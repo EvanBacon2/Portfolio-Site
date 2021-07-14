@@ -49,8 +49,8 @@
 
 .CardImageCover {
     width: 0%;
-    height: 70%;
-    top: 15%;
+    height: 102%;
+    top: 0%;
     transition: all 0.2s .2s;
     position: absolute;
 }
@@ -69,23 +69,23 @@
 }
 
 .WebImage .Right.DisplayCover {
-    right: -1.2em;
-    width: calc(51% + 1.2em);
+    right: -2.2em;
+    width: calc(50.1% + 2.2em);
 }
 
 .WebImage .Left.DisplayCover {
-    left: -1.2em;
-    width: calc(51% + 1.2em);
+    left: -2.2em;
+    width: calc(50.1% + 2.2em);
 }
 
 .IosImage .Right.DisplayCover {
-    right: -2.2em;
-    width: calc(51% + 2.2em);
+    right: -9.079em;
+    width: calc(50.3% + 9.079em);
 }
 
 .IosImage .Left.DisplayCover {
-    left: -2.2em;
-    width: calc(51% + 2.2em);
+    left: -9.079em;
+    width: calc(50.3% + 9.079em);
 }
 
 .WebCover {
