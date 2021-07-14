@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
+
+.CardContainer {
+    height: fit-content;
+    background-color: #637280;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 40px;
+    margin-bottom: 40px;
+    padding: 0 .5em .375em .5em;
+    border-radius: .625em;
+    font-size: 1.25rem;
+}
+
+.WebContainer {
+    width: 23em;
+}
+
+.IosContainer {
+    width: 10em;
+}
+
+.HeaderBox {
+    display: flex;
+    width: 97%;
+    justify-content: space-between;
+    
+    margin: .125em 0;
+}
+
+.CardHeader {
+    font-family: 'Racing Sans One';
+    font-size: 1em;
+    color: #FAFEFF;
+    margin: 0;
+}
+
+.CardImage {
+    background-color: #22282E; 
+    margin-bottom: .25em;
+    border-radius: .625em;
+    overflow: hidden;
+    position: relative;
+}
+
+.CardImageCover {
+    width: 0%;
+    height: 70%;
+    top: 15%;
+    transition: all 0.2s .2s;
+    position: absolute;
+}
+
+.CardImageCover.Right {
+    right: 0; 
+}
+
+.CardImageCover.Left {
+    left: 0; 
+}
+
+.CardImageCover.DisplayCover {
+    transform: skew(-15deg);
+    transition: all .2s 0s;
+}
+
+.WebImage .Right.DisplayCover {
+    right: -1.2em;
+    width: calc(51% + 1.2em);
+}
+
+.WebImage .Left.DisplayCover {
+    left: -1.2em;
+    width: calc(51% + 1.2em);
+}
+
+.IosImage .Right.DisplayCover {
+    right: -2.2em;
+    width: calc(51% + 2.2em);
+}
+
+.IosImage .Left.DisplayCover {
+    left: -2.2em;
+    width: calc(51% + 2.2em);
+}
+
+.WebCover {
+    background-color: #1ABCFE;
+}
+
+.CalendexCover {
+    background-color: #38CDA1;
+}
+
+.WebImage {
+    width: 23em;
+    height: 12.9375em;
+}
+
+.IosImage {
+    width: 10em;
+    height: 21.6642em;
+}
+
+.DescContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    top: 15%;
+    z-index: 1;
+}
+
+.DescContainer * {
+    opacity: 0;
+    transition: opacity .2s 0s;
+}
+
+.CoverDesc {
+    font-family: 'Roboto';
+    font-size: .75em;
+    color: #FAFEFF;
+    margin-top: 1.5em;
+}
+
+.DescContainer .DisplayCover {
+    opacity: 100;
+    transition: opacity .2s .2s;
+}
+
+.LearnLink {
+    font-family: 'Roboto';
+    font-size: .75em;
+    width: fit-content;
+    background-color: #FAFEFF;
+    padding: .3em .5em;
+    margin-bottom: 1.5em;
+    border-radius: .25em;
+    text-decoration: none;
+}
+
+.WebLink {
+    color: #1ABCFE;
+}
+
+.CalendexLink {
+    color: #38CDA1;
+}
+
+.LinkBox {
+    display: flex;
+    justify-content: flex-end;
+    width: 97%;
+}
+
+.CardIconContainer {
+    margin-left: .42em;
+}
+
+.CardIcon {
+    fill: #FAFEFF;
+}
+
+.WebSizer {
+    width: 1.71875em;
+    height: .825em;
+}
+
+.AppleSizer {
+    width: .6875em;
+    height: .825em;
+}
+
+.GitSizer {
+    width: 1em;
+    height: .98275em;
+}
+
+.WebsiteSizer {
+    width: 1em;
+    height: 1em;
+}
+
+.AppStoreSizer {
+    width: 1.02206em;
+    height: .98275em;
+}
+
+.WebShadow {
+    text-shadow: .042em .042em #1ABCFE;
+}
+
+.CalendexShadow {
+    text-shadow: .042em .042em #38CDA1;
+}
+
+.WebBorder {
+    border: .083em solid #1ABCFE;
+}
+
+.CalendexBorder {
+    border: .083em solid #38CDA1;
+}
+

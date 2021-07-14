@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
+
+.LinksContainer {
+    float: right;
+    margin-right: 10%;
+}
+
+.Link {
+    clear: both;
+    vertical-align: baseline;
+    position: relative;
+    width: fit-content;
+    margin-top: 25px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.LinkIconContianer {
+    display: inline;
+    position: relative;
+}
+
+.LinkIcon {
+    fill: #637280;
+    transition: transform .2s ease-in-out 0s;
+    transition: fill 0s ease-in-out .08s;
+}
+
+.Link:hover .LinkIcon {
+    fill: #FAFEFF;
+    transform: translate(-2px, -2px);
+    transition: transform .2s ease-in-out 0s;
+}
+
+.LinkIconShadow {
+    position: absolute;
+    z-index: -1;
+}
+
+.LinkText {
+    display: inline;
+    color: #FAFEFF;
+    font-family: 'Roboto';
+    font-size: 16pt;
+    margin-left: 15px;
+    position: relative;
+    pointer-events: none;
+    transition: text-shadow .2s;
+}
+
+.FigmaText {
+    margin: 0;
+}
+
+.Link:hover .FigmaColor1 {
+    text-shadow: 1px 1px #F24E1E;
+}
+
+.Link:hover .FigmaColor2 {
+    text-shadow: 1px 1px #FF7262;
+}
+
+.Link:hover .FigmaColor3 {
+    text-shadow: 1px 1px #A259FF;
+}
+
+.Link:hover .FigmaColor4 {
+    text-shadow: 1px 1px #1ABCFE;
+}
+
+.Link:hover .FigmaColor5 {
+    text-shadow: 1px 1px #0ACF83;
+}
+
+.Link:hover .GithubColor {
+    text-shadow: 1px 1px #A259FF;
+}
+
+.Link:hover .WebsiteColor {
+    text-shadow: 1px 1px #1ABCFE;
+}
