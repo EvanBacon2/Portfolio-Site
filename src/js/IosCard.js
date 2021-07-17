@@ -13,13 +13,13 @@ export default class IosCard extends Component {
         return (
             <div class='CardContainer IosContainer'>
                 <div class='HeaderBox'>
-                    <h1 class={'CardHeader CalendexShadow'}>{this.props.title}</h1>
+                    <h1 class={'CardHeader ' + this.props.theme + 'Shadow'}>{this.props.title}</h1>
                     <div class='AppleSizer'>
                        <AppleIcon class='CardIcon'/>
                    </div>
                 </div>  
                 
-                <ProjectCardImage dimensions='Ios' theme='Calendex'>
+                <ProjectCardImage dimensions='Ios' theme={this.props.theme}>
                     An Ios app for my project
                 </ProjectCardImage>
 

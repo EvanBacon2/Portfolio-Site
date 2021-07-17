@@ -1,0 +1,19 @@
+.NavButton {
+    position: fixed;
+    left: 1em;
+    top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: 1.25em;
+    z-index: 999;
+}
+
+.NavLine {
+    background-color: #F58C8C;
+    width: 2.5497em;
+    height: .07497em;
+    translate: skew(12deg);
+}

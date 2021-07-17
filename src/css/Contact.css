@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
+
+.Contact {
+    height: 100vh;
+}
+
+.ContactForm {
+    margin-top: 2em;
+}
+
+.FormGroup {
+    margin-bottom: 1em;
+}
+
+.FormLabel {
+    display: block;
+    font-family: 'Racing Sans One';
+    font-size: 1.291em;
+    color: #FAFEFF;
+}
+
+.FormStyle {
+    background-color: #1C1F22;
+    border: .0416em solid #F58C8C;
+    border-radius: .4167em;
+    font-family: 'Roboto';
+    color: #FAFEFF;
+    font-size: .7em;
+    padding: .7em;
+}
+
+.FormStyle:focus {
+    outline: none;
+}
+
+.LineForm {
+    width: 20em;
+}
+
+.AreaForm {
+    width: 20em;
+    height: 10em;
+}
+
+.SubmitButton {
+    font-family: 'Racing Sans One';
+    font-size: 1.291em;
+    color: #FAFEFF;
+    background-color: #F58C8C;
+    border: .0416em solid #F58C8C;
+    border-radius: .2em;
+    padding: .2em;
+    box-sizing: border-box;
+    transition: all .2s 0s;
+}
+
+.SubmitButton:hover {
+    background-color: #22282E;
+    transition: all .2s 0s;
+}

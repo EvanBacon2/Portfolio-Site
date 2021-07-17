@@ -1,0 +1,15 @@
+.Skeleton {
+    display: grid;
+    grid-template-rows: min-content auto;
+    grid-template-columns: 5em 1fr 5em;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.SiteHeader {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.ContentSections {
+    grid-area: 2 / 2 / 3 / 3;
+}

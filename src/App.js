@@ -1,42 +1,37 @@
 import { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { MenuContext, Selections } from 'js/MenuContext';
-
+import NavButton from 'js/NavButton';
 import SiteHeader from 'js/SiteHeader';
-import AboutPage from 'js/AboutPage';
-import WebCard from 'js/WebCard'
-import IosCard from 'js/IosCard'
+import About from 'js/About';
+import Projects from 'js/Projects';
+import Contact from 'js/Contact';
+
+import 'css/FixedElements.css';
+import 'css/Structure.css';
+
+import {ReactComponent as InitialsIcon} from 'svg/initials.svg';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.setSelection = (newSelection) => {
-      this.setState(state => ({
-        selection: newSelection
-      }));
-    }
-
-    this.state = {
-      selection: Selections.ABOUT,
-      setSelection: this.setSelection
-    }
-  }
-
-
   render() {
     document.body.style = 'background: #22282E'
     
     return (
       <Router>
-        <MenuContext.Provider value={this.state}>
           <div className="App">
-            <SiteHeader/>
-            <WebCard title='Website'/>
-            <IosCard title='Ios App'/>
+            <NavButton></NavButton>
+            <div class='InitialsSizer InitialsPos'>
+              <InitialsIcon></InitialsIcon>
+            </div>
+            <div class='Skeleton'>
+                <SiteHeader class='SiteHeader'></SiteHeader>
+                <div class='ContentSections'>
+                    <About></About>
+                    <Projects></Projects>
+                    <Contact></Contact>
+                </div>
+            </div>
           </div>
-        </MenuContext.Provider>
       </Router>)
   }
 }
