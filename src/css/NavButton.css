@@ -1,4 +1,4 @@
-.NavButton {
+.nav-button {
     position: fixed;
     left: 1em;
     top: 1em;
@@ -8,12 +8,24 @@
     font-size: 1.5rem;
     width: fit-content;
     height: 1.25em;
-    z-index: 999;
+    z-index: 1001;
 }
 
-.NavLine {
-    background-color: #F58C8C;
+.nav-button:hover {
+    cursor: pointer;
+}
+
+.nav-line {
     width: 2.5497em;
     height: .07497em;
     translate: skew(12deg);
+}
+
+.nav-line.closed {
+    background-color: #F58C8C;
+    transition: all .2s .2s;
+}
+.nav-line.open {
+    background-color: #FAFEFF;
+    transition: all .2s .6s;
 }

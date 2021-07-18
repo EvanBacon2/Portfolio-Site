@@ -5,10 +5,10 @@ import 'css/NavButton.css';
 export default class NavButton extends Component {
     render() {
         return (
-            <div class='NavButton'>
-                <div class='NavLine'></div>
-                <div class='NavLine'></div>
-                <div class='NavLine'></div>
+            <div class='nav-button' onClick={this.props.toggleNav}>
+                <div class={'nav-line ' + this.props.navState}></div>
+                <div class={'nav-line ' + this.props.navState}></div>
+                <div class={'nav-line ' + this.props.navState}></div>
             </div>
         );
     }
