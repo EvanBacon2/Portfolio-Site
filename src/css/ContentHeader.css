@@ -6,7 +6,7 @@ h2 {
     font-size: 38pt;
     margin: 0 30px 0 0;
     pointer-events: none;
-    display: inline;
+    display: inline-block;
   }
 
 h3 {
@@ -15,7 +15,7 @@ h3 {
    font-size: 22pt;
    margin: 0;
    pointer-events: none;
-   display: inline;
+   display: inline-block;
 }
 
 hr {

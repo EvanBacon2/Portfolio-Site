@@ -1,4 +1,4 @@
-.Skeleton {
+.skeleton {
     display: grid;
     grid-template-rows: min-content auto;
     grid-template-columns: 5em 1fr 5em;
@@ -6,14 +6,18 @@
     font-size: 1.5rem;
 }
 
-.SiteHeader {
+.site-header {
     grid-area: 1 / 2 / 2 / 3;
 }
 
-.ContentSections {
+.content-sections {
     grid-area: 2 / 2 / 3 / 3;
 }
 
-.App.open {
+#master {
+    height: 100vh;
+}
+
+#master.open {
     overflow: hidden;
 }

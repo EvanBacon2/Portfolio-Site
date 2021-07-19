@@ -44,8 +44,9 @@
 }
 
 #nav-contents.closed {
+    visibility: hidden;
     opacity: 0;
-    transition: opacity .2s .2s;
+    transition: all .2s .2s;
 }
 
 #nav-contents.open {
@@ -61,6 +62,7 @@
 }
 
 .nav-bttn {
+    position: relative;
     font-family: 'Racing Sans One';
     font-size: 3.75em;
     background-color: #FAFEFF;
@@ -72,11 +74,42 @@
     width: 5.5em;
 }
 
+.nav-bttn::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #FCC28D;
+    /*background-image: linear-gradient(-45deg, #FCC28D, #FAFEFF);*/
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity .2s 0s;
+}
+
+.nav-bttn:hover::before {
+    opacity: 1;
+    transition: opacity .2s 0s;
+    z-index: 1;
+}
+
 #nav-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+}
+
+.closed #nav-menu {
+    transform: translateX(-2em);
+    transition: transform .2s .2s;
+}
+
+.open #nav-menu {
+    transform: translateX(0);
+    transition: transform .2s .6s;
 }
 
 #nav-links {
@@ -85,9 +118,18 @@
     justify-content: space-between;
 }
 
+.closed #nav-links {
+    transform: translateX(2em);
+    transition: transform .2s .2s;
+}
+.open #nav-links {
+    transform: translateX(0);
+    transition: transform .2s .6s;
+}
+
 #nav-divider {
     height: inherit;
-    width: .2em;
+    width: .15em;
     background-color: #FAFEFF;
 }
 

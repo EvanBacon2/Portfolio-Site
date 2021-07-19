@@ -7,6 +7,7 @@ import SiteHeader from 'js/SiteHeader';
 import About from 'js/About';
 import Projects from 'js/Projects';
 import Contact from 'js/Contact';
+import { THEMES } from 'js/Themes';
 
 import 'css/FixedElements.css';
 import 'css/Structure.css';
@@ -18,6 +19,7 @@ class App extends Component {
     super(props);
     this.state = {
       navState: 'closed',
+      overlayTheme: THEMES.BRAND,
     }
   }
 
@@ -34,23 +36,25 @@ class App extends Component {
     
     return (
       <Router>
-          <div class={"App " + this.state.navState}>
-            <NavButton navState={this.state.navState} toggleNav={this.toggleNav}/>
-            <NavPage navState={this.state.navState}/>
-            <div id='closed-initials'class='initials-sizer initials-pos'>
-              <InitialsIcon/>
-            </div>
-            <div id='open-initials'class={'initials-sizer initials-pos ' + this.state.navState}>
-              <InitialsIcon/>
-            </div>
-            <div class='Skeleton'>
-                <SiteHeader class='SiteHeader'/>
-                <div class='ContentSections'>
+          <div class="App">
+            <body id='master' class={this.state.navState}>
+              <NavButton navState={this.state.navState} toggleNav={this.toggleNav}/>
+              <NavPage navState={this.state.navState}/>
+              <div id='closed-initials'class='initials-sizer initials-pos'>
+                <InitialsIcon/>
+              </div>
+              <div id='open-initials'class={'initials-sizer initials-pos ' + this.state.navState}>
+                <InitialsIcon/>
+              </div>
+              <div class='skeleton'>
+                <SiteHeader class='site-header'/>
+                <div class='content-sections'>
                     <About/>
                     <Projects/>
                     <Contact/>
                 </div>
-            </div>
+              </div>
+            </body>
           </div>
       </Router>)
   }
