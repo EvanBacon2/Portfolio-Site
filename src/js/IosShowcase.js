@@ -5,7 +5,7 @@ import '../css/IosShowcase.css'
 export default class IosShowcase extends Component {
     render() {
         return (
-            <div class='ShowcaseBorder'>
+            <div class='showcase-border'>
                 
             </div>
         );

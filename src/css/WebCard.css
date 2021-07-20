@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
-.CardContainer {
+.card-container {
     height: fit-content;
     background-color: #637280;
 
@@ -13,15 +13,15 @@
     font-size: 1.25rem;
 }
 
-.WebContainer {
+.web-container {
     width: 23em;
 }
 
-.IosContainer {
+.ios-container {
     width: 10em;
 }
 
-.HeaderBox {
+.header-box {
     display: flex;
     width: 97%;
     justify-content: space-between;
@@ -29,14 +29,14 @@
     margin: .125em 0;
 }
 
-.CardHeader {
+.card-header {
     font-family: 'Racing Sans One';
     font-size: 1em;
     color: #FAFEFF;
     margin: 0;
 }
 
-.CardImage {
+.card-image {
     background-color: #22282E; 
     margin-bottom: .25em;
     border-radius: .625em;
@@ -44,7 +44,7 @@
     position: relative;
 }
 
-.CardImageCover {
+.card-image-cover {
     width: 0%;
     height: 102%;
     top: 0%;
@@ -52,58 +52,58 @@
     position: absolute;
 }
 
-.CardImageCover.Right {
+.card-image-cover.right {
     right: 0; 
 }
 
-.CardImageCover.Left {
+.card-image-cover.left {
     left: 0; 
 }
 
-.CardImageCover.DisplayCover {
+.card-image-cover.display-cover {
     transform: skew(-15deg);
     transition: all .2s 0s;
 }
 
-.WebImage .Right.DisplayCover {
+.web-image .right.display-cover {
     right: -2.2em;
     width: calc(50.1% + 2.2em);
 }
 
-.WebImage .Left.DisplayCover {
+.web-image .left.display-cover {
     left: -2.2em;
     width: calc(50.1% + 2.2em);
 }
 
-.IosImage .Right.DisplayCover {
+.ios-image .right.display-cover {
     right: -9.079em;
     width: calc(50.3% + 9.079em);
 }
 
-.IosImage .Left.DisplayCover {
+.ios-image .left.display-cover {
     left: -9.079em;
     width: calc(50.3% + 9.079em);
 }
 
-.webCover {
+.web-cover {
     background-color: #1ABCFE;
 }
 
-.calendexCover {
+.calendex-cover {
     background-color: #38CDA1;
 }
 
-.WebImage {
+.web-image {
     width: 23em;
     height: 12.9375em;
 }
 
-.IosImage {
+.ios-image {
     width: 10em;
     height: 21.6642em;
 }
 
-.DescContainer {
+.desc-container {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -115,24 +115,24 @@
     z-index: 1;
 }
 
-.DescContainer * {
+.desc-container * {
     opacity: 0;
     transition: opacity .2s 0s;
 }
 
-.CoverDesc {
+.cover-desc {
     font-family: 'Roboto';
     font-size: .75em;
     color: #FAFEFF;
     margin-top: 1.5em;
 }
 
-.DescContainer .DisplayCover {
+.desc-container .display-cover {
     opacity: 100;
     transition: opacity .2s .2s;
 }
 
-.LearnLink {
+.learn-link {
     font-family: 'Roboto';
     font-size: .75em;
     width: fit-content;
@@ -143,66 +143,66 @@
     text-decoration: none;
 }
 
-.webLink {
+.web-link {
     color: #1ABCFE;
 }
 
-.calendexLink {
+.calendex-link {
     color: #38CDA1;
 }
 
-.LinkBox {
+.link-box {
     display: flex;
     justify-content: flex-end;
     width: 97%;
 }
 
-.CardIconContainer {
+.card-icon-container {
     margin-left: .42em;
 }
 
-.CardIcon {
+.card-icon {
     fill: #FAFEFF;
 }
 
-.WebSizer {
+.web-sizer {
     width: 1.71875em;
     height: .825em;
 }
 
-.AppleSizer {
+.apple-sizer {
     width: .6875em;
     height: .825em;
 }
 
-.GitSizer {
+.git-sizer {
     width: 1em;
     height: .98275em;
 }
 
-.WebsiteSizer {
+.website-sizer {
     width: 1em;
     height: 1em;
 }
 
-.AppStoreSizer {
+.app-store-sizer {
     width: 1.02206em;
     height: .98275em;
 }
 
-.webShadow {
+.web-shadow {
     text-shadow: .042em .042em #1ABCFE;
 }
 
-.calendexShadow {
+.calendex-shadow {
     text-shadow: .042em .042em #38CDA1;
 }
 
-.webBorder {
+.web-border {
     border: .083em solid #1ABCFE;
 }
 
-.calendexBorder {
+.calendex-border {
     border: .083em solid #38CDA1;
 }
 

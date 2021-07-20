@@ -9,11 +9,11 @@ import 'css/About.css';
 export default class About extends Component {
     render() {
         return (
-            <div class='About'>
-                <div class='Content'>
-                    <div class='DescriptionContainer'>
-                        <ContentHeader title='About Me' subTitle='' theme={THEMES.BRAND}/>
-                        <p class='Description'>                        
+            <div class='about'>
+                <div class='content'>
+                    <div class='description-container'>
+                        <ContentHeader title='About Me' theme={THEMES.BRAND}/>
+                        <p class='description'>                        
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et                             
                             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip 
                             ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
-.SiteTitle {
+#site-title {
   color: #FAFEFF;
   font-family: 'Racing Sans One';
   font-size: 2.875em;
@@ -12,7 +12,7 @@
   pointer-events: none;
 }
 
-hr {
+#header-underline {
   background-color: #F58C8C;
   height: .0833em;
   border: none;
@@ -20,20 +20,24 @@ hr {
   transform: skew(-12deg);
 }
 
-.CenterDiv {
+.site-header {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.center-div {
   text-align: center;
 }
 
-.HeaderContainer {
+#header-container {
   display: inline-block;
 }
 
-.SkillList {
+#skill-list {
   padding: 0;
   margin: 0;
 }
 
-.SkillItem {
+.skill-item {
   display: inline;
   color: #FAFEFF;
   font-family: 'Racing Sans One';

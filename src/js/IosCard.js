@@ -11,25 +11,25 @@ import {ReactComponent as GithubIcon} from 'svg/github.svg';
 export default class IosCard extends Component {
     render() {
         return (
-            <div class='CardContainer IosContainer'>
-                <div class='HeaderBox'>
-                    <h1 class={'CardHeader ' + this.props.theme + 'Shadow'}>{this.props.title}</h1>
-                    <div class='AppleSizer'>
+            <div class='card-container ios-container'>
+                <div class='header-box'>
+                    <h1 class={'card-header ' + this.props.theme + '-shadow'}>{this.props.title}</h1>
+                    <div class='apple-sizer'>
                        <AppleIcon class='CardIcon'/>
                    </div>
                 </div>  
                 
-                <ProjectCardImage dimensions='Ios' theme={this.props.theme}>
+                <ProjectCardImage dimensions='ios' theme={this.props.theme}>
                     An Ios app for my project
                 </ProjectCardImage>
 
-                <div class='LinkBox'>
-                    <div class="CardIconContainer WebsiteSizer">
-                        <AppStoreIcon class='CardIcon CardLink'/>
+                <div class='link-box'>
+                    <div class="card-icon-container website-sizer">
+                        <AppStoreIcon class='card-icon card-link'/>
                     </div>
-                    <div class="CardIconContainer GitSizer">
+                    <div class="card-icon-container git-sizer">
                         <a href='https://github.com/EvanBacon2' target='_blank' rel='noreferrer'>
-                            <GithubIcon class='CardIcon CardLink'/>
+                            <GithubIcon class='card-icon card-link'/>
                         </a>
                     </div>
                 </div>

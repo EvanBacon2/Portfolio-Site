@@ -11,25 +11,25 @@ import {ReactComponent as GithubIcon} from 'svg/github.svg';
 export default class WebCard extends Component {
     render() {
         return (
-            <div class='CardContainer WebContainer'>
-                <div class='HeaderBox'>
-                    <h1 class={'CardHeader WebShadow'}>{this.props.title}</h1>
-                    <div class='WebSizer'>
-                       <WebIcon class='CardIcon'/>
+            <div class='card-container web-container'>
+                <div class='header-box'>
+                    <h1 class={'card-header web-shadow'}>{this.props.title}</h1>
+                    <div class='web-sizer'>
+                       <WebIcon class='card-icon'/>
                     </div>
                 </div>  
                 
-                <ProjectCardImage dimensions='Web' theme='Web'>
+                <ProjectCardImage dimensions='web' theme='web'>
                     A Website for my portfolio
                 </ProjectCardImage>
 
-                <div class='LinkBox'>
-                    <div class="CardIconContainer WebsiteSizer">
-                        <WebsiteIcon class='CardIcon CardLink'/>
+                <div class='link-box'>
+                    <div class="card-icon-container website-sizer">
+                        <WebsiteIcon class='card-icon card-link'/>
                     </div>
-                    <div class="CardIconContainer GitSizer">
+                    <div class="card-icon-container git-sizer">
                         <a href='https://github.com/EvanBacon2' target='_blank' rel='noreferrer'>
-                            <GithubIcon class='CardIcon CardLink'/>
+                            <GithubIcon class='card-icon card-link'/>
                         </a>
                     </div>
                 </div>

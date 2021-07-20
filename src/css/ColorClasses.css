@@ -1,30 +1,30 @@
 /* Color Classes */
-.brandColor {
+.brand-color {
     background-color: #F58C8C;
 }
 
-.calendexColor {
+.calendex-color {
     background-color: #38CDA1;
 }
 
-.GithubColor {
+.github-color {
     fill: #A259FF;
 }
 
-.WebsiteColor {
+.website-color {
     fill: #1ABCFE;
 }
 
 
 /* Text Shadow Classes */
-.brandShadow3x3 {
+.brand-shadow-3x3 {
     text-shadow: 3px 3px #F58C8C;
 }
 
-.brandShadow2x2 {
+.brand-shadow-2x2 {
     text-shadow: 2px 2px #F58C8C;
 }
 
-.calendexShadow2x2 {
+.calendex-shadow-2x2 {
     text-shadow: 2px 2px #38CDA1;
 }

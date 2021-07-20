@@ -66,7 +66,7 @@ class App extends Component {
             <body id='master'>
               <NavButton navState={this.state.navState} toggleNav={this.toggleNav}/>
               <NavPage navState={this.state.navState}/>
-              <Overlay navState={this.state.navState} theme={this.state.theme}/>
+              <Overlay navState={this.state.navState} theme={this.state.overlayTheme}/>
               {/*<CalendexShowcase navState={this.state.navState}/>*/}
               <div id='closed-initials'class={'initials-sizer initials-pos '  + this.state.navState}>
                 <InitialsIcon/>

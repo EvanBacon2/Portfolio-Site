@@ -6,10 +6,6 @@
     font-size: 1.5rem;
 }
 
-.site-header {
-    grid-area: 1 / 2 / 2 / 3;
-}
-
 .content-sections {
     grid-area: 2 / 2 / 3 / 3;
 }

@@ -12,9 +12,9 @@ export default class CalendexShowcase extends Component {
     render() {
         return (
             <div id='calendex-showcase' class={'showcase-container ' + this.props.navState}>
-                <div class='ContentContainer'>
+                <div class='content-container'>
                     <ContentHeader title='Calendex' subTitle='ios app' theme={THEMES.CALENDEX}/>
-                    <p class='ContentDescription'>                        
+                    <p class='content-description'>                        
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
                         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip 
                         ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 

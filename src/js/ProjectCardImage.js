@@ -10,13 +10,13 @@ export default class ProjectCardImage extends Component {
         }
     }
 
-    DisplayCover() {
+    displayCover() {
         this.setState({
-            coverState: 'DisplayCover'
+            coverState: 'display-cover'
         });
     }
 
-    HideCover() {
+    hideCover() {
         this.setState({
             coverState: ''
         });
@@ -24,14 +24,14 @@ export default class ProjectCardImage extends Component {
 
     render() {
         return (
-            <div class={'CardImage ' + this.props.dimensions + 'Image ' + this.props.theme + 'Border'}
-                     onMouseEnter={() => this.DisplayCover()} 
-                     onMouseLeave={() => this.HideCover()}>
-                    <div class={'Left CardImageCover ' + this.props.theme + 'Cover ' + this.state.coverState}></div>
-                    <div class={'Right CardImageCover ' + this.props.theme + 'Cover ' + this.state.coverState}></div>
-                    <div class='DescContainer'>
-                        <div class={'CoverDesc ' + this.state.coverState}>{this.props.children}</div>
-                        <a class={'LearnLink ' + this.props.theme + 'Link ' + this.state.coverState} href='https://github.com/EvanBacon2' 
+            <div class={'card-image ' + this.props.dimensions + '-image ' + this.props.theme + '-border'}
+                     onMouseEnter={() => this.displayCover()} 
+                     onMouseLeave={() => this.hideCover()}>
+                    <div class={'card-image-cover left ' + this.props.theme + '-cover ' + this.state.coverState}></div>
+                    <div class={'card-image-cover right ' + this.props.theme + '-cover ' + this.state.coverState}></div>
+                    <div class='desc-container'>
+                        <div class={'cover-desc ' + this.state.coverState}>{this.props.children}</div>
+                        <a class={'learn-link ' + this.props.theme + '-link ' + this.state.coverState} href='https://github.com/EvanBacon2' 
                            target='_blank' rel='noreferrer'>
                             Learn More
                         </a>

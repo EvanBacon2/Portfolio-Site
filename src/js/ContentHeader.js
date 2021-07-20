@@ -6,12 +6,11 @@ import 'css/ColorClasses.css';
 export default class ContentHeader extends Component {
     render() {
         return (
-            <div class='HeaderContainer'>
-                <div class='ExtraPadding'>
-                    <h2 class={this.props.theme + 'Shadow2x2'}>{this.props.title}</h2>
-                    <h3>{this.props.subTitle}</h3>
+            <div id='header-container'>
+                <div class='extra-padding'>
+                    <span id='content-title' class={this.props.theme + '-shadow-2x2'}>{this.props.title}</span>
                 </div>
-                <hr class={this.props.theme + 'Color'}/>
+                <hr id='content-underline' class={this.props.theme + '-color'}/>
             </div>
         );
     }

@@ -1,24 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 
-h2 {
+#header-container {
+  width: fit-content;
+}
+
+#content-title {
     color: #FAFEFF;
     font-family: 'Racing Sans One';
     font-size: 38pt;
-    margin: 0 30px 0 0;
     pointer-events: none;
     display: inline-block;
   }
 
-h3 {
-   color: #FAFEFF;
-   font-family: 'Racing Sans One';
-   font-size: 22pt;
-   margin: 0;
-   pointer-events: none;
-   display: inline-block;
-}
-
-hr {
+#content-underline {
     background-color: #F58C8C;
     height: 3px;
     border: none;
@@ -26,7 +20,7 @@ hr {
     transform: skew(-12deg);
  }
 
-.ExtraPadding {
+.extra-padding {
     padding-left: 15px;
     padding-right: 15px;
 }
