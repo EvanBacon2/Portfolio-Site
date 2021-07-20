@@ -1,0 +1,33 @@
+
+.overlay {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 100vh;
+}
+
+.overlay.left {
+    left: 0;
+}
+
+.overlay.right {
+    right: 0;
+}
+
+.overlay.closed {
+    width: 0%;
+    transition: all .2s .6s;
+}
+
+.overlay.open {
+    width: 50.1%;
+    transition: all .2s .2s;
+}
+
+.brand-overlay {
+    background-color: #F58C8C;
+}
+
+.calendex-overlay {
+    background-color: #233034;
+}

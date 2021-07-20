@@ -85,11 +85,11 @@
     width: calc(50.3% + 9.079em);
 }
 
-.WebCover {
+.webCover {
     background-color: #1ABCFE;
 }
 
-.CalendexCover {
+.calendexCover {
     background-color: #38CDA1;
 }
 
@@ -143,11 +143,11 @@
     text-decoration: none;
 }
 
-.WebLink {
+.webLink {
     color: #1ABCFE;
 }
 
-.CalendexLink {
+.calendexLink {
     color: #38CDA1;
 }
 
@@ -190,19 +190,19 @@
     height: .98275em;
 }
 
-.WebShadow {
+.webShadow {
     text-shadow: .042em .042em #1ABCFE;
 }
 
-.CalendexShadow {
+.calendexShadow {
     text-shadow: .042em .042em #38CDA1;
 }
 
-.WebBorder {
+.webBorder {
     border: .083em solid #1ABCFE;
 }
 
-.CalendexBorder {
+.calendexBorder {
     border: .083em solid #38CDA1;
 }
 

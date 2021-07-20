@@ -5,12 +5,13 @@ import IosShowcase from 'js/IosShowcase'
 import Links from 'js/Links';
 import { THEMES } from 'js/Themes';
 
-import '../css/Content.css';
+import 'css/ContentHeader.css';
+import 'css/CalendexShowcase.css'
 
-export default class CalendexPage extends Component {
+export default class CalendexShowcase extends Component {
     render() {
         return (
-            <div>
+            <div id='calendex-showcase' class={'showcase-container ' + this.props.navState}>
                 <div class='ContentContainer'>
                     <ContentHeader title='Calendex' subTitle='ios app' theme={THEMES.CALENDEX}/>
                     <p class='ContentDescription'>                        

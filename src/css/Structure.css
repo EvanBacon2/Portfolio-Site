@@ -14,10 +14,11 @@
     grid-area: 2 / 2 / 3 / 3;
 }
 
-#master {
-    height: 100vh;
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-#master.open {
-    overflow: hidden;
+::-webkit-scrollbar-thumb {
+    background-color: #F58C8C;
+    border-radius: 10px;
 }

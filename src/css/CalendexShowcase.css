@@ -1,0 +1,17 @@
+.showcase-container {
+    position: fixed;
+    top: 7em;
+    left: 7em;
+    z-index: 1001;
+}
+
+.showcase-container.closed {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s .2s;
+}
+
+.showcase-container.open {
+    opacity: 1.0;
+    transition: opacity .2s .6s;
+}

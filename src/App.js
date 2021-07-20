@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import NavButton from 'js/NavButton';
 import NavPage from 'js/NavPage';
+import Overlay from 'js/Overlay';
+import CalendexShowcase from 'js/CalendexShowcase'
 import SiteHeader from 'js/SiteHeader';
 import About from 'js/About';
 import Projects from 'js/Projects';
@@ -24,11 +26,35 @@ class App extends Component {
   }
 
   toggleNav = () => {
+    const master = document.getElementById('master');
+    const closedInitials = document.getElementById('closed-initials');
+
     if (this.state.navState === 'closed') {
+      master.style.top = `-${window.scrollY}px`;
+      setTimeout(() => {
+        master.style.position = 'fixed';
+        master.style.paddingRight = '8px';
+        closedInitials.style.paddingRight = '8px';
+      }, 200);
+
       this.setState({ navState: 'open' });
     } else {
+      const scrollY = master.style.top;
+      closedInitials.style.paddingRight = '8px';
+      setTimeout(() => {
+        master.style.position = '';
+        master.style.top = '';
+        master.style.paddingRight = '0px';
+        closedInitials.style.paddingRight = '0px';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      }, 800);
+
       this.setState({ navState: 'closed' });
     }
+  }
+
+  setOverlayTheme(theme) {
+    this.setState({ overlayTheme: theme })
   }
 
   render() {
@@ -37,10 +63,12 @@ class App extends Component {
     return (
       <Router>
           <div class="App">
-            <body id='master' class={this.state.navState}>
+            <body id='master'>
               <NavButton navState={this.state.navState} toggleNav={this.toggleNav}/>
               <NavPage navState={this.state.navState}/>
-              <div id='closed-initials'class='initials-sizer initials-pos'>
+              <Overlay navState={this.state.navState} theme={this.state.theme}/>
+              {/*<CalendexShowcase navState={this.state.navState}/>*/}
+              <div id='closed-initials'class={'initials-sizer initials-pos '  + this.state.navState}>
                 <InitialsIcon/>
               </div>
               <div id='open-initials'class={'initials-sizer initials-pos ' + this.state.navState}>

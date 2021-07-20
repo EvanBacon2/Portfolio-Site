@@ -10,6 +10,14 @@
     font-size: 1.5rem;
 }
 
+#open-initials.open {
+    right: calc(1em + 8px);
+}
+
+#open-initials.closed {
+    right: calc(1em + 8px);
+}
+
 #closed-initials {
     z-index: 999;
 }

@@ -1,5 +1,5 @@
 export const THEMES = {
-    BRAND: 'Brand',
-    CALENDEX: 'Calendex',
-    WEB: 'Web',
+    BRAND: 'brand',
+    CALENDEX: 'balendex',
+    WEB: 'web',
 }
