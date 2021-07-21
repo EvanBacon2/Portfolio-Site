@@ -35,3 +35,11 @@
     opacity: 100%;
     transition: opacity .6s 1s;
 }
+
+.initials-shadow.brand {
+    fill: #F58C8C;
+}
+
+#open-initials .initials-shadow.calendex {
+    fill: #38CDA1;
+}

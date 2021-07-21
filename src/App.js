@@ -69,10 +69,10 @@ class App extends Component {
               <NavPage navState={this.state.navState} theme={this.state.overlayTheme}/>
               <CalendexShowcase navState={this.state.navState} theme={this.state.overlayTheme}/>
               <div id='closed-initials'class={'initials-sizer initials-pos '  + this.state.navState}>
-                <InitialsIcon/>
+                <InitialsIcon class={'initials-shadow ' + this.state.overlayTheme}/>
               </div>
               <div id='open-initials'class={'initials-sizer initials-pos ' + this.state.navState}>
-                <InitialsIcon/>
+                <InitialsIcon class={'initials-shadow ' + this.state.overlayTheme}/>
               </div>
               <div class='skeleton'>
                 <SiteHeader class='site-header'/>

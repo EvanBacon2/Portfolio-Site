@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
 .links-container {
-    float: right;
-    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-size: 1.5rem
 }
 
 .link {
-    clear: both;
-    vertical-align: baseline;
-    position: relative;
     width: fit-content;
     margin-top: 25px;
     margin-left: 15px;
@@ -17,7 +16,6 @@
 }
 
 .link-icon-contianer {
-    display: inline;
     position: relative;
 }
 
@@ -42,11 +40,21 @@
     display: inline;
     color: #FAFEFF;
     font-family: 'Roboto';
-    font-size: 16pt;
+    font-size: 1.0833em;
     margin-left: 15px;
     position: relative;
     pointer-events: none;
     transition: text-shadow .2s;
+}
+
+.github-box {
+    width: 2.4167em;
+    height: 2.4167em;
+}
+
+.website-box {
+    width: 2.4167em;
+    height: 2.4167em;
 }
 
 .figma-text {

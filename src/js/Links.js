@@ -29,15 +29,23 @@ export default class Links extends Component {
                 </div>
                 <div class='link'>
                     <div class='link-icon-container'>
-                        <GithubIcon class='link-icon-shadow github-color'/>
-                        <GithubIcon class='link-icon'/>
+                        <div class='github-box link-icon-shadow'>
+                            <GithubIcon class='github-color'/>
+                        </div>
+                        <div class='github-box'>
+                            <GithubIcon class='link-icon'/>
+                        </div>
                     </div>
                     <span class='link-text github-color'>Github</span>
                 </div>
                 <div class='link'>
                 <div class='link-icon-container'>
-                    <WebsiteIcon class='link-icon-shadow website-color'/>
-                    <WebsiteIcon class='link-icon'/>
+                    <div class='website-box link-icon-shadow'>
+                        <WebsiteIcon class='website-color'/>
+                    </div>
+                    <div class='website-box'>
+                        <WebsiteIcon class='link-icon'/>
+                    </div>
                 </div>
                     <span class='link-text website-color'>Website</span>
                 </div>

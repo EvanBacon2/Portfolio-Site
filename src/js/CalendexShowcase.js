@@ -5,7 +5,6 @@ import IosShowcase from 'js/IosShowcase'
 import Links from 'js/Links';
 import { THEMES } from 'js/Themes';
 
-import 'css/ContentHeader.css';
 import 'css/CalendexShowcase.css'
 
 export default class CalendexShowcase extends Component {
