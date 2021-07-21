@@ -23,9 +23,9 @@
 
 .nav-line.closed {
     background-color: #F58C8C;
-    transition: all .2s .2s;
+    transition: all .6s .2s;
 }
 .nav-line.open {
     background-color: #FAFEFF;
-    transition: all .2s .6s;
+    transition: all .6s 1s;
 }

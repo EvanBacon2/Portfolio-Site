@@ -139,6 +139,7 @@
     background-color: #FAFEFF;
     padding: .3em .5em;
     margin-bottom: 1.5em;
+    border: none;
     border-radius: .25em;
     text-decoration: none;
 }

@@ -12,7 +12,7 @@ export default class Projects extends Component {
             <div class='projects'>
                 <ContentHeader title='Projects' subTitle='' theme={THEMES.BRAND}/>
                 <div class='gallery'>
-                    <IosCard title='calendex' theme='calendex'></IosCard>
+                    <IosCard title='calendex' theme='calendex' toggleOverlay={this.props.toggleOverlay}/>
                 </div>
             </div>
         );

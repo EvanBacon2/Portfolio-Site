@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import NavButton from 'js/NavButton';
+import BackButton from 'js/BackButton';
 import NavPage from 'js/NavPage';
 import Overlay from 'js/Overlay';
 import CalendexShowcase from 'js/CalendexShowcase'
@@ -25,7 +26,13 @@ class App extends Component {
     }
   }
 
-  toggleNav = () => {
+  toggleOverlay = () => {
+    this.toggleOverlay(this.state.overlayTheme);
+  }
+
+  toggleOverlay = (theme) => {
+    this.setState({ overlayTheme: theme});
+
     const master = document.getElementById('master');
     const closedInitials = document.getElementById('closed-initials');
 
@@ -47,14 +54,10 @@ class App extends Component {
         master.style.paddingRight = '0px';
         closedInitials.style.paddingRight = '0px';
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
-      }, 800);
+      }, 1400);
 
       this.setState({ navState: 'closed' });
     }
-  }
-
-  setOverlayTheme(theme) {
-    this.setState({ overlayTheme: theme })
   }
 
   render() {
@@ -64,9 +67,10 @@ class App extends Component {
       <Router>
           <div class="App">
             <body id='master'>
-              <NavButton navState={this.state.navState} toggleNav={this.toggleNav}/>
-              <NavPage navState={this.state.navState}/>
               <Overlay navState={this.state.navState} theme={this.state.overlayTheme}/>
+              {/*<NavButton navState='open'/>*/}
+              <BackButton/>
+              {/*<NavPage navState={this.state.navState} toggleOverlay={this.toggleOverlay}/>*/}
               {/*<CalendexShowcase navState={this.state.navState}/>*/}
               <div id='closed-initials'class={'initials-sizer initials-pos '  + this.state.navState}>
                 <InitialsIcon/>
@@ -78,7 +82,7 @@ class App extends Component {
                 <SiteHeader class='site-header'/>
                 <div class='content-sections'>
                     <About/>
-                    <Projects/>
+                    <Projects toggleOverlay={this.toggleOverlay}/>
                     <Contact/>
                 </div>
               </div>

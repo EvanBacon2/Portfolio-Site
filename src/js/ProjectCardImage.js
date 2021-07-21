@@ -31,10 +31,10 @@ export default class ProjectCardImage extends Component {
                     <div class={'card-image-cover right ' + this.props.theme + '-cover ' + this.state.coverState}></div>
                     <div class='desc-container'>
                         <div class={'cover-desc ' + this.state.coverState}>{this.props.children}</div>
-                        <a class={'learn-link ' + this.props.theme + '-link ' + this.state.coverState} href='https://github.com/EvanBacon2' 
-                           target='_blank' rel='noreferrer'>
+                        <button class={'learn-link ' + this.props.theme + '-link ' + this.state.coverState} 
+                                onClick={() => this.props.toggleOverlay(this.props.theme)}>
                             Learn More
-                        </a>
+                        </button>
                     </div>
             </div>
         );

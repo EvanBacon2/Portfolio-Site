@@ -1,0 +1,13 @@
+#back-button-sizer {
+    width: 2.833em;
+    height: 1.3em;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+}
+
+#back-button {
+    fill: #F58C8C;
+    stroke: #F58C8C;
+}

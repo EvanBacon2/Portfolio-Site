@@ -1,5 +1,7 @@
 import { Component } from 'react';
 
+import NavButton from 'js/NavButton';
+
 import 'css/NavPage.css';
 
 import {ReactComponent as GithubIcon} from 'svg/github.svg';
@@ -9,8 +11,7 @@ export default class NavPage extends Component {
     render() {
         return (
             <div class='nav-page'>
-                {/*<div class={'nav-overlay left ' + this.props.navState}/>
-                <div class={'nav-overlay right ' + this.props.navState}/>*/}
+                <NavButton navState={this.props.navState} toggleOverlay={this.props.toggleOverlay}/>
                 <div id='nav-contents' class={this.props.navState}>
                     <div id='nav-menu'>
                         <h1 id='nav-menu-header' class='nav-header'>Navigation</h1>
