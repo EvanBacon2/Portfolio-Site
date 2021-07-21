@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 
 #nav-page {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 #nav-contents {
@@ -14,15 +14,14 @@
     justify-content: space-between;
     width: 60vw;
     height: 60vh;
-}
 
-#nav-contents.closed {
     visibility: hidden;
     opacity: 0;
     transition: all .6s .2s;
 }
 
-#nav-contents.open {
+#nav-contents.open.brand {
+    visibility: visible;
     opacity: 1.0;
     transition: opacity .6s 1s;
 }

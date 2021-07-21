@@ -26,12 +26,8 @@ class App extends Component {
     }
   }
 
-  toggleOverlay = () => {
-    this.toggleOverlay(this.state.overlayTheme);
-  }
-
   toggleOverlay = (theme) => {
-    this.setState({ overlayTheme: theme});
+    this.setState({ overlayTheme: theme });
 
     const master = document.getElementById('master');
     const closedInitials = document.getElementById('closed-initials');
@@ -68,10 +64,10 @@ class App extends Component {
           <div class="App">
             <body id='master'>
               <Overlay navState={this.state.navState} theme={this.state.overlayTheme}/>
-              {/*<NavButton navState='open'/>*/}
-              <BackButton/>
-              {/*<NavPage navState={this.state.navState} toggleOverlay={this.toggleOverlay}/>*/}
-              {/*<CalendexShowcase navState={this.state.navState}/>*/}
+              <NavButton navState={this.state.navState} toggleOverlay={this.toggleOverlay}/>
+              <BackButton navState={this.state.navState} toggleOverlay={this.toggleOverlay} theme={this.state.overlayTheme}/>
+              <NavPage navState={this.state.navState} theme={this.state.overlayTheme}/>
+              <CalendexShowcase navState={this.state.navState} theme={this.state.overlayTheme}/>
               <div id='closed-initials'class={'initials-sizer initials-pos '  + this.state.navState}>
                 <InitialsIcon/>
               </div>

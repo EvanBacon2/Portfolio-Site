@@ -10,9 +10,8 @@ import {ReactComponent as LinkedInIcon} from 'svg/linkedin.svg';
 export default class NavPage extends Component {
     render() {
         return (
-            <div class='nav-page'>
-                <NavButton navState={this.props.navState} toggleOverlay={this.props.toggleOverlay}/>
-                <div id='nav-contents' class={this.props.navState}>
+            <div id='nav-page'>
+                <div id='nav-contents' class={this.props.navState + ' ' + this.props.theme}>
                     <div id='nav-menu'>
                         <h1 id='nav-menu-header' class='nav-header'>Navigation</h1>
                         <button id='nav-bttn-about' class='nav-bttn'>About</button>

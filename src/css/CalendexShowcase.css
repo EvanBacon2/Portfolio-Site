@@ -3,15 +3,14 @@
     top: 7em;
     left: 7em;
     z-index: 1001;
-}
 
-.showcase-container.closed {
     visibility: hidden;
     opacity: 0;
-    transition: all .2s .2s;
+    transition: all .6s .2s;
 }
 
-.showcase-container.open {
+.showcase-container.open.calendex {
+    visibility: visible;
     opacity: 1.0;
-    transition: opacity .2s .6s;
+    transition: opacity .6s 1s;
 }

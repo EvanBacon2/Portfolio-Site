@@ -8,7 +8,7 @@
     font-size: 1.5rem;
     width: fit-content;
     height: 1.25em;
-    z-index: 1001;
+    z-index: 999;
 }
 
 .nav-button:hover {
@@ -22,10 +22,11 @@
 }
 
 .nav-line.closed {
+    opacity: 1;
     background-color: #F58C8C;
     transition: all .6s .2s;
 }
 .nav-line.open {
-    background-color: #FAFEFF;
+    opacity: 0;
     transition: all .6s 1s;
 }

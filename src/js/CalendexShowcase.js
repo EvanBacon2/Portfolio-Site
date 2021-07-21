@@ -11,7 +11,7 @@ import 'css/CalendexShowcase.css'
 export default class CalendexShowcase extends Component {
     render() {
         return (
-            <div id='calendex-showcase' class={'showcase-container ' + this.props.navState}>
+            <div id='calendex-showcase' class={'showcase-container ' + this.props.navState + ' ' + this.props.theme}>
                 <div class='content-container'>
                     <ContentHeader title='Calendex' subTitle='ios app' theme={THEMES.CALENDEX}/>
                     <p class='content-description'>                        

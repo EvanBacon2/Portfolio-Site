@@ -5,9 +5,29 @@
     position: fixed;
     top: 1em;
     left: 1em;
+    z-index: 1002;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all .6s .2s;
 }
 
-#back-button {
-    fill: #F58C8C;
-    stroke: #F58C8C;
+#back-button-sizer:hover {
+    cursor: pointer;
+}
+
+#back-button-sizer.open {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .6s 1s;
+}
+
+#back-button.brand {
+    fill: #FAFEFF;
+    stroke: #FAFEFF;
+}
+
+#back-button.calendex {
+    fill: #38CDA1;
+    stroke: #38CDA1;
 }
