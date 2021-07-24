@@ -1,6 +1,7 @@
 .grad-photo {
     width: 8.041em;
-    height: auto;
+    height: fit-content;
+    object-fit: contain;
     border: .4167em solid #FAFEFF;
     border-radius: .625em;
     font-size: 1.5rem;

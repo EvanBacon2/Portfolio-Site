@@ -1,5 +1,22 @@
-.projects {
+#projects {
     height: 100vh;
+    background-color: #22282E;
+    grid-area: 3 / 1 / 4 / 4;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+#projects-content {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#projects-triangle-box {
+    width: 50%;
+    height: calc(50vw * .2885);
+}
+
+.projects-background-fill {
+    fill: #1C1F22;
 }
 
 .gallery {

@@ -10,14 +10,6 @@
     font-size: 1.5rem;
 }
 
-#open-initials.open {
-    right: calc(1em + 8px);
-}
-
-#open-initials.closed {
-    right: calc(1em + 8px);
-}
-
 #closed-initials {
     z-index: 999;
 }
@@ -37,7 +29,7 @@
 }
 
 .initials-shadow.brand {
-    fill: #F58C8C;
+    fill: #E26E6E;
 }
 
 #open-initials .initials-shadow.calendex {

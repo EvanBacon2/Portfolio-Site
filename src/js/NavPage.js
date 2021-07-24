@@ -1,7 +1,5 @@
 import { Component } from 'react';
 
-import NavButton from 'js/NavButton';
-
 import 'css/NavPage.css';
 
 import {ReactComponent as GithubIcon} from 'svg/github.svg';

@@ -5,12 +5,13 @@ import HeadShot from 'js/HeadShot';
 import { THEMES } from 'js/Themes';
 
 import 'css/About.css';
+import 'css/Structure.css';
 
 export default class About extends Component {
     render() {
         return (
-            <div class='about'>
-                <div class='content'>
+            <div id='about' class='content-grid-template'>
+                <div id='about-content'>
                     <div class='description-container'>
                         <ContentHeader title='About Me' theme={THEMES.BRAND}/>
                         <p class='description'>                        

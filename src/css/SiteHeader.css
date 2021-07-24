@@ -5,7 +5,7 @@
   color: #FAFEFF;
   font-family: 'Racing Sans One';
   font-size: 2.875em;
-  text-shadow: 3px 3px #F58C8C;
+  text-shadow: 3px 3px #E26E6E;
   margin: 0px;
   padding-left: 15px;
   padding-right: 15px;
@@ -13,7 +13,7 @@
 }
 
 #header-underline {
-  background-color: #F58C8C;
+  background-color: #E26E6E;
   height: .0833em;
   border: none;
   margin: 0px;
@@ -23,6 +23,7 @@
 #skill-list {
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 .skill-item {

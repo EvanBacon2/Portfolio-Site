@@ -21,3 +21,13 @@
     align-self: end;
     margin-bottom: 1em;
 }
+
+.show-prompt {
+    transition: all .4s .2s;
+}
+
+.hide-prompt {
+    opacity: 0;
+    transform: translateY(2em);
+    transition: all .4s;
+}

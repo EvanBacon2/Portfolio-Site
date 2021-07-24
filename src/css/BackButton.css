@@ -1,25 +1,28 @@
-#back-button-sizer {
-    width: 2.833em;
-    height: 1.3em;
-    font-size: 1.5rem;
+#back-button-box {
+    width: 1.9167em;
+    height: 1.167em;
     position: fixed;
-    top: 1em;
-    left: 1em;
+    top: 2em;
+    left: 1.25em;
     z-index: 1002;
-
-    visibility: hidden;
-    opacity: 0;
-    transition: all .6s .2s;
 }
 
-#back-button-sizer:hover {
+#back-button-box:hover {
     cursor: pointer;
 }
 
-#back-button-sizer.open {
+#back-button-box.closed {
+    visibility: hidden;
+    opacity: 0;
+    transform: rotate(90deg) translateY(1em);
+    transition: all .6s .2s;
+}
+
+#back-button-box.open {
     visibility: visible;
     opacity: 1;
-    transition: opacity .6s 1s;
+    transform: rotate(90deg) translateY(0em);
+    transition: all .6s 1s;
 }
 
 #back-button.brand {

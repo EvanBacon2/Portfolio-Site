@@ -6,7 +6,6 @@ import BackButton from 'js/BackButton';
 import NavPage from 'js/NavPage';
 import Overlay from 'js/Overlay';
 import CalendexShowcase from 'js/CalendexShowcase'
-import SiteHeader from 'js/SiteHeader';
 import LandingPage from 'js/LandingPage';
 import About from 'js/About';
 import Projects from 'js/Projects';
@@ -37,19 +36,19 @@ class App extends Component {
       master.style.top = `-${window.scrollY}px`;
       setTimeout(() => {
         master.style.position = 'fixed';
-        master.style.paddingRight = '8px';
-        closedInitials.style.paddingRight = '8px';
+        /*master.style.paddingRight = '6px';
+        closedInitials.style.paddingRight = '6px';*/
       }, 200);
 
       this.setState({ navState: 'open' });
     } else {
       const scrollY = master.style.top;
-      closedInitials.style.paddingRight = '8px';
+      closedInitials.style.paddingRight = '6px';
       setTimeout(() => {
         master.style.position = '';
         master.style.top = '';
-        master.style.paddingRight = '0px';
-        closedInitials.style.paddingRight = '0px';
+        /*master.style.paddingRight = '0px';
+        closedInitials.style.paddingRight = '0px';*/
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
       }, 1400);
 
@@ -63,7 +62,7 @@ class App extends Component {
     return (
       <Router>
           <div class="App">
-            <body id='master'>
+            <div id='master'>
               <Overlay navState={this.state.navState} theme={this.state.overlayTheme}/>
               <NavButton navState={this.state.navState} toggleOverlay={this.toggleOverlay}/>
               <BackButton navState={this.state.navState} toggleOverlay={this.toggleOverlay} theme={this.state.overlayTheme}/>
@@ -75,16 +74,13 @@ class App extends Component {
               <div id='open-initials'class={'initials-sizer initials-pos ' + this.state.navState}>
                 <InitialsIcon class={'initials-shadow ' + this.state.overlayTheme}/>
               </div>
-              <div class='skeleton'>
-                {/*<SiteHeader class='site-header'/>*/}
-                <LandingPage/>
-                <div class='content-sections'>
-                    <About/>
-                    <Projects toggleOverlay={this.toggleOverlay}/>
-                    <Contact/>
-                </div>
+              <div class='skeleton content-grid-template'>
+                <LandingPage scrollTop={window.pageYOffset}/>
+                <About/>
+                <Projects toggleOverlay={this.toggleOverlay}/>
+                <Contact/>
               </div>
-            </body>
+            </div>
           </div>
       </Router>)
   }

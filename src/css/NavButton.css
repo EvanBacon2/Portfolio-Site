@@ -23,8 +23,7 @@
 .nav-line {
     opacity: 1;
     background-color: #637280;
-    box-shadow: 0em 0em #E26E6E;
-    transform: translate(0em, 0em) skew(11.3deg);
+    transform: skew(11.3deg);
     transition: all .2s 0s;
 }
 
