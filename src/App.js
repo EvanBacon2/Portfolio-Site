@@ -7,6 +7,7 @@ import NavPage from 'js/NavPage';
 import Overlay from 'js/Overlay';
 import CalendexShowcase from 'js/CalendexShowcase'
 import SiteHeader from 'js/SiteHeader';
+import LandingPage from 'js/LandingPage';
 import About from 'js/About';
 import Projects from 'js/Projects';
 import Contact from 'js/Contact';
@@ -75,7 +76,8 @@ class App extends Component {
                 <InitialsIcon class={'initials-shadow ' + this.state.overlayTheme}/>
               </div>
               <div class='skeleton'>
-                <SiteHeader class='site-header'/>
+                {/*<SiteHeader class='site-header'/>*/}
+                <LandingPage/>
                 <div class='content-sections'>
                     <About/>
                     <Projects toggleOverlay={this.toggleOverlay}/>

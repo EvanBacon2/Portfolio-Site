@@ -20,18 +20,6 @@
   transform: skew(-12deg);
 }
 
-.site-header {
-  grid-area: 1 / 2 / 2 / 3;
-}
-
-.center-div {
-  text-align: center;
-}
-
-#header-container {
-  display: inline-block;
-}
-
 #skill-list {
   padding: 0;
   margin: 0;

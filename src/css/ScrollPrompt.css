@@ -1,0 +1,33 @@
+#scroll-prompt-text {
+    font-family: 'Roboto';
+    font-size: .7em;
+    color: #FAFEFF;
+}
+
+#scroll-chevron-container {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+#scroll-chevron {
+    z-index: 1;
+}
+
+.scroll-chevron-box {
+    width: 1.9167em;
+    height: 1.167em;
+}
+
+.scroll-chevron-layout {
+    position: absolute;
+    top: .167em;
+}
+
+.chevron-fill {
+    fill: #FAFEFF;
+}
+
+.chevron-shadow-fill {
+    fill: #E26E6E;
+}

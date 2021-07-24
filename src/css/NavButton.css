@@ -16,17 +16,24 @@
 }
 
 .nav-line {
-    width: 2.5497em;
-    height: .07497em;
-    translate: skew(12deg);
+    width: 2.9167em;
+    height: .2083em;
 }
 
-.nav-line.closed {
+.nav-line {
     opacity: 1;
-    background-color: #F58C8C;
-    transition: all .6s .2s;
+    background-color: #637280;
+    box-shadow: 0em 0em #E26E6E;
+    transform: translate(0em, 0em) skew(11.3deg);
+    transition: all .2s 0s;
 }
+
+.nav-button:hover .nav-line {
+    background-color: #FAFEFF;
+    box-shadow: .125em .0833em #E26E6E;
+    transform: translate(-.125em, -.0833em);
+}
+
 .nav-line.open {
     opacity: 0;
-    transition: all .6s 1s;
 }

@@ -1,7 +1,8 @@
 import { React, Component } from 'react';
 
-import 'css/NavButton.css';
 import { THEMES } from './Themes';
+
+import 'css/NavButton.css';
 
 export default class NavButton extends Component {
     render() {
