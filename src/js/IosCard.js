@@ -19,7 +19,7 @@ export default class IosCard extends Component {
                    </div>
                 </div>  
                 
-                <ProjectCardImage dimensions='ios' theme={this.props.theme} toggleOverlay={this.props.toggleOverlay}>
+                <ProjectCardImage dimensions='ios' theme={this.props.theme} toggleShowcase={this.props.toggleShowcase}>
                     An Ios app for my project
                 </ProjectCardImage>
 

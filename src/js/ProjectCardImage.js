@@ -32,7 +32,7 @@ export default class ProjectCardImage extends Component {
                     <div class='desc-container'>
                         <div class={'cover-desc ' + this.state.coverState}>{this.props.children}</div>
                         <button class={'learn-link ' + this.props.theme + '-link ' + this.state.coverState} 
-                                onClick={() => this.props.toggleOverlay(this.props.theme)}>
+                                onClick={() => this.props.toggleShowcase(this.props.theme)}>
                             Learn More
                         </button>
                     </div>

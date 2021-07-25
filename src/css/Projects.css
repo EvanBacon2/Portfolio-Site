@@ -1,24 +1,99 @@
 #projects {
-    height: 100vh;
+    height: fit-content;
+    width: 100%;
     background-color: #22282E;
     grid-area: 3 / 1 / 4 / 4;
     display: grid;
     grid-template-rows: 1fr;
 }
 
-#projects-content {
-    grid-area: 1 / 2 / 2 / 3;
+#projects-background {
+    grid-area: 1 / 1 / 2 / 4;
 }
 
-#projects-triangle-box {
+#projects-content {
+    grid-area: 1 / 2 / 2 / 3;
+    height: fit-content;
+    justify-self: center;
+    margin-top: 3.5em;
+    z-index: 1;
+}
+
+.projects-triangle-box {
+    display: inline-block;
     width: 50%;
     height: calc(50vw * .2885);
 }
 
-.projects-background-fill {
-    fill: #1C1F22;
+.projects-triangle-box.top {
+    transform: scaleY(-1);
 }
 
-.gallery {
-    margin-top: 2em;
+.projects-triangle-box.top.right {
+    transform: scaleY(-1) scaleX(-1); 
+}
+
+.projects-triangle-box.middle-top {
+    margin-top: -.08033em;
+    transform: translateY(calc(-50vw * .2885))
+}
+
+.projects-triangle-box.middle-top.left {
+    transform: scaleX(-1) translateY(calc(-50vw * .2885));
+}
+
+.projects-triangle-box.middle-bottom {
+    transform: scaleY(-1) translateY(calc(50vw * .2885));
+}
+
+.projects-triangle-box.middle-bottom.left {
+    transform: scaleX(-1) scaleY(-1) translateY(calc(50vw * .2885));
+}
+
+.projects-triangle-box.bottom {
+    margin-top: -.08033em;
+    transform: translateY(calc(-100vw * .2885));
+}
+
+.projects-triangle-box.bottom.right {
+    transform: scaleX(-1) translateY(calc(-100vw * .2885));
+}
+
+.projects-background-fill {
+    fill: #1C1F23;
+}
+
+.center {
+    margin: auto;
+}
+
+#gallery-container {
+    width: 100%;
+    min-height: 26em;
+    height: fit-content;
+    margin-top: -.25em;
+    padding: 1em 0;
+    display: grid;
+
+    transform: translateY(calc(-50vw * .2885));
+
+    background-color: #1C1F23;
+}
+
+#gallery-box {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.7em, 16em));
+    row-gap: 1em;
+    justify-content: center;
+    align-content: center;
+}
+
+#gallery-box * {
+    justify-self: center;
+}
+
+#gallery-box.showcase {
+    opacity: 0;
+    transition: all .4s;
 }

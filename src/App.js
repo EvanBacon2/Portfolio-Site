@@ -36,8 +36,6 @@ class App extends Component {
       master.style.top = `-${window.scrollY}px`;
       setTimeout(() => {
         master.style.position = 'fixed';
-        /*master.style.paddingRight = '6px';
-        closedInitials.style.paddingRight = '6px';*/
       }, 200);
 
       this.setState({ navState: 'open' });
@@ -47,8 +45,6 @@ class App extends Component {
       setTimeout(() => {
         master.style.position = '';
         master.style.top = '';
-        /*master.style.paddingRight = '0px';
-        closedInitials.style.paddingRight = '0px';*/
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
       }, 1400);
 
@@ -77,7 +73,7 @@ class App extends Component {
               <div class='skeleton content-grid-template'>
                 <LandingPage scrollTop={window.pageYOffset}/>
                 <About/>
-                <Projects toggleOverlay={this.toggleOverlay}/>
+                <Projects/>
                 <Contact/>
               </div>
             </div>

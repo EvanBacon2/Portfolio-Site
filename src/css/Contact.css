@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
-.contact {
+#contact {
     height: 100vh;
+    margin-top: -.25em;
+    transform: translateY(calc(-100vw * .2885));
+    background-color: #1C1F23;
+    grid-area: 4 / 1 / 4 / 5;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+#contact.contents {
+    grid-area: 1 / 2 / 2 / 3;
 }
 
 .contact-form {
