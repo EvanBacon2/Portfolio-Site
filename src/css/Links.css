@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
-    grid-area: 1 / 4 / 2 / 5;
 }
 
 .link {

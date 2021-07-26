@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
 .showcase-container {
-    position: fixed;
-    top: 5em;
-    left: 5em;
+    position: relative;
     z-index: 998;
 
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
+    grid-area: 1 / 2 / 2 / 3; 
 
     font-size: 1.5rem;
 
     visibility: hidden;
     opacity: 0;
     transition: all .6s .2s;
+
+    align-self: center;
 }
 
 .showcase-container.showcase.calendex {
@@ -22,9 +23,7 @@
     transition: opacity .6s 1s;
 }
 
-.content-container {
-    grid-area: 1 / 2 / 2 / 3
-}
+
 
 .content-description {
     width: 80%;

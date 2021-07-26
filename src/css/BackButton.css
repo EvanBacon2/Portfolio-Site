@@ -6,6 +6,7 @@
     left: 1.25em;
     z-index: 1002;
     font-size: 1.5rem;
+    transform: rotate(90deg);
 }
 
 #back-button-box:hover {
@@ -29,7 +30,6 @@
 #back-button-box.showcase {
     visibility: visible;
     opacity: 1;
-    transform: rotate(90deg) translateY(0em);
     transition: all .6s 1s;
 }
 
@@ -39,6 +39,6 @@
 }
 
 #back-button.calendex {
-    fill: #38CDA1;
-    stroke: #38CDA1;
+    fill: #637280;
+    stroke: #637280;
 }

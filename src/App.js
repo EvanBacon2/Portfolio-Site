@@ -61,7 +61,7 @@ class App extends Component {
                 <LandingPage scrollTop={window.pageYOffset}/>
                 <About/>
                 <Projects/>
-                <Contact/>
+                {/*<Contact/>*/}
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ export default class CalendexShowcase extends Component {
         return (
             <div id='calendex-showcase' class={'showcase-container ' + this.props.showcase}>
                 <BackButton layoutClass='back-button-layout' showcase={this.props.showcase} theme='calendex' 
-                            toggleOverlay={this.props.toggleShowcase}/>
+                            onClick={this.props.toggleShowcase}/>
                 <div class='content-container'>
                     <ContentHeader title='Calendex' subTitle='ios app' theme={THEMES.CALENDEX}/>
                     <p class='content-description'>                        
