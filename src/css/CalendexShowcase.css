@@ -5,7 +5,8 @@
     z-index: 998;
 
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 3fr 9fr;
+    grid-template-columns: .3fr 2fr 1.5fr 1fr;
     grid-area: 1 / 2 / 2 / 3; 
 
     font-size: 1.5rem;
@@ -23,10 +24,26 @@
     transition: opacity .6s 1s;
 }
 
+.showcase-back-button-layout {
+    grid-area: 1 / 1 / 2 / 2;
+    align-self: center;
+}
 
+.content-layout {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.showcase-layout {
+    grid-area: 2 / 3 / 3 / 4;
+    justify-self: center;
+}
+
+.links-layout {
+    grid-area: 2 / 4 / 3 / 5
+}
 
 .content-description {
-    width: 80%;
+    width: 100%;
     margin-left: 15px;
     font-family: 'Roboto';
     color: #FAFEFF;

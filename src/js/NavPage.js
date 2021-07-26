@@ -13,7 +13,8 @@ export default class NavPage extends Component {
         return (
             <div id='nav-page'>
                 <div id='nav-contents' class={this.props.navState}>
-                    <BackButton navState={this.props.navState} onClick={this.props.onClick} theme='brand'/>
+                    <BackButton layoutClass='nav-back-button-layout' navState={this.props.navState} 
+                                onClick={this.props.onClick} theme='brand'/>
                     <InitialsLogo theme='brand'/>
                     <div id='nav-menu'>
                         <h1 id='nav-menu-header' class='nav-header'>Navigation</h1>

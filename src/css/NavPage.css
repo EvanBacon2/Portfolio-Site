@@ -26,6 +26,13 @@
     transition: opacity .6s 1s;
 }
 
+.nav-back-button-layout {
+    position: fixed;
+    top: 2em;
+    left: 1.25em;
+    z-index: 1002;
+}
+
 .nav-header {
     font-family: 'Racing Sans One';
     font-size: 5em;
