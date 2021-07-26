@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
+
+#page-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#page-caption {
+    font-family: 'Racing Sans One';
+    font-size: .8em;
+    color: #FAFEFF;
+    text-align: center;
+    margin-top: .6em;
+}
+
+#index-list {
+    list-style: none;
+    text-align: center;
+    font-size: 3rem;
+    padding: 0;
+    margin: -.5em 0;
+}
+
+.index-dot {
+    display: inline-block;
+    padding: 0 .11em;
+    color: #FAFEFF;
+    transition: color .2s 0s;
+}
+
+.index-dot.selected {
+    color: #38CDA1;
+}

@@ -90,6 +90,14 @@
     animation: background-color-shift 1.2s linear .8s;
 }
 
+.projects-header {
+    transition: text-shadow .4s .6s, background-color .4s .6s;
+}
+
+.projects-header.showcase {
+    transition: text-shadow .4s 1.6s, background-color .4s 1.6s;
+}
+
 #gallery-box {
     grid-area: 1 / 2 / 2 / 3;
     display: grid;

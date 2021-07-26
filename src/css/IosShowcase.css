@@ -1,8 +1,43 @@
+#ios-showcase {
+    display: flex;
+    flex-direction: column;
+}
+
+#showcase-screen {
+    display: flex;
+}
+
+.showcase-chevron {
+    width: 1.9167em;
+    height: 1.167em;
+    margin: 0 .5em;
+    align-self: center;
+    fill: #637280;
+}
+
+.showcase-chevron.left {
+    transform: rotate(90deg);
+}
+
+.showcase-chevron.right {
+    transform: rotate(-90deg);
+}
 
 .showcase-border {
-    width: 195px;
-    height: 422px;
-    border: 2px solid #38CDA1;
-    border-radius: 10px;
-    float: left;   
+    width: 8.125em;
+    height: 17.583em;
+    border: .0833em solid #38CDA1;
+    border-radius: .4167em; 
+    overflow: hidden;
+}
+
+#showcase-image-list {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform .4s ease-in;
+}
+
+.showcase-photo {
+    object-fit: contain; 
+    width: 8.125em;
 }

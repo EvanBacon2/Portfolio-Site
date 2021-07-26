@@ -14,12 +14,18 @@ export default class Projects extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showcase: ''
+            showcase: '',
+            theme: 'brand'
         };
     }
 
     toggleShowcase = (theme) => {
-        this.setState({ showcase: this.state.showcase === '' ? 'showcase ' + theme : ''})
+        this.setState((state) => {
+            return { 
+                showcase: state.showcase === '' ? 'showcase ' + theme : '',
+                theme: state.showcase === '' ? theme : 'brand'
+            }
+        });
     }
 
     triangles(orientation) {
@@ -61,7 +67,8 @@ export default class Projects extends Component {
                 </div>
                 <div id='projects-content'>
                     <div class='center'>
-                        <ContentHeader title='Projects' subTitle='' theme={THEMES.BRAND}/>
+                        <ContentHeader title='Projects' subTitle='' theme={this.state.theme} 
+                                       themeTransition={'projects-header ' + this.state.showcase}/>
                     </div>
                 </div>
             </div>
