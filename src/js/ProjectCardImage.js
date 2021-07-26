@@ -27,8 +27,7 @@ export default class ProjectCardImage extends Component {
             <div class={'card-image ' + this.props.dimensions + '-image ' + this.props.theme + '-border'}
                      onMouseEnter={() => this.displayCover()} 
                      onMouseLeave={() => this.hideCover()}>
-                    <div class={'card-image-cover left ' + this.props.theme + '-cover ' + this.state.coverState}></div>
-                    <div class={'card-image-cover right ' + this.props.theme + '-cover ' + this.state.coverState}></div>
+                    <div class={'card-image-cover ' + this.props.theme + '-cover ' + this.state.coverState}/>
                     <div class='desc-container'>
                         <div class={'cover-desc ' + this.state.coverState}>{this.props.children}</div>
                         <button class={'learn-link ' + this.props.theme + '-link ' + this.state.coverState} 

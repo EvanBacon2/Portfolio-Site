@@ -45,44 +45,18 @@
 }
 
 .card-image-cover {
-    width: 0%;
+    width: 102%;
     height: 102%;
-    top: 0%;
+    opacity: 0;
+    top: 0;
+    left: 0;
     transition: all 0.2s .2s;
     position: absolute;
 }
 
-.card-image-cover.right {
-    right: 0; 
-}
-
-.card-image-cover.left {
-    left: 0; 
-}
-
 .card-image-cover.display-cover {
-    transform: skew(-15deg);
-    transition: all .2s 0s;
-}
-
-.web-image .right.display-cover {
-    right: -2.2em;
-    width: calc(50.1% + 2.2em);
-}
-
-.web-image .left.display-cover {
-    left: -2.2em;
-    width: calc(50.1% + 2.2em);
-}
-
-.ios-image .right.display-cover {
-    right: -9.079em;
-    width: calc(50.3% + 9.079em);
-}
-
-.ios-image .left.display-cover {
-    left: -9.079em;
-    width: calc(50.3% + 9.079em);
+    opacity: 5%;
+    transition: opacity .2s 0s;
 }
 
 .web-cover {
@@ -149,7 +123,7 @@
 }
 
 .calendex-link {
-    color: #38CDA1;
+    color: #222E38;
 }
 
 .link-box {

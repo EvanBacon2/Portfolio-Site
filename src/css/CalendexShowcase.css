@@ -13,7 +13,7 @@
 
     visibility: hidden;
     opacity: 0;
-    transition: all .6s .2s;
+    transition: all .4s 0s;
 
     align-self: center;
 }
@@ -21,7 +21,7 @@
 .showcase-container.showcase.calendex {
     visibility: visible;
     opacity: 1.0;
-    transition: opacity .6s 1s;
+    transition: opacity .8s 2.4s;
 }
 
 .showcase-back-button-layout {
