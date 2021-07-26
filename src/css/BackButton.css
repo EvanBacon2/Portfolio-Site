@@ -5,6 +5,7 @@
     top: 2em;
     left: 1.25em;
     z-index: 1002;
+    font-size: 1.5rem;
 }
 
 #back-button-box:hover {
@@ -19,6 +20,13 @@
 }
 
 #back-button-box.open {
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(90deg) translateY(0em);
+    transition: all .6s 1s;
+}
+
+#back-button-box.showcase {
     visibility: visible;
     opacity: 1;
     transform: rotate(90deg) translateY(0em);

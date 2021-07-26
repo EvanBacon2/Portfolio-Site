@@ -2,33 +2,26 @@ import { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import NavButton from 'js/NavButton';
-import BackButton from 'js/BackButton';
+import InitialsLogo from 'js/InitialsLogo';
 import NavPage from 'js/NavPage';
 import Overlay from 'js/Overlay';
-import CalendexShowcase from 'js/CalendexShowcase'
 import LandingPage from 'js/LandingPage';
 import About from 'js/About';
 import Projects from 'js/Projects';
 import Contact from 'js/Contact';
 import { THEMES } from 'js/Themes';
 
-import 'css/FixedElements.css';
 import 'css/Structure.css';
-
-import {ReactComponent as InitialsIcon} from 'svg/initials.svg';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       navState: 'closed',
-      overlayTheme: THEMES.BRAND,
     }
   }
 
-  toggleOverlay = (theme) => {
-    this.setState({ overlayTheme: theme });
-
+  toggleOverlay = () => {
     const master = document.getElementById('master');
     const closedInitials = document.getElementById('closed-initials');
 
@@ -41,7 +34,6 @@ class App extends Component {
       this.setState({ navState: 'open' });
     } else {
       const scrollY = master.style.top;
-      closedInitials.style.paddingRight = '6px';
       setTimeout(() => {
         master.style.position = '';
         master.style.top = '';
@@ -59,17 +51,12 @@ class App extends Component {
       <Router>
           <div class="App">
             <div id='master'>
-              <Overlay navState={this.state.navState} theme={this.state.overlayTheme}/>
-              <NavButton navState={this.state.navState} toggleOverlay={this.toggleOverlay}/>
-              <BackButton navState={this.state.navState} toggleOverlay={this.toggleOverlay} theme={this.state.overlayTheme}/>
-              <NavPage navState={this.state.navState} theme={this.state.overlayTheme}/>
-              <CalendexShowcase navState={this.state.navState} theme={this.state.overlayTheme}/>
-              <div id='closed-initials'class={'initials-sizer initials-pos '  + this.state.navState}>
-                <InitialsIcon class={'initials-shadow ' + this.state.overlayTheme}/>
+              <div id='fixed-elements'>
+                <NavButton navState={this.state.navState} toggleOverlay={this.toggleOverlay}/>
+                <InitialsLogo theme='brand'/>
               </div>
-              <div id='open-initials'class={'initials-sizer initials-pos ' + this.state.navState}>
-                <InitialsIcon class={'initials-shadow ' + this.state.overlayTheme}/>
-              </div>
+              <Overlay navState={this.state.navState}/>
+              <NavPage navState={this.state.navState} onClick={this.toggleOverlay}/>
               <div class='skeleton content-grid-template'>
                 <LandingPage scrollTop={window.pageYOffset}/>
                 <About/>

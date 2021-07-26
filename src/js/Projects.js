@@ -3,12 +3,12 @@ import { Component } from 'react';
 import ContentHeader from 'js/ContentHeader';
 import { THEMES } from 'js/Themes';
 import IosCard from 'js/IosCard';
+import CalendexShowcase from 'js/CalendexShowcase'
 
 import 'css/Projects.css';
 import 'css/Structure.css';
 
 import {ReactComponent as BackgroundTriangle} from 'svg/background-triangle.svg';
-import {ReactComponent as BackgroundTrapezoid} from 'svg/background-trapezoid.svg';
 
 export default class Projects extends Component {
     constructor(props) {
@@ -47,6 +47,7 @@ export default class Projects extends Component {
                             <IosCard title='Calendex' theme='calendex' toggleShowcase={this.toggleShowcase}/>
                             <IosCard title='Calendex' theme='calendex' toggleShowcase={this.toggleShowcase}/>
                         </div>
+                        <CalendexShowcase showcase={this.state.showcase} toggleShowcase={this.toggleShowcase}/>
                     </div>
                     <div class='projects-triangle-box middle-bottom left'>
                         <BackgroundTriangle class='projects-background-fill'/>

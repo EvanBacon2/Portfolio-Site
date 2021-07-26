@@ -1,5 +1,8 @@
 import { Component } from 'react';
 
+import BackButton from 'js/BackButton';
+import InitialsLogo from './InitialsLogo';
+
 import 'css/NavPage.css';
 
 import {ReactComponent as GithubIcon} from 'svg/github.svg';
@@ -9,7 +12,9 @@ export default class NavPage extends Component {
     render() {
         return (
             <div id='nav-page'>
-                <div id='nav-contents' class={this.props.navState + ' ' + this.props.theme}>
+                <div id='nav-contents' class={this.props.navState}>
+                    <BackButton navState={this.props.navState} onClick={this.props.onClick} theme='brand'/>
+                    <InitialsLogo theme='brand'/>
                     <div id='nav-menu'>
                         <h1 id='nav-menu-header' class='nav-header'>Navigation</h1>
                         <button id='nav-bttn-about' class='nav-bttn'>About</button>

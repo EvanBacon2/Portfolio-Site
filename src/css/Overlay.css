@@ -1,9 +1,9 @@
-
 .overlay {
     position: fixed;
     top: 0;
     z-index: 1000;
     height: 100vh;
+    background-color: #E26E6E;
 }
 
 .overlay.left {
@@ -22,12 +22,4 @@
 .overlay.open {
     width: 50.1%;
     transition: width .6s .2s;
-}
-
-.brand-overlay {
-    background-color: #E26E6E;
-}
-
-.calendex-overlay {
-    background-color: #233034;
 }

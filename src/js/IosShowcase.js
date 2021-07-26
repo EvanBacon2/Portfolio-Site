@@ -5,8 +5,10 @@ import '../css/IosShowcase.css'
 export default class IosShowcase extends Component {
     render() {
         return (
-            <div class='showcase-border'>
+            <div id='ios-showcase'>
+                <div class='showcase-border'>
                 
+                </div>
             </div>
         );
     }

@@ -4,7 +4,7 @@
     position: fixed;
     top: 5em;
     left: 5em;
-    z-index: 1001;
+    z-index: 998;
 
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -16,10 +16,14 @@
     transition: all .6s .2s;
 }
 
-.showcase-container.open.calendex {
+.showcase-container.showcase.calendex {
     visibility: visible;
     opacity: 1.0;
     transition: opacity .6s 1s;
+}
+
+.content-container {
+    grid-area: 1 / 2 / 2 / 3
 }
 
 .content-description {

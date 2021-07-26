@@ -2,6 +2,10 @@
     font-size: 1.5rem;
 }
 
+#fixed-elements {
+    z-index: 999;
+}
+
 .skeleton {
     display: grid;
     grid-template-rows: min-content auto;

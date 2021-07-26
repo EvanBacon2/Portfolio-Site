@@ -20,7 +20,7 @@
     transition: all .6s .2s;
 }
 
-#nav-contents.open.brand {
+#nav-contents.open {
     visibility: visible;
     opacity: 1.0;
     transition: opacity .6s 1s;
