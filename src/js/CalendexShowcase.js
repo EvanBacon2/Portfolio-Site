@@ -1,19 +1,22 @@
 import { React, Component } from 'react';
 
-import BackButton from './BackButton';
 import ContentHeader from 'js/ContentHeader';
 import IosShowcase from 'js/IosShowcase'
 import Links from 'js/Links';
 import { THEMES } from 'js/Themes';
+import SvgButton from 'js/SvgButton';
 
 import 'css/CalendexShowcase.css'
+
+import {ReactComponent as Chevron} from 'svg/chevron.svg';
 
 export default class CalendexShowcase extends Component {
     render() {
         return (
             <div id='calendex-showcase' class={'showcase-container ' + this.props.showcase}>
-                <BackButton layoutClass='showcase-back-button-layout' showcase={this.props.showcase} 
-                            theme='calendex' onClick={this.props.toggleShowcase}/>
+                <SvgButton layoutClass='showcase-back-button-layout'>
+                    <Chevron class='showcase-back-button' onClick={() => this.props.toggleShowcase('calendex')}/>
+                </SvgButton>
                 <div class='content-layout'>
                     <ContentHeader title='Calendex' subTitle='ios app' theme={THEMES.CALENDEX}/>
                     <p class='content-description'>                        

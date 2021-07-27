@@ -26,11 +26,23 @@
     transition: opacity .6s 1s;
 }
 
-.nav-back-button-layout {
+.nav-back-button {
+    width: 1.9167em;
+    height: 1.167em;
+    font-size: 1.5rem;
+    transform: rotate(90deg);
+    fill: #FAFEFF;
+}
+
+.nav-back-button.layout {
     position: fixed;
     top: 2em;
     left: 1.25em;
     z-index: 1002;
+}
+
+.nav-back-button:hover {
+    cursor: pointer;
 }
 
 .nav-header {
