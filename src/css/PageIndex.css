@@ -11,6 +11,7 @@
     font-family: 'Racing Sans One';
     font-size: .8em;
     color: #FAFEFF;
+    pointer-events: none;
     text-align: center;
     margin-top: .6em;
 }
@@ -21,15 +22,25 @@
     font-size: 3rem;
     padding: 0;
     margin: -.5em 0;
+    pointer-events: none;
 }
 
 .index-dot {
     display: inline-block;
     padding: 0 .11em;
     color: #FAFEFF;
+    pointer-events: none;
     transition: color .2s 0s;
 }
 
 .index-dot.selected {
     color: #38CDA1;
+}
+
+.no-highlight {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }

@@ -1,6 +1,7 @@
 import { React, Component } from 'react';
 
 import PageIndex from 'js/PageIndex';
+import SvgButton from 'js/SvgButton';
 
 import '../css/IosShowcase.css'
 
@@ -28,7 +29,9 @@ export default class IosShowcase extends Component {
         return (
             <div id='ios-showcase'>
                 <div id='showcase-screen'>
-                <Chevron class='showcase-chevron left' onClick={() => this.shiftPage(-1)}/>
+                <SvgButton layoutClass='showcase-chevron-layout'>
+                    <Chevron class='showcase-chevron left' onClick={() => this.shiftPage(-1)}/>
+                </SvgButton>
                     <div class='showcase-border'>
                         <div id='showcase-image-list'>
                             <div class='photo-box'>
@@ -45,7 +48,9 @@ export default class IosShowcase extends Component {
                             </div>
                         </div>
                     </div>
-                    <Chevron class='showcase-chevron right' onClick={() => this.shiftPage(1)}/>
+                    <SvgButton layoutClass='showcase-chevron-layout' direction='left/right' hoverX='' hoverY=''>
+                        <Chevron class='showcase-chevron right' onClick={() => this.shiftPage(1)}/>
+                    </SvgButton>
                 </div>
                 <PageIndex captions={['View Blood Sugar', 'page 2', 'page 3', 'page 4']} currPage={this.state.imageListPage}/>
             </div>

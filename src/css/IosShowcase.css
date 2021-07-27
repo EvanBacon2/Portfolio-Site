@@ -7,12 +7,14 @@
     display: flex;
 }
 
+.showcase-chevron-layout {
+    margin: auto .5em;
+    justify-self: center;
+}
+
 .showcase-chevron {
     width: 1.9167em;
     height: 1.167em;
-    margin: 0 .5em;
-    align-self: center;
-    fill: #637280;
 }
 
 .showcase-chevron.left {
@@ -40,4 +42,10 @@
 .showcase-photo {
     object-fit: contain; 
     width: 8.125em;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }

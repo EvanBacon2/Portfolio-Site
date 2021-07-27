@@ -4,7 +4,7 @@ import 'css/PageIndex.css';
 
 export default class PageIndex extends Component {
     captionForIndex = (index) => {
-        return <h1 id='page-caption'>{this.props.captions[index]}</h1>
+        return <h1 id='page-caption' class='no-highlight'>{this.props.captions[index]}</h1>
     }
 
     render() {
@@ -14,7 +14,7 @@ export default class PageIndex extends Component {
                 <ul id='index-list'>
                     {this.props.captions.map((caption, index) => {
                         const selectionClass = index === this.props.currPage ? 'selected' : '';
-                        return <li class={'index-dot ' + selectionClass}>&bull;</li>
+                        return <li class={'index-dot no-highlight ' + selectionClass}>&bull;</li>
                     })}
                 </ul>
             </div>

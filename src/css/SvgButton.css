@@ -1,0 +1,47 @@
+.svg-button-box {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.svg-button {
+    fill: #637280;
+
+    transition: fill 0s ease-in-out .08s;
+}
+
+.svg-button-mover {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .2s ease-in-out 0s;
+}
+
+.click-animation {
+    animation: svg-button-click .4s ease-out;
+}
+
+.svg-button-box:hover .svg-button {
+    fill: #FAFEFF;
+}
+
+.svg-button-box:hover .svg-button-mover {
+    transform: translate(-4px, -1px);
+    transition: transform .2s ease-in-out 0s;
+}
+
+.svg-button-shadow {
+    fill: #38CDA1;
+}
+
+@keyframes svg-button-click {
+    50% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-4px, -1px);
+    }
+}
