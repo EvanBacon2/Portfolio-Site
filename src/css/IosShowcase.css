@@ -36,7 +36,7 @@
 #showcase-image-list {
     display: flex;
     flex-wrap: nowrap;
-    transition: transform .4s ease-in;
+    transition: transform .4s ease-out;
 }
 
 .showcase-photo {
