@@ -9,6 +9,15 @@ import {ReactComponent as LinkedInIcon} from 'svg/linkedin.svg';
 import {ReactComponent as Chevron} from 'svg/chevron.svg';
 
 export default class NavPage extends Component {
+
+    activateBttn = (bttnId) => {
+        document.getElementById('nav-menu-bttn-' + bttnId).classList.add('active');
+    }
+
+    deactivateBttn = (bttnId) => {
+        document.getElementById('nav-menu-bttn-' + bttnId).classList.remove('active');
+    }
+
     render() {
         return (
             <div id='nav-page'>
@@ -18,9 +27,21 @@ export default class NavPage extends Component {
                     <InitialsLogo theme='brand'/>
                     <div id='nav-menu'>
                         <h1 id='nav-menu-header' class='nav-header'>Navigation</h1>
-                        <button id='nav-bttn-about' class='nav-bttn'>About</button>
-                        <button id='nav-bttn-projects' class='nav-bttn'>Projects</button>
-                        <button id='nav-bttn-contact' class='nav-bttn'>Contact</button>
+                        <div class='nav-menu-bttn-container' onMouseEnter={() => this.activateBttn('about')} 
+                             onMouseLeave={() => this.deactivateBttn('about')}>
+                            <div id='nav-menu-bttn-about' class='nav-menu-bttn'/>
+                            <div class='nav-menu-bttn-text'>About</div>
+                        </div>
+                        <div class='nav-menu-bttn-container' onMouseEnter={() => this.activateBttn('projects')} 
+                             onMouseLeave={() => this.deactivateBttn('projects')}>
+                            <div id='nav-menu-bttn-projects' class='nav-menu-bttn'/>
+                            <div class='nav-menu-bttn-text'>Projects</div>
+                        </div>
+                        <div class='nav-menu-bttn-container' onMouseEnter={() => this.activateBttn('contact')} 
+                             onMouseLeave={() => this.deactivateBttn('contact')}>
+                            <div id='nav-menu-bttn-contact' class='nav-menu-bttn'/>
+                            <div class='nav-menu-bttn-text'>Contact</div>
+                        </div>
                     </div>
                     <div id='nav-divider'/>
                     <div id='nav-links'>

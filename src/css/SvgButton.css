@@ -23,6 +23,10 @@
     animation: svg-button-click .4s ease-out;
 }
 
+.click-animation * {
+    fill: #FAFEFF;
+}
+
 .svg-button-box:hover .svg-button {
     fill: #FAFEFF;
 }

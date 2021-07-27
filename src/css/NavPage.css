@@ -52,6 +52,36 @@
     margin: 0;
 }
 
+.nav-menu-bttn-container {
+    position: relative;
+    width: 5.5em;
+    height: fit-content;
+    border-radius: .15em;
+    padding: .03em 0;
+    font-size: 3.75rem;
+}
+
+.nav-menu-bttn-container:hover {
+    cursor: pointer;
+}
+
+.nav-menu-bttn {
+    position: absolute;
+    top: 0;
+    background-color: #FAFEFF;
+    width: inherit;
+    height: 100%;
+    border-radius: .15em;
+    overflow: hidden;
+}
+
+.nav-menu-bttn-text {
+    position: relative;
+    font-family: 'Racing Sans One';
+    text-align: center;
+    color: #E26E6E;
+}
+
 .nav-bttn {
     position: relative;
     font-family: 'Racing Sans One';
@@ -65,25 +95,27 @@
     width: 5.5em;
 }
 
-.nav-bttn::before {
+.nav-menu-bttn::before {
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    font-family: inherit;
-    font-size: inherit;
-    background-color: #FCC28D;
-    /*background-image: linear-gradient(-45deg, #FCC28D, #FAFEFF);*/
+    display: block;
+    left: 100%;
+    width: 5.5em;
+    height: fit-content;
     border-radius: inherit;
+
+    background-color: transparent;
+    background-image: linear-gradient(-45deg, #FCC28D, #FAFEFF);
+
+    content: ".";
+    color: transparent;
+
     opacity: 0;
-    transition: opacity .2s 0s;
+    transition: opacity .3s 0s, left .3s 0s;
 }
 
-.nav-bttn:hover::before {
+.nav-menu-bttn.active::before {
     opacity: 1;
-    transition: opacity .2s 0s;
-    z-index: 1;
+    left: 0;
 }
 
 #nav-menu {
