@@ -5,6 +5,7 @@ import {ReactComponent as LinkedinCutout} from 'svg/linkedin-cutout.svg';
 import {ReactComponent as FigmaCutout} from 'svg/figma-cutout.svg';
 import {ReactComponent as WebsiteCutout} from 'svg/website-cutout.svg';
 import {ReactComponent as AppStoreCutout} from 'svg/app-store-cutout.svg';
+import {ReactComponent as ChevronCutout} from 'svg/chevron-cutout.svg';
 
 export default function NavPageIcon(props) {
     return (
@@ -21,5 +22,6 @@ function cutout(type) {
         case 'figma': return <FigmaCutout class='nav-page-icon figma'/>
         case 'website': return <WebsiteCutout class='nav-page-icon website'/>
         case 'app-store': return <AppStoreCutout class='nav-page-icon app-store'/>
+        case 'chevron': return <ChevronCutout class='nav-page-icon cheevron'/>
     }
 }
