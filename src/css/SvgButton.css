@@ -7,7 +7,7 @@
 .svg-button {
     fill: #637280;
 
-    transition: fill 0s ease-in-out .08s;
+    transition: fill .2s ease-in-out 0s;
 }
 
 .svg-button-mover {
@@ -29,6 +29,7 @@
 
 .svg-button-box:hover .svg-button {
     fill: #FAFEFF;
+    transition: fill .05s ease-in-out 0s;
 }
 
 .svg-button-box:hover .svg-button-mover {

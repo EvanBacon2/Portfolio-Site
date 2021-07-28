@@ -30,6 +30,7 @@
     background-color: #FAFEFF;
     box-shadow: .125em .0833em #E26E6E;
     transform: translate(-.125em, -.0833em);
+    transition: transform .2s 0s, box-shadow .2s 0s, background-color .05s 0s;
 }
 
 .nav-line.open {

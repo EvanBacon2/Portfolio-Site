@@ -15,7 +15,7 @@ export default class Links extends Component {
     render() {
         return (
             <div class='links-container'>
-                <ContentHeader title='links' theme={this.props.theme}/>
+                <ContentHeader title='Links' theme={this.props.theme}/>
                 <div class='link'>
                     <div class='link-icon-container'>
                         <FigmaColorIcon class='link-icon-shadow'/>

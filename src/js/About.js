@@ -10,7 +10,7 @@ import 'css/Structure.css';
 export default class About extends Component {
     render() {
         return (
-            <div id='about' class='content-grid-template'>
+            <div id='about' class='content-grid-template' ref={this.props.refProp}>
                 <div id='about-content'>
                     <div class='description-container'>
                         <ContentHeader title='About Me' theme={THEMES.BRAND}/>

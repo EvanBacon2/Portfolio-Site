@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -19,29 +20,38 @@ class App extends Component {
     this.state = {
       navState: 'closed',
     }
+
+    this.aboutRef = React.createRef();
+    this.projectsRef = React.createRef();
+    this.contactRef = React.createRef();
   }
 
-  toggleOverlay = () => {
+  openOverlay = () => {
     const master = document.getElementById('master');
-    const closedInitials = document.getElementById('closed-initials');
 
-    if (this.state.navState === 'closed') {
-      master.style.top = `-${window.scrollY}px`;
-      setTimeout(() => {
-        master.style.position = 'fixed';
-      }, 200);
+    master.style.top = `-${window.scrollY}px`;
+    setTimeout(() => {
+      master.style.position = 'fixed';
+    }, 200);
+    this.setState({ navState: 'open' });
+  }
 
-      this.setState({ navState: 'open' });
-    } else {
-      const scrollY = master.style.top;
-      setTimeout(() => {
-        master.style.position = '';
-        master.style.top = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
-      }, 1400);
+  closeOverlay = (section) => {
+    const master = document.getElementById('master');
 
-      this.setState({ navState: 'closed' });
+    const scrollY = master.style.top;
+    master.style.position = '';
+    master.style.top = '';
+
+    if (section === '') {
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    } else if (section === 'About') {
+      this.aboutRef.current.scrollIntoView();
+    } else if (section === 'Projects') {
+      this.projectsRef.current.scrollIntoView();
     }
+
+    this.setState({ navState: 'closed' });
   }
 
   render() {
@@ -52,15 +62,15 @@ class App extends Component {
           <div class="App">
             <div id='master'>
               <div id='fixed-elements'>
-                <NavButton navState={this.state.navState} toggleOverlay={this.toggleOverlay}/>
+                <NavButton navState={this.state.navState} onClick={this.openOverlay}/>
                 <InitialsLogo theme='brand'/>
               </div>
               <Overlay navState={this.state.navState}/>
-              <NavPage navState={this.state.navState} onClick={this.toggleOverlay}/>
+              <NavPage navState={this.state.navState} onClick={this.closeOverlay}/>
               <div class='skeleton content-grid-template'>
                 <LandingPage scrollTop={window.pageYOffset}/>
-                <About/>
-                <Projects/>
+                <About refProp={this.aboutRef}/>
+                <Projects refProp={this.projectsRef}/>
                 {/*<Contact/>*/}
               </div>
             </div>

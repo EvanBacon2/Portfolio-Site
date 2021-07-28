@@ -1,6 +1,7 @@
 import { Component } from 'react';
 
 import InitialsLogo from './InitialsLogo';
+import SvgButton from './SvgButton';
 
 import 'css/NavPage.css';
 
@@ -9,6 +10,23 @@ import {ReactComponent as LinkedInIcon} from 'svg/linkedin.svg';
 import {ReactComponent as Chevron} from 'svg/chevron.svg';
 
 export default class NavPage extends Component {
+    navPageButton = (text) => {
+        return (
+            <div class='nav-menu-bttn-container' onMouseEnter={() => this.activateBttn(text)} 
+                 onMouseLeave={() => this.deactivateBttn(text)} onClick={() => this.props.onClick(text)}>
+                <div id={'nav-menu-bttn-' + text} class='nav-menu-bttn'/>
+           <div class='nav-menu-bttn-text'>{text}</div>
+       </div>);
+    }
+
+    navPageLink = (text, link) => {
+        return (
+            <div class='nav-menu-bttn-container' onMouseEnter={() => this.activateBttn(text)} 
+                 onMouseLeave={() => this.deactivateBttn(text)}>
+                <div id={'nav-menu-bttn-' + text} class='nav-menu-bttn'/>
+           <a class='nav-menu-bttn-text' href={link} target='_blank'>{text}</a>
+       </div>);
+    } 
 
     activateBttn = (bttnId) => {
         document.getElementById('nav-menu-bttn-' + bttnId).classList.add('active');
@@ -22,26 +40,13 @@ export default class NavPage extends Component {
         return (
             <div id='nav-page'>
                 <div id='nav-contents' class={this.props.navState}>
-                    <Chevron class='nav-back-button layout' onClick={() => this.props.onClick()}/>
-
+                    <Chevron class='nav-back-button layout' onClick={() => this.props.onClick('')}/>
                     <InitialsLogo theme='brand'/>
                     <div id='nav-menu'>
                         <h1 id='nav-menu-header' class='nav-header'>Navigation</h1>
-                        <div class='nav-menu-bttn-container' onMouseEnter={() => this.activateBttn('about')} 
-                             onMouseLeave={() => this.deactivateBttn('about')}>
-                            <div id='nav-menu-bttn-about' class='nav-menu-bttn'/>
-                            <div class='nav-menu-bttn-text'>About</div>
-                        </div>
-                        <div class='nav-menu-bttn-container' onMouseEnter={() => this.activateBttn('projects')} 
-                             onMouseLeave={() => this.deactivateBttn('projects')}>
-                            <div id='nav-menu-bttn-projects' class='nav-menu-bttn'/>
-                            <div class='nav-menu-bttn-text'>Projects</div>
-                        </div>
-                        <div class='nav-menu-bttn-container' onMouseEnter={() => this.activateBttn('contact')} 
-                             onMouseLeave={() => this.deactivateBttn('contact')}>
-                            <div id='nav-menu-bttn-contact' class='nav-menu-bttn'/>
-                            <div class='nav-menu-bttn-text'>Contact</div>
-                        </div>
+                        {this.navPageButton('About')}
+                        {this.navPageButton('Projects')}
+                        {this.navPageButton('Contact')}
                     </div>
                     <div id='nav-divider'/>
                     <div id='nav-links'>
@@ -56,7 +61,7 @@ export default class NavPage extends Component {
                             <div id='nav-links-spacer'/>
                         </div>
                         <div id='nav-links-spacer'/>
-                        <a id='nav-link-resume' class='nav-bttn'>Resume</a>
+                        {this.navPageLink('Resume', 'https://github.com/EvanBacon2')}
                     </div>
                 </div>
             </div>

@@ -23,6 +23,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
+    width: 4px;
     background-color: #E26E6E;
     border-radius: 10px;
 }

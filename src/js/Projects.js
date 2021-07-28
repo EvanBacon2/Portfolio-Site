@@ -49,7 +49,7 @@ export default class Projects extends Component {
 
     render() {
         return(
-            <div id='projects' class='content-grid-template'>
+            <div id='projects' class='content-grid-template' ref={this.props.refProp}>
                 <div id='projects-background'>
                    {this.triangles('top')}
                     <div id='gallery-container' class={'content-grid-template ' + this.state.showcase}>
