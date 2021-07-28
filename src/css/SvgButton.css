@@ -37,8 +37,20 @@
     transition: transform .2s ease-in-out 0s;
 }
 
-.svg-button-shadow {
+.svg-button-shadow.brand {
+    fill: #E26E6E;
+}
+
+.svg-button-shadow.calendex {
     fill: #38CDA1;
+}
+
+.svg-button-shadow.github {
+    fill: #A259FF;
+}
+
+.svg-button-shadow.website {
+    fill: #1ABCFE;
 }
 
 @keyframes svg-button-click {

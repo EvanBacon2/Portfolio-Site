@@ -1,6 +1,6 @@
 /* Color Classes */
 .brand-color {
-    background-color: #F58C8C;
+    background-color: #E26E6E;
 }
 
 .calendex-color {
@@ -18,11 +18,11 @@
 
 /* Text Shadow Classes */
 .brand-shadow-3x3 {
-    text-shadow: 3px 3px #F58C8C;
+    text-shadow: 3px 3px #E26E6E;
 }
 
 .brand-shadow-2x2 {
-    text-shadow: 2px 2px #F58C8C;
+    text-shadow: 2px 2px #E26E6E;
 }
 
 .calendex-shadow-2x2 {

@@ -3,6 +3,7 @@ import { React, Component } from 'react';
 import ContentHeader from 'js/ContentHeader';
 import IosShowcase from 'js/IosShowcase'
 import Links from 'js/Links';
+import LargeLink from './LargeLink';
 import { THEMES } from 'js/Themes';
 import SvgButton from 'js/SvgButton';
 
@@ -14,7 +15,7 @@ export default class CalendexShowcase extends Component {
     render() {
         return (
             <div id='calendex-showcase' class={'showcase-container ' + this.props.showcase}>
-                <SvgButton layoutClass='showcase-back-button-layout'>
+                <SvgButton layoutClass='showcase-back-button-layout' theme='calendex'>
                     <Chevron class='showcase-back-button' onClick={() => this.props.toggleShowcase('calendex')}/>
                 </SvgButton>
                 <div class='content-layout'>
@@ -31,7 +32,11 @@ export default class CalendexShowcase extends Component {
                     <IosShowcase/>
                 </div>
                 <div class='links-layout'>
-                    <Links theme={THEMES.CALENDEX}/>
+                    <Links theme={THEMES.CALENDEX}>
+                        <LargeLink destination='github' url='https://github.com/EvanBacon2'/>
+                        <LargeLink destination='figma'/>
+                        <LargeLink destination='website'/>
+                    </Links>
                 </div>
             </div>
         );

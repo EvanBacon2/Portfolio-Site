@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
+
+.link {
+    width: fit-content;
+    margin-top: 25px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.link-text {
+    display: inline;
+    color: #FAFEFF;
+    font-family: 'Roboto';
+    font-size: 1.0833em;
+    margin-left: 15px;
+    position: relative;
+    pointer-events: none;
+    transition: text-shadow .2s;
+}
+
+.github-box {
+    width: 2.4167em;
+    height: 2.4167em;
+}
+
+.website-box {
+    width: 2.4167em;
+    height: 2.4167em;
+}
+
+.figma-text {
+    margin: 0;
+}
+
+.link:hover .figma-color1 {
+    text-shadow: 1px 1px #F24E1E;
+}
+
+.link:hover .figma-color2 {
+    text-shadow: 1px 1px #FF7262;
+}
+
+.link:hover .figma-color3 {
+    text-shadow: 1px 1px #A259FF;
+}
+
+.link:hover .figma-color4 {
+    text-shadow: 1px 1px #1ABCFE;
+}
+
+.link:hover .figma-color5 {
+    text-shadow: 1px 1px #0ACF83;
+}
+
+.link:hover .github-color {
+    text-shadow: 1px 1px #A259FF;
+}
+
+.link:hover .website-color {
+    text-shadow: 1px 1px #1ABCFE;
+}

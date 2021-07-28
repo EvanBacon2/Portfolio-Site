@@ -29,7 +29,7 @@ export default class IosShowcase extends Component {
         return (
             <div id='ios-showcase'>
                 <div id='showcase-screen'>
-                <SvgButton layoutClass='showcase-chevron-layout'>
+                <SvgButton layoutClass='showcase-chevron-layout' theme='calendex'>
                     <Chevron class='showcase-chevron left' onClick={() => this.shiftPage(-1)}/>
                 </SvgButton>
                     <div class='showcase-border'>
@@ -48,7 +48,7 @@ export default class IosShowcase extends Component {
                             </div>
                         </div>
                     </div>
-                    <SvgButton layoutClass='showcase-chevron-layout' direction='left/right' hoverX='' hoverY=''>
+                    <SvgButton layoutClass='showcase-chevron-layout' theme='calendex'>
                         <Chevron class='showcase-chevron right' onClick={() => this.shiftPage(1)}/>
                     </SvgButton>
                 </div>
