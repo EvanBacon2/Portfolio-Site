@@ -1,0 +1,52 @@
+.nav-page-icon-background {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    background-color: #FAFEFF;
+}
+
+.nav-page-icon-background:hover {
+    cursor: pointer;
+}
+
+.nav-page-icon-background::before {
+    position: absolute;
+    display: block;
+    left: 100%;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+
+    background-color: transparent;
+    background: linear-gradient(-45deg, #FCC28D, #FAFEFF 60%);
+
+    content: ".";
+    color: transparent;
+
+    opacity: 0;
+    transition: opacity .3s 0s, left .6s 0s, top .6s 0s;
+}
+
+.nav-page-icon-background:hover::before {
+    opacity: 1;
+    left: 0;
+    top: 0;
+}
+
+.nav-page-icon {
+    position: relative;
+    display: block;
+    fill: #E36E6E;
+}
+
+.nav-page-icon {
+    width: 4.95em;
+    height: 4.95em;
+}
+
+.nav-page-icon.figma {
+    width: 3.3em;
+    height: 4.95em;
+}

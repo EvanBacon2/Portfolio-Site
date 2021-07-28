@@ -27,7 +27,7 @@ export default class SvgButton extends Component {
             <div class={'svg-button-box ' + this.props.layoutClass} onClick={this.onClick}>
                 {this.injectStyle('svg-button-shadow ' + this.props.theme)}
                 <div class={'svg-button-mover ' + this.state.clickAnimation}>
-                    {this.injectStyle('svg-button')}
+                    {this.injectStyle('svg-button ' + this.props.baseColor)}
                 </div>
             </div>
         );

@@ -6,8 +6,11 @@
 
 .svg-button {
     fill: #637280;
-
     transition: fill .2s ease-in-out 0s;
+}
+
+.svg-button.white {
+    fill: #FAFEFF;
 }
 
 .svg-button-mover {
@@ -52,6 +55,10 @@
 .svg-button-shadow.website {
     fill: #1ABCFE;
 }
+
+.svg-button-shadow.nav-page {
+    fill: #FCC28D;
+} 
 
 @keyframes svg-button-click {
     40% {

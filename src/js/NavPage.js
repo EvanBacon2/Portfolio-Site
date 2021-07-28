@@ -2,39 +2,28 @@ import { Component } from 'react';
 
 import InitialsLogo from './InitialsLogo';
 import SvgButton from './SvgButton';
+import NavPageIcon from 'js/NavPageIcon';
 
 import 'css/NavPage.css';
 
-import {ReactComponent as GithubIcon} from 'svg/github.svg';
-import {ReactComponent as LinkedInIcon} from 'svg/linkedin.svg';
 import {ReactComponent as Chevron} from 'svg/chevron.svg';
 
 export default class NavPage extends Component {
     navPageButton = (text) => {
         return (
-            <div class='nav-menu-bttn-container' onMouseEnter={() => this.activateBttn(text)} 
-                 onMouseLeave={() => this.deactivateBttn(text)} onClick={() => this.props.onClick(text)}>
+            <div class='nav-menu-bttn-container' onClick={() => this.props.onClick(text)}>
                 <div id={'nav-menu-bttn-' + text} class='nav-menu-bttn'/>
-           <div class='nav-menu-bttn-text'>{text}</div>
-       </div>);
+                <div class='nav-menu-bttn-text'>{text}</div>
+            </div>);
     }
 
     navPageLink = (text, link) => {
         return (
-            <div class='nav-menu-bttn-container' onMouseEnter={() => this.activateBttn(text)} 
-                 onMouseLeave={() => this.deactivateBttn(text)}>
+            <div class='nav-menu-bttn-container'>
                 <div id={'nav-menu-bttn-' + text} class='nav-menu-bttn'/>
-           <a class='nav-menu-bttn-text' href={link} target='_blank'>{text}</a>
-       </div>);
+                <a class='nav-menu-bttn-text' href={link} target='_blank'>{text}</a>
+            </div>);
     } 
-
-    activateBttn = (bttnId) => {
-        document.getElementById('nav-menu-bttn-' + bttnId).classList.add('active');
-    }
-
-    deactivateBttn = (bttnId) => {
-        document.getElementById('nav-menu-bttn-' + bttnId).classList.remove('active');
-    }
 
     render() {
         return (
@@ -52,13 +41,9 @@ export default class NavPage extends Component {
                     <div id='nav-links'>
                         <h1 id='nav-links-header' class='nav-header'>Links</h1>
                         <div id='link-container'>
-                            <div id='github-box'>
-                                <GithubIcon/>
-                            </div>
-                            <div id='linkedin-box'>
-                                <LinkedInIcon/>
-                            </div>
-                            <div id='nav-links-spacer'/>
+                           <NavPageIcon type='github'/>
+                           <NavPageIcon type='linkedin'/>
+                           <NavPageIcon type='figma'/>
                         </div>
                         <div id='nav-links-spacer'/>
                         {this.navPageLink('Resume', 'https://github.com/EvanBacon2')}

@@ -115,7 +115,7 @@
     transition: opacity .3s 0s, left .6s 0s;
 }
 
-.nav-menu-bttn.active::before {
+.nav-menu-bttn-container:hover .nav-menu-bttn::before {
     opacity: 1;
     left: 0;
 }
@@ -167,20 +167,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-#github-box {
-    width: 3.3em;
-    height: 3.3em;
-    fill: #FAFEFF;
-    font-size: 1.5rem;
-}
-
-#linkedin-box {
-    width: 3.3em;
-    height: 3.3em;
-    fill: #FAFEFF;
-    font-size: 1.5rem;
 }
 
 #nav-links-spacer {
