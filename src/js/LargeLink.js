@@ -7,28 +7,31 @@ import '../css/LargeLink.css';
 
 import {ReactComponent as GithubIcon} from '../svg/github.svg';
 import {ReactComponent as WebsiteIcon} from '../svg/website.svg';
+import {ReactComponent as AppStoreIcon} from '../svg/appstore.svg';
 import {ReactComponent as LinkedinIcon} from '../svg/linkedin.svg';
 
 export default class LargeLink extends Component {
     icon = (dest) => {
         switch (dest) {
-            case 'github': return <SvgButton theme='github'><GithubIcon class='github-box'/></SvgButton>
-            case 'website': return <SvgButton theme='website'><WebsiteIcon class='website-box'/></SvgButton>
-            case 'linkedin': return <SvgButton theme='linkedin'><LinkedinIcon class='linkedin-box'/></SvgButton>
-            case 'figma': return <FigmaButton/>
+            case 'github': return <SvgButton theme='github'><GithubIcon class='large-link-box github'/></SvgButton>
+            case 'website': return <SvgButton theme='website'><WebsiteIcon class='large-link-box website'/></SvgButton>
+            case 'appstore': return <SvgButton theme='appstore'><AppStoreIcon class='large-link-box appstore'/></SvgButton>
+            case 'linkedin': return <SvgButton theme='linkedin'><LinkedinIcon class='large-link-box linkedin'/></SvgButton>
+            case 'figma': return <FigmaButton boxClass='large-link-box figma'/>
         }
     }
 
     text = (dest) => {
         switch (dest) {
             case 'figma': return <div>
-                <span class='link-text figma-color1'>F</span>
-                <span class='link-text figma-text figma-color2'>i</span>
-                <span class='link-text figma-text figma-color3'>g</span>
-                <span class='link-text figma-text figma-color4'>m</span>
-                <span class='link-text figma-text figma-color5'>a</span>
+                <span class='link-text figma1'>F</span>
+                <span class='link-text figma-text figma2'>i</span>
+                <span class='link-text figma-text figma3'>g</span>
+                <span class='link-text figma-text figma4'>m</span>
+                <span class='link-text figma-text figma5'>a</span>
             </div>
-            default: return <span class={'link-text ' + this.props.destination}>{this.capitalized(this.props.destination)}</span>
+            case 'appstore': return <span class={'link-text ' + dest}>App Store</span>
+            default: return <span class={'link-text ' + dest}>{this.capitalized(dest)}</span>
         }
     }
 

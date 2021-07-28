@@ -23,11 +23,9 @@ export default class FigmaButton extends Component {
     render() {
         return (
             <div class={'svg-button-box ' + this.props.layoutClass} onClick={this.onClick}>
-                <FigmaColorIcon class='svg-button-shadow'/>
-                {/*this.injectStyle('svg-button-shadow ' + this.props.theme)*/}
+                <FigmaColorIcon class={'svg-button-shadow ' + this.props.boxClass}/>
                 <div class={'svg-button-mover ' + this.state.clickAnimation}>
-                    <FigmaIcon class='svg-button'/>
-                    {/*this.injectStyle('svg-button')*/}
+                    <FigmaIcon class={'svg-button ' + this.props.boxClass}/>
                 </div>
             </div>
         );

@@ -56,6 +56,14 @@
     fill: #1ABCFE;
 }
 
+.svg-button-shadow.appstore {
+    fill: #2071F3;
+}
+
+.svg-button-shadow.linkedin {
+    fill: #0077B7;
+}
+
 .svg-button-shadow.nav-page {
     fill: #FCC28D;
 } 

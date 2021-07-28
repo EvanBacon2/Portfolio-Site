@@ -1,0 +1,10 @@
+#footer {
+    background-color: #22282E;
+    grid-area: 5 / 1 / 6 / 4;
+    font-size: 1rem;
+    height: 5em;
+}
+
+#footer-box {
+    display: flex;
+}

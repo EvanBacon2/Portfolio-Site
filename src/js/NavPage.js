@@ -1,7 +1,6 @@
 import { Component } from 'react';
 
 import InitialsLogo from './InitialsLogo';
-import SvgButton from './SvgButton';
 import NavPageIcon from 'js/NavPageIcon';
 
 import 'css/NavPage.css';

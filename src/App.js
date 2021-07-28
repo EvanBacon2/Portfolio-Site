@@ -10,6 +10,7 @@ import LandingPage from 'js/LandingPage';
 import About from 'js/About';
 import Projects from 'js/Projects';
 import Contact from 'js/Contact';
+import Footer from 'js/Footer';
 import { THEMES } from 'js/Themes';
 
 import 'css/Structure.css';
@@ -71,7 +72,8 @@ class App extends Component {
                 <LandingPage scrollTop={window.pageYOffset}/>
                 <About refProp={this.aboutRef}/>
                 <Projects refProp={this.projectsRef}/>
-                {/*<Contact/>*/}
+                <Contact/>
+                <Footer/>
               </div>
             </div>
           </div>

@@ -15,49 +15,59 @@
     font-family: 'Roboto';
     font-size: 1.0833em;
     margin-left: 15px;
+    margin-bottom: 6px;
     position: relative;
     pointer-events: none;
     transition: text-shadow .2s;
 }
 
-.github-box {
+.large-link-box {
     width: 2.4167em;
     height: 2.4167em;
 }
 
-.website-box {
-    width: 2.4167em;
+.large-link-box.figma {
+    width: 1.619189em;
     height: 2.4167em;
+    margin-left: .39844em; 
 }
 
 .figma-text {
     margin: 0;
 }
 
-.link:hover .figma-color1 {
+.link:hover .figma1 {
     text-shadow: 1px 1px #F24E1E;
 }
 
-.link:hover .figma-color2 {
+.link:hover .figma2 {
     text-shadow: 1px 1px #FF7262;
 }
 
-.link:hover .figma-color3 {
+.link:hover .figma3 {
     text-shadow: 1px 1px #A259FF;
 }
 
-.link:hover .figma-color4 {
+.link:hover .figma4 {
     text-shadow: 1px 1px #1ABCFE;
 }
 
-.link:hover .figma-color5 {
+.link:hover .figma5 {
     text-shadow: 1px 1px #0ACF83;
 }
 
-.link:hover .github-color {
+.link:hover .github {
     text-shadow: 1px 1px #A259FF;
 }
 
-.link:hover .website-color {
+.link:hover .website {
     text-shadow: 1px 1px #1ABCFE;
+}
+
+.link:hover .appstore {
+    text-shadow: 1px 1px #2071F3;
+}
+
+.link:hover .linkedin {
+    text-shadow: 1px 1px #0077B7;
 }
