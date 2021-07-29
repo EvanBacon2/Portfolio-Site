@@ -2,18 +2,22 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
 #contact {
-    height: calc(100vh - 5em);
-    background-color: #1C1F23;
+    height: calc(100vh - 3.35em);
+    background-image: linear-gradient(to top, #23272B 5%, #1C1F23 60%);
     grid-area: 4 / 1 / 5 / 5;
     display: grid;
 }
 
 #contact-contents {
+    display: flex;
+    justify-content: space-between;
     grid-area: 1 / 2 / 2 / 3;
+    margin-top: 2.5em;
 }
 
 .contact-form {
     margin-top: 1em;
+    margin-left: 15px;
 }
 
 .form-group {
@@ -50,19 +54,7 @@
     height: 3em;
 }
 
-.submit-button {
-    font-family: 'Racing Sans One';
-    font-size: 1.291em;
-    color: #FAFEFF;
-    background-color: #F58C8C;
-    border: .0416em solid #F58C8C;
-    border-radius: .2em;
-    padding: .2em;
-    box-sizing: border-box;
-    transition: all .2s 0s;
-}
-
-.submit-button:hover {
-    background-color: #22282E;
-    transition: all .2s 0s;
+.send-message-layout {
+    width: fit-content;
+    margin: 0 auto;
 }

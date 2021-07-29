@@ -9,6 +9,10 @@
     text-decoration: none;
 }
 
+.link:hover {
+    cursor: pointer;
+}
+
 .link-text {
     display: inline;
     color: #FAFEFF;
@@ -24,6 +28,11 @@
 .large-link-box {
     width: 2.4167em;
     height: 2.4167em;
+}
+
+.large-link-box.mail {
+    width: 2.167em;
+    height: 1.54167em;
 }
 
 .large-link-box.figma {
@@ -70,4 +79,8 @@
 
 .link:hover .linkedin {
     text-shadow: 1px 1px #0077B7;
+}
+
+.link:hover .mail {
+    text-shadow: 1px 1px #E26E6E;
 }

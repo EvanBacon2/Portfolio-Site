@@ -15,12 +15,12 @@
     display: block;
     left: 100%;
     top: 100%;
-    width: 100%;
-    height: 100%;
+    width: 150%;
+    height: 150%;
     border-radius: inherit;
 
     background-color: transparent;
-    background: linear-gradient(-45deg, #FCC28D, #FAFEFF 60%);
+    background: linear-gradient(-45deg, #FCC28D 10%, #FAFEFF 60%);
 
     content: ".";
     color: transparent;
@@ -31,8 +31,8 @@
 
 .nav-page-icon-background:hover::before {
     opacity: 1;
-    left: 0;
-    top: 0;
+    left: -50%;
+    top: -50%;
 }
 
 .nav-page-icon {

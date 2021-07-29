@@ -50,6 +50,8 @@ class App extends Component {
       this.aboutRef.current.scrollIntoView();
     } else if (section === 'Projects') {
       this.projectsRef.current.scrollIntoView();
+    } else if (section === 'Contact') {
+      this.contactRef.current.scrollIntoView();
     }
 
     this.setState({ navState: 'closed' });
@@ -74,7 +76,7 @@ class App extends Component {
                 <LandingPage scrollTop={window.pageYOffset}/>
                 <About refProp={this.aboutRef}/>
                 <Projects refProp={this.projectsRef}/>
-                <Contact/>
+                <Contact refProp={this.contactRef}/>
                 <Footer/>
               </div>
             </div>

@@ -34,7 +34,6 @@ export default class CalendexShowcase extends Component {
                 <div class='links-layout'>
                     <Links theme={THEMES.CALENDEX}>
                         <LargeLink destination='github' url='https://github.com/EvanBacon2'/>
-                        <LargeLink destination='linkedin'/>
                         <LargeLink destination='appstore'/>
                     </Links>
                 </div>

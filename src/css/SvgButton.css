@@ -4,6 +4,10 @@
     position: relative;
 }
 
+.svg-button-box:hover {
+    cursor: pointer;
+}
+
 .svg-button {
     fill: #637280;
     transition: fill .2s ease-in-out 0s;
@@ -40,6 +44,16 @@
     transition: transform .2s ease-in-out 0s;
 }
 
+.svg-button-box.active .svg-button {
+    fill: #FAFEFF;
+    transition: fill .05s ease-in-out 0s;
+}
+
+.svg-button-box.active .svg-button-mover {
+    transform: translate(-4px, -1px);
+    transition: transform .2s ease-in-out 0s;
+}
+
 .svg-button-shadow.brand {
     fill: #E26E6E;
 }
@@ -64,8 +78,8 @@
     fill: #0077B7;
 }
 
-.svg-button-shadow.nav-page {
-    fill: #FCC28D;
+.svg-button-shadow.mail {
+    fill: #E26E6E;
 } 
 
 @keyframes svg-button-click {
