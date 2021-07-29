@@ -7,7 +7,7 @@ import 'css/InitialsLogo.css';
 export default class InitialsLogo extends Component {
     render() {
         return ( 
-            <div id='initials-logo'class={'initials-sizer initials-pos'}>
+            <div id='initials-logo'class={'initials-sizer'}>
                 <InitialsIcon class={'initials-shadow ' + this.props.theme}/>
             </div>
         );

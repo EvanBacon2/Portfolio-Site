@@ -28,11 +28,12 @@ export default class NavPage extends Component {
         return (
             <div id='nav-page'>
                 <div id='nav-contents' class={this.props.navState}>
-                    {/*<Chevron class='nav-back-button layout' onClick={() => this.props.onClick('')}/>*/}
                     <div class='nav-back-button layout' onClick={() => this.props.onClick('')}>
                         <NavPageIcon type='chevron'/>
                     </div>
-                    <InitialsLogo theme='brand'/>
+                    <div class='nav-initials-logo layout'>
+                        <InitialsLogo theme='brand'/>
+                    </div>
                     <div id='nav-menu'>
                         <h1 id='nav-menu-header' class='nav-header'>Navigation</h1>
                         {this.navPageButton('About')}

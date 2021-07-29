@@ -8,7 +8,9 @@ export default function Footer(props) {
             <div id='footer-box'>
                 <a class='footer-link'>Home</a>
                 <a class='footer-link'>About</a>
-                <InitialsLogo theme='brand'/>
+                <div id='footer-initials-logo' class='layout'>
+                    <InitialsLogo theme='brand'/>
+                </div>
                 <a class='footer-link'>Projects</a>
                 <a class='footer-link'>Contact</a>
             </div>

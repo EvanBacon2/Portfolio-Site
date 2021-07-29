@@ -64,7 +64,9 @@ class App extends Component {
             <div id='master'>
               <div id='fixed-elements'>
                 <NavButton navState={this.state.navState} onClick={this.openOverlay}/>
-                <InitialsLogo theme='brand'/>
+                <div class='main-initials-logo layout'>
+                  <InitialsLogo theme='brand'/>
+                </div>
               </div>
               <Overlay navState={this.state.navState}/>
               <NavPage navState={this.state.navState} onClick={this.closeOverlay}/>

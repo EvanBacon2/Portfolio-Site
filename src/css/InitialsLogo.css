@@ -3,13 +3,6 @@
     height: 57px;
 }
 
-.initials-pos {
-    position: fixed;
-    right: 1em;
-    top: 1em;
-    font-size: 1.5rem;
-}
-
 .initials-shadow.brand {
     fill: #E26E6E;
 }

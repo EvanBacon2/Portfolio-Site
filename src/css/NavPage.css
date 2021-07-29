@@ -33,6 +33,13 @@
     z-index: 1002;
 }
 
+.nav-initials-logo.layout {
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    font-size: 1.5rem;
+}
+
 .nav-header {
     font-family: 'Racing Sans One';
     font-size: 5em;
