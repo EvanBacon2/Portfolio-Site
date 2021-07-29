@@ -30,7 +30,7 @@
 .projects-triangle-box {
     display: inline-block;
     width: 50%;
-    height: calc(50vw * .2885);
+    height: calc(50vw * .28854167);
 }
 
 .projects-triangle-box.top {
