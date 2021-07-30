@@ -1,8 +1,9 @@
 import { Component } from 'react';
 
 import ContentHeader from 'js/ContentHeader';
-import ProjectCard from './ProjectCard';
-import CalendexShowcase from 'js/CalendexShowcase'
+import CalendexProjectCard from './CalendexProjectCard';
+import WebProjectCard from 'js/WebProjectCard';
+import CalendexShowcase from 'js/CalendexShowcase';
 
 import 'css/Projects.css';
 import 'css/Structure.css';
@@ -53,12 +54,8 @@ export default class Projects extends Component {
                    {this.triangles('top')}
                     <div id='gallery-container' class={'content-grid-template ' + this.state.showcase}>
                         <div id='gallery-box' class={this.state.showcase}>
-                            <ProjectCard title='Website' theme='web' type='web' toggleShowcase={this.toggleShowcase}/>
-                            <ProjectCard title='Calendex' theme='calendex' type='ios' toggleShowcase={this.toggleShowcase}/>
-                            <ProjectCard title='Calendex' theme='calendex' type='ios' toggleShowcase={this.toggleShowcase}/>
-                            <ProjectCard title='Calendex' theme='calendex' type='ios' toggleShowcase={this.toggleShowcase}/>
-                            <ProjectCard title='Calendex' theme='calendex' type='ios' toggleShowcase={this.toggleShowcase}/>
-                            <ProjectCard title='Calendex' theme='calendex' type='ios' toggleShowcase={this.toggleShowcase}/>
+                            <WebProjectCard toggleShowcase={this.toggleShowcase}/>
+                            <CalendexProjectCard toggleShowcase={this.toggleShowcase}/>
                         </div>
                         <CalendexShowcase showcase={this.state.showcase} toggleShowcase={this.toggleShowcase}/>
                     </div>

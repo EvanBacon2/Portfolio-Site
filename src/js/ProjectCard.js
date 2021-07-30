@@ -27,12 +27,10 @@ export default class ProjectCard extends Component {
                 </div>  
                 
                 <ProjectCardImage theme={this.props.theme} toggleShowcase={this.props.toggleShowcase}>
-                    A Website for my portfolio
+                    {this.props.description}
                 </ProjectCardImage>
 
                 <div class='link-box'>
-                    <SmallLink theme={this.props.theme}><WebSiteIcon/></SmallLink>
-                    <SmallLink theme={this.props.theme}><GithubIcon/></SmallLink>
                     {this.props.children}
                 </div>
             </div>

@@ -62,6 +62,12 @@
     border: none;
     border-radius: .25em;
     text-decoration: none;
+
+    transition: background-color .2s;
+}
+
+.learn-link:hover {
+    cursor: pointer;
 }
 
 /*----------------------THEMED ITEMS----------------------*/
@@ -91,4 +97,14 @@
 
 .calendex-link {
     color: #233034;
+}
+
+
+/*- - - - links:hover - - - -*/
+.web-link:hover {
+    background-color: #1ABCFE;
+}
+
+.calendex-link:hover {
+    background-color: #38CDA1;
 }

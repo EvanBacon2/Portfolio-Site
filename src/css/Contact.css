@@ -52,6 +52,7 @@
 .area-form {
     width: 20em;
     height: 3em;
+    resize: none;
 }
 
 .send-message-layout {
