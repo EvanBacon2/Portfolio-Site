@@ -22,6 +22,7 @@ class App extends Component {
       navState: 'closed',
     }
 
+    this.homeRef = React.createRef();
     this.aboutRef = React.createRef();
     this.projectsRef = React.createRef();
     this.contactRef = React.createRef();
@@ -63,7 +64,7 @@ class App extends Component {
     return (
       <Router>
           <div class="App">
-            <div id='master'>
+            <div id='master' ref={this.homeRef}>
               <div id='fixed-elements'>
                 <NavButton navState={this.state.navState} onClick={this.openOverlay}/>
                 <div class='main-initials-logo layout'>
@@ -77,7 +78,7 @@ class App extends Component {
                 <About refProp={this.aboutRef}/>
                 <Projects refProp={this.projectsRef}/>
                 <Contact refProp={this.contactRef}/>
-                <Footer/>
+                <Footer homeRef={this.homeRef} aboutRef={this.aboutRef} projectsRef={this.projectsRef} contactRef={this.contactRef}/>
               </div>
             </div>
           </div>

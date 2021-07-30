@@ -1,0 +1,20 @@
+.small-link-box {
+    width: 1em;
+}
+
+.small-link {
+    fill: #FAFEFF;
+    transition: fill .2s;
+}
+
+.small-link:hover {
+    cursor: pointer;
+}
+
+.small-link:hover.web {
+    fill: #1ABCFE;
+}
+
+.small-link:hover.calendex {
+    fill: #38CDA1;
+}

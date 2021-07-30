@@ -1,8 +1,7 @@
 import { Component } from 'react';
 
 import ContentHeader from 'js/ContentHeader';
-import { THEMES } from 'js/Themes';
-import IosCard from 'js/IosCard';
+import ProjectCard from './ProjectCard';
 import CalendexShowcase from 'js/CalendexShowcase'
 
 import 'css/Projects.css';
@@ -54,12 +53,12 @@ export default class Projects extends Component {
                    {this.triangles('top')}
                     <div id='gallery-container' class={'content-grid-template ' + this.state.showcase}>
                         <div id='gallery-box' class={this.state.showcase}>
-                            <IosCard title='Calendex' theme='calendex' toggleShowcase={this.toggleShowcase}/>
-                            <IosCard title='Calendex' theme='calendex' toggleShowcase={this.toggleShowcase}/>
-                            <IosCard title='Calendex' theme='calendex' toggleShowcase={this.toggleShowcase}/>
-                            <IosCard title='Calendex' theme='calendex' toggleShowcase={this.toggleShowcase}/>
-                            <IosCard title='Calendex' theme='calendex' toggleShowcase={this.toggleShowcase}/>
-                            <IosCard title='Calendex' theme='calendex' toggleShowcase={this.toggleShowcase}/>
+                            <ProjectCard title='Website' theme='web' type='web' toggleShowcase={this.toggleShowcase}/>
+                            <ProjectCard title='Calendex' theme='calendex' type='ios' toggleShowcase={this.toggleShowcase}/>
+                            <ProjectCard title='Calendex' theme='calendex' type='ios' toggleShowcase={this.toggleShowcase}/>
+                            <ProjectCard title='Calendex' theme='calendex' type='ios' toggleShowcase={this.toggleShowcase}/>
+                            <ProjectCard title='Calendex' theme='calendex' type='ios' toggleShowcase={this.toggleShowcase}/>
+                            <ProjectCard title='Calendex' theme='calendex' type='ios' toggleShowcase={this.toggleShowcase}/>
                         </div>
                         <CalendexShowcase showcase={this.state.showcase} toggleShowcase={this.toggleShowcase}/>
                     </div>
