@@ -12,6 +12,8 @@
 }
 
 #projects-content {
+    display: flex;
+    flex-direction: column;
     grid-area: 1 / 2 / 2 / 3;
     height: fit-content;
     justify-self: center;

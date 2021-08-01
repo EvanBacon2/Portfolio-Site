@@ -14,7 +14,8 @@
 }
 
 #header-underline {
-  background-color: #E26E6E;
+  /*background-color: #E26E6E;*/
+  background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
   height: .0833em;
   border: none;
   margin: 0px;

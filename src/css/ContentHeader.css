@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 
 #header-container {
-  width: fit-content;
+    width: fit-content;
 }
 
 #content-title {
@@ -10,16 +10,71 @@
     font-size: 38pt;
     pointer-events: none;
     display: inline-block;
-  }
+    opacity: 0;
+    transition: opacity .2s ease-out .5s, text-shadow .4s ease-out .55s, transform .4s ease-out .55s;
+}
+
+.show #content-title {
+    opacity: 100%;
+    transform: translate(-2px, -2px);
+}
 
 #content-underline {
-    height: 3px;
+    height: .0625em;
     border: none;
     margin: 0px;
     transform: skew(-12deg);
- }
+
+    transition: width .8s cubic-bezier(.82,0,.16,.96), transform .8s cubic-bezier(.82,0,.16,.96);
+}
+
+.hide #content-underline {
+    width: 0;
+    transform: translateX(100%);
+}
+
+.show #content-underline {
+    width: 100%;
+    transform: translateX(0);
+}
 
 .extra-padding {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+/*----------------------THEMED ITEMS----------------------*/
+
+/*- - - - text - - - -*/
+#content-title.brand {
+    text-shadow: #E26E6E 1px 1px;
+}
+
+.show #content-title.brand {
+    text-shadow: #E26E6E 2px 2px;
+}
+
+#content-title.calendex {
+    text-shadow: #38CDA1 1px 1px;
+}
+
+.show #content-title.calendex {
+    text-shadow: #38CDA1 2px 2px;
+}
+
+/*- - - - underline - - - -*/
+#content-underline.brand.right {
+    background-image: linear-gradient(to right, #E26E6E 50%, #FCC28D 95%);
+}
+
+#content-underline.brand.left {
+    background-image: linear-gradient(to left, #E26E6E 50%, #FCC28D 95%);
+}
+
+#content-underline.brand.center {
+    background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
+}
+
+#content-underline.calendex {
+    background-color: #38CDA1;
 }

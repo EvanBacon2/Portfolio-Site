@@ -33,12 +33,20 @@
 
 .form-style {
     background-color: #1C1F22;
-    border: .0416em solid #F58C8C;
     border-radius: .4167em;
     font-family: 'Roboto';
     color: #FAFEFF;
-    font-size: .7em;
     padding: .7em;
+    border: none;
+}
+
+.form-border {
+    width: fit-content;
+    height: fit-content;
+    background: linear-gradient(to right, #E26E6E 50%, #FCC28D 95%);
+    padding: .0625em;
+    font-size: .7em;
+    border-radius: .4167em;
 }
 
 .form-style:focus {
@@ -51,7 +59,8 @@
 
 .area-form {
     width: 20em;
-    height: 3em;
+    height: 100%;
+    margin-bottom: -4.4px;
     resize: none;
 }
 

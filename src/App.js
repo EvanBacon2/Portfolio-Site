@@ -11,7 +11,6 @@ import About from 'js/About';
 import Projects from 'js/Projects';
 import Contact from 'js/Contact';
 import Footer from 'js/Footer';
-import { THEMES } from 'js/Themes';
 
 import 'css/Structure.css';
 

@@ -1,9 +1,37 @@
+#headshot-container {
+    position: relative
+}
+
+.grad-photo-background {
+    width: 8.8744em;
+    height: 0;
+    border-radius: .5em;
+    background-color: #E26E6E;
+    background: linear-gradient(to top left, #FCC28D, #E26E6E 45%);
+    transform: translateY(30%);
+    transition: height .8s cubic-bezier(.82,0,.16,.96), transform .8s .3s cubic-bezier(.82,0,.16,.96);
+}
+
+.show .grad-photo-background {
+    transform: translateY(0);
+    height: 12.2282em;
+}
+
 .grad-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 8.041em;
     height: fit-content;
     object-fit: contain;
+    border-radius: .5em;
     border: .4167em solid #FAFEFF;
-    border-radius: .625em;
-    font-size: 1.5rem;
-    box-shadow: .4167em .4167em #F58C8C; 
+    opacity: 0;
+}
+
+.show .grad-photo {
+    top: -.4167em;
+    left: -.4167em;
+    opacity: 100;
+    transition: opacity .2s ease-out .8s, left .4s ease-out .85s, top .4s ease-out .85s;
 }

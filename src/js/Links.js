@@ -10,7 +10,7 @@ export default class Links extends Component {
     render() {
         return (
             <div class='links-container'>
-                <ContentHeader title='Links' theme={this.props.theme}/>
+                <ContentHeader title='Links' theme={this.props.theme} fadeAlignment='right'/>
                 {this.props.children}
             </div>
         );

@@ -23,14 +23,14 @@
     opacity: 1;
     background-color: #637280;
     transform: skew(11.3deg);
-    transition: all .2s 0s;
+    /*transition: all .2s 0s;*/
+    transition: transform .2s, box-shadow .2s, background-color .05s, opacity .2s;;
 }
 
 .nav-button:hover .nav-line {
     background-color: #FAFEFF;
     box-shadow: .125em .0833em #E26E6E;
     transform: translate(-.125em, -.0833em);
-    transition: transform .2s 0s, box-shadow .2s 0s, background-color .05s 0s;
 }
 
 .nav-line.open {

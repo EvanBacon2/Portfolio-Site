@@ -7,7 +7,7 @@ export default class SiteHeader extends Component {
         return (
         <div id='site-header-container' class={this.props.layoutClass}>
             <h1 id='site-title'>Evan Bacon</h1>
-            <hr id='header-underline'/>
+            <div id='header-underline'/>
             <ul id='skill-list'>
                 <li class='skill-item'>&bull; ios development </li>
                 <li class='skill-item'>&bull; web development </li>
