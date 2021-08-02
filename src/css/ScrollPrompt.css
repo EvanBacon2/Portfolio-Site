@@ -12,6 +12,7 @@
 
 #scroll-chevron {
     z-index: 1;
+    animation: scroll-float 3s ease-in-out 0s infinite;
 }
 
 .scroll-chevron-box {
@@ -21,7 +22,6 @@
 
 .scroll-chevron-layout {
     position: absolute;
-    top: .167em;
 }
 
 .chevron-fill {
@@ -30,4 +30,18 @@
 
 .chevron-shadow-fill {
     fill: #E26E6E;
+}
+
+@keyframes scroll-float {
+    0% {
+        top: 0;
+    }
+
+    25% {
+        top: .167em;
+    }
+
+    50% {
+        top: 0;
+    }
 }

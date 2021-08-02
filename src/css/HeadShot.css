@@ -8,8 +8,9 @@
     border-radius: .5em;
     background-color: #E26E6E;
     background: linear-gradient(to top left, #FCC28D, #E26E6E 45%);
+
     transform: translateY(30%);
-    transition: height .8s cubic-bezier(.82,0,.16,.96), transform .8s .3s cubic-bezier(.82,0,.16,.96);
+    transition: height .8s cubic-bezier(.82,0,.16,.96) .55s, transform .8s cubic-bezier(.82,0,.16,.96) .85s;
 }
 
 .show .grad-photo-background {
@@ -33,5 +34,5 @@
     top: -.4167em;
     left: -.4167em;
     opacity: 100;
-    transition: opacity .2s ease-out .8s, left .4s ease-out .85s, top .4s ease-out .85s;
+    transition: opacity .2s ease-out 1.35s, left .4s ease-out 1.35s, top .4s ease-out 1.35s;
 }

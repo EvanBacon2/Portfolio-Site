@@ -12,12 +12,10 @@
 }
 
 #projects-content {
-    display: flex;
-    flex-direction: column;
     grid-area: 1 / 2 / 2 / 3;
-    height: fit-content;
+    height: 8em;
     justify-self: center;
-    margin-top: 3.5em;
+    margin-top: 5.5em;
     z-index: 1;
 }
 

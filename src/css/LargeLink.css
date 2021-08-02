@@ -2,11 +2,21 @@
 
 .link {
     width: fit-content;
-    margin-top: 25px;
-    margin-left: 15px;
+    margin-top: 1.5625em;
+    margin-left: .9375em;
     display: flex;
     align-items: center;
     text-decoration: none;
+    font-size: 1rem;
+
+    opacity: 0;
+    transform: translateX(-.9375em);
+    transition: all .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s;
+}
+
+.show .link {
+    opacity: 100;
+    transform: translateX(0);
 }
 
 .link:hover {
@@ -17,28 +27,28 @@
     display: inline;
     color: #FAFEFF;
     font-family: 'Roboto';
-    font-size: 1.0833em;
-    margin-left: 15px;
-    margin-bottom: 6px;
+    font-size: 1.625em;
+    margin-left: .9375em;
+    margin-bottom: .375em;
     position: relative;
     pointer-events: none;
     transition: text-shadow .2s;
 }
 
 .large-link-box {
-    width: 2.4167em;
-    height: 2.4167em;
+    width: 3.625em;
+    height: 3.625em;
 }
 
 .large-link-box.mail {
-    width: 2.167em;
-    height: 1.54167em;
+    width: 3.25em;
+    height: 2.3125em;
 }
 
 .large-link-box.figma {
-    width: 1.619189em;
-    height: 2.4167em;
-    margin-left: .39844em; 
+    width: 2.4167em;
+    height: 3.625em;
+    margin-left: .59766em; 
 }
 
 .figma-text {
@@ -46,41 +56,41 @@
 }
 
 .link:hover .figma1 {
-    text-shadow: 1px 1px #F24E1E;
+    text-shadow: .0625em .0625em #F24E1E;
 }
 
 .link:hover .figma2 {
-    text-shadow: 1px 1px #FF7262;
+    text-shadow: .0625em .0625em #FF7262;
 }
 
 .link:hover .figma3 {
-    text-shadow: 1px 1px #A259FF;
+    text-shadow: .0625em .0625em #A259FF;
 }
 
 .link:hover .figma4 {
-    text-shadow: 1px 1px #1ABCFE;
+    text-shadow: .0625em .0625em #1ABCFE;
 }
 
 .link:hover .figma5 {
-    text-shadow: 1px 1px #0ACF83;
+    text-shadow: .0625em .0625em #0ACF83;
 }
 
 .link:hover .github {
-    text-shadow: 1px 1px #A259FF;
+    text-shadow: .0625em .0625em #A259FF;
 }
 
 .link:hover .website {
-    text-shadow: 1px 1px #1ABCFE;
+    text-shadow: .0625em .0625em #1ABCFE;
 }
 
 .link:hover .appstore {
-    text-shadow: 1px 1px #2071F3;
+    text-shadow: .0625em .0625em #2071F3;
 }
 
 .link:hover .linkedin {
-    text-shadow: 1px 1px #0077B7;
+    text-shadow: .0625em .0625em #0077B7;
 }
 
 .link:hover .mail {
-    text-shadow: 1px 1px #E26E6E;
+    text-shadow: .0625em .0625em #E26E6E;
 }

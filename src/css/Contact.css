@@ -1,66 +1,88 @@
+/*1 rem*/
+
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
 #contact {
-    height: calc(100vh - 3.35em);
+    height: calc(100vh - 5.025em);
     background-image: linear-gradient(to top, #23272B 5%, #1C1F23 60%);
     grid-area: 4 / 1 / 5 / 5;
     display: grid;
+    font-size: 1rem;
 }
 
 #contact-contents {
     display: flex;
+    height: fit-content;
     justify-content: space-between;
     grid-area: 1 / 2 / 2 / 3;
-    margin-top: 2.5em;
+    margin-top: 3.75em;
 }
 
 .contact-form {
-    margin-top: 1em;
-    margin-left: 15px;
+    margin-top: 1.5em;
+    margin-left: .9375em;
 }
 
 .form-group {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 
 .form-label {
     display: block;
     font-family: 'Racing Sans One';
-    font-size: 1.291em;
+    font-size: 1.9375rem;
     color: #FAFEFF;
+
+    opacity: 0;
+    transform: translateX(-.9375em);
+    transition: all .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s;
+}
+
+.show .form-label {
+    opacity: 100;
+    transform: translateX(0);
 }
 
 .form-style {
+    width: 20rem;
     background-color: #1C1F22;
-    border-radius: .4167em;
+    border-radius: .4167rem;
     font-family: 'Roboto';
     color: #FAFEFF;
-    padding: .7em;
+    padding: .7rem;
     border: none;
+
+    opacity: 0;
+    transition: opacity .4s ease-out 1.25s;
+}
+
+.show .form-style {
+    opacity: 100%;
 }
 
 .form-border {
-    width: fit-content;
+    width: 0;
     height: fit-content;
     background: linear-gradient(to right, #E26E6E 50%, #FCC28D 95%);
     padding: .0625em;
-    font-size: .7em;
     border-radius: .4167em;
+
+    opacity: 0;
+    transition: width .7s cubic-bezier(.05,.11,0,.7) .5s, opacity .05s linear .5s;
+}
+
+.show .form-border {
+    opacity: 100;
+    width: 21.4em;
 }
 
 .form-style:focus {
     outline: none;
 }
 
-.line-form {
-    width: 20em;
-}
-
 .area-form {
-    width: 20em;
-    height: 100%;
-    margin-bottom: -4.4px;
+    margin-bottom: -4px;
     resize: none;
 }
 

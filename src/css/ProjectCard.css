@@ -1,3 +1,5 @@
+/*1 rem*/
+
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 
 .card-container {
@@ -7,13 +9,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 .5em .375em .5em;
-    border-radius: .625em;
-    font-size: 1.25rem;
+    padding: 0 .625em .46875em .625em;
+    border-radius: .78125em;
+    font-size: 1rem;
 }
 
 .project-container {
-    width: 15em;
+    width: 18.75em;
 }
 
 .header-box {
@@ -22,12 +24,12 @@
     justify-content: space-between;
     align-content: flex-end;
     
-    margin: .125em .2em;
+    margin: .15625em .25em;
 }
 
 .card-header {
     font-family: 'Racing Sans One';
-    font-size: 1em;
+    font-size: 1.25em;
     color: #FAFEFF;
     margin: 0;
 }
@@ -39,7 +41,7 @@
 }
 
 .link-box *{
-    margin: 0 .2em;
+    margin: 0 .25em;
 }
 
 .card-icon {
@@ -49,13 +51,13 @@
 
 .platform-icon-sizer {
     width: fit-content;
-    height: .825em;
+    height: 1.03125em;
 }
 
 .web-shadow {
-    text-shadow: .042em .042em #1ABCFE;
+    text-shadow: .0625em .0625em #1ABCFE;
 }
 
 .calendex-shadow {
-    text-shadow: .042em .042em #38CDA1;
+    text-shadow: .0625em .0625em #38CDA1;
 }

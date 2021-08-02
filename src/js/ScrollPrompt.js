@@ -10,7 +10,7 @@ export default class ScrollPrompt extends Component {
             <div id='scroll-prompt-container' class={this.props.layoutClass}>
                 <h1 id='scroll-prompt-text'>Scroll Down</h1>
                 <div id='scroll-chevron-container'>
-                    <div id='scroll-chevron' class ='scroll-chevron-box scroll-chevron-layout scroll-chevron-offset'>
+                    <div id='scroll-chevron' class ='scroll-chevron-box scroll-chevron-layout'>
                         <Chevron class='chevron-fill'/>
                     </div>
                     <div id='scroll-chevron-shadow' class ='scroll-chevron-box'>

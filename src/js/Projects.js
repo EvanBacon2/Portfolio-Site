@@ -61,8 +61,8 @@ export default class Projects extends Component {
                     </div>
                     {this.triangles('bottom')}
                 </div>
-                <div id='projects-content'>
-                    <div class='center hide'>
+                <div id='projects-content' class='hide'>
+                    <div class='center'>
                         <ContentHeader title='Projects' subTitle='' theme={this.state.theme} 
                                        fadeAlignment='center'/>
                     </div>

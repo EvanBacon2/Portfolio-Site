@@ -1,4 +1,4 @@
-import { Component, useState, useEffect} from 'react';
+import { useState, useEffect} from 'react';
 
 import SiteHeader from 'js/SiteHeader';
 import ScrollPrompt from 'js/ScrollPrompt';
@@ -13,6 +13,16 @@ export default function LandingPage() {
             setOffset(window.pageYOffset)
         }
     }, []);
+
+    const hiddenElements = document.getElementsByClassName('hide')
+    Array.prototype.map.call(hiddenElements, (element) => {
+        const bottomOfObject = element.getBoundingClientRect()['bottom'];
+        const bottomOfWindow = window.innerHeight;
+        if (bottomOfObject < bottomOfWindow) {
+            element.classList.remove('hide');
+            element.classList.add('show');
+        }     
+    }); 
 
     var hidePrompt = 'show-prompt';
     if (offset !== 0) {            
