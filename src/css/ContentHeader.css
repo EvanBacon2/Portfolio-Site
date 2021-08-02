@@ -1,10 +1,8 @@
-/*1rem*/
-
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 
 #header-container {
     width: fit-content;
-    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 #content-title {
@@ -12,14 +10,16 @@
     font-family: 'Racing Sans One';
     font-size: 3.1875em;
     pointer-events: none;
-    display: inline-block;
     opacity: 0;
+    transform: translate(.0196em, .0196em);
     transition: opacity .2s ease-out .5s, text-shadow .4s ease-out .55s, transform .4s ease-out .55s;
+    padding-left: .29412em;
+    padding-right: .29412em;
 }
 
 .show #content-title {
     opacity: 100%;
-    transform: translate(-.125em, -.125em);
+    transform: translate(0, 0);
 }
 
 #content-underline {
@@ -41,10 +41,11 @@
     transform: translateX(0);
 }
 
-.extra-padding {
+/*.extra-padding {
     padding-left: .9375em;
     padding-right: .9375em;
-}
+    text-align: center;
+}*/
 
 /*----------------------THEMED ITEMS----------------------*/
 
