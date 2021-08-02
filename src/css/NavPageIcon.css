@@ -1,9 +1,12 @@
+/*1rem*/
+
 .nav-page-icon-background {
     position: relative;
     width: fit-content;
     height: fit-content;
     overflow: hidden;
     background-color: #FAFEFF;
+    font-size: 1rem;
 }
 
 .nav-page-icon-background:hover {

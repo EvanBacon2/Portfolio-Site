@@ -21,7 +21,7 @@ export default class IosShowcase extends Component {
         const newPage = this.state.imageListPage + direction;
         if (newPage >= 0 && newPage < this.imageCount) {
             this.setState((prevState) => { return { imageListPage: prevState.imageListPage + direction } });
-            document.getElementById('showcase-image-list').style.transform = 'translateX(-' + newPage * 8.125 + 'em)'
+            document.getElementById('showcase-image-list').style.transform = 'translateX(-' + newPage * 12.1875 + 'em)'
         }
     }
 

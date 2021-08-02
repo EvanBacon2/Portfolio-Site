@@ -1,3 +1,5 @@
+/*1rem*/
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
 .showcase-container {
@@ -9,7 +11,7 @@
     grid-template-columns: .3fr 2fr 2fr 1fr;
     grid-area: 1 / 2 / 2 / 3; 
 
-    font-size: 1.5rem;
+    font-size: 1rem;
 
     visibility: hidden;
     opacity: 0;
@@ -25,8 +27,8 @@
 }
 
 .showcase-back-button {
-    width: 1.9167em;
-    height: 1.167em;
+    width: 2.875em;
+    height: 1.75em;
     transform: rotate(90deg);
 }
 
@@ -50,8 +52,8 @@
 
 .content-description {
     width: 100%;
-    margin-left: 15px;
+    margin-left: .7617em;
     font-family: 'Roboto';
     color: #FAFEFF;
-    font-size: .54167em;
+    font-size: .8125em;
 }

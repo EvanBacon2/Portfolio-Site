@@ -1,3 +1,5 @@
+/*1rem*/
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
 #landing-page {
@@ -8,6 +10,7 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+    font-size: 1rem;
 }
 
 .header-layout {
@@ -19,7 +22,7 @@
 .scroll-prompt-layout {
     justify-self: center;
     align-self: end;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 
 .show-prompt {
@@ -28,6 +31,6 @@
 
 .hide-prompt {
     opacity: 0;
-    transform: translateY(2em);
+    transform: translateY(3em);
     transition: all .4s;
 }

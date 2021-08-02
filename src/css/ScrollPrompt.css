@@ -1,6 +1,12 @@
+/*1rem*/
+
+#scroll-prompt-container {
+    font-size: 1rem;
+}
+
 #scroll-prompt-text {
     font-family: 'Roboto';
-    font-size: .7em;
+    font-size: 1.05rem;
     color: #FAFEFF;
 }
 
@@ -16,8 +22,8 @@
 }
 
 .scroll-chevron-box {
-    width: 1.9167em;
-    height: 1.167em;
+    width: 2.875em;
+    height: 1.75em;
 }
 
 .scroll-chevron-layout {
@@ -38,7 +44,7 @@
     }
 
     25% {
-        top: .167em;
+        top: .25em;
     }
 
     50% {

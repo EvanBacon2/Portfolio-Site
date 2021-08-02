@@ -1,6 +1,9 @@
+/*1rem*/
+
 #ios-showcase {
     display: flex;
     flex-direction: column;
+    font-size: 1rem;
 }
 
 #showcase-screen {
@@ -8,13 +11,13 @@
 }
 
 .showcase-chevron-layout {
-    margin: auto .5em;
+    margin: auto .75em;
     justify-self: center;
 }
 
 .showcase-chevron {
-    width: 1.9167em;
-    height: 1.167em;
+    width: 2.875em;
+    height: 1.75em;
 }
 
 .showcase-chevron.left {
@@ -26,10 +29,10 @@
 }
 
 .showcase-border {
-    width: 8.125em;
-    height: 17.583em;
-    border: .0833em solid #38CDA1;
-    border-radius: .4167em; 
+    width: 12.1875em;
+    height: 26.3745em;
+    border: .125em solid #38CDA1;
+    border-radius: .625em; 
     overflow: hidden;
 }
 
@@ -41,7 +44,7 @@
 
 .showcase-photo {
     object-fit: contain; 
-    width: 8.125em;
+    width: 12.1875em;
 
     -webkit-user-select: none;
     -khtml-user-select: none;

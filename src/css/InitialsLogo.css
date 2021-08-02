@@ -1,6 +1,9 @@
+/*1rem*/
+
 .initials-sizer {
-    width: 53px;
-    height: 57px;
+    width: 3.3125em;
+    height: 3.5625em;
+    font-size: 1rem;
 }
 
 .initials-shadow.brand {

@@ -14,7 +14,7 @@ export default function Contact(props) {
         <div id='contact' class='content-grid-template' ref={props.refProp}>
             <div id='contact-contents' class='hide'>
                 <div>
-                    <ContentHeader title='Contact' theme={THEMES.BRAND} fadeAlignment='left'/>
+                    <ContentHeader title='Contact' theme={THEMES.BRAND} fadeAlignment='right'/>
                     <form class='contact-form' method="POST">
                         <div class="form-group">
                             <label class='form-label' htmlFor="name">Name</label>
@@ -23,7 +23,7 @@ export default function Contact(props) {
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class='form-label' htmlFor="exampleInputEmail1">Email address</label>
+                            <label class='form-label' htmlFor="exampleInputEmail1">Email</label>
                             <div class='form-border'>
                                 <input class="form-style line-form" type="email" aria-describedby="emailHelp" />
                             </div>

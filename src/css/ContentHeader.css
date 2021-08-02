@@ -1,13 +1,16 @@
+/*1rem*/
+
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 
 #header-container {
     width: fit-content;
+    font-size: 1rem;
 }
 
 #content-title {
     color: #FAFEFF;
     font-family: 'Racing Sans One';
-    font-size: 38pt;
+    font-size: 3.1875em;
     pointer-events: none;
     display: inline-block;
     opacity: 0;
@@ -16,7 +19,7 @@
 
 .show #content-title {
     opacity: 100%;
-    transform: translate(-2px, -2px);
+    transform: translate(-.125em, -.125em);
 }
 
 #content-underline {
@@ -39,27 +42,27 @@
 }
 
 .extra-padding {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: .9375em;
+    padding-right: .9375em;
 }
 
 /*----------------------THEMED ITEMS----------------------*/
 
 /*- - - - text - - - -*/
 #content-title.brand {
-    text-shadow: #E26E6E 1px 1px;
+    text-shadow: #E26E6E .0196em .0196em;
 }
 
 .show #content-title.brand {
-    text-shadow: #E26E6E 2px 2px;
+    text-shadow: #E26E6E .0392em .0392em;
 }
 
 #content-title.calendex {
-    text-shadow: #38CDA1 1px 1px;
+    text-shadow: #38CDA1 .0196em .0196em;
 }
 
 .show #content-title.calendex {
-    text-shadow: #38CDA1 2px 2px;
+    text-shadow: #38CDA1 .0392em .0392em;
 }
 
 /*- - - - underline - - - -*/
