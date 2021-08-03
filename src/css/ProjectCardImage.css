@@ -1,13 +1,28 @@
-/*1rem*/
+.card-image-container {
+    position: relative;
+}
+
+.card-image-border {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: .78125em;
+    margin-bottom: .3125em;
+
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+    animation: border-draw 2s cubic-bezier(.59,.2,.16,.9) 1s;
+    animation-fill-mode: forwards;
+}
 
 .card-image {
     width: 18.75em;
     height: 12.5em;
     background-color: #22282E; 
-    margin-bottom: .3125em;
     border-radius: .78125em;
     overflow: hidden;
-    position: relative;
+    margin-bottom: .3125em;
 }
 
 .card-image-cover {
@@ -39,9 +54,6 @@
     transition: opacity .2s 0s;
 }
 
-.desc-container {
-}
-
 .cover-desc {
     font-family: 'Roboto';
     font-size: .9375em;
@@ -70,6 +82,28 @@
 
 .learn-link:hover {
     cursor: pointer;
+}
+
+@keyframes border-draw {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+    }
+
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+    }
+
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+    }
+
+    75% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+    }
 }
 
 /*----------------------THEMED ITEMS----------------------*/

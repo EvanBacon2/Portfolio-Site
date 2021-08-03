@@ -56,6 +56,10 @@ export default class Projects extends Component {
                         <div id='gallery-box' class={this.state.showcase}>
                             <WebProjectCard toggleShowcase={this.toggleShowcase}/>
                             <CalendexProjectCard toggleShowcase={this.toggleShowcase}/>
+                            <WebProjectCard toggleShowcase={this.toggleShowcase}/>
+                            <CalendexProjectCard toggleShowcase={this.toggleShowcase}/>
+                            <WebProjectCard toggleShowcase={this.toggleShowcase}/>
+                            <CalendexProjectCard toggleShowcase={this.toggleShowcase}/>
                         </div>
                         <CalendexShowcase showcase={this.state.showcase} toggleShowcase={this.toggleShowcase}/>
                     </div>

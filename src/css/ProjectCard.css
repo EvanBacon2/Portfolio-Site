@@ -9,9 +9,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 .625em .46875em .625em;
+    padding: 0 .625em .3125em .625em;
     border-radius: .78125em;
-    font-size: 1rem;
 }
 
 .project-container {
@@ -24,7 +23,7 @@
     justify-content: space-between;
     align-content: flex-end;
     
-    margin: .15625em .25em;
+    margin: .12em .25em;
 }
 
 .card-header {

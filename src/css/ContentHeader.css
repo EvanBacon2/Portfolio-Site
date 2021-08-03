@@ -10,11 +10,12 @@
     font-family: 'Racing Sans One';
     font-size: 3.1875em;
     pointer-events: none;
+    padding-left: .29412em;
+    padding-right: .29412em;
+    
     opacity: 0;
     transform: translate(.0196em, .0196em);
     transition: opacity .2s ease-out .5s, text-shadow .4s ease-out .55s, transform .4s ease-out .55s;
-    padding-left: .29412em;
-    padding-right: .29412em;
 }
 
 .show #content-title {

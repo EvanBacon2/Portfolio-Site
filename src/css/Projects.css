@@ -18,7 +18,7 @@
     grid-area: 1 / 2 / 2 / 3;
     height: 12em;
     justify-self: center;
-    margin-top: 7.75em;
+    margin-top: 3.5em;
     z-index: 1;
 }
 
@@ -33,7 +33,7 @@
 .projects-triangle-box {
     display: inline-block;
     width: 50%;
-    height: calc(50vw * .28854167);
+    height: calc(50vw * .17708333);
 }
 
 .projects-triangle-box.top {
@@ -72,7 +72,7 @@
 
 #gallery-container {
     width: 100%;
-    min-height: 39em;
+    min-height: 33em;
     height: fit-content;
     padding: 1.5em 0;
     display: grid;

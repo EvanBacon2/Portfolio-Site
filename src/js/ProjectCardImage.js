@@ -24,7 +24,9 @@ export default class ProjectCardImage extends Component {
 
     render() {
         return (
-            <div class={'card-image ' + this.props.theme + '-border'}
+            <div class='card-image-container'>
+                <div class={'card-image-border ' + this.props.theme + '-border'}/>
+                <div class={'card-image'}
                      onMouseEnter={() => this.displayCover()} 
                      onMouseLeave={() => this.hideCover()}>
                     <div class={'card-image-cover ' + this.props.theme + '-cover ' + this.state.coverState}/>
@@ -35,6 +37,7 @@ export default class ProjectCardImage extends Component {
                             Learn More
                         </button>
                     </div>
+                </div>
             </div>
         );
     }
