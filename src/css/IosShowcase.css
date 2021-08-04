@@ -53,14 +53,13 @@
     background-color: #38CDA1;
     border-radius: .625em; 
     overflow: hidden;
-
-    transition: height .8s ease-out 2.95s, background-color .4s ease-out 3.7s, border-width 0s ease-out 2.95s;
 }
 
 .showcase .showcase-border {
     height: 26.3745em;
     background-color: transparent;
     border-width: .125em;
+    transition: height .8s ease-out 2.95s, background-color .4s ease-out 3.7s, border-width 0s ease-out 2.95s;
 }
 
 .showcase-image-list {
