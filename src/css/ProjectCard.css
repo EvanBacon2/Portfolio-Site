@@ -1,16 +1,19 @@
-/*1 rem*/
-
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 
 .card-container {
     height: fit-content;
-    background-color: #637280;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 .625em .3125em .625em;
     border-radius: .78125em;
+
+    background-color: transparent;
+    transition: background-color 0s 2.5s, padding .6s 2.5s;
+}
+
+.show .card-container {
+    background-color: #637280;
+    padding: 0 .625em .3125em .625em;
 }
 
 .project-container {
@@ -22,8 +25,18 @@
     width: 97%;
     justify-content: space-between;
     align-content: flex-end;
-    
     margin: .12em .25em;
+
+    height: 0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity .2s 2.55s, transform .2s ease-out 2.55s, height .2s ease-out 2.55s;
+}
+
+.show .header-box {
+    height: 1.575em;
+    opacity: 100;
+    transform: translateY(0);
 }
 
 .card-header {
@@ -37,9 +50,20 @@
     display: flex;
     justify-content: flex-end;
     width: 97%;
+
+    height: 0;
+    opacity: 0;
+    transform: translateY(-3.5em);
+    transition: opacity .2s 2.55s, transform .2s ease-out 2.55s, height .2s ease-out 2.55s;
 }
 
-.link-box *{
+.show .link-box {
+    height: 1.5em;
+    opacity: 100;
+    transform: translateY(0);
+}
+
+.link-box * {
     margin: 0 .25em;
 }
 

@@ -1,5 +1,6 @@
 .card-image-container {
     position: relative;
+    z-index: 2;
 }
 
 .card-image-border {
@@ -11,23 +12,58 @@
     border-radius: .78125em;
     margin-bottom: .3125em;
 
-    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
-    animation: border-draw 2s cubic-bezier(.59,.2,.16,.9) 1s;
-    animation-fill-mode: forwards;
+    clip-path: polygon(50% 50%, 50% 0, 50% 0,    
+                           50% 50%, 100% 50%, 100% 50%,
+                           50% 50%, 50% 100%, 50% 100%,
+                           50% 50%, 0% 50%, 0% 50%);
+}
+
+.show .card-image-border {
+    animation: border-draw-center .7s cubic-bezier(.12,.54,.56,.99) 1.6s forwards;
 }
 
 .card-image {
     width: 18.75em;
-    height: 12.5em;
-    background-color: #22282E; 
+    height: 12.5em; 
     border-radius: .78125em;
     overflow: hidden;
     margin-bottom: .3125em;
+    background-color: transparent;
+    transition: background-color .2s 2.3s;
+}
+
+.show .card-image {
+    background-color: #22282E;
+}
+
+.show .p-1 .card-image-cover {
+    animation: cover-flash-p1 2.5s linear 0s;
+}
+
+.show .p-2 .card-image-cover {
+    animation: cover-flash-p2 2.5s linear 0s;
+}
+
+.show .p-3 .card-image-cover {
+    animation: cover-flash-p3 2.5s linear 0s;
+}
+
+.show .p-4 .card-image-cover {
+    animation: cover-flash-p4 2.5s linear 0s;
+}
+
+.show .p-5 .card-image-cover {
+    animation: cover-flash-p5 2.5s linear 0s;
+}
+
+.show .p-6 .card-image-cover {
+    animation: cover-flash-p6 2.5s linear 0s;
 }
 
 .card-image-cover {
-    width: 102%;
-    height: 102%;
+    width: 100%;
+    height: calc(100% - .3125em);
+    border-radius: .78125em;
     opacity: 0;
     top: 0;
     left: 0;
@@ -84,25 +120,103 @@
     cursor: pointer;
 }
 
-@keyframes border-draw {
+@keyframes border-draw-center {
     0% {
-        clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
-    }
-
-    25% {
-        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
-    }
-
-    50% {
-        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
-    }
-
-    75% {
-        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+        clip-path: polygon(50% 50%, 50% 0, 50% 0,    
+                           50% 50%, 100% 50%, 100% 50%,
+                           50% 50%, 50% 100%, 50% 100%,
+                           50% 50%, 0% 50%, 0% 50%);
     }
 
     100% {
-        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+        clip-path: polygon(50% 50%, 0 0, 100% 0,    
+                           50% 50%, 100% 0, 100% 100%,
+                           50% 50%, 0 100%, 100% 100%,
+                           50% 50%, 0 0, 0 100%);
+    }
+}
+
+@keyframes cover-flash-p1 {
+    0%, 40% {
+        opacity: 0;
+    }
+
+    48%, 92% {
+        opacity: 5%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes cover-flash-p2 {
+    0%, 42% {
+        opacity: 0;
+    }
+
+    50%, 92% {
+        opacity: 5%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes cover-flash-p3 {
+    0%, 44% {
+        opacity: 0;
+    }
+
+    52%, 92% {
+        opacity: 5%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes cover-flash-p4 {
+    0%, 46% {
+        opacity: 0;
+    }
+
+    54%, 92% {
+        opacity: 5%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes cover-flash-p5 {
+    0%, 48% {
+        opacity: 0;
+    }
+
+    56%, 92% {
+        opacity: 5%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes cover-flash-p6 {
+    0%, 50% {
+        opacity: 0;
+    }
+
+    58%, 92% {
+        opacity: 5%;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 

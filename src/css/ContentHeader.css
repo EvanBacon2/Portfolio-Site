@@ -29,24 +29,15 @@
     margin: 0px;
     transform: skew(-12deg);
 
-    transition: width .8s cubic-bezier(.82,0,.16,.96), transform .8s cubic-bezier(.82,0,.16,.96);
-}
-
-.hide #content-underline {
     width: 0;
     transform: translateX(100%);
+    transition: width .8s cubic-bezier(.82,0,.16,.96), transform .8s cubic-bezier(.82,0,.16,.96);
 }
 
 .show #content-underline {
     width: 100%;
     transform: translateX(0);
 }
-
-/*.extra-padding {
-    padding-left: .9375em;
-    padding-right: .9375em;
-    text-align: center;
-}*/
 
 /*----------------------THEMED ITEMS----------------------*/
 

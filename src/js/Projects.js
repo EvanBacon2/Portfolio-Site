@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { useState, useEffect } from 'react';
 
 import ContentHeader from 'js/ContentHeader';
 import CalendexProjectCard from './CalendexProjectCard';
@@ -10,25 +10,27 @@ import 'css/Structure.css';
 
 import {ReactComponent as BackgroundTriangle} from 'svg/background-triangle.svg';
 
-export default class Projects extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showcase: '',
-            theme: 'brand'
-        };
-    }
+export default function Projects(props) {
+    const [showcase, setShowcase] = useState('');
+    const [theme, setTheme] = useState('brand'); 
 
-    toggleShowcase = (theme) => {
-        this.setState((state) => {
-            return { 
-                showcase: state.showcase === '' ? 'showcase ' + theme : '',
-                theme: state.showcase === '' ? theme : 'brand'
+    useEffect(() => {
+        const checkScrollTrigger = () => {
+            if (document.getElementById('projects-scroll-trigger').classList.contains('show')) {
+                document.getElementById('projects').classList.add('show')
+                document.getElementById('projects').classList.add('hide')
             }
-        });
+        }
+
+        window.addEventListener("scroll", checkScrollTrigger, { passive: true });
+    });
+
+    const toggleShowcase = (theme) => {
+        setShowcase(showcase === '' ? 'showcase ' + theme : '');
+        setTheme(showcase === '' ? theme : 'brand');
     }
 
-    triangles(orientation) {
+    const triangles = (orientation, showcase) => {
         return (
             <div class={'projects-triangle-container ' + orientation}>
                 <div class='projects-triangle-box top left'>
@@ -38,40 +40,38 @@ export default class Projects extends Component {
                     <BackgroundTriangle class='projects-background-fill'/>
                 </div>
                 <div class='projects-triangle-box bottom left'>
-                    <BackgroundTriangle class={'projects-background-fill dynamic-background ' + this.state.showcase}/>
+                    <BackgroundTriangle class={'projects-background-fill dynamic-background ' + showcase}/>
                 </div>
                 <div class='projects-triangle-box bottom right'>
-                    <BackgroundTriangle class={'projects-background-fill dynamic-background ' + this.state.showcase}/>
+                    <BackgroundTriangle class={'projects-background-fill dynamic-background ' + showcase}/>
                 </div>
             </div>
         );
     }
-
-    render() {
-        return(
-            <div id='projects' class='content-grid-template' ref={this.props.refProp}>
-                <div id='projects-background'>
-                   {this.triangles('top')}
-                    <div id='gallery-container' class={'content-grid-template ' + this.state.showcase}>
-                        <div id='gallery-box' class={this.state.showcase}>
-                            <WebProjectCard toggleShowcase={this.toggleShowcase}/>
-                            <CalendexProjectCard toggleShowcase={this.toggleShowcase}/>
-                            <WebProjectCard toggleShowcase={this.toggleShowcase}/>
-                            <CalendexProjectCard toggleShowcase={this.toggleShowcase}/>
-                            <WebProjectCard toggleShowcase={this.toggleShowcase}/>
-                            <CalendexProjectCard toggleShowcase={this.toggleShowcase}/>
-                        </div>
-                        <CalendexShowcase showcase={this.state.showcase} toggleShowcase={this.toggleShowcase}/>
+    
+    return(
+        <div id='projects' class='content-grid-template' ref={props.refProp}>
+            <div id='projects-background'>
+                {triangles('top', showcase)}
+                <div id='gallery-container' class={'content-grid-template ' + showcase}>
+                    <div id='gallery-box' class={showcase}>
+                        <div id='projects-scroll-trigger' class='p-1 hide'><WebProjectCard toggleShowcase={toggleShowcase}/></div>    
+                        <div class='p-2'><CalendexProjectCard toggleShowcase={toggleShowcase}/></div>
+                        <div class='p-3'><WebProjectCard toggleShowcase={toggleShowcase}/></div>
+                        <div class='p-4'><CalendexProjectCard toggleShowcase={toggleShowcase}/></div>
+                        <div class='p-5'><WebProjectCard toggleShowcase={toggleShowcase}/></div>
+                        <div class='p-6'><CalendexProjectCard toggleShowcase={toggleShowcase}/></div>
                     </div>
-                    {this.triangles('bottom')}
+                    <CalendexShowcase showcase={showcase} toggleShowcase={toggleShowcase}/>
                 </div>
-                <div id='projects-content' class='hide'>
-                    <div class='center'>
-                        <ContentHeader title='Projects' subTitle='' theme={this.state.theme} 
-                                       fadeAlignment='center'/>
-                    </div>
+                {triangles('bottom', showcase)}
+            </div>
+            <div id='projects-content' /*class='hide'*/>
+                <div class='center'>
+                    <ContentHeader title='Projects' subTitle='' theme={theme} 
+                                   fadeAlignment='center'/>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
