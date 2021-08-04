@@ -9,7 +9,7 @@ export default class PageIndex extends Component {
 
     render() {
         return (
-            <div id='page-index'>
+            <div class='page-index-container'>
                 {this.captionForIndex(this.props.currPage)}
                 <ul id='index-list'>
                     {this.props.captions.map((caption, index) => {

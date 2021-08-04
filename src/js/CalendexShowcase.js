@@ -20,7 +20,7 @@ export default class CalendexShowcase extends Component {
                 </SvgButton>
                 <div class='content-layout'>
                     <ContentHeader title='Calendex' subTitle='ios app' theme={THEMES.CALENDEX}/>
-                    <p class='content-description'>                        
+                    <p class='showcase-content-description'>                        
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
                         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip 
                         ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
@@ -31,7 +31,7 @@ export default class CalendexShowcase extends Component {
                 <div class='showcase-layout'>
                     <IosShowcase/>
                 </div>
-                <div class='links-layout'>
+                <div class='showcase-links-layout'>
                     <Links theme={THEMES.CALENDEX}>
                         <LargeLink destination='github' url='https://github.com/EvanBacon2'/>
                         <LargeLink destination='appstore'/>

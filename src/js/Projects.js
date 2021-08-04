@@ -11,14 +11,14 @@ import 'css/Structure.css';
 import {ReactComponent as BackgroundTriangle} from 'svg/background-triangle.svg';
 
 export default function Projects(props) {
+    const [scrollTrigger, setScrollTrigger] = useState('hide');
     const [showcase, setShowcase] = useState('');
     const [theme, setTheme] = useState('brand'); 
 
     useEffect(() => {
         const checkScrollTrigger = () => {
             if (document.getElementById('projects-scroll-trigger').classList.contains('show')) {
-                document.getElementById('projects').classList.add('show')
-                document.getElementById('projects').classList.add('hide')
+                setScrollTrigger('show');
             }
         }
 
@@ -54,7 +54,7 @@ export default function Projects(props) {
             <div id='projects-background'>
                 {triangles('top', showcase)}
                 <div id='gallery-container' class={'content-grid-template ' + showcase}>
-                    <div id='gallery-box' class={showcase}>
+                    <div id='gallery-box' class={showcase + ' ' + scrollTrigger}>
                         <div id='projects-scroll-trigger' class='p-1 hide'><WebProjectCard toggleShowcase={toggleShowcase}/></div>    
                         <div class='p-2'><CalendexProjectCard toggleShowcase={toggleShowcase}/></div>
                         <div class='p-3'><WebProjectCard toggleShowcase={toggleShowcase}/></div>
@@ -66,7 +66,7 @@ export default function Projects(props) {
                 </div>
                 {triangles('bottom', showcase)}
             </div>
-            <div id='projects-content' /*class='hide'*/>
+            <div id='projects-content' class={scrollTrigger}>
                 <div class='center'>
                     <ContentHeader title='Projects' subTitle='' theme={theme} 
                                    fadeAlignment='center'/>

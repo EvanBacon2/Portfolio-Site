@@ -32,19 +32,21 @@ export default class IosShowcase extends Component {
                 <SvgButton layoutClass='showcase-chevron-layout' theme='calendex'>
                     <Chevron class='showcase-chevron left' onClick={() => this.shiftPage(-1)}/>
                 </SvgButton>
-                    <div class='showcase-border'>
-                        <div id='showcase-image-list'>
-                            <div class='photo-box'>
-                                <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
-                            </div>
-                            <div class='photo-box'>
-                                <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
-                            </div>
-                            <div class='photo-box'>
-                                <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
-                            </div>
-                            <div class='photo-box'>
-                                <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
+                    <div class='showcase-border-container'>
+                        <div class='showcase-border'>
+                            <div class='showcase-image-list'>
+                                <div class='photo-box'>
+                                    <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
+                                </div>
+                                <div class='photo-box'>
+                                    <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
+                                </div>
+                                <div class='photo-box'>
+                                    <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
+                                </div>
+                                <div class='photo-box'>
+                                    <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
+                                </div>
                             </div>
                         </div>
                     </div>

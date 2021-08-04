@@ -1,5 +1,3 @@
-/*1rem*/
-
 #ios-showcase {
     display: flex;
     flex-direction: column;
@@ -18,28 +16,65 @@
 .showcase-chevron {
     width: 2.875em;
     height: 1.75em;
+
+    opacity: 0;
 }
 
 .showcase-chevron.left {
-    transform: rotate(90deg);
+    transform: rotate(90deg) translateY(.625em);
 }
 
 .showcase-chevron.right {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateY(.625em);
 }
 
-.showcase-border {
-    width: 12.1875em;
+.showcase .showcase-chevron {
+    opacity: 100;
+    transition: opacity .4s ease-out 3.7s, transform .4s ease-out 3.75s;
+}
+
+.showcase .showcase-chevron.left {
+    transform: rotate(90deg) translateX(0);
+}
+
+.showcase .showcase-chevron.right {
+    transform: rotate(-90deg) translateX(0);
+}
+
+.showcase-border-container {
     height: 26.3745em;
-    border: .125em solid #38CDA1;
+}
+/*TODO: fix bug where height doesnt get reset to 0*/
+.showcase-border {
+    position: relative;
+    width: 12.1875em;
+    height: 0;
+    border: 0 solid #38CDA1;
+    background-color: #38CDA1;
     border-radius: .625em; 
     overflow: hidden;
+
+    transition: height .8s ease-out 2.95s, background-color .4s ease-out 3.7s, border-width 0s ease-out 2.95s;
 }
 
-#showcase-image-list {
+.showcase .showcase-border {
+    height: 26.3745em;
+    background-color: transparent;
+    border-width: .125em;
+}
+
+.showcase-image-list {
     display: flex;
+    position: relative;
     flex-wrap: nowrap;
     transition: transform .4s ease-out;
+
+    opacity: 0;
+}
+
+.showcase .showcase-image-list {
+    opacity: 100;
+    transition: opacity .4s ease-out 3.7s;
 }
 
 .showcase-photo {

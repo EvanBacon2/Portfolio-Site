@@ -23,6 +23,12 @@
     transform: translate(0, 0);
 }
 
+.showcase #content-title {
+    opacity: 100%;
+    transform: translate(0, 0);
+    transition: opacity .2s ease-out 2.9s, text-shadow .4s ease-out 2.95s, transform .4s ease-out 2.95s;
+}
+
 #content-underline {
     height: .0625em;
     border: none;
@@ -37,6 +43,12 @@
 .show #content-underline {
     width: 100%;
     transform: translateX(0);
+}
+
+.showcase #content-underline {
+    width: 100%;
+    transform: translateX(0);
+    transition: width .8s cubic-bezier(.82,0,.16,.96) 2.4s, transform .8s cubic-bezier(.82,0,.16,.96) 2.4s;
 }
 
 /*----------------------THEMED ITEMS----------------------*/
