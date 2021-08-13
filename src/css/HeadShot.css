@@ -1,5 +1,3 @@
-/* 1rem */
-
 #headshot-container {
     position: relative;
     font-size: 1rem;
@@ -16,7 +14,7 @@
     transition: height .8s cubic-bezier(.82,0,.16,.96) .55s, transform .8s cubic-bezier(.82,0,.16,.96) .85s;
 }
 
-.show .grad-photo-background {
+.show-init .grad-photo-background {
     transform: translateY(0);
     height: 18.3423em;
 }
@@ -33,7 +31,7 @@
     opacity: 0;
 }
 
-.show .grad-photo {
+.show-init .grad-photo {
     top: -.625em;
     left: -.625em;
     opacity: 100;

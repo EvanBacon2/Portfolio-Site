@@ -55,7 +55,7 @@ export default class LargeLink extends Component {
 
     render() {
         return (
-            <a class='link' href={this.props.url} target='_blank' onMouseEnter={this.toggleActive} onMouseLeave={this.toggleActive}>
+            <a class={'link ' + this.props.state} href={this.props.url} target='_blank' onMouseEnter={this.toggleActive} onMouseLeave={this.toggleActive}>
                 {this.icon(this.props.destination)}
                 {this.text(this.props.destination)}
             </a>

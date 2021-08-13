@@ -1,24 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 
+/*----------------------CARD CONTAINER----------------------*/
+
 .card-container {
     height: fit-content;
+    width: 18.75em;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: .78125em;
 
-    background-color: transparent;
-    transition: background-color 0s 2.5s, padding .6s 2.5s;
-}
-
-.show .card-container {
     background-color: #637280;
     padding: 0 .625em .3125em .625em;
 }
 
-.project-container {
-    width: 18.75em;
+.no-show.no-showcase .card-container {
+    background-color: transparent;
+    padding: 0;
 }
+
+.show-init .card-container {
+    transition: background-color 0s 2.5s, padding .6s 2.5s;
+}
+
+/*----------------------HEADER----------------------*/
 
 .header-box {
     display: flex;
@@ -27,16 +32,19 @@
     align-content: flex-end;
     margin: .12em .25em;
 
-    height: 0;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity .2s 2.55s, transform .2s ease-out 2.55s, height .2s ease-out 2.55s;
-}
-
-.show .header-box {
     height: 1.575em;
     opacity: 100;
     transform: translateY(0);
+}
+
+.no-show.no-showcase .header-box {
+    height: 0;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.show-init .header-box {
+    transition: opacity .2s 2.55s, transform .2s ease-out 2.55s, height .2s ease-out 2.55s;
 }
 
 .card-header {
@@ -46,18 +54,13 @@
     margin: 0;
 }
 
+/*----------------------LINKS----------------------*/
+
 .link-box {
     display: flex;
     justify-content: flex-end;
     width: 97%;
 
-    height: 0;
-    opacity: 0;
-    transform: translateY(-3.5em);
-    transition: opacity .2s 2.55s, transform .2s ease-out 2.55s, height .2s ease-out 2.55s;
-}
-
-.show .link-box {
     height: 1.5em;
     opacity: 100;
     transform: translateY(0);
@@ -66,6 +69,18 @@
 .link-box * {
     margin: 0 .25em;
 }
+
+.no-show.no-showcase .link-box {
+    height: 0;
+    opacity: 0;
+    transform: translateY(-3.5em);
+}
+
+.show-init .link-box {
+    transition: opacity .2s 2.55s, transform .2s ease-out 2.55s, height .2s ease-out 2.55s;
+}
+
+/*----------------------ICONS----------------------*/
 
 .card-icon {
     fill: #FAFEFF;
@@ -76,6 +91,8 @@
     width: fit-content;
     height: 1.03125em;
 }
+
+/*----------------------TEXT SHADOW----------------------*/
 
 .web-shadow {
     text-shadow: .0625em .0625em #1ABCFE;

@@ -68,21 +68,26 @@
     transition: fill .4s .6s;
 }
 
+.dynamic-background.showcase {
+    fill: #222E38;
+    transition: fill 0s 2s;
+    animation: fill-shift 1.2s linear .8s;
+}
+
+/*----------------------GALLERY----------------------*/
+
+/*- - - - gallery container - - - -*/
 #gallery-container {
     width: 100%;
     min-height: 33em;
     height: fit-content;
     padding: 1.5em 0;
     display: grid;
-
-    background-color: #1C1F23;
-    transition: background-color .4s .6s;
 }
 
-.dynamic-background.showcase {
-    fill: #222E38;
-    transition: fill 0s 2s;
-    animation: fill-shift 1.2s linear .8s;
+#gallery-container.no-showcase {
+    background-color: #1C1F23;
+    transition: background-color .4s .6s;
 }
 
 #gallery-container.showcase {
@@ -91,14 +96,7 @@
     animation: background-color-shift 1.2s linear .8s;
 }
 
-.projects-header {
-    transition: text-shadow .4s .6s, background-color .4s .6s;
-}
-
-.projects-header.showcase {
-    transition: text-shadow .4s 1.6s, background-color .4s 1.6s;
-}
-
+/*- - - - gallery box - - - -*/
 #gallery-box {
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
@@ -118,6 +116,13 @@
     opacity: 0;
     transition: opacity .4s 0s;
 }
+
+#gallery-box.no-showcase {
+    opacity: 100;
+    transition: opacity .4s 1.4s;
+}
+
+/*----------------------ANIMATIONS----------------------*/
 
 @keyframes background-color-shift {
     0% {

@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import ContentHeader from 'js/ContentHeader';
 import HeadShot from 'js/HeadShot';
 import { THEMES } from 'js/Themes';
@@ -6,11 +8,23 @@ import 'css/About.css';
 import 'css/Structure.css';
 
 export default function About(props) {
+    const [state, setState] = useState('no-show');
+
+    useEffect(() => {
+        const checkScrollTrigger = () => {
+            if (document.getElementById('about-scroll-trigger').classList.contains('show')) {
+                setState('show-init');
+            }
+        }
+
+        window.addEventListener("scroll", checkScrollTrigger, { passive: true });
+    });
+
     return (
         <div id='about' class='content-grid-template' ref={props.refProp}>
-            <div id='about-content' class='hide'>
+            <div id='about-content' class={state}>
                 <div class='about-description-container'>
-                    <ContentHeader title='About Me' theme={THEMES.BRAND} fadeAlignment='right'/>
+                    <ContentHeader state={state} title='About Me' theme={THEMES.BRAND} fadeAlignment='right'/>
                     <p class='about-description'>                        
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et                             
                         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip 
@@ -20,6 +34,7 @@ export default function About(props) {
                     </p>
                 </div>
                 <HeadShot></HeadShot>
+                <div id='about-scroll-trigger' class='hide'/>
             </div>
         </div>
     );   

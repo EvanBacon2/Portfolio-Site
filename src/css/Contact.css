@@ -33,15 +33,17 @@
     font-family: 'Racing Sans One';
     font-size: 1.9375rem;
     color: #FAFEFF;
-
-    opacity: 0;
-    transform: translateX(-.9375em);
-    transition: all .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s;
 }
 
-.show .form-label {
+.no-show .form-label {
+    opacity: 0;
+    transform: translateX(-.9375em);
+}
+
+.show-init .form-label {
     opacity: 100;
     transform: translateX(0);
+    transition: all .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s;
 }
 
 .form-style {
@@ -52,13 +54,15 @@
     color: #FAFEFF;
     padding: .7rem;
     border: none;
-
-    opacity: 0;
-    transition: opacity .4s ease-out 1.25s;
 }
 
-.show .form-style {
+.no-show .form-style {
+    opacity: 0;
+}
+
+.show-init .form-style {
     opacity: 100%;
+    transition: opacity .4s ease-out 1.25s;
 }
 
 .form-border {
@@ -67,14 +71,16 @@
     background: linear-gradient(to right, #E26E6E 50%, #FCC28D 95%);
     padding: .0625em;
     border-radius: .4167em;
-
-    opacity: 0;
-    transition: width .7s cubic-bezier(.05,.11,0,.7) .5s, opacity .05s linear .5s;
 }
 
-.show .form-border {
+.no-show .form-border {
+    opacity: 0;
+}
+
+.show-init .form-border {
     opacity: 100;
     width: 21.4em;
+    transition: width .7s cubic-bezier(.05,.11,0,.7) .5s, opacity .05s linear .5s;
 }
 
 .form-style:focus {

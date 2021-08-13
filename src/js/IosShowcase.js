@@ -34,7 +34,7 @@ export default class IosShowcase extends Component {
                 </SvgButton>
                     <div class='showcase-border-container'>
                         <div class='showcase-border'>
-                            <div class='showcase-image-list'>
+                            <div id='showcase-image-list'>
                                 <div class='photo-box'>
                                     <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
                                 </div>

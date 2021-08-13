@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
+/*----------------------SHOWCASE CONTAINER----------------------*/
+
 .showcase-container {
     position: relative;
     z-index: 998;
@@ -11,17 +13,20 @@
 
     font-size: 1rem;
 
-    visibility: hidden;
-    transition: all .4s 0s;
-
     align-self: center;
 }
 
-.showcase-container.showcase.calendex {
-    visibility: visible;
-    opacity: 1.0;
-    /*transition: opacity .8s 2.4s;*/
+.showcase-container.no-showcase {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear .4s, opacity .4s linear 0s;
 }
+
+.showcase-container.showcase {
+    visibility: visible;
+}
+
+/*----------------------SHOWCASE BACK BUTTON----------------------*/
 
 .showcase-back-button {
     width: 2.875em;
@@ -34,6 +39,42 @@
     align-self: center;
 }
 
+.no-showcase .showcase-back-button-layout {
+    opacity: 0;
+    transform: translateX(-.625em);
+    transition: opacity .4s 0s, transform 0s .4s;
+}
+
+.showcase .showcase-back-button-layout {
+    opacity: 100;
+    transform: translateX(0);
+    transition: opacity .4s ease-out 3.7s, transform .4s ease-out 3.75s;
+}
+
+/*----------------------SHOWCASE CONTENT DESCRIPTION----------------------*/
+
+.showcase-content-description {
+    width: 100%;
+    margin-left: .7617em;
+    font-family: 'Roboto';
+    color: #FAFEFF;
+    font-size: .8125em;
+}
+
+.no-showcase .showcase-content-description {
+    opacity: 0;
+    transform: translateX(-.675em);
+    transition: opacity .4s 0s, transform 0s .4s;
+}
+
+.showcase .showcase-content-description {
+    opacity: 100;
+    transform: translateX(0);
+    transition: opacity .4s ease-out 3.7s, transform .4s ease-out 3.75s;
+}
+
+/*----------------------MISC LAYOUTS----------------------*/
+
 .content-layout {
     grid-area: 2 / 2 / 3 / 3;
 }
@@ -45,21 +86,4 @@
 
 .showcase-links-layout {
     grid-area: 2 / 4 / 3 / 5
-}
-
-.showcase-content-description {
-    width: 100%;
-    margin-left: .7617em;
-    font-family: 'Roboto';
-    color: #FAFEFF;
-    font-size: .8125em;
-
-    opacity: 0;
-    transform: translateX(-.675em);
-}
-
-.showcase .showcase-content-description {
-    opacity: 100;
-    transform: translateX(0);
-    transition: opacity .4s ease-out 3.7s, transform .4s ease-out 3.75s;
 }

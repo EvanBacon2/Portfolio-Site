@@ -1,88 +1,152 @@
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 
-#header-container {
+.header-container {
     width: fit-content;
     box-sizing: border-box;
 }
 
-#content-title {
+/*----------------------CONTENT TITLE----------------------*/
+
+.content-title {
     color: #FAFEFF;
     font-family: 'Racing Sans One';
     font-size: 3.1875em;
     pointer-events: none;
     padding-left: .29412em;
     padding-right: .29412em;
-    
+}
+
+.no-show.content-title {
     opacity: 0;
     transform: translate(.0196em, .0196em);
+}
+
+.show-init.content-title {
+    opacity: 100%;
+    transform: translate(0, 0);
     transition: opacity .2s ease-out .5s, text-shadow .4s ease-out .55s, transform .4s ease-out .55s;
 }
 
-.show #content-title {
-    opacity: 100%;
-    transform: translate(0, 0);
+.showcase-container .no-showcase.content-title {
+    opacity: 0;
+    transform: translate(.0196em, .0196em);
+    transition: opacity .4s, transform 0s .4s;
 }
 
-.showcase #content-title {
+.showcase-container .showcase.content-title {
     opacity: 100%;
     transform: translate(0, 0);
     transition: opacity .2s ease-out 2.9s, text-shadow .4s ease-out 2.95s, transform .4s ease-out 2.95s;
 }
 
-#content-underline {
+.projects-header .show.no-showcase.content-title {
+    opacity: 100%;
+    transform: translate(0, 0);
+    transition: text-shadow .4s .6s;
+}
+
+.projects-header .no-show.showcase.content-title {
+    opacity: 100%;
+    transform: translate(0, 0);
+    transition: text-shadow .4s 1.6s;
+}
+
+/*----------------------CONTENT UNDERLINE----------------------*/
+
+.content-underline {
+    position: relative;
     height: .0625em;
     border: none;
     margin: 0px;
     transform: skew(-12deg);
+}
 
+.no-show.content-underline {
     width: 0;
     transform: translateX(100%);
+}
+
+.showcase-container .no-showcase.content-underline {
+    opacity: 0;
+    width: 0;
+    transform: translateX(100%);
+    transition: opacity .4s, width 0s .4s, transform 0s .4s;
+}
+
+.show-init.content-underline {
+    width: 100%;
+    transform: translateX(0);
     transition: width .8s cubic-bezier(.82,0,.16,.96), transform .8s cubic-bezier(.82,0,.16,.96);
 }
 
-.show #content-underline {
+.showcase.content-underline {
+    opacity: 100;
+    width: 100%;
+    transform: translateX(0);
+    transition: opacity 0s, width .8s cubic-bezier(.82,0,.16,.96) 2.4s, transform .8s cubic-bezier(.82,0,.16,.96) 2.4s;
+}
+
+.projects-header .show.no-showcase.content-underline {
     width: 100%;
     transform: translateX(0);
 }
 
-.showcase #content-underline {
-    width: 100%;
-    transform: translateX(0);
-    transition: width .8s cubic-bezier(.82,0,.16,.96) 2.4s, transform .8s cubic-bezier(.82,0,.16,.96) 2.4s;
+.projects-header .content-underline::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: " ";
+    background-color: transparent;
+}
+
+.projects-header .content-underline.calendex {
+    background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
+}
+
+.projects-header .no-showcase.content-underline::before {
+    background-color: transparent;
+    transition: background-color .4s .6s;
+}
+
+.projects-header .content-underline.calendex::before {
+    background-color: #38CDA1;
+    transition: background-color .4s 1.6s;
 }
 
 /*----------------------THEMED ITEMS----------------------*/
 
 /*- - - - text - - - -*/
-#content-title.brand {
+.no-show.content-title.brand {
     text-shadow: #E26E6E .0196em .0196em;
 }
 
-.show #content-title.brand {
-    text-shadow: #E26E6E .0392em .0392em;
-}
-
-#content-title.calendex {
+.no-show.no-showcase.content-title.calendex {
     text-shadow: #38CDA1 .0196em .0196em;
 }
 
-.show #content-title.calendex {
+.content-title.brand {
+    text-shadow: #E26E6E .0392em .0392em;
+}
+
+.content-title.calendex {
     text-shadow: #38CDA1 .0392em .0392em;
 }
 
 /*- - - - underline - - - -*/
-#content-underline.brand.right {
+.content-underline.brand.right {
     background-image: linear-gradient(to right, #E26E6E 50%, #FCC28D 95%);
 }
 
-#content-underline.brand.left {
+.content-underline.brand.left {
     background-image: linear-gradient(to left, #E26E6E 50%, #FCC28D 95%);
 }
 
-#content-underline.brand.center {
+.content-underline.brand.center {
     background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
 }
 
-#content-underline.calendex {
+.content-underline.calendex {
     background-color: #38CDA1;
 }

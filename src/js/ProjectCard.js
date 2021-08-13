@@ -7,8 +7,6 @@ import 'css/ProjectCard.css';
 
 import {ReactComponent as WebIcon} from 'svg/web.svg';
 import {ReactComponent as AppleIcon} from 'svg/apple.svg';
-import {ReactComponent as WebSiteIcon} from 'svg/website.svg';
-import {ReactComponent as GithubIcon} from 'svg/github.svg';
 
 export default class ProjectCard extends Component {
     platformIcon = (type) => {
@@ -20,7 +18,7 @@ export default class ProjectCard extends Component {
 
     render() {
         return (
-            <div class='card-container project-container'>
+            <div class='card-container'>
                 <div class='header-box'>
                     <h1 class={'card-header ' + this.props.theme + '-shadow'}>{this.props.title}</h1>
                     {this.platformIcon(this.props.type)}

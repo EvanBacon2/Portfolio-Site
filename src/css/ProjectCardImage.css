@@ -1,8 +1,12 @@
+/*----------------------CARD IMAGE----------------------*/
+
+/*- - - - container - - - -*/
 .card-image-container {
     position: relative;
     z-index: 2;
 }
 
+/*- - - - border - - - -*/
 .card-image-border {
     position: absolute;
     left: 0;
@@ -12,54 +16,46 @@
     border-radius: .78125em;
     margin-bottom: .3125em;
 
+    clip-path: polygon(50% 50%, 0 0, 100% 0,    
+                           50% 50%, 100% 0, 100% 100%,
+                           50% 50%, 0 100%, 100% 100%,
+                           50% 50%, 0 0, 0 100%);
+}
+
+.no-show.no-showcase .card-image-border {
     clip-path: polygon(50% 50%, 50% 0, 50% 0,    
                            50% 50%, 100% 50%, 100% 50%,
                            50% 50%, 50% 100%, 50% 100%,
                            50% 50%, 0% 50%, 0% 50%);
 }
 
-.show .card-image-border {
+.show-init .card-image-border {
+    clip-path: polygon(50% 50%, 50% 0, 50% 0,    
+                           50% 50%, 100% 50%, 100% 50%,
+                           50% 50%, 50% 100%, 50% 100%,
+                           50% 50%, 0% 50%, 0% 50%);
     animation: border-draw-center .7s cubic-bezier(.12,.54,.56,.99) 1.6s forwards;
 }
 
+/*- - - - image - - - -*/
 .card-image {
     width: 18.75em;
     height: 12.5em; 
     border-radius: .78125em;
     overflow: hidden;
     margin-bottom: .3125em;
-    background-color: transparent;
-    transition: background-color .2s 2.3s;
-}
-
-.show .card-image {
     background-color: #22282E;
 }
 
-.show .p-1 .card-image-cover {
-    animation: cover-flash-p1 2.5s linear 0s;
+.no-show.no-showcase .card-image {
+    background-color: transparent;
 }
 
-.show .p-2 .card-image-cover {
-    animation: cover-flash-p2 2.5s linear 0s;
+.show-init .card-image {
+    transition: background-color .2s 2.3s;
 }
 
-.show .p-3 .card-image-cover {
-    animation: cover-flash-p3 2.5s linear 0s;
-}
-
-.show .p-4 .card-image-cover {
-    animation: cover-flash-p4 2.5s linear 0s;
-}
-
-.show .p-5 .card-image-cover {
-    animation: cover-flash-p5 2.5s linear 0s;
-}
-
-.show .p-6 .card-image-cover {
-    animation: cover-flash-p6 2.5s linear 0s;
-}
-
+/*- - - - cover - - - -*/
 .card-image-cover {
     width: 100%;
     height: calc(100% - .3125em);
@@ -71,11 +67,38 @@
     position: absolute;
 }
 
-.card-image-cover.display-cover {
+.on .card-image-cover.display-cover {
     opacity: 5%;
     transition: opacity .2s 0s;
 }
 
+.show-init .p-1 .card-image-cover {
+    animation: cover-flash-p1 2.5s linear 0s;
+}
+
+.show-init .p-2 .card-image-cover {
+    animation: cover-flash-p2 2.5s linear 0s;
+}
+
+.show-init .p-3 .card-image-cover {
+    animation: cover-flash-p3 2.5s linear 0s;
+}
+
+.show-init .p-4 .card-image-cover {
+    animation: cover-flash-p4 2.5s linear 0s;
+}
+
+.show-init .p-5 .card-image-cover {
+    animation: cover-flash-p5 2.5s linear 0s;
+}
+
+.show-init .p-6 .card-image-cover {
+    animation: cover-flash-p6 2.5s linear 0s;
+}
+
+/*----------------------COVER DESCRIPTION----------------------*/
+
+/*- - - - container - - - -*/
 .desc-container {
     position: absolute;
     display: flex;
@@ -90,6 +113,7 @@
     transition: opacity .2s 0s;
 }
 
+/*- - - - description - - - -*/
 .cover-desc {
     font-family: 'Roboto';
     font-size: .9375em;
@@ -97,11 +121,12 @@
     margin-top: 1.5rem;
 }
 
-.desc-container.display-cover {
+.on .desc-container.display-cover {
     opacity: 100%;
     transition: opacity .2s .2s;
 }
 
+/*- - - - link - - - -*/
 .learn-link {
     font-family: 'Roboto';
     font-size: .9375em;
@@ -120,6 +145,8 @@
     cursor: pointer;
 }
 
+/*----------------------ANIMATIONS----------------------*/
+
 @keyframes border-draw-center {
     0% {
         clip-path: polygon(50% 50%, 50% 0, 50% 0,    
@@ -137,11 +164,11 @@
 }
 
 @keyframes cover-flash-p1 {
-    0%, 40% {
+    0%, 35% {
         opacity: 0;
     }
 
-    48%, 92% {
+    43%, 92% {
         opacity: 5%;
     }
 
@@ -151,11 +178,11 @@
 }
 
 @keyframes cover-flash-p2 {
-    0%, 42% {
+    0%, 37% {
         opacity: 0;
     }
 
-    50%, 92% {
+    45%, 92% {
         opacity: 5%;
     }
 
@@ -165,11 +192,11 @@
 }
 
 @keyframes cover-flash-p3 {
-    0%, 44% {
+    0%, 39% {
         opacity: 0;
     }
 
-    52%, 92% {
+    47%, 92% {
         opacity: 5%;
     }
 
@@ -179,11 +206,11 @@
 }
 
 @keyframes cover-flash-p4 {
-    0%, 46% {
+    0%, 41% {
         opacity: 0;
     }
 
-    54%, 92% {
+    49%, 92% {
         opacity: 5%;
     }
 
@@ -193,11 +220,11 @@
 }
 
 @keyframes cover-flash-p5 {
-    0%, 48% {
+    0%, 43% {
         opacity: 0;
     }
 
-    56%, 92% {
+    51%, 92% {
         opacity: 5%;
     }
 
@@ -207,11 +234,11 @@
 }
 
 @keyframes cover-flash-p6 {
-    0%, 50% {
+    0%, 45% {
         opacity: 0;
     }
 
-    58%, 92% {
+    53%, 92% {
         opacity: 5%;
     }
 
@@ -248,7 +275,6 @@
 .calendex-link {
     color: #233034;
 }
-
 
 /*- - - - links:hover - - - -*/
 .web-link:hover {
