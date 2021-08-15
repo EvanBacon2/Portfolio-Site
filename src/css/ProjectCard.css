@@ -3,6 +3,7 @@
 /*----------------------CARD CONTAINER----------------------*/
 
 .card-container {
+    position: relative;
     height: fit-content;
     width: 18.75em;
     display: flex;

@@ -37,18 +37,9 @@ export default function Projects(props) {
     const triangles = (orientation) => {
         return (
             <div class={'projects-triangle-container ' + orientation}>
-                <div class='projects-triangle-box top left'>
-                    <BackgroundTriangle class='projects-background-fill'/>
-                </div>
-                <div class='projects-triangle-box top right'>
-                    <BackgroundTriangle class='projects-background-fill'/>
-                </div>
-                <div class='projects-triangle-box bottom left'>
-                    <BackgroundTriangle class={'projects-background-fill dynamic-background ' + showcase + ' ' + theme}/>
-                </div>
-                <div class='projects-triangle-box bottom right'>
-                    <BackgroundTriangle class={'projects-background-fill dynamic-background ' + showcase + ' ' + theme}/>
-                </div>
+                <div class={'projects-triangle-box outer left ' + showcase + ' ' + theme}/>
+                <div class={'projects-triangle-box inner gallery-swipe ' + showcase + ' ' + theme}/>
+                <div class={'projects-triangle-box outer right ' + showcase + ' ' + theme}/>
             </div>
         );
     }
@@ -57,7 +48,7 @@ export default function Projects(props) {
         <div id='projects' class='content-grid-template' ref={props.refProp}>
             <div id='projects-background'>
                 {triangles('top')}
-                <div id='gallery-container' class={'content-grid-template ' + showcase + ' ' + theme}>
+                <div id='gallery-container' class={'content-grid-template gallery-swipe ' + showcase + ' ' + theme}>
                     <div id='gallery-box' class={gallery + ' ' + showcase + ' ' + theme + ' ' + displaySwitch}>
                         <div class='p-1'>
                             <WebProjectCard toggleShowcase={toggleShowcase}/>
