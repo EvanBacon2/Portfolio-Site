@@ -34,8 +34,8 @@ export default function About(props) {
                     </p>
                 </div>
                 <HeadShot></HeadShot>
-                <div id='about-scroll-trigger' class='hide'/>
             </div>
+            <div id='about-scroll-trigger' class='hide'/>
         </div>
     );   
 }
