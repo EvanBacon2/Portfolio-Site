@@ -34,3 +34,9 @@
     text-shadow: #E26E6E .0323em .0323em;
     cursor: pointer;
 }
+
+@media only screen and (orientation: portrait) {
+    .footer-link {
+        display: none;
+    }
+}

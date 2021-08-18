@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
 #contact {
-    height: calc(100vh - 5.025em);
+    min-height: calc(100vh - 5.025em);
     background-image: linear-gradient(to top, #23272B 5%, #1C1F23 60%);
     grid-area: 4 / 1 / 5 / 5;
     display: grid;
@@ -95,4 +95,26 @@
 .send-message-layout {
     width: fit-content;
     margin: 0 auto;
+}
+
+@media only screen and (orientation: portrait) {
+    #contact {
+        justify-self: center;
+        width: 100%;
+    }
+    
+    #contact-contents {
+        flex-direction: column;
+        justify-content: flex-start;
+        justify-self: center;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .contact-header {
+        text-align: center;
+    }
+
+    #contact .links-container {
+        margin-top: 0em;
+    }
 }

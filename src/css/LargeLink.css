@@ -2,7 +2,7 @@
 
 .link {
     width: fit-content;
-    margin-top: 1.5625em;
+    margin-top: 1.25em;
     margin-left: .9375em;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@
 .show-init.link {
     opacity: 100;
     transform: translateX(0);
-    transition: all .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s;
+    transition: opacity .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s, transform .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s;
 }
 
 .no-showcase.link {
@@ -107,4 +107,18 @@
 
 .link:hover .mail {
     text-shadow: .0625em .0625em #E26E6E;
+}
+
+@media only screen and (orientation: portrait) {
+    .link {
+        margin-top: 1.25em;
+        margin-left: .75em;
+        margin-right: .75em;
+        text-align: center;
+        flex-basis: fill;
+    }
+
+    .link-text {
+        display: none;
+    }
 }

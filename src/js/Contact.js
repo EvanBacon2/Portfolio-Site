@@ -25,7 +25,9 @@ export default function Contact(props) {
         <div id='contact' class='content-grid-template' ref={props.refProp}>
             <div id='contact-contents' class={state}>
                 <div>
-                    <ContentHeader title='Contact' state={state} theme={THEMES.BRAND} fadeAlignment='right'/>
+                    <div class='contact-header'>
+                        <ContentHeader title='Contact' state={state} theme={THEMES.BRAND} fadeAlignment='right'/>
+                    </div>
                     <form class='contact-form' method="POST">
                         <div class="form-group">
                             <label class='form-label' htmlFor="name">Name</label>
@@ -53,6 +55,8 @@ export default function Contact(props) {
                 </div>
                 <Links state={state} theme={THEMES.BRAND}>
                     <LargeLink state={state} destination='github'/>
+                    <LargeLink state={state} destination='linkedin'/>
+                    <LargeLink state={state} destination='linkedin'/>
                     <LargeLink state={state} destination='linkedin'/>
                 </Links>
             </div>

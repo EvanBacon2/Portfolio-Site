@@ -3,6 +3,7 @@
 .header-container {
     width: fit-content;
     box-sizing: border-box;
+    display: inline-block;
 }
 
 /*----------------------CONTENT TITLE----------------------*/

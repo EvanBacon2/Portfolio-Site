@@ -6,8 +6,12 @@ import '../css/ColorClasses.css'
 export default function Links(props) {    
     return (
         <div class='links-container'>
-            <ContentHeader title='Links' state={props.state} theme={props.theme} fadeAlignment='left'/>
-            {props.children}
+            {/*<div class='links-header'>*/}
+                <ContentHeader title='Links' state={props.state} theme={props.theme} fadeAlignment='left'/>
+            {/*</div>*/}
+            <div class='links-list'>
+                {props.children}
+            </div>
         </div>
     );
 }

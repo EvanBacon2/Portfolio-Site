@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
 .links-container {
+    width: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: left;
+}
+
+.links-list {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (orientation: portrait) {
+    .links-list {
+        flex-direction: row;
+        /*width: 9.675em;*/
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
