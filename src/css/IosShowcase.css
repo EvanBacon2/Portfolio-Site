@@ -1,7 +1,6 @@
 #ios-showcase {
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
 }
 
 #showcase-screen {
@@ -102,4 +101,10 @@
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+
+@media only screen and (max-width: 350px) {
+    #ios-showcase {
+        font-size: .8rem;
+    }
 }

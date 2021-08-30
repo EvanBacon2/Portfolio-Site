@@ -1,20 +1,19 @@
-/*1rem*/
-
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
 #site-header-container {
   font-size: 1rem;
+  max-width: 85%;
 }
 
 #site-title {
   color: #FAFEFF;
   font-family: 'Racing Sans One';
-  font-size: 4.3125rem;
-  text-shadow: .1875rem .1875rem #E26E6E;
+  font-size: 4.3125em;
+  text-shadow: calc(.1875em / 4.3125) calc(.1875em / 4.3125) #E26E6E;
   margin: 0;
-  padding-left: .9375rem;
-  padding-right: .9375rem;
+  padding-left: calc(.9375em / 4.3125);
+  padding-right: calc(.9375em / 4.3125);
   pointer-events: none;
   text-align: center;
 }
@@ -39,5 +38,17 @@
   color: #FAFEFF;
   font-family: 'Racing Sans One';
   pointer-events: none;
-  font-size: .975rem;
+  font-size: .975em;
+}
+
+@media only screen and (max-width: 500px) {
+  #site-header-container {
+    font-size: .75rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #site-header-container {
+    font-size: .55rem;
+  }
 }

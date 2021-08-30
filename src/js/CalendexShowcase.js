@@ -10,14 +10,14 @@ import 'css/CalendexShowcase.css'
 import {ReactComponent as Chevron} from 'svg/chevron.svg';
 
 export default function CalendexShowcase(props) {
-    return (
+    return ( 
         <div id='calendex-showcase' class={'showcase-container ' + props.state + ' ' + props.theme}>
             <SvgButton layoutClass='showcase-back-button-layout' theme='calendex'>
                 <Chevron class='showcase-back-button' onClick={() => props.toggleShowcase('brand')}/>
             </SvgButton>
             <div class='content-layout'>
                 <ContentHeader title='Calendex' state={props.state} theme={THEMES.CALENDEX}/>
-                <p class='showcase-content-description'>                        
+                 <p class='showcase-content-description'>                        
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip 
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 

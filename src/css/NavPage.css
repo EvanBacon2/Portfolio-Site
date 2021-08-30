@@ -1,31 +1,42 @@
-/*1rem*/
-
 @import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 
 #nav-page {
     font-size: 1rem;
+    position: fixed;
+    left: 7em;
+    top: 7em;
+    z-index: 1001;
+    visibility: hidden;
+}
+
+#nav-page.open {
+    visibility: visible;
+    transition: 0s 1s;
 }
 
 #nav-contents {
-    position: fixed;
+    position: relative;
     z-index: 1001;
     display: flex;
-    left: 7em;
-    top: 7em;
+    
     display: flex;
     justify-content: space-between;
-    width: 60vw;
-    height: 60vh;
+    width: fit-content;
+    height: fit-content;
 
     visibility: hidden;
     opacity: 0;
     transition: all .6s .2s;
 }
 
-#nav-contents.open {
+.open #nav-contents {
     visibility: visible;
     opacity: 1.0;
     transition: opacity .6s 1s;
+}
+
+.nav-spacer {
+    margin: .3em 0;
 }
 
 .nav-back-button.layout {
@@ -37,9 +48,8 @@
 
 .nav-initials-logo.layout {
     position: fixed;
-    right: 1em;
-    top: 1em;
-    font-size: 1.5rem;
+    right: 1.5em;
+    top: 1.5em;
 }
 
 .closed .nav-back-button {
@@ -64,7 +74,7 @@
     height: fit-content;
     border-radius: .15em;
     padding: .03em 0;
-    font-size: 3.75rem;
+    font-size: 3.75em;
 }
 
 .nav-menu-bttn-container:hover {
@@ -153,6 +163,7 @@
     transform: translateX(2em);
     transition: transform .6s .2s;
 }
+
 .open #nav-links {
     transform: translateX(0);
     transition: transform .6s 1s;
@@ -161,6 +172,7 @@
 #nav-divider {
     height: inherit;
     width: .15em;
+    margin: 0 4em;
     background-color: #FAFEFF;
 }
 
@@ -176,7 +188,60 @@
 }
 
 #nav-links-spacer {
-    width: 3.3em;
-    height: 3.3em;
-    font-size: 1.5rem;
+    width: 4.95em;
+    height: 4.95em;
+}
+
+@media only screen and (max-width: 1080px) {
+    #nav-page {
+        font-size: .8em;
+        overflow-y: auto;
+        left: 0;
+        right: 0;
+    }
+
+    #nav-contents {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #nav-menu {
+        align-items: center;
+    }
+
+    #nav-links { 
+        align-items: center;
+    }
+
+    .closed #nav-links {
+        transform: translateX(-2em);
+    }
+
+    #nav-links-spacer {
+        width: 0em;
+        height: 0em;
+    }
+
+    #link-container {
+        width: 20.625em;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .nav-initials-logo {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 350px), (max-height: 700px) {
+    #nav-page {
+        font-size: .7em;
+    }
+}
+
+@media only screen and (max-width: 300px), (max-height: 600px) {
+    #nav-page {
+        font-size: .6em;
+    }
 }

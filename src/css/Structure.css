@@ -5,14 +5,15 @@
 
 .main-initials-logo.layout {
     position: fixed;
-    right: 1.5em;
-    top: 1.5em;
+    right: 1.4em;
+    top: .7em;
 } 
 
 .skeleton {
     display: grid;
     grid-template-rows: min-content auto;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .content-grid-template {
@@ -36,5 +37,11 @@ body {
 @media only screen and (orientation: portrait) {
     .content-grid-template {
         grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .main-initials-logo.layout {
+        visibility: hidden;
     }
 }

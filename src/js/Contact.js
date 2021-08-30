@@ -24,7 +24,7 @@ export default function Contact(props) {
     return(
         <div id='contact' class='content-grid-template' ref={props.refProp}>
             <div id='contact-contents' class={state}>
-                <div>
+                <div class='form-container'>
                     <div class='contact-header'>
                         <ContentHeader title='Contact' state={state} theme={THEMES.BRAND} fadeAlignment='right'/>
                     </div>
@@ -49,7 +49,7 @@ export default function Contact(props) {
                         </div>
                         <div id='contact-scroll-trigger' class='hide'/>
                         <div class='send-message-layout'>
-                            <LargeLink destination='mail'/>
+                            <LargeLink state={state} destination='mail'/>
                         </div>
                     </form>
                 </div>

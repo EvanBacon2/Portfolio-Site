@@ -15,6 +15,7 @@ export default function Projects(props) {
     const [theme, setTheme] = useState('brand')
     const [gallery, setGallery] = useState('no-show')
     const [showcase, setShowcase] = useState('no-showcase')
+    const [collapse, setCollapse] = useState('no-collapse');
 
     useEffect(() => {
         const checkScrollTrigger = () => {
@@ -31,6 +32,7 @@ export default function Projects(props) {
     const toggleShowcase = (theme) => {
         setGallery(gallery === 'no-show' ? 'show' : 'no-show')
         setShowcase(showcase === 'no-showcase' ? 'showcase' : 'no-showcase')
+        setTimeout(() => setCollapse(collapse === 'no-collapse' ? 'collapse' : 'no-collapse'), 600)
         setTheme(theme)
     }
 
@@ -48,19 +50,21 @@ export default function Projects(props) {
         <div id='projects' class='content-grid-template' ref={props.refProp}>
             <div id='projects-background'>
                 {triangles('top')}
-                <div id='gallery-container' class={'content-grid-template gallery-swipe ' + showcase + ' ' + theme}>
-                    <div id='gallery-box' class={gallery + ' ' + showcase + ' ' + theme + ' ' + displaySwitch}>
-                        <div class='p-1'>
-                            <WebProjectCard toggleShowcase={toggleShowcase}/>
-                            <div id='projects-scroll-trigger' class='hide'/>
-                        </div>    
-                        <div class='p-2'><CalendexProjectCard toggleShowcase={toggleShowcase}/></div>
-                        <div class='p-3'><WebProjectCard toggleShowcase={toggleShowcase}/></div>
-                        <div class='p-4'><CalendexProjectCard toggleShowcase={toggleShowcase}/></div>
-                        <div class='p-5'><WebProjectCard toggleShowcase={toggleShowcase}/></div>
-                        <div class='p-6'><CalendexProjectCard toggleShowcase={toggleShowcase}/></div>
+                <div id='projects-content-container' class={'gallery-swipe ' + showcase + ' ' + theme}>
+                    <div id='projects-content-grid' class={'content-grid-template ' + showcase}>
+                        <div id='gallery-box' class={gallery + ' ' + showcase + ' ' + collapse + ' ' + theme + ' ' + displaySwitch}>
+                            <div class='p-1'>
+                                <WebProjectCard toggleShowcase={toggleShowcase}/>
+                                <div id='projects-scroll-trigger' class='hide'/>
+                            </div>    
+                            <div class='p-2'><CalendexProjectCard toggleShowcase={toggleShowcase}/></div>
+                            <div class='p-3'><WebProjectCard toggleShowcase={toggleShowcase}/></div>
+                            <div class='p-4'><CalendexProjectCard toggleShowcase={toggleShowcase}/></div>
+                            <div class='p-5'><WebProjectCard toggleShowcase={toggleShowcase}/></div>
+                            <div class='p-6'><CalendexProjectCard toggleShowcase={toggleShowcase}/></div>
+                        </div>
+                        <CalendexShowcase state={showcase + ' ' + collapse} theme={theme} toggleShowcase={toggleShowcase}/>
                     </div>
-                    <CalendexShowcase state={showcase} theme={theme} toggleShowcase={toggleShowcase}/>
                 </div>
                 {triangles('bottom')}
             </div>
