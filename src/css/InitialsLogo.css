@@ -1,10 +1,10 @@
-#initials-logo {
+#main-initials-logo {
     opacity: 0;
 }
 
-#initials-logo.show-init {
+#main-initials-logo.show-init {
     opacity: 100;
-    transition: opacity .4s ease-out .5s
+    transition: opacity .6s ease-out .9s
 }
 
 .initials-sizer {

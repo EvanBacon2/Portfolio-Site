@@ -30,5 +30,5 @@
 .hide-prompt {
     opacity: 0;
     transform: translateY(3em);
-    transition: all .4s;
+    transition: transform .4s, opacity .4s;
 }

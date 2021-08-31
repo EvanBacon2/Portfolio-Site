@@ -6,7 +6,7 @@ import 'css/InitialsLogo.css';
 
 export default function InitialsLogo(props) {
     useEffect(() => {
-        setTimeout(() => document.getElementById('initials-logo').classList.add('show-init'), 200)
+        setTimeout(() => document.getElementById('main-initials-logo').classList.add('show-init'), 200)
     });
     
     return ( 

@@ -6,7 +6,7 @@
 
 #scroll-prompt-container.show-prompt.show-init {
     opacity: 100;
-    transition: opacity .4s ease-out .5s
+    transition: opacity .6s ease-out .9s
 }
 
 #scroll-prompt-text {
