@@ -16,16 +16,18 @@
     justify-content: space-between;
     grid-area: 1 / 2 / 2 / 3;
     margin-top: 3.75em;
+
+    gap: max(2em, 5vw);
 }
 
 .contact-form {
     margin-top: 1.5em;
     margin-left: .9375em;
-    max-width: 95%;
 }
 
 .form-group {
     margin-bottom: 1.5em;
+    width: 21.525em;
 }
 
 .form-label {
@@ -47,7 +49,7 @@
 }
 
 .form-style {
-    width: /*min(20rem, 100%);*/20rem;
+    width: 20rem;
     background-color: #1C1F22;
     border-radius: .4167rem;
     font-family: 'Roboto';
@@ -62,10 +64,11 @@
 
 .show-init .form-style {
     opacity: 100%;
-    transition: opacity .4s ease-out 1.25s;
+    transition: opacity .4s ease-out 1.45s;
 }
 
 .form-border {
+    display: block;
     width: 0;
     height: fit-content;
     background: linear-gradient(to right, #E26E6E 50%, #FCC28D 95%);
@@ -80,7 +83,7 @@
 .show-init .form-border {
     opacity: 100;
     width: 21.4em;
-    transition: width .7s cubic-bezier(.05,.11,0,.7) .5s, opacity .05s linear .5s;
+    transition: width .9s cubic-bezier(.05,.11,0,.7) .5s, opacity .05s linear .5s;
 }
 
 .form-style:focus {
@@ -111,10 +114,21 @@
         justify-self: center;
         grid-area: 1 / 1 / 2 / 2;
         margin-bottom: 1em;
+
+        gap: 0;
     }
 
     .contact-header {
         text-align: center;
+    }
+
+    .contact-form {
+        margin-left: 0;
+    }
+
+    .form-group {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .form-container {
@@ -129,8 +143,8 @@
 }
 
 @media only screen and (max-width: 400px) {
-    .contact-form {
-        margin: 0 auto;
+    .form-group {
+        width: 17.525rem;
     }
 
     .form-style {
@@ -146,6 +160,10 @@
 @media only screen and (max-width: 320px) {
     .contact-form {
         margin: 0 auto;
+    }
+
+    .form-group {
+        width: 16.525rem;
     }
 
     .form-style {
