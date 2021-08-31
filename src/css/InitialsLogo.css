@@ -1,3 +1,12 @@
+#initials-logo {
+    opacity: 0;
+}
+
+#initials-logo.show-init {
+    opacity: 100;
+    transition: opacity .4s ease-out .5s
+}
+
 .initials-sizer {
     width: 3.3125em;
     height: 3.5625em;

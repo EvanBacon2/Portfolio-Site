@@ -1,17 +1,17 @@
-import { React, Component } from 'react';
-
-import { THEMES } from './Themes';
+import { useEffect } from 'react';
 
 import 'css/NavButton.css';
 
-export default class NavButton extends Component {
-    render() {
-        return (
-            <div class='nav-button' onClick={() => this.props.onClick()}>
-                <div class={'nav-line ' + this.props.navState}></div>
-                <div class={'nav-line ' + this.props.navState}></div>
-                <div class={'nav-line ' + this.props.navState}></div>
-            </div>
-        );
-    }
+export default function NavButton(props) {
+    useEffect(() => {
+        setTimeout(() => document.getElementById('nav-button').classList.add('show-init'), 200)
+    });
+
+    return (
+        <div id='nav-button' onClick={() => props.onClick()}>
+            <div class={'nav-line ' + props.navState}></div>
+            <div class={'nav-line ' + props.navState}></div>
+            <div class={'nav-line ' + props.navState}></div>
+        </div>
+    );
 }

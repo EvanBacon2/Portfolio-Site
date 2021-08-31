@@ -151,3 +151,14 @@
 .content-underline.calendex {
     background-color: #38CDA1;
 }
+
+
+@media only screen and (orientation: portrait) {
+    .content-underline.brand.right {
+        background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
+    }
+    
+    .content-underline.brand.left {
+        background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
+    }
+}

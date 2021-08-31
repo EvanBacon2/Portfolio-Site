@@ -1,4 +1,4 @@
-.nav-button {
+#nav-button {
     position: fixed;
     left: 1.5em;
     top: 1.5em;
@@ -9,9 +9,16 @@
     width: fit-content;
     height: 1.875em;
     font-size: .75em;
+
+    opacity: 0;
 }
 
-.nav-button:hover {
+#nav-button.show-init  {
+    opacity: 100;
+    transition: opacity .4s ease-out .5s
+}
+
+#nav-button:hover {
     cursor: pointer;
 }
 
@@ -28,7 +35,7 @@
 }
 
 @media only screen and (orientation: landscape) {
-    .nav-button:hover .nav-line {
+    #nav-button:hover .nav-line {
         background-color: #FAFEFF;
         box-shadow: .1875em .125em #E26E6E;
         transform: translate(-.1875em, -.125em);
@@ -40,7 +47,7 @@
 }
 
 @media only screen and (orientation: portrait) {
-    .nav-button {
+    #nav-button {
         background-color: #FAFEFF;
         padding: 1em;
         top: 0;

@@ -16,6 +16,15 @@
   padding-right: calc(.9375em / 4.3125);
   pointer-events: none;
   text-align: center;
+
+  opacity: 0;
+  transform: translate(.0196em, .0196em);
+}
+
+.show-init #site-title {
+  opacity: 100%;
+  transform: translate(0, 0);
+  transition: opacity .2s ease-out .5s, text-shadow .4s ease-out .55s, transform .4s ease-out .55s;
 }
 
 #header-underline {
@@ -24,6 +33,15 @@
   border: none;
   margin: 0;
   transform: skew(-12deg);
+
+  width: 0;
+  transform: translateX(100%);
+}
+
+.show-init #header-underline {
+  width: 100%;
+  transform: translateX(0);
+  transition: width .8s cubic-bezier(.82,0,.16,.96), transform .8s cubic-bezier(.82,0,.16,.96);
 }
 
 #skill-list {
@@ -31,6 +49,13 @@
   margin: 0;
   margin-top: .25em;
   text-align: center;
+
+  opacity: 0;
+}
+
+.show-init #skill-list {
+  opacity: 100;
+  transition: opacity .4s ease-out .5s
 }
 
 .skill-item {

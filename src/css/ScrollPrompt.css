@@ -1,7 +1,12 @@
-/*1rem*/
-
 #scroll-prompt-container {
     font-size: 1rem;
+
+    opacity: 0;
+}
+
+#scroll-prompt-container.show-prompt.show-init {
+    opacity: 100;
+    transition: opacity .4s ease-out .5s
 }
 
 #scroll-prompt-text {
