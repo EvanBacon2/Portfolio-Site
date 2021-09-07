@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import 'css/ProjectCardImage.css';
 
-export default function ProjectCardImage(props) {
+const ProjectCardImage = ({theme, showcaseCallback, children}) => {
     const [coverState, setCoverState] = useState('');
 
     const displayCover = () => {
@@ -15,13 +15,13 @@ export default function ProjectCardImage(props) {
     
     return (
         <div class='card-image-container'>
-            <div class={'card-image-border ' + props.theme + '-border'}/>
+            <div class={'card-image-border ' + theme + '-border'}/>
             <div class={'card-image'} onMouseEnter={() => displayCover()} onMouseLeave={() => hideCover()}>
-                <div class={'card-image-cover ' + props.theme + '-cover ' + coverState}/>
+                <div class={'card-image-cover ' + theme + '-cover ' + coverState}/>
                 <div class={'desc-container ' + coverState}>
-                    <div class={'cover-desc'}>{props.children}</div>
-                    <button class={'learn-link ' + props.theme + '-link'} 
-                            onClick={() => props.toggleShowcase(props.theme)}>
+                    <div class={'cover-desc'}>{children}</div>
+                    <button class={'learn-link ' + theme + '-link'} 
+                            onClick={() => showcaseCallback(theme)}>
                         Learn More
                     </button>
                 </div>
@@ -29,3 +29,5 @@ export default function ProjectCardImage(props) {
         </div>
     );
 }
+
+export default ProjectCardImage

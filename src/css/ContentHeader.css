@@ -17,36 +17,36 @@
     padding-right: .29412em;
 }
 
-.no-show.content-title {
+.no-show .section-header .content-title {
     opacity: 0;
     transform: translate(.0196em, .0196em);
 }
 
-.show-init.content-title {
+.show-init .section-header .content-title {
     opacity: 100%;
     transform: translate(0, 0);
     transition: opacity .2s ease-out .5s, text-shadow .4s ease-out .55s, transform .4s ease-out .55s;
 }
 
-.showcase-container .no-showcase.content-title {
+.showcase-container.no-showcase .content-title {
     opacity: 0;
     transform: translate(.0196em, .0196em);
     transition: opacity .4s, transform 0s .4s;
 }
 
-.showcase-container .showcase.content-title {
+.showcase-container.showcase .content-title {
     opacity: 100%;
     transform: translate(0, 0);
     transition: opacity .2s ease-out 2.6s, text-shadow .4s ease-out 2.65s, transform .4s ease-out 2.65s;
 }
 
-.projects-header .show.no-showcase.content-title {
+.projects-header.no-showcase .section-header .content-title {
     opacity: 100%;
     transform: translate(0, 0);
     transition: text-shadow .4s 1s;
 }
 
-.projects-header .no-show.showcase.content-title {
+.projects-header.showcase .section-header .content-title {
     opacity: 100%;
     transform: translate(0, 0);
     transition: text-shadow .4s 1.5s;
@@ -62,32 +62,32 @@
     transform: skew(-12deg);
 }
 
-.no-show.content-underline {
+.no-show .content-underline {
     width: 0;
     transform: translateX(100%);
 }
 
-.showcase-container .no-showcase.content-underline {
+.show-init .content-underline {
+    width: 100%;
+    transform: translateX(0);
+    transition: width .8s cubic-bezier(.82,0,.16,.96), transform .8s cubic-bezier(.82,0,.16,.96);
+}
+
+.showcase-container.no-showcase .content-underline {
     opacity: 0;
     width: 0;
     transform: translateX(100%);
     transition: opacity .4s, width 0s .4s, transform 0s .4s;
 }
 
-.show-init.content-underline {
-    width: 100%;
-    transform: translateX(0);
-    transition: width .8s cubic-bezier(.82,0,.16,.96), transform .8s cubic-bezier(.82,0,.16,.96);
-}
-
-.showcase.content-underline {
+.showcase .content-underline {
     opacity: 100;
     width: 100%;
     transform: translateX(0);
     transition: opacity 0s, width .8s cubic-bezier(.82,0,.16,.96) 2.1s, transform .8s cubic-bezier(.82,0,.16,.96) 2.1s;
 }
 
-.projects-header .show.no-showcase.content-underline {
+.projects-header.show.no-showcase .content-underline {
     width: 100%;
     transform: translateX(0);
 }
@@ -106,14 +106,17 @@
     background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
 }
 
-.projects-header .no-showcase.content-underline::before {
+.projects-header.showcase .content-underline::before {
+    transition: background-color .4s 1.5s;
+}
+
+.projects-header.no-showcase .content-underline::before {
     background-color: transparent;
     transition: background-color .4s 1s;
 }
 
 .projects-header .content-underline.calendex::before {
     background-color: #38CDA1;
-    transition: background-color .4s 1.5s;
 }
 
 /*----------------------THEMED ITEMS----------------------*/
@@ -152,6 +155,9 @@
     background-color: #38CDA1;
 }
 
+.content-underline.web {
+    background-color: #1ABCFE;
+}
 
 @media only screen and (orientation: portrait) {
     .content-underline.brand.right {

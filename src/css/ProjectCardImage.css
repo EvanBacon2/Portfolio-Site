@@ -22,7 +22,7 @@
                            50% 50%, 0 0, 0 100%);
 }
 
-.no-show.no-showcase .card-image-border {
+.no-show .card-image-border {
     clip-path: polygon(50% 50%, 50% 0, 50% 0,    
                            50% 50%, 100% 50%, 100% 50%,
                            50% 50%, 50% 100%, 50% 100%,
@@ -47,7 +47,7 @@
     background-color: #22282E;
 }
 
-.no-show.no-showcase .card-image {
+.no-show .card-image {
     background-color: transparent;
 }
 

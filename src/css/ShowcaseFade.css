@@ -1,0 +1,10 @@
+.showcase-fade {
+    opacity: 100;
+    position: relative;
+    z-index: 998;
+    transition: opacity .4s 0s;
+}
+
+.showcase-fade.fade-out {
+    opacity: 0;
+}

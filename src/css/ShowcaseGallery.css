@@ -1,9 +1,13 @@
-#ios-showcase {
+.showcase-layout {
+    margin-top: 4em;
+}
+
+.showcase-gallery {
     display: flex;
     flex-direction: column;
 }
 
-#showcase-screen {
+.showcase-gallery-screen {
     display: flex;
 }
 
@@ -35,12 +39,12 @@
     transform: translateX(.625em);
 }
 
-.no-showcase .showcase-chevron-layout {
+.showcase-container.no-showcase .showcase-chevron-layout {
     opacity: 0;
     transition: opacity .4s, transform 0s .4s;
 }
 
-.showcase .showcase-chevron-layout {
+.showcase-container.showcase .showcase-chevron-layout {
     opacity: 100;
     transform: translateX(0);
     transition: opacity .4s ease-out 3.4s, transform .4s ease-out 3.45s;
@@ -48,46 +52,72 @@
 
 /*----------------------SHOWCASE BORDER----------------------*/
 
-.showcase-border-container {
+.showcase-border-container.ios {
     height: 26.3745em;
+}
+
+.showcase-border-container.web {
+    height: 15em;
 }
 
 .showcase-border {
     position: relative;
-    width: 12.1875em;
     height: 0;
-    border: 0 solid #38CDA1;
-    background-color: #38CDA1;
     border-radius: .625em; 
     overflow: hidden;
 }
 
-.no-showcase .showcase-border {
+.showcase-border.ios {
+    width: 12.1875em;
+}
+
+.showcase-border.web {
+    width: 24em;
+}
+
+.showcase-border.calendex {
+    border: 0 solid #38CDA1;
+    background-color: #38CDA1;
+}
+
+.showcase-border.web {
+    border: 0 solid #1ABCFE;
+    background-color: #1ABCFE;
+}
+
+.showcase-container.no-showcase .showcase-border {
     opacity: 0;
     transition: opacity .4s, height 0s .4s, background-color 0s .4s, border-width 0s .4s;
 }
 
-.showcase .showcase-border {
-    height: 26.3745em;
+.showcase-container.showcase .showcase-border {
     background-color: transparent;
     border-width: .125em;
     transition: height .8s ease-out 2.65s, background-color .4s ease-out 3.4s, border-width 0s ease-out 2.65s;
 }
 
+.showcase-container.showcase .showcase-border.ios {
+    height: 26.3745em;
+}
+
+.showcase-container.showcase .showcase-border.web {
+    height: 15em;
+}
+
 /*----------------------SHOWCASE IMAGE----------------------*/
 
-#showcase-image-list {
+.showcase-image-list {
     display: flex;
     position: relative;
     flex-wrap: nowrap;
 }
 
-.no-showcase #showcase-image-list {
+.showcase-container.no-showcase .showcase-image-list {
     opacity: 0;
     transition: opacity.4s;
 }
 
-.showcase #showcase-image-list {
+.showcase-container.showcase .showcase-image-list {
     opacity: 100;
     transition: opacity .4s ease-out 3.4s, transform .4s ease-out;
 }

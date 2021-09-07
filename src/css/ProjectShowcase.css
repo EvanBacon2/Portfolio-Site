@@ -9,23 +9,11 @@
     display: grid;
     grid-template-rows: 3fr 9fr;
     grid-template-columns: .3fr 2fr 2fr 1fr;
-    grid-area: 1 / 2 / 2 / 3; 
 
     font-size: 1rem;
 
     align-self: center;
     justify-self: center;
-}
-
-.showcase-container.no-showcase {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s .4s, opacity .4s linear 0s;
-}
-
-.showcase-container.showcase {
-    visibility: visible;
-    transition: max-height .4s .4s;
 }
 
 /*----------------------SHOWCASE BACK BUTTON----------------------*/
@@ -41,13 +29,13 @@
     align-self: center;
 }
 
-.no-showcase .showcase-back-button-layout {
+.showcase-container.no-showcase .showcase-back-button-layout {
     opacity: 0;
     transform: translateX(-.625em);
     transition: opacity .4s 0s, transform 0s .4s;
 }
 
-.showcase .showcase-back-button-layout {
+.showcase-container.showcase .showcase-back-button-layout {
     opacity: 100;
     transform: translateX(0);
     transition: opacity .4s ease-out 3.4s, transform .4s ease-out 3.45s;
@@ -63,13 +51,13 @@
     font-size: .8125em;
 }
 
-.no-showcase .showcase-content-description {
+.showcase-container.no-showcase .showcase-content-description {
     opacity: 0;
     transform: translateX(-.675em);
     transition: opacity .4s 0s, transform 0s .4s;
 }
 
-.showcase .showcase-content-description {
+.showcase-container.showcase .showcase-content-description {
     opacity: 100;
     transform: translateX(0);
     transition: opacity .4s ease-out 3.4s, transform .4s ease-out 3.45s;
@@ -92,7 +80,6 @@
 
 @media only screen and (max-width: 1080px) {
     .showcase-container {
-        grid-area: 1 / 1 / 2 / 2;
         grid-template-rows: 1fr min-content min-content min-content;
         grid-template-columns: 100%;
         row-gap: 2em;
@@ -120,6 +107,7 @@
     .showcase-layout {
         grid-area: 3 / 1 / 4 / 2;
         justify-self: center;
+        margin-top: 0;
     }
     
     .showcase-links-layout {

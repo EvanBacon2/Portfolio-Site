@@ -10,19 +10,19 @@ import 'css/ProjectShowcase.css'
 
 import {ReactComponent as Chevron} from 'svg/chevron.svg';
 
-const CalendexShowcase = ({showCallback}) => {
+const WebShowcase = ({showCallback}) => {
     useEffect(() => {
-        document.getElementById('calendex-showcase').classList.remove('no-showcase');
-        document.getElementById('calendex-showcase').classList.add('showcase');
+        document.getElementById('web-showcase').classList.remove('no-showcase');
+        document.getElementById('web-showcase').classList.add('showcase');
     });
 
-    return (  
-        <div id='calendex-showcase' class={'showcase-container no-showcase'}>
-            <SvgButton layoutClass='showcase-back-button-layout' theme='calendex'>
+    return ( 
+        <div id='web-showcase' class={'showcase-container'}>
+            <SvgButton layoutClass='showcase-back-button-layout' theme='web'>
                 <Chevron class='showcase-back-button' onClick={() => showCallback(false)}/>
             </SvgButton>
             <div class='content-layout'>
-                <ContentHeader title='Calendex' theme={'calendex'}/>
+                <ContentHeader title='Website' theme={'web'}/>
                  <p class='showcase-content-description'>                        
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip 
@@ -32,7 +32,7 @@ const CalendexShowcase = ({showCallback}) => {
                 </p>
             </div>
             <div class='showcase-layout'>
-                <ShowcaseGallery layout='ios' theme='calendex' captions={['View Blood Sugar', 'page 2', 'page 3', 'page 4']}>
+                <ShowcaseGallery layout='web' theme='web' captions={['View Blood Sugar', 'page 2', 'page 3', 'page 4']}>
                     <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
                     <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
                     <img class='showcase-photo' src='grad_photo.png' alt='My face'/>
@@ -40,7 +40,7 @@ const CalendexShowcase = ({showCallback}) => {
                 </ShowcaseGallery>
             </div>
             <div class='showcase-links-layout'>
-                <Links theme={'calendex'}>
+                <Links theme={'web'}>
                     <LargeLink destination='github' url='https://github.com/EvanBacon2'/>
                     <LargeLink destination='appstore'/>
                 </Links>
@@ -49,4 +49,4 @@ const CalendexShowcase = ({showCallback}) => {
     );
 }
 
-export default CalendexShowcase
+export default WebShowcase

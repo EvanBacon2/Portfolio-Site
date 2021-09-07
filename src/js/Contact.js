@@ -26,7 +26,7 @@ export default function Contact(props) {
             <div id='contact-contents' class={state}>
                 <div class='form-container'>
                     <div class='contact-header'>
-                        <ContentHeader title='Contact' state={state} theme={THEMES.BRAND} fadeAlignment='right'/>
+                        <ContentHeader state={'section-header'} title='Contact' theme={THEMES.BRAND} fadeAlignment='right'/>
                     </div>
                     <form class='contact-form' method="POST">
                         <div class="form-group">
@@ -53,7 +53,7 @@ export default function Contact(props) {
                         </div>
                     </form>
                 </div>
-                <Links state={state} theme={THEMES.BRAND}>
+                <Links state={state + ' section-header'} theme={THEMES.BRAND}>
                     <LargeLink state={state} destination='github'/>
                     <LargeLink state={state} destination='linkedin'/>
                     <LargeLink state={state} destination='linkedin'/>

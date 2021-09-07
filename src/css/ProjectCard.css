@@ -15,7 +15,7 @@
     padding: 0 .625em .3125em .625em;
 }
 
-.no-show.no-showcase .card-container {
+.no-show .card-container {
     background-color: transparent;
     padding: 0;
 }
@@ -38,7 +38,7 @@
     transform: translateY(0);
 }
 
-.no-show.no-showcase .header-box {
+.no-show .header-box {
     height: 0;
     opacity: 0;
     transform: translateY(100%);
@@ -71,7 +71,7 @@
     margin: 0 .25em;
 }
 
-.no-show.no-showcase .link-box {
+.no-show .link-box {
     height: 0;
     opacity: 0;
     transform: translateY(-3.5em);

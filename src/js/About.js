@@ -24,7 +24,7 @@ export default function About(props) {
         <div id='about' class='content-grid-template' ref={props.refProp}>
             <div id='about-content' class={state}>
                 <div class='about-header'>
-                    <ContentHeader state={state} title='About Me' theme={THEMES.BRAND} fadeAlignment='right'/>
+                    <ContentHeader state={'section-header'} title='About Me' theme={THEMES.BRAND} fadeAlignment='right'/>
                 </div>
                 <div id='about-scroll-trigger' class='hide'/>
                 <p class='about-description'>                        
