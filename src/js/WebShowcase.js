@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import ContentHeader from 'js/ContentHeader';
 import ShowcaseGallery from 'js/ShowcaseGallery'
@@ -11,15 +11,16 @@ import 'css/ProjectShowcase.css'
 import {ReactComponent as Chevron} from 'svg/chevron.svg';
 
 const WebShowcase = ({showCallback}) => {
+    const [showcase, setShowcase] = useState('no-showcase')
+
     useEffect(() => {
-        document.getElementById('web-showcase').classList.remove('no-showcase');
-        document.getElementById('web-showcase').classList.add('showcase');
+        setTimeout(() => setShowcase('showcase'), 10);
     });
 
     return ( 
-        <div id='web-showcase' class={'showcase-container'}>
+        <div id='web-showcase' class={'showcase-container ' + showcase}>
             <SvgButton layoutClass='showcase-back-button-layout' theme='web'>
-                <Chevron class='showcase-back-button' onClick={() => showCallback(false)}/>
+                <Chevron class='showcase-back-button' onClick={() => showCallback('')}/>
             </SvgButton>
             <div class='content-layout'>
                 <ContentHeader title='Website' theme={'web'}/>

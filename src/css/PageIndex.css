@@ -46,8 +46,12 @@
     transition: color .2s 0s;
 }
 
-.index-dot.selected {
+.index-dot.selected.calendex {
     color: #38CDA1;
+}
+
+.index-dot.selected.web {
+    color: #1ABCFE;;
 }
 
 .no-highlight {

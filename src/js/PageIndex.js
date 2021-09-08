@@ -11,7 +11,7 @@ export default function PageIndex(props) {
             <ul id='index-list'>
                 {props.captions.map((caption, index) => {
                     const selectionClass = index === props.currPage ? 'selected' : '';
-                    return <li class={'index-dot no-highlight ' + selectionClass}>&bull;</li>
+                    return <li class={'index-dot no-highlight ' + selectionClass + ' ' + props.theme}>&bull;</li>
                 })}
             </ul>
         </div>

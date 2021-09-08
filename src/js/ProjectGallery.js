@@ -8,25 +8,41 @@ import 'css/Structure.css'
 
 const ProjectGallery =  ({showcase, showcaseCallback}) => {
     const [displaySwitch, setDisplaySwitch] = useState('off')
-    const [collapse, setCollapse] = useState('')
 
     useEffect(() => {
         if (showcase === 'show-init') setTimeout(() => { setDisplaySwitch('on') }, 3100)
-    }, [showcase])
+        if (isShowcase() === 'no-showcase') setDisplaySwitch('on')
+    })
 
-    useEffect(() => {
-        showcase === '' || showcase === 'show-init' || showcase === 'no-show' ? setCollapse('') : setTimeout(() => { setCollapse('collapse') }, 400)
-    }, [showcase])
+    const isShowcase = () => { 
+        switch(showcase) {
+            case 'show-init': {
+                return 'show-init'
+            }
+            case 'no-show': {
+                return 'no-show'
+            }
+            case 'no-showcase': {
+                return 'no-showcase'
+            }
+            case '': {
+                return 'no-showcase'
+            }
+            default: {
+                return 'showcase'
+            }
+        }
+    }
 
-    const isShowcase = () => { return showcase === '' || 
-                                      showcase === 'show-init' || 
-                                      showcase === 'no-show' ? 'no-showcase' : 'showcase' }
+    const includeScrollTrigger = () => {
+        if (showcase === 'no-show') return <div id='projects-scroll-trigger' class='hide'/>
+    }
 
     return (
-        <div id='gallery-container' class={isShowcase() + ' ' + collapse + ' ' + displaySwitch}>
+        <div id='gallery-container' class={isShowcase() + ' ' + displaySwitch}>
             <div class='p-1'>
                 <WebProjectCard showcaseCallback={showcaseCallback}/>
-                <div id='projects-scroll-trigger' class='hide'/>
+                {includeScrollTrigger()}
             </div>    
             <div class='p-2'><CalendexProjectCard showcaseCallback={showcaseCallback}/></div>
             <div class='p-3'><WebProjectCard showcaseCallback={showcaseCallback}/></div>

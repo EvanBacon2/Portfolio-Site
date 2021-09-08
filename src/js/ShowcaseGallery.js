@@ -9,7 +9,7 @@ import {ReactComponent as Chevron} from 'svg/chevron.svg';
 
 export default function ShowcaseGallery(props) {
     const [page, setPage] = useState(0);
-    const pageCount = Children.toArray().length;
+    const pageCount = Children.toArray(props.children).length;
 
     const shiftPage = (direction) => {
         const newPage = page + direction;
@@ -36,7 +36,7 @@ export default function ShowcaseGallery(props) {
                     <Chevron class='showcase-chevron right' onClick={() => shiftPage(1)}/>
                 </SvgButton>
             </div>
-            <PageIndex captions={props.captions} currPage={page}/>
+            <PageIndex theme={props.theme} captions={props.captions} currPage={page}/>
         </div>
     );
 }

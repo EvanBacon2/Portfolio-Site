@@ -78,7 +78,7 @@
     grid-area: 2 / 4 / 3 / 5
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1080px), (orientation: portrait) {
     .showcase-container {
         grid-template-rows: 1fr min-content min-content min-content;
         grid-template-columns: 100%;

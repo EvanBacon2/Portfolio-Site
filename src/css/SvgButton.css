@@ -62,6 +62,10 @@
     fill: #38CDA1;
 }
 
+.svg-button-shadow.web {
+    fill: #1ABCFE;
+}
+
 .svg-button-shadow.github {
     fill: #A259FF;
 }

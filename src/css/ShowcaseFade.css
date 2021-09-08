@@ -2,9 +2,44 @@
     opacity: 100;
     position: relative;
     z-index: 998;
-    transition: opacity .4s 0s;
+}
+
+.showcase-fade.fade-in {
+    animation: 1.2s gallery-to-showcase 0s;
 }
 
 .showcase-fade.fade-out {
-    opacity: 0;
+    animation: 2.4s showcase-to-gallery 0s;
+}
+
+@keyframes gallery-to-showcase {
+    0% {
+        opacity: 100
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 100
+    }
+}
+
+@keyframes showcase-to-gallery {
+    0% {
+        opacity: 100
+    }
+
+    25% {
+        opacity: 0
+    }
+
+    75% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 100
+    }
 }

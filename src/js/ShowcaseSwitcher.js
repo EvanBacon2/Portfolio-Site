@@ -7,30 +7,33 @@ import WebShowcase from './WebShowcase';
 
 import 'css/Projects.css';
 
-const ShowcaseSwitcher = ({showcase, showcaseCallback}) => {
-    const [show, setShow] = useState(true)
-
-    useEffect(() => {
-        if (showcase !== '') setShow(true)
-    }, [showcase])
+const ShowcaseSwitcher = ({showcase, showcaseCallback, show, showCallback}) => {
+    const switchShowcase = (showcase) => {
+        if (show === '' || show === 'out') {
+            showCallback('in')
+            setTimeout(() => showcaseCallback(showcase), 600)
+        } else if (show === 'in') {
+            showCallback('out')
+            setTimeout(() => showcaseCallback(showcase), 1300)
+        }
+    }
      
     const showCaseSelector = () => {
         switch(showcase) {
             case 'calendex': {
-                return <CalendexShowcase showCallback={setShow}/>
+                return <CalendexShowcase showCallback={switchShowcase}/>
             }
             case 'web': {
-                return <WebShowcase showCallback={setShow}/>
+                return <WebShowcase showCallback={switchShowcase}/>
             }
             default: {
-                return <div id='empty-showcase'/>
+                return <ProjectGallery showcase={showcase} showcaseCallback={switchShowcase}/>
             }
         }
     }
 
     return (
         <div id='showcase-switcher'>
-            <ProjectGallery showcase={showcase} showcaseCallback={showcaseCallback}/>
             <ShowcaseFade show={show} showcaseCallback={showcaseCallback}>{showCaseSelector()}</ShowcaseFade>
         </div>
     )
