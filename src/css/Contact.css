@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
 
 #contact {
-    height: calc(100vh - 5.025em);
+    height: min(calc(100vh - 5.025em), 55em);
     max-height: fit-content;
     background-image: linear-gradient(to top, #23272B 5%, #1C1F23 60%);
     grid-area: 4 / 1 / 5 / 5;
