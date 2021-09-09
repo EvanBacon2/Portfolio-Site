@@ -76,12 +76,12 @@
 }
 
 #projects-content-grid.no-showcase {
-    transition: flex-basis .4s .4s;
+    transition: flex-basis 1s .0s;
     flex-basis: 33em;
 }
 
 #projects-content-grid.in {
-    transition: flex-basis .4s 0s !important; 
+    transition: flex-basis .6s 0s !important; 
     flex-basis: 47em;
 }
 

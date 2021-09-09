@@ -35,7 +35,7 @@
     cursor: pointer;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 900px) {
     .footer-link {
         display: none;
     }

@@ -26,9 +26,7 @@ export default class NavPage extends Component {
         return (
             <div id='nav-page' class={this.props.navState}>
                 <div id='nav-contents'>
-                    <div class='nav-back-button layout' onClick={() => this.props.onClick('')}>
-                        <NavPageIcon type='chevron'/>
-                    </div>
+                    <NavPageIcon type='chevron' layoutClass='nav-back-button layout' onClick={() => this.props.onClick('')}/>
                     <div class='nav-initials-logo layout'>
                         <InitialsLogo theme='brand'/>
                     </div>
@@ -42,8 +40,8 @@ export default class NavPage extends Component {
                     <div id='nav-links'>
                         <h1 id='nav-links-header' class='nav-header'>Links</h1>
                         <div id='link-container' class='nav-spacer'>
-                           <NavPageIcon type='github'/>
-                           <NavPageIcon type='linkedin'/>
+                           <NavPageIcon type='github' href='https://github.com/EvanBacon2'/>
+                           <NavPageIcon type='linkedin' href='https://www.linkedin.com/in/evan-bacon-5b5127172/'/>
                            <NavPageIcon type='figma'/>
                         </div>
                         <div id='nav-links-spacer' class='nav-spacer'/>
