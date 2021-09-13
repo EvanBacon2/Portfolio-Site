@@ -103,6 +103,10 @@
     text-shadow: .0625em .0625em #38CDA1;
 }
 
+.language-shadow {
+    text-shadow: .0625em .0625em #9877B1;
+}
+
 @media only screen and (max-width: 400px) {
     .card-container {
         font-size: .75rem;

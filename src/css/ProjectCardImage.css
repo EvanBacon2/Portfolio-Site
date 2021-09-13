@@ -119,6 +119,7 @@
     font-size: .9375em;
     color: #FAFEFF;
     margin-top: 1.5rem;
+    text-align: center;
 }
 
 .on .desc-container.display-cover {
@@ -258,6 +259,10 @@
     border: .125em solid #38CDA1;
 }
 
+.language-border {
+    border: .125em solid #9877B1;
+}
+
 /*- - - - covers - - - -*/
 .web-cover {
     background-color: #1ABCFE;
@@ -265,6 +270,10 @@
 
 .calendex-cover {
     background-color: #38CDA1;
+}
+
+.language-cover {
+    background-color: #9877B1;
 }
 
 /*- - - - links - - - -*/
@@ -283,4 +292,8 @@
 
 .calendex-link:hover {
     background-color: #38CDA1;
+}
+
+.language-link:hover {
+    background-color: #9877B1;
 }

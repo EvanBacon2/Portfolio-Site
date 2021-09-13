@@ -9,7 +9,7 @@ const CalendexProjectCard = ({showcaseCallback}) => {
         <ProjectCard title='Calendex' theme='calendex' type='ios' description='Blood sugar metrics app for diabetics' 
                      showcaseCallback={showcaseCallback}>
             <SmallLink theme='calendex'><AppStoreIcon/></SmallLink>
-            <SmallLink theme='calendex'><GithubIcon/></SmallLink>
+            <SmallLink theme='calendex' url='https://github.com/EvanBacon2/portfolio-site'><GithubIcon/></SmallLink>
         </ProjectCard>
     );
 }

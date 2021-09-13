@@ -42,7 +42,7 @@ export default class NavPage extends Component {
                         <div id='link-container' class='nav-spacer'>
                            <NavPageIcon type='github' href='https://github.com/EvanBacon2'/>
                            <NavPageIcon type='linkedin' href='https://www.linkedin.com/in/evan-bacon-5b5127172/'/>
-                           <NavPageIcon type='figma'/>
+                           <div id='nav-links-spacer' class='nav-spacer'/>
                         </div>
                         <div id='nav-links-spacer' class='nav-spacer'/>
                         {this.navPageLink('Resume', 'https://github.com/EvanBacon2')}

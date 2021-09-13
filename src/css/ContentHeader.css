@@ -115,6 +115,10 @@
     background-color: #38CDA1;
 }
 
+.projects-header .content-underline.language::before {
+    background-color: #9877B1;
+}
+
 .projects-header .content-underline.web::before {
     background-color: #1ABCFE;
 }
@@ -135,12 +139,20 @@
     text-shadow: #38CDA1 .0196em .0196em;
 }
 
+.no-show.no-showcase.content-title.language {
+    text-shadow: #9877B1 .0196em .0196em;
+}
+
 .content-title.brand {
     text-shadow: #E26E6E .0392em .0392em;
 }
 
 .content-title.calendex {
     text-shadow: #38CDA1 .0392em .0392em;
+}
+
+.content-title.language {
+    text-shadow: #9877B1 .0392em .0392em;
 }
 
 .content-title.web {
@@ -166,6 +178,10 @@
 
 .content-underline.calendex {
     background-color: #38CDA1;
+}
+
+.content-underline.language {
+    background-color: #9877B1;
 }
 
 .content-underline.web {

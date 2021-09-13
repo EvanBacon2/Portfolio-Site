@@ -127,6 +127,10 @@
     background-image: linear-gradient(to right, #222E38 70% , #22282E 100%);
 }
 
+.gallery-swipe.language::after {
+    background-image: linear-gradient(to right, #2E303B 70% , #22282E 100%);
+}
+
 .gallery-swipe.web::after {
     background-image: linear-gradient(to right, #232f39 70% , #22282E 100%);
 }
@@ -143,6 +147,10 @@
 
 .gallery-swipe.calendex.out::after {
     background-image: linear-gradient(to right, #222E38 70% , #1C1F23 100%);
+}
+
+.gallery-swipe.language.out::after {
+    background-image: linear-gradient(to right, #2E303B 70% , #1C1F23 100%);
 }
 
 .gallery-swipe.web.out::after {

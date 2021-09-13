@@ -10,8 +10,6 @@
 
 .showcase-container.no-showcase .page-index-container {
     opacity: 0;
-    transform: translateY(.625em);
-    transition: opacity .4s, transform 0s .4s;
 }
 
 .showcase-container.showcase .page-index-container {
@@ -48,6 +46,10 @@
 
 .index-dot.selected.calendex {
     color: #38CDA1;
+}
+
+.index-dot.selected.language {
+    color: #9877B1;
 }
 
 .index-dot.selected.web {
