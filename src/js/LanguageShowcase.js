@@ -41,7 +41,7 @@ const CalendexShowcase = ({showCallback}) => {
             </div>
             <div class='showcase-links-layout'>
                 <Links theme={'language'}>
-                    <LargeLink destination='figma' url='https://github.com/EvanBacon2/portfolio-site'/>
+                    <LargeLink destination='figma' url='https://www.figma.com/file/NoxMY1g6x97M8WzxnpFUmL/Language-Buddy'/>
                 </Links>
             </div>
         </div>

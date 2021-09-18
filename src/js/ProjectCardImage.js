@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import 'css/ProjectCardImage.css';
 
-const ProjectCardImage = ({theme, showcaseCallback, children}) => {
+const ProjectCardImage = ({theme, showcaseCallback, children, cardPhoto}) => {
     const [coverState, setCoverState] = useState('');
 
     const displayCover = () => {
@@ -17,6 +17,7 @@ const ProjectCardImage = ({theme, showcaseCallback, children}) => {
         <div class='card-image-container'>
             <div class={'card-image-border ' + theme + '-border'}/>
             <div class={'card-image'} onMouseEnter={() => displayCover()} onMouseLeave={() => hideCover()}>
+                <img class='card-photo' src={cardPhoto} alt='Calendex app screenshot'/>
                 <div class={'card-image-cover ' + theme + '-cover ' + coverState}/>
                 <div class={'desc-container ' + coverState}>
                     <div class={'cover-desc'}>{children}</div>

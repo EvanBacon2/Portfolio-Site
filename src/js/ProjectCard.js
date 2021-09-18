@@ -4,12 +4,14 @@ import 'css/ProjectCard.css';
 
 import {ReactComponent as WebIcon} from 'svg/web.svg';
 import {ReactComponent as AppleIcon} from 'svg/apple.svg';
+import {ReactComponent as UXIcon} from 'svg/ux.svg';
 
-const ProjectCard = ({title, theme, type, description, showcaseCallback, children}) => {
+const ProjectCard = ({title, theme, type, cardPhoto, description, showcaseCallback, children}) => {
     const platformIcon = (type) => {
         switch (type) {
             case 'web': return <WebIcon class={'card-icon platform-icon-sizer'}/>
             case 'ios': return <AppleIcon class={'card-icon platform-icon-sizer'}/>
+            case 'ux': return <UXIcon class={'card-icon platform-icon-sizer'}/>
         }
     }
     
@@ -20,7 +22,7 @@ const ProjectCard = ({title, theme, type, description, showcaseCallback, childre
                 {platformIcon(type)}
             </div>  
                 
-            <ProjectCardImage theme={theme} showcaseCallback={showcaseCallback}>
+            <ProjectCardImage theme={theme} showcaseCallback={showcaseCallback} cardPhoto={cardPhoto}>
                 {description}
             </ProjectCardImage>
 

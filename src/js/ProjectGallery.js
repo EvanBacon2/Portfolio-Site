@@ -17,21 +17,11 @@ const ProjectGallery =  ({showcase, showcaseCallback}) => {
 
     const isShowcase = () => { 
         switch(showcase) {
-            case 'show-init': {
-                return 'show-init'
-            }
-            case 'no-show': {
-                return 'no-show'
-            }
-            case 'no-showcase': {
-                return 'no-showcase'
-            }
-            case '': {
-                return 'no-showcase'
-            }
-            default: {
-                return 'showcase'
-            }
+            case 'show-init': return 'show-init'
+            case 'no-show': return 'no-show'
+            case 'no-showcase': return 'no-showcase'
+            case '': return 'no-showcase'
+            default: return 'showcase'
         }
     }
 

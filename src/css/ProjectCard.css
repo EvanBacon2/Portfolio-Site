@@ -86,6 +86,7 @@
 .card-icon {
     fill: #FAFEFF;
     margin: auto 0;
+    margin-right: .2em
 }
 
 .platform-icon-sizer {

@@ -55,21 +55,35 @@
     transition: background-color .2s 2.3s;
 }
 
+.card-photo {
+    width: 18.75em;
+    object-fit: contain;
+}
+
+.no-show .card-photo {
+    opacity: 0;
+}
+
+.show-init .card-photo {
+    opacity: 100;
+    transition: opacity .3s 2.55s;
+}
+
 /*- - - - cover - - - -*/
 .card-image-cover {
-    width: 100%;
-    height: calc(100% - .3125em);
+    width: calc(100% - .25em);
+    height: calc(100% - .5625em);
     border-radius: .78125em;
     opacity: 0;
-    top: 0;
-    left: 0;
-    transition: all 0.2s .2s;
+    top: .125em;
+    left: .125em;
+    transition: all 0.4s;
     position: absolute;
 }
 
 .on .card-image-cover.display-cover {
-    opacity: 5%;
-    transition: opacity .2s 0s;
+    opacity: 75%;
+    transition: opacity .4s 0s;
 }
 
 .show-init .p-1 .card-image-cover {
@@ -265,24 +279,28 @@
 
 /*- - - - covers - - - -*/
 .web-cover {
-    background-color: #1ABCFE;
+    background-color: #1C3743;
 }
 
 .calendex-cover {
-    background-color: #38CDA1;
+    background-color: #203935;
 }
 
 .language-cover {
-    background-color: #9877B1;
+    background-color: #2F2C37;
 }
 
 /*- - - - links - - - -*/
 .web-link {
-    color: #222E38;
+    color: #1C3743;
 }
 
 .calendex-link {
-    color: #233034;
+    color: #203935;
+}
+
+.language-link {
+    color: #2F2C37;
 }
 
 /*- - - - links:hover - - - -*/
