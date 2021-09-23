@@ -221,10 +221,12 @@
     #nav-links-spacer {
         width: 0em;
         height: 0em;
+        display: none;
     }
 
     #link-container {
         width: 20.625em;
+        justify-content: space-around;
     }
 }
 

@@ -95,9 +95,16 @@
     resize: none;
 }
 
+.flex-center {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .send-message-layout {
     width: fit-content;
-    margin: 0 auto;
+    margin-top: -1.25em;
+    margin-left: -.9375em;
     background-color: transparent;
     border-style: none;
 }
@@ -140,7 +147,11 @@
     }
 
     #contact .links-container {
-        margin-top: 0em;
+        margin-top: 0;
+    }
+
+    .send-message-layout {
+        margin-left: 0;
     }
 }
 
@@ -161,7 +172,8 @@
 
 @media only screen and (max-width: 320px) {
     .contact-form {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .form-group {

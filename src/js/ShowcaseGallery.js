@@ -25,7 +25,7 @@ export default function ShowcaseGallery(props) {
                 <SvgButton layoutClass='showcase-chevron-layout left' theme={props.theme}>
                     <Chevron class='showcase-chevron left' onClick={() => shiftPage(-1)}/>
                 </SvgButton>
-                <div class={'showcase-border-container ' + props.layout}>
+                <div class={'showcase-border-container ' + props.layout + ' ' + props.theme}>
                     <div class={'showcase-border ' + props.theme + ' ' + props.layout}>
                         <div id={props.theme + '-showcase-image-list'} class='showcase-image-list'>
                             {props.children}

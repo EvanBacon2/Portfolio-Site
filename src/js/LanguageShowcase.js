@@ -25,18 +25,22 @@ const CalendexShowcase = ({showCallback}) => {
             <div class='content-layout'>
                 <ContentHeader title='Language Buddy' theme={'language'}/>
                 <p class='showcase-content-description'>                        
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip 
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                    mollit anim id est laborum
+                    Language Buddy is a mockup of an app meant to help international students studying in the US 
+                    find others to study or practice English with.  The mockup was created as part of a group project 
+                    for a college course. In creating the mockup I conducted user research by organizing interviews with 
+                    two instructors who taught English classes meant for non native speakers, in order to better understand 
+                    the challenges they face. I also helped design and create the ui for the mockup.
                 </p>
             </div>
             <div class='showcase-layout'>
-                <ShowcaseGallery layout='ios' theme='language' captions={['View Blood Sugar', 'View Aggregate Data', 'Set Goals']}>
-                    <img class='showcase-photo' src='Calendex_Day_Chart.png' alt='A chart showing blood sugar readings over one day'/>
-                    <img class='showcase-photo' src='Calendex_Month_Data.png' alt='A calender showing avg blood sugar over one month'/>
-                    <img class='showcase-photo' src='Calendex_Settings_Goals.png' alt='Sliders for adjusting blood sugar goals'/>
+                <ShowcaseGallery layout='ios' theme='language' captions={['Sign in/up', 'Search for other users', 'Search for other users', 
+                                                                          'Search for other users', 'Schedule Meetups', 'Schedule Meetups']}>
+                    <img class='showcase-photo' src='Language_Main_App_Page.png' alt='Sign in/up screen'/>
+                    <img class='showcase-photo' src='Language_Connect_Intro_Page.png' alt='Choose between searching for meetups, finding them on a map'/>
+                    <img class='showcase-photo' src='Language_Initial_Search.png' alt='Menu for searching for nearby users'/>
+                    <img class='showcase-photo' src='Language_Explore.png' alt='Map for explore the surrounding area'/>
+                    <img class='showcase-photo' src='Language_Schedule_New_Meeting.png' alt='Menu for scheduling a new meeting'/>
+                    <img class='showcase-photo' src='Language_Calendar_Popup.png' alt='Menu for scheduling a new meeting'/>
                 </ShowcaseGallery>
             </div>
             <div class='showcase-links-layout'>

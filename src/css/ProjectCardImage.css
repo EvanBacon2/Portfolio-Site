@@ -9,6 +9,7 @@
 /*- - - - border - - - -*/
 .card-image-border {
     position: absolute;
+    z-index: 2;
     left: 0;
     right: 0;
     top: 0;
@@ -65,7 +66,7 @@
 }
 
 .show-init .card-photo {
-    opacity: 100;
+    opacity: 100%;
     transition: opacity .3s 2.55s;
 }
 
@@ -79,6 +80,7 @@
     left: .125em;
     transition: all 0.4s;
     position: absolute;
+    z-index: 3;
 }
 
 .on .card-image-cover.display-cover {
@@ -115,6 +117,7 @@
 /*- - - - container - - - -*/
 .desc-container {
     position: absolute;
+    z-index: 4;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -122,7 +125,6 @@
     height: 70%;
     width: 100%;
     top: 15%;
-    z-index: 1;
     opacity: 0;
     transition: opacity .2s 0s;
 }
@@ -180,10 +182,12 @@
 
 @keyframes cover-flash-p1 {
     0%, 35% {
+        background-color: #38CDA1;
         opacity: 0;
     }
 
     43%, 92% {
+        background-color: #38CDA1;
         opacity: 5%;
     }
 
@@ -194,10 +198,12 @@
 
 @keyframes cover-flash-p2 {
     0%, 37% {
+        background-color: #9877B1;
         opacity: 0;
     }
 
     45%, 92% {
+        background-color: #9877B1;
         opacity: 5%;
     }
 

@@ -156,12 +156,12 @@
 
     69.73%, 89.47% {
         border: .3125em solid #38CDA1; 
-        border-radius: .625em;
+        border-radius: 1.125em;
     }
 
     100% {
         border: .3125em solid #FAFEFF; 
-        border-radius: .625em;
+        border-radius: 1.125em;
     }
 }
 
@@ -172,12 +172,12 @@
 
     69.73%, 89.47% {
         border: .3125em solid #9877B1; 
-        border-radius: .625em;
+        border-radius: 1.125em;
     }
 
     100% {
         border: .3125em solid #FAFEFF; 
-        border-radius: .625em;
+        border-radius: 1.125em;
     }
 }
 
@@ -188,12 +188,12 @@
 
     69.73%, 89.47% {
         border: .3125em solid #1ABCFE; 
-        border-radius: .625em;
+        border-radius: 1.125em;
     }
 
     100% {
         border: .3125em solid #FAFEFF; 
-        border-radius: .625em;
+        border-radius: 1.125em;
     }
 }
 

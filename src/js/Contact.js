@@ -61,9 +61,11 @@ export default function Contact(props) {
                             </div>
                         </div>
                         <div id='contact-scroll-trigger' class='hide'/>
-                        <button class='send-message-layout' type='submit'>
-                            <LargeLink state={state} destination='mail'/>
-                        </button>
+                        <div class='flex-center'>
+                            <button class='send-message-layout' type='submit'>
+                                <LargeLink state={state + ' send-message '} destination='mail'/>
+                            </button>
+                        </div>
                     </form>
                 </div>
                 <Links state={state + ' section-header'} theme={THEMES.BRAND}>
