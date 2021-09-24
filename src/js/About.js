@@ -30,7 +30,7 @@ export default function About(props) {
                 <p class='about-description'>                        
                     Hi, my name’s Evan.  I’m a recent graduate from the University of Washington pursuing a career as a front 
                     end developer. I am particularly passionate about the design aspect of front end development, and have 
-                    experience designing front end ios apps and websites.  When not coding I enjoy making pixel art and writing 
+                    experience designing ios apps and websites.  When not coding I enjoy making pixel art and writing 
                     music in my free time.
                 </p>
                 <div class='about-headshot'>
