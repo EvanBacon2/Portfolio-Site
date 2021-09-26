@@ -15,7 +15,7 @@
 .showcase-container.showcase .page-index-container {
     opacity: 100;
     transform: translateY(0);
-    transition: opacity .4s ease-out 3.4s, transform .4s ease-out 3.45s;
+    transition: opacity .4s ease-out 2.5s, transform .4s ease-out 2.55s;
 }
 
 #page-caption {
@@ -50,10 +50,6 @@
 
 .index-dot.selected.language {
     color: #9877B1;
-}
-
-.index-dot.selected.web {
-    color: #1ABCFE;;
 }
 
 .no-highlight {

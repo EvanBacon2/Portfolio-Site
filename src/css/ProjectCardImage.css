@@ -271,10 +271,6 @@
 /*----------------------THEMED ITEMS----------------------*/
 
 /*- - - - borders - - - -*/
-.web-border {
-    border: .125em solid #1ABCFE;
-}
-
 .calendex-border {
     border: .125em solid #38CDA1;
 }
@@ -284,10 +280,6 @@
 }
 
 /*- - - - covers - - - -*/
-.web-cover {
-    background-color: #1C3743;
-}
-
 .calendex-cover {
     background-color: #203935;
 }
@@ -297,10 +289,6 @@
 }
 
 /*- - - - links - - - -*/
-.web-link {
-    color: #1C3743;
-}
-
 .calendex-link {
     color: #203935;
 }
@@ -310,10 +298,6 @@
 }
 
 /*- - - - links:hover - - - -*/
-.web-link:hover {
-    background-color: #1ABCFE;
-}
-
 .calendex-link:hover {
     background-color: #38CDA1;
 }

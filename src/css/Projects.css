@@ -93,26 +93,6 @@
     overflow: hidden;
 }
 
-.gallery-swipe::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 140%;
-    right: 0;
-    content: ' ';
-
-    background-image: linear-gradient(to left, #22282E 70%, #1C1F23 100%);
-}
-
-.gallery-swipe.showcase::before {
-    left: -40%;
-    transition: left .6s ease-in-out .3s;
-}
-
-.gallery-swipe.out::before {
-    left: 140%;
-}
-
 .gallery-swipe::after {
     position: absolute;
     top: 0;
@@ -124,20 +104,16 @@
 }
 
 .gallery-swipe.calendex::after {
-    background-image: linear-gradient(to right, #222E38 70% , #22282E 100%);
+    background-image: linear-gradient(to right, #222E38 70% , #1C1F23 100%);
 }
 
 .gallery-swipe.language::after {
-    background-image: linear-gradient(to right, #2E303B 70% , #22282E 100%);
-}
-
-.gallery-swipe.web::after {
-    background-image: linear-gradient(to right, #232f39 70% , #22282E 100%);
+    background-image: linear-gradient(to right, #2E303B 70% , #1C1F23 100%);
 }
 
 .gallery-swipe.showcase::after {
     right: -40%;
-    transition: right .6s ease-in-out 1.2s;
+    transition: right .6s ease-in-out .3s;
 }
 
 .gallery-swipe.out::after {
@@ -151,10 +127,6 @@
 
 .gallery-swipe.language.out::after {
     background-image: linear-gradient(to right, #2E303B 70% , #1C1F23 100%);
-}
-
-.gallery-swipe.web.out::after {
-    background-image: linear-gradient(to right, #232f39 70% , #1C1F23 100%);
 }
 
 /*- - - - gallery container - - - -*/

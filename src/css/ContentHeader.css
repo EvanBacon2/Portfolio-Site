@@ -38,13 +38,13 @@
 .showcase-container.showcase .content-title {
     opacity: 100%;
     transform: translate(0, 0);
-    transition: opacity .2s ease-out 2.6s, text-shadow .4s ease-out 2.65s, transform .4s ease-out 2.65s;
+    transition: opacity .2s ease-out 1.7s, text-shadow .4s ease-out 1.75s, transform .4s ease-out 1.75s;
 }
 
 .projects-header.showcase .section-header .content-title {
     opacity: 100%;
     transform: translate(0, 0);
-    transition: text-shadow .4s 1.5s;
+    transition: text-shadow .4s .6s;
 }
 
 .projects-header.out .section-header .content-title {
@@ -85,7 +85,7 @@
     opacity: 100;
     width: 100%;
     transform: translateX(0);
-    transition: opacity 0s, width .8s cubic-bezier(.82,0,.16,.96) 2.1s, transform .8s cubic-bezier(.82,0,.16,.96) 2.1s;
+    transition: opacity 0s, width .8s cubic-bezier(.82,0,.16,.96) 1.2s, transform .8s cubic-bezier(.82,0,.16,.96) 1.2s;
 }
 
 .projects-header.show.no-showcase .content-underline {
@@ -109,7 +109,7 @@
 }
 
 .projects-header.showcase .content-underline::before {
-    transition: background-color .4s 1.5s;
+    transition: background-color .4s .6s;
 }
 
 .projects-header .content-underline.calendex::before {
@@ -118,10 +118,6 @@
 
 .projects-header .content-underline.language::before {
     background-color: #9877B1;
-}
-
-.projects-header .content-underline.web::before {
-    background-color: #1ABCFE;
 }
 
 .projects-header.out .content-underline::before {
@@ -156,10 +152,6 @@
     text-shadow: #9877B1 .0392em .0392em;
 }
 
-.content-title.web {
-    text-shadow: #1ABCFE .0392em .0392em;
-}
-
 .projects-header.out .content-title {
     text-shadow: #E26E6E .0392em .0392em;
 }
@@ -183,10 +175,6 @@
 
 .content-underline.language {
     background-color: #9877B1;
-}
-
-.content-underline.web {
-    background-color: #1ABCFE;
 }
 
 .projects-header .content-underline {
