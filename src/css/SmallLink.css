@@ -13,10 +13,6 @@
     cursor: pointer;
 }
 
-.small-link:hover.web {
-    fill: #1ABCFE;
-}
-
 .small-link:hover.calendex {
     fill: #38CDA1;
 }

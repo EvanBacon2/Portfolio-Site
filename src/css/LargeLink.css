@@ -106,7 +106,7 @@
 }
 
 .link:hover .mail {
-    text-shadow: .0625em .0625em #E26E6E;
+    text-shadow: .0625em .0625em #EE6363;
 }
 
 @media only screen and (orientation: portrait) {

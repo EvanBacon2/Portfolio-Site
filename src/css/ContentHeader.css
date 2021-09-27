@@ -129,7 +129,7 @@
 
 /*- - - - text - - - -*/
 .no-show.content-title.brand {
-    text-shadow: #E26E6E .0196em .0196em;
+    text-shadow: #EE6363 .0196em .0196em;
 }
 
 .no-show.no-showcase.content-title.calendex {
@@ -141,7 +141,7 @@
 }
 
 .content-title.brand {
-    text-shadow: #E26E6E .0392em .0392em;
+    text-shadow: #EE6363 .0392em .0392em;
 }
 
 .content-title.calendex {
@@ -153,20 +153,20 @@
 }
 
 .projects-header.out .content-title {
-    text-shadow: #E26E6E .0392em .0392em;
+    text-shadow: #EE6363 .0392em .0392em;
 }
 
 /*- - - - underline - - - -*/
 .content-underline.brand.right {
-    background-image: linear-gradient(to right, #E26E6E 50%, #FCC28D 95%);
+    background-image: linear-gradient(to right, #EE6363 50%, #FCC28D 95%);
 }
 
 .content-underline.brand.left {
-    background-image: linear-gradient(to left, #E26E6E 50%, #FCC28D 95%);
+    background-image: linear-gradient(to left, #EE6363 50%, #FCC28D 95%);
 }
 
 .content-underline.brand.center {
-    background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
+    background-image: radial-gradient(circle at center, #FCC28D 0%, #EE6363 50%);
 }
 
 .content-underline.calendex {
@@ -183,10 +183,10 @@
 
 @media only screen and (orientation: portrait) {
     .content-underline.brand.right {
-        background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
+        background-image: radial-gradient(circle at center, #FCC28D 0%, #EE6363 50%);
     }
     
     .content-underline.brand.left {
-        background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
+        background-image: radial-gradient(circle at center, #FCC28D 0%, #EE6363 50%);
     }
 }

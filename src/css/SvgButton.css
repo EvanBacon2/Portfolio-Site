@@ -55,7 +55,7 @@
 }
 
 .svg-button-shadow.brand {
-    fill: #E26E6E;
+    fill: #EE6363;
 }
 
 .svg-button-shadow.calendex {
@@ -87,7 +87,7 @@
 }
 
 .svg-button-shadow.mail {
-    fill: #E26E6E;
+    fill: #EE6363;
 } 
 
 @keyframes svg-button-click {

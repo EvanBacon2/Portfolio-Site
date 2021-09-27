@@ -10,7 +10,7 @@
   color: #FAFEFF;
   font-family: 'Racing Sans One';
   font-size: 4.3125em;
-  text-shadow: calc(.1875em / 4.3125) calc(.1875em / 4.3125) #E26E6E;
+  text-shadow: calc(.1875em / 4.3125) calc(.1875em / 4.3125) #EE6363;
   margin: 0;
   padding-left: calc(.9375em / 4.3125);
   padding-right: calc(.9375em / 4.3125);
@@ -28,7 +28,7 @@
 }
 
 #header-underline {
-  background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
+  background-image: radial-gradient(circle at center, #FCC28D 0%, #EE6363 50%);
   height: .125em;
   border: none;
   margin: 0;

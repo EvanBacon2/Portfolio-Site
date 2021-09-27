@@ -37,7 +37,7 @@
 @media only screen and (orientation: landscape) {
     #nav-button:hover .nav-line {
         background-color: #FAFEFF;
-        box-shadow: .1875em .125em #E26E6E;
+        box-shadow: .1875em .125em #EE6363;
         transform: translate(-.1875em, -.125em);
     }
 

@@ -71,7 +71,7 @@
     display: block;
     width: 0;
     height: fit-content;
-    background: linear-gradient(to right, #E26E6E 50%, #FCC28D 95%);
+    background: linear-gradient(to right, #EE6363 50%, #FCC28D 95%);
     padding: .0625em;
     border-radius: .4167em;
 }
