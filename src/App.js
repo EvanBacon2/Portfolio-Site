@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import NavButton from 'js/NavButton';
 import InitialsLogo from 'js/InitialsLogo';
@@ -61,27 +60,26 @@ class App extends Component {
     document.body.style = 'background: #22282E'
     
     return (
-      <Router>
-          <div class="App">
-            <div id='master' ref={this.homeRef}>
-              <div id='fixed-elements'>
-                <NavButton navState={this.state.navState} onClick={this.openOverlay}/>
-                <div id='main-initials-logo' class='main-initials-logo layout'>
-                  <InitialsLogo theme='brand'/>
-                </div>
-              </div>
-              <Overlay navState={this.state.navState}/>
-              <NavPage navState={this.state.navState} onClick={this.closeOverlay}/>
-              <div class='skeleton content-grid-template'>
-                <LandingPage scrollTop={window.pageYOffset}/>
-                <About refProp={this.aboutRef}/>
-                <Projects refProp={this.projectsRef}/>
-                <Contact refProp={this.contactRef}/>
-                <Footer homeRef={this.homeRef} aboutRef={this.aboutRef} projectsRef={this.projectsRef} contactRef={this.contactRef}/>
-              </div>
+      <div class="App">
+        <div id='master' ref={this.homeRef}>
+          <div id='fixed-elements'>
+            <NavButton navState={this.state.navState} onClick={this.openOverlay}/>
+            <div id='main-initials-logo' class='main-initials-logo layout'>
+              <InitialsLogo theme='brand'/>
             </div>
           </div>
-      </Router>)
+          <Overlay navState={this.state.navState}/>
+          <NavPage navState={this.state.navState} onClick={this.closeOverlay}/>
+          <div class='skeleton content-grid-template'>
+            <LandingPage scrollTop={window.pageYOffset}/>
+            <About refProp={this.aboutRef}/>
+            <Projects refProp={this.projectsRef}/>
+            <Contact refProp={this.contactRef}/>
+            <Footer homeRef={this.homeRef} aboutRef={this.aboutRef} projectsRef={this.projectsRef} contactRef={this.contactRef}/>
+          </div>
+        </div>
+      </div>
+    )
   }
 }
 
