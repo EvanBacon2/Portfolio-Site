@@ -16,6 +16,7 @@
     pointer-events: none;
     padding-left: .29412em;
     padding-right: .29412em;
+    margin: 0;
 }
 
 .no-show .section-header .content-title {
