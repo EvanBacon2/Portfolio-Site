@@ -56,7 +56,7 @@ export default function Contact(props) {
                         </div>
                         <div class="form-group">
                             <label class='form-label' htmlFor="message">Message</label>
-                            <div class='form-border'>
+                            <div class='area form-border'>
                                 <textarea class="form-style area-form" rows="4" name='message'/>
                             </div>
                         </div>

@@ -48,7 +48,7 @@
 }
 
 .show-init .about-description {
-    opacity: 100;
+    opacity: 1;
     transform: translateX(0);
     transition: opacity .4s ease-out 1.6s, transform .4s ease-out 1.65s;
 }

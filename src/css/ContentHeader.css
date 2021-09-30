@@ -25,7 +25,7 @@
 }
 
 .show-init .section-header .content-title {
-    opacity: 100%;
+    opacity: 1;
     transform: translate(0, 0);
     transition: opacity .2s ease-out .5s, text-shadow .4s ease-out .55s, transform .4s ease-out .55s;
 }
@@ -37,19 +37,19 @@
 }
 
 .showcase-container.showcase .content-title {
-    opacity: 100%;
+    opacity: 1;
     transform: translate(0, 0);
     transition: opacity .2s ease-out 1.7s, text-shadow .4s ease-out 1.75s, transform .4s ease-out 1.75s;
 }
 
 .projects-header.showcase .section-header .content-title {
-    opacity: 100%;
+    opacity: 1;
     transform: translate(0, 0);
     transition: text-shadow .4s .6s;
 }
 
 .projects-header.out .section-header .content-title {
-    opacity: 100%;
+    opacity: 1;
     transform: translate(0, 0);
     transition: text-shadow .4s 1s;
 }
@@ -83,7 +83,7 @@
 }
 
 .showcase .content-underline {
-    opacity: 100;
+    opacity: 1;
     width: 100%;
     transform: translateX(0);
     transition: opacity 0s, width .8s cubic-bezier(.82,0,.16,.96) 1.2s, transform .8s cubic-bezier(.82,0,.16,.96) 1.2s;

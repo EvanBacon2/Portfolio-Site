@@ -10,8 +10,8 @@ const ProjectCard = ({title, theme, type, cardPhoto, description, showcaseCallba
     const platformIcon = (type) => {
         switch (type) {
             case 'web': return <WebIcon class={'card-icon platform-icon-sizer'}/>
-            case 'ios': return <AppleIcon class={'card-icon platform-icon-sizer'}/>
-            case 'ux': return <UXIcon class={'card-icon platform-icon-sizer'}/>
+            case 'ios': return <AppleIcon class={'card-icon platform-icon-sizer apple'}/>
+            case 'ux': return <UXIcon class={'card-icon platform-icon-sizer ux'}/>
         }
     }
     

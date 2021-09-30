@@ -90,8 +90,15 @@
 }
 
 .platform-icon-sizer {
-    width: fit-content;
     height: 1.03125em;
+}
+
+.platform-icon-sizer.apple {
+    width: .859375em;
+}
+
+.platform-icon-sizer.ux {
+    width: 1.40625em;
 }
 
 /*----------------------TEXT SHADOW----------------------*/
