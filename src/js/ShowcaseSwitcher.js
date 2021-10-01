@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react'
-
-import ProjectGallery from './ProjectGallery'
-import ShowcaseFade from './ShowcaseFade'
-import CalendexShowcase from './CalendexShowcase'
-import LanguageShowcase from './LanguageShowcase'
-import WebShowcase from './WebShowcase'
+import ProjectGallery from 'js/ProjectGallery'
+import ShowcaseFade from 'js/ShowcaseFade'
+import CalendexShowcase from 'js/CalendexShowcase'
+import LanguageShowcase from 'js/LanguageShowcase'
 
 import 'css/Projects.css';
 
@@ -26,9 +23,6 @@ const ShowcaseSwitcher = ({showcase, showcaseCallback, show, showCallback}) => {
             }
             case 'language': {
                 return <LanguageShowcase showCallback={switchShowcase}/>
-            }
-            case 'web': {
-                return <WebShowcase showCallback={switchShowcase}/>
             }
             default: {
                 return <ProjectGallery showcase={showcase} showcaseCallback={switchShowcase}/>

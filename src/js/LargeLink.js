@@ -1,18 +1,18 @@
 import { useState } from 'react'
 
-import SvgButton from './SvgButton.js';
+import SvgButton from './SvgButton.js'
 import FigmaButton from 'js/FigmaButton'
 
-import '../css/LargeLink.css';
+import '../css/LargeLink.css'
 
-import {ReactComponent as GithubIcon} from '../svg/github.svg';
-import {ReactComponent as WebsiteIcon} from '../svg/website.svg';
-import {ReactComponent as AppStoreIcon} from '../svg/appstore.svg';
-import {ReactComponent as LinkedinIcon} from '../svg/linkedin.svg';
-import {ReactComponent as MailIcon} from '../svg/mail.svg';
+import {ReactComponent as GithubIcon} from '../svg/github.svg'
+import {ReactComponent as WebsiteIcon} from '../svg/website.svg'
+import {ReactComponent as AppStoreIcon} from '../svg/appstore.svg'
+import {ReactComponent as LinkedinIcon} from '../svg/linkedin.svg'
+import {ReactComponent as MailIcon} from '../svg/mail.svg'
 
 const LargeLink = ({state, destination, url}) => {
-    const [active, setActive] = useState('');
+    const [active, setActive] = useState('')
 
     const icon = (dest) => {
         switch (dest) {

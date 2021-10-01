@@ -1,10 +1,10 @@
-import ProjectCardImage from 'js/ProjectCardImage';
+import ProjectCardImage from 'js/ProjectCardImage'
 
-import 'css/ProjectCard.css';
+import 'css/ProjectCard.css'
 
-import {ReactComponent as WebIcon} from 'svg/web.svg';
-import {ReactComponent as AppleIcon} from 'svg/apple.svg';
-import {ReactComponent as UXIcon} from 'svg/ux.svg';
+import {ReactComponent as WebIcon} from 'svg/web.svg'
+import {ReactComponent as AppleIcon} from 'svg/apple.svg'
+import {ReactComponent as UXIcon} from 'svg/ux.svg'
 
 const ProjectCard = ({title, theme, type, cardPhoto, description, showcaseCallback, children}) => {
     const platformIcon = (type) => {
@@ -30,7 +30,7 @@ const ProjectCard = ({title, theme, type, cardPhoto, description, showcaseCallba
                 {children}
             </div>
         </div>
-    );
+    )
 }
 
 export default ProjectCard

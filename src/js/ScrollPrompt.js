@@ -4,13 +4,13 @@ import {ReactComponent as Chevron} from 'svg/chevron.svg';
 
 import 'css/ScrollPrompt.css';
 
-export default function ScrollPrompt(props) {
+const ScrollPrompt = ({layoutClass}) => {
     useEffect(() => {
         setTimeout(() => document.getElementById('scroll-prompt-container').classList.add('show-init'), 200)
-    });
+    })
     
     return (
-        <div id='scroll-prompt-container' class={props.layoutClass}>
+        <div id='scroll-prompt-container' class={layoutClass}>
             <h1 id='scroll-prompt-text'>Scroll Down</h1>
             <div id='scroll-chevron-container'>
                 <div id='scroll-chevron' class ='scroll-chevron-box scroll-chevron-layout'>
@@ -21,5 +21,7 @@ export default function ScrollPrompt(props) {
                 </div>
             </div>
         </div>
-    );
+    )
 }
+
+export default ScrollPrompt

@@ -1,10 +1,12 @@
-import 'css/ContentHeader.css';
+import 'css/ContentHeader.css'
 
-export default function ContentHeader(props) {
+const ContentHeader = ({state, title, theme, fadeAlignment}) => {
     return (
-        <div class={'header-container ' + props.state}>
-            <p class={'content-title ' + props.theme}>{props.title}</p>
-            <hr class={'content-underline ' + props.theme + ' ' + props.fadeAlignment}/>
+        <div class={'header-container ' + state}>
+            <p class={'content-title ' + theme}>{title}</p>
+            <hr class={'content-underline ' + theme + ' ' + fadeAlignment}/>
         </div>
-    );
+    )
 }
+
+export default ContentHeader

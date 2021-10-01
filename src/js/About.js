@@ -1,27 +1,27 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
-import ContentHeader from 'js/ContentHeader';
-import HeadShot from 'js/HeadShot';
-import { THEMES } from 'js/Themes';
+import ContentHeader from 'js/ContentHeader'
+import HeadShot from 'js/HeadShot'
+import { THEMES } from 'js/Themes'
 
-import 'css/About.css';
-import 'css/Structure.css';
+import 'css/About.css'
+import 'css/Structure.css'
 
-export default function About(props) {
-    const [state, setState] = useState('no-show');
+const About = ({refProp}) => {
+    const [state, setState] = useState('no-show')
 
     useEffect(() => {
         const checkScrollTrigger = () => {
             if (document.getElementById('about-scroll-trigger').classList.contains('show')) {
-                setState('show-init');
+                setState('show-init')
             }
         }
 
-        window.addEventListener("scroll", checkScrollTrigger, { passive: true });
-    });
+        window.addEventListener("scroll", checkScrollTrigger, { passive: true })
+    })
 
     return (
-        <div id='about' class='content-grid-template' ref={props.refProp}>
+        <div id='about' class='content-grid-template' ref={refProp}>
             <div id='about-content' class={state}>
                 <div class='about-header'>
                     <ContentHeader state={'section-header'} title='About Me' theme={THEMES.BRAND} fadeAlignment='right'/>
@@ -41,3 +41,5 @@ export default function About(props) {
         </div>
     );   
 }
+
+export default About

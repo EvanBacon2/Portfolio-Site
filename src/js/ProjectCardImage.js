@@ -1,22 +1,14 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
-import 'css/ProjectCardImage.css';
+import 'css/ProjectCardImage.css'
 
 const ProjectCardImage = ({theme, showcaseCallback, children, cardPhoto}) => {
-    const [coverState, setCoverState] = useState('');
-
-    const displayCover = () => {
-        setCoverState('display-cover');
-    }
-
-    const hideCover = () => {
-        setCoverState('');
-    }
+    const [coverState, setCoverState] = useState('')
     
     return (
         <div class='card-image-container'>
             <div class={'card-image-border ' + theme + '-border'}/>
-            <div class={'card-image'} onMouseEnter={() => displayCover()} onMouseLeave={() => hideCover()}>
+            <div class={'card-image'} onMouseEnter={() => setCoverState('display-cover')} onMouseLeave={() => setCoverState('')}>
                 <img class='card-photo' src={cardPhoto} alt='Calendex app screenshot'/>
                 <div class={'card-image-cover ' + theme + '-cover ' + coverState}/>
                 <div class={'desc-container ' + coverState}>
@@ -28,7 +20,7 @@ const ProjectCardImage = ({theme, showcaseCallback, children, cardPhoto}) => {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
 export default ProjectCardImage

@@ -1,19 +1,21 @@
 import 'css/PageIndex.css';
 
-export default function PageIndex(props) {
+const PageIndex = ({captions, currPage, theme}) => {
     const captionForIndex = (index) => {
-        return <h1 id='page-caption' class='no-highlight'>{props.captions[index]}</h1>
+        return <h1 id='page-caption' class='no-highlight'>{captions[index]}</h1>
     }
 
     return (
         <div class='page-index-container'>
-            {captionForIndex(props.currPage)}
+            {captionForIndex(currPage)}
             <ul id='index-list'>
-                {props.captions.map((caption, index) => {
-                    const selectionClass = index === props.currPage ? 'selected' : '';
-                    return <li class={'index-dot no-highlight ' + selectionClass + ' ' + props.theme}>&bull;</li>
+                {captions.map((caption, index) => {
+                    const selectionClass = index === currPage ? 'selected' : '';
+                    return <li class={'index-dot no-highlight ' + selectionClass + ' ' + theme}>&bull;</li>
                 })}
             </ul>
         </div>
-    );
+    )
 }
+
+export default PageIndex

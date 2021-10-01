@@ -1,35 +1,31 @@
-import * as React from 'react';
-import { Component } from 'react';
+import React from 'react'
+
+import { useState } from 'react'
 
 import 'css/SvgButton.css'
 
-export default class SvgButton extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            clickAnimation: ''
-        }
+const SvgButton = ({theme, layoutClass, active, baseColor, children}) => {
+    const [clickAnimation, setClickAnimation] = useState('')
+
+    const injectStyle = (newClass) => {
+        return React.Children.map(children, child => 
+            React.cloneElement(child, { class: child.props.class + ' ' + newClass}))
     }
 
-    injectStyle = (newClass) => {
-        return React.Children.map(this.props.children, child => 
-            React.cloneElement(child, { class: child.props.class + ' ' + newClass}));
+    const onClick = () => {
+        setClickAnimation('')
+        setClickAnimation('click-animation')
+        setTimeout(() => setClickAnimation(''), 400)
     }
-
-    onClick = () => {
-        this.setState(() => { return { clickAnimation: ''} })
-        this.setState(() => { return { clickAnimation: 'click-animation'} })
-        setTimeout(() => this.setState(() => { return { clickAnimation: ''} }), 400);
-    }
-
-    render() {
-        return (
-            <div class={'svg-button-box ' + this.props.layoutClass + ' ' + this.props.active} onClick={this.onClick}>
-                {this.injectStyle('svg-button-shadow ' + this.props.theme)}
-                <div class={'svg-button-mover ' + this.state.clickAnimation}>
-                    {this.injectStyle('svg-button ' + this.props.baseColor)}
-                </div>
+    
+    return (
+        <div class={'svg-button-box ' + layoutClass + ' ' + active} onClick={onClick}>
+            {injectStyle('svg-button-shadow ' + theme)}
+            <div class={'svg-button-mover ' + clickAnimation}>
+                {injectStyle('svg-button ' + baseColor)}
             </div>
-        );
-    }
+        </div>
+    ) 
 }
+
+export default SvgButton

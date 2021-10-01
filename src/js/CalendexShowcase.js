@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react'
 
-import ContentHeader from 'js/ContentHeader';
+import ContentHeader from 'js/ContentHeader'
 import ShowcaseGallery from 'js/ShowcaseGallery'
-import Links from 'js/Links';
-import LargeLink from './LargeLink';
-import SvgButton from 'js/SvgButton';
+import Links from 'js/Links'
+import LargeLink from 'js/LargeLink'
+import SvgButton from 'js/SvgButton'
 
 import 'css/ProjectShowcase.css'
 
-import {ReactComponent as Chevron} from 'svg/chevron.svg';
+import {ReactComponent as Chevron} from 'svg/chevron.svg'
 
 const CalendexShowcase = ({showCallback}) => {
     const [showcase, setShowcase] = useState('no-showcase')
 
     useEffect(() => {
-        setTimeout(() => setShowcase('showcase'), 10);
-    });
+        setTimeout(() => setShowcase('showcase'), 10)
+    })
 
     return (  
         <div id='calendex-showcase' class={'showcase-container ' + showcase}>
@@ -41,11 +41,10 @@ const CalendexShowcase = ({showCallback}) => {
             <div class='showcase-links-layout'>
                 <Links theme={'calendex'}>
                     <LargeLink destination='github' url='https://github.com/EvanBacon2/Calendex'/>
-                    {/*<LargeLink destination='appstore'/>*/}
                 </Links>
             </div>
         </div>
-    );
+    )
 }
 
 export default CalendexShowcase

@@ -20,20 +20,20 @@ class App extends Component {
       navState: 'closed',
     }
 
-    this.homeRef = React.createRef();
-    this.aboutRef = React.createRef();
-    this.projectsRef = React.createRef();
-    this.contactRef = React.createRef();
+    this.homeRef = React.createRef()
+    this.aboutRef = React.createRef()
+    this.projectsRef = React.createRef()
+    this.contactRef = React.createRef()
   }
 
   openOverlay = () => {
-    const master = document.getElementById('master');
+    const master = document.getElementById('master')
 
-    master.style.top = `-${window.scrollY}px`;
+    master.style.top = `-${window.scrollY}px`
     setTimeout(() => {
-      master.style.position = 'fixed';
+      master.style.position = 'fixed'
     }, 200);
-    this.setState({ navState: 'open' });
+    this.setState({ navState: 'open' })
   }
 
   closeOverlay = (section) => {
@@ -43,17 +43,14 @@ class App extends Component {
     master.style.position = '';
     master.style.top = '';
 
-    if (section === '') {
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    } else if (section === 'About') {
-      this.aboutRef.current.scrollIntoView();
-    } else if (section === 'Projects') {
-      this.projectsRef.current.scrollIntoView();
-    } else if (section === 'Contact') {
-      this.contactRef.current.scrollIntoView();
+    switch(section) {
+      case 'About': this.aboutRef.current.scrollIntoView(); break
+      case 'Projects': this.projectsRef.current.scrollIntoView(); break
+      case 'Contact': this.contactRef.current.scrollIntoView(); break
+      default: window.scrollTo(0, parseInt(scrollY || '0') * -1); break
     }
 
-    this.setState({ navState: 'closed' });
+    this.setState({ navState: 'closed' })
   }
 
   render() {

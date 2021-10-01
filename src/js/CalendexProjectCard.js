@@ -1,7 +1,7 @@
-import ProjectCard from './ProjectCard';
-import SmallLink from 'js/SmallLink';
+import ProjectCard from './ProjectCard'
+import SmallLink from 'js/SmallLink'
 
-import {ReactComponent as GithubIcon} from 'svg/github.svg';
+import { ReactComponent as GithubIcon } from 'svg/github.svg'
 
 const CalendexProjectCard = ({showcaseCallback}) => {
     return (

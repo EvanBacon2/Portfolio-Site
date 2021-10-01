@@ -1,32 +1,32 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect} from 'react'
 
-import SiteHeader from 'js/SiteHeader';
-import ScrollPrompt from 'js/ScrollPrompt';
+import SiteHeader from 'js/SiteHeader'
+import ScrollPrompt from 'js/ScrollPrompt'
 
-import 'css/LandingPage.css';
+import 'css/LandingPage.css'
 
-export default function LandingPage() {
-    const [offset, setOffset] = useState(0);
+const LandingPage = () => {
+    const [offset, setOffset] = useState(0)
 
     useEffect(() => {
         window.onscroll = () => {
             setOffset(window.pageYOffset)
         }
-    }, []);
+    }, [])
 
     const hiddenElements = document.getElementsByClassName('hide')
     Array.prototype.map.call(hiddenElements, (element) => {
-        const bottomOfObject = element.getBoundingClientRect()['bottom'];
-        const bottomOfWindow = window.innerHeight;
+        const bottomOfObject = element.getBoundingClientRect()['bottom']
+        const bottomOfWindow = window.innerHeight
         if (bottomOfObject < bottomOfWindow) {
-            element.classList.remove('hide');
-            element.classList.add('show');
+            element.classList.remove('hide')
+            element.classList.add('show')
         }     
-    }); 
+    })
 
-    var hidePrompt = 'show-prompt';
+    var hidePrompt = 'show-prompt'
     if (offset !== 0) {            
-        hidePrompt = 'hide-prompt';
+        hidePrompt = 'hide-prompt'
     }
     
     return (
@@ -35,5 +35,7 @@ export default function LandingPage() {
             <ScrollPrompt layoutClass={'scroll-prompt-layout ' + hidePrompt}/>
             <span>{window.scrollTop}</span>
         </div>
-    );
+    )
 }
+
+export default LandingPage

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com'
 
 import ContentHeader from 'js/ContentHeader'
 import Links from 'js/Links'
@@ -11,32 +11,32 @@ import { THEMES } from 'js/Themes'
 import 'css/Contact.css'
 import 'css/Structure.css'
 
-export default function Contact(props) {
-    const [state, setState] = useState('no-show');
+const Contact = ({refProp}) => {
+    const [state, setState] = useState('no-show')
 
     useEffect(() => {
         const checkScrollTrigger = () => {
             if (document.getElementById('contact-scroll-trigger').classList.contains('show')) {
-                setState('show-init');
+                setState('show-init')
             }
         }
 
-        window.addEventListener("scroll", checkScrollTrigger, { passive: true });
-    });
+        window.addEventListener("scroll", checkScrollTrigger, { passive: true })
+    })
 
     const sendEmail = (e) => {
-        e.preventDefault();
+        e.preventDefault()
     
         emailjs.sendForm('service_qeucivz', 'template_6sjtpuj', e.target, 'user_m7tWQG5rUezeCWcB73oHX')
           .then((result) => {
-              console.log(result.text);
+              console.log(result.text)
           }, (error) => {
-              console.log(error.text);
-          });
+              console.log(error.text)
+          })
       }
 
     return(
-        <div id='contact' class='content-grid-template' ref={props.refProp}>
+        <div id='contact' class='content-grid-template' ref={refProp}>
             <div id='contact-contents' class={state}>
                 <div class='form-container'>
                     <div class='contact-header'>
@@ -64,7 +64,6 @@ export default function Contact(props) {
                         <div id='contact-scroll-trigger' class='hide'/>
                         <div class='flex-center'>
                             <button class='send-message-layout' type='submit'>
-                                {/*<LargeLink state={state + ' send-message'} destination='mail'/>*/}
                                 <SubmitEmail state={state + ' send-message'}/>
                             </button>
                         </div>
@@ -76,5 +75,7 @@ export default function Contact(props) {
                 </Links>
             </div>
         </div>
-    );
+    )
 }
+
+export default Contact

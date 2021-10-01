@@ -6,7 +6,7 @@ import '../css/LargeLink.css';
 
 import {ReactComponent as MailIcon} from '../svg/mail.svg';
 
-const SubmitEmail = ({state}) => {
+const SubmitEmail = ({ state }) => {
     const [active, setActive] = useState('');
 
     const toggleActive = () => { setActive(active === '' ? 'active' : '') }

@@ -1,33 +1,27 @@
-import * as React from 'react';
-import { Component } from 'react';
+import { useState } from 'react'
 
 import 'css/SvgButton.css'
 
-import {ReactComponent as FigmaIcon} from '../svg/figma.svg';
-import {ReactComponent as FigmaColorIcon} from '../svg/figma-color.svg';
+import {ReactComponent as FigmaIcon} from '../svg/figma.svg'
+import {ReactComponent as FigmaColorIcon} from '../svg/figma-color.svg'
 
-export default class FigmaButton extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            clickAnimation: ''
-        }
+const FigmaButton = ({active, boxClass}) => {
+    const [clickAnimation, setClickAnimation] = useState('')
+
+    const onClick = () => {
+        setClickAnimation('')
+        setClickAnimation('click-animation')
+        setTimeout(() => setClickAnimation(''), 400)
     }
 
-    onClick = () => {
-        this.setState(() => { return { clickAnimation: ''} })
-        this.setState(() => { return { clickAnimation: 'click-animation'} })
-        setTimeout(() => this.setState(() => { return { clickAnimation: ''} }), 400);
-    }
-
-    render() {
-        return (
-            <div class={'svg-button-box ' + this.props.active} onClick={this.onClick}>
-                <FigmaColorIcon class={'svg-button-shadow ' + this.props.boxClass}/>
-                <div class={'svg-button-mover ' + this.state.clickAnimation}>
-                    <FigmaIcon class={'svg-button ' + this.props.boxClass}/>
-                </div>
+    return (
+        <div class={'svg-button-box ' + active} onClick={onClick}>
+            <FigmaColorIcon class={'svg-button-shadow ' + boxClass}/>
+            <div class={'svg-button-mover ' + clickAnimation}>
+                <FigmaIcon class={'svg-button ' + boxClass}/>
             </div>
-        );
-    }
+        </div>
+    );
 }
+
+export default FigmaButton
