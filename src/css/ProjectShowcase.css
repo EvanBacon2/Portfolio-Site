@@ -47,6 +47,8 @@
     width: 100%;
     margin-left: .7617em;
     font-family: 'Roboto';
+    font-weight: normal;
+    font-style: italic; 
     color: #FAFEFF;
     font-size: .8125em;
 }

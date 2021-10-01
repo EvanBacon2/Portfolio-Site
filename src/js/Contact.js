@@ -45,19 +45,19 @@ export default function Contact(props) {
                         <div class="form-group">
                             <label class='form-label' htmlFor="name">Name</label>
                             <div class='form-border'>
-                                <input class="form-style line-form" type="text" name='user_name'/>
+                                <input id="name" class="form-style line-form" type="text" name='user_name'/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class='form-label' htmlFor="exampleInputEmail1">Email</label>
+                            <label class='form-label' htmlFor="email">Email</label>
                             <div class='form-border'>
-                                <input class="form-style line-form" type="email" aria-describedby="emailHelp" name='user_email'/>
+                                <input id="email" class="form-style line-form" type="email" aria-describedby="emailHelp" name='user_email'/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class='form-label' htmlFor="message">Message</label>
                             <div class='area form-border'>
-                                <textarea class="form-style area-form" rows="4" name='message'/>
+                                <textarea id="message" class="form-style area-form" rows="4" name='message'/>
                             </div>
                         </div>
                         <div id='contact-scroll-trigger' class='hide'/>

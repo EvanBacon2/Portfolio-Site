@@ -132,6 +132,8 @@
 /*- - - - description - - - -*/
 .cover-desc {
     font-family: 'Roboto';
+    font-weight: normal;
+    font-style: italic; 
     font-size: .9375em;
     color: #FAFEFF;
     margin-top: 1.5rem;
@@ -146,6 +148,8 @@
 /*- - - - link - - - -*/
 .learn-link {
     font-family: 'Roboto';
+    font-weight: normal;
+    font-style: italic; 
     font-size: .9375em;
     width: fit-content;
     background-color: #FAFEFF;

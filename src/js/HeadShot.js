@@ -8,7 +8,7 @@ export default class HeadShot extends Component {
             <div>
                 <div id='headshot-container'>
                     <div class='grad-photo-background'/>
-                    <img class='grad-photo' src='grad_photo.png' alt='My face'/>
+                    <img class='grad-photo' src='grad_photo.avif' alt='My face'/>
                 </div>
             </div>
         )

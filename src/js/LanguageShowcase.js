@@ -35,12 +35,12 @@ const CalendexShowcase = ({showCallback}) => {
             <div class='showcase-layout'>
                 <ShowcaseGallery layout='ios' theme='language' captions={['Sign in/up', 'Search for other users', 'Search for other users', 
                                                                           'Search for other users', 'Schedule Meetups', 'Schedule Meetups']}>
-                    <img class='showcase-photo' src='Language_Main_App_Page.png' alt='Sign in/up screen'/>
-                    <img class='showcase-photo' src='Language_Connect_Intro_Page.png' alt='Choose between searching for meetups, finding them on a map'/>
-                    <img class='showcase-photo' src='Language_Initial_Search.png' alt='Menu for searching for nearby users'/>
-                    <img class='showcase-photo' src='Language_Explore.png' alt='Map for explore the surrounding area'/>
-                    <img class='showcase-photo' src='Language_Schedule_New_Meeting.png' alt='Menu for scheduling a new meeting'/>
-                    <img class='showcase-photo' src='Language_Calendar_Popup.png' alt='Menu for scheduling a new meeting'/>
+                    <img class='showcase-photo' src='Language_Main_App_Page.avif' alt='Sign in/up screen'/>
+                    <img class='showcase-photo' src='Language_Connect_Intro_Page.avif' alt='Choose between searching for meetups, finding them on a map'/>
+                    <img class='showcase-photo' src='Language_Initial_Search.avif' alt='Menu for searching for nearby users'/>
+                    <img class='showcase-photo' src='Language_Explore.avif' alt='Map for explore the surrounding area'/>
+                    <img class='showcase-photo' src='Language_Schedule_New_Meeting.avif' alt='Menu for scheduling a new meeting'/>
+                    <img class='showcase-photo' src='Language_Calendar_Popup.avif' alt='Menu for scheduling a new meeting'/>
                 </ShowcaseGallery>
             </div>
             <div class='showcase-links-layout'>

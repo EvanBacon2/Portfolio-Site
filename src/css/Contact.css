@@ -55,6 +55,8 @@
     background-color: #1C1F22;
     border-radius: .4167rem;
     font-family: 'Roboto';
+    font-weight: normal;
+    font-style: italic; 
     color: #FAFEFF;
     padding: .7rem;
     border: none;

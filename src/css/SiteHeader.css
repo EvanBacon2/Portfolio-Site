@@ -62,6 +62,7 @@
   display: inline;
   color: #FAFEFF;
   font-family: 'Racing Sans One';
+  font-weight: bold;
   pointer-events: none;
   font-size: .975em;
 }
