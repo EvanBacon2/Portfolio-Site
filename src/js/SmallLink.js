@@ -9,7 +9,7 @@ export default function SmallLink(props) {
     }
 
     return (
-        <a class={'small-link-box ' + props.theme} href={props.url} target='_blank'>
+        <a class={'small-link-box ' + props.theme} href={props.url} target='_blank' rel="noreferrer">
             {injectStyle('small-link ' + props.theme)}
         </a>
     );

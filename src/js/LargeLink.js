@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { useState } from 'react'
 
 import SvgButton from './SvgButton.js';
 import FigmaButton from 'js/FigmaButton'
@@ -11,26 +11,21 @@ import {ReactComponent as AppStoreIcon} from '../svg/appstore.svg';
 import {ReactComponent as LinkedinIcon} from '../svg/linkedin.svg';
 import {ReactComponent as MailIcon} from '../svg/mail.svg';
 
-export default class LargeLink extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            active: ''
-        };
-    }
+const LargeLink = ({state, destination, url}) => {
+    const [active, setActive] = useState('');
 
-    icon = (dest) => {
+    const icon = (dest) => {
         switch (dest) {
-            case 'github': return <SvgButton theme='github' active={this.state.active}><GithubIcon class='large-link-box github'/></SvgButton>
-            case 'website': return <SvgButton theme='website' active={this.state.active}><WebsiteIcon class='large-link-box website'/></SvgButton>
-            case 'appstore': return <SvgButton theme='appstore' active={this.state.active}><AppStoreIcon class='large-link-box appstore'/></SvgButton>
-            case 'linkedin': return <SvgButton theme='linkedin' active={this.state.active}><LinkedinIcon class='large-link-box linkedin'/></SvgButton>
-            case 'mail': return <SvgButton theme='mail' active={this.state.active}><MailIcon class='large-link-box mail'/></SvgButton>
-            case 'figma': return <FigmaButton boxClass='large-link-box figma' active={this.state.active}/>
+            case 'github': return <SvgButton theme='github' active={active}><GithubIcon class='large-link-box github'/></SvgButton>
+            case 'website': return <SvgButton theme='website' active={active}><WebsiteIcon class='large-link-box website'/></SvgButton>
+            case 'appstore': return <SvgButton theme='appstore' active={active}><AppStoreIcon class='large-link-box appstore'/></SvgButton>
+            case 'linkedin': return <SvgButton theme='linkedin' active={active}><LinkedinIcon class='large-link-box linkedin'/></SvgButton>
+            case 'mail': return <SvgButton theme='mail' active={active}><MailIcon class='large-link-box mail'/></SvgButton>
+            case 'figma': return <FigmaButton boxClass='large-link-box figma' active={active}/>
         }
     }
 
-    text = (dest) => {
+    const text = (dest) => {
         switch (dest) {
             case 'figma': return <div>
                 <span class='link-text figma1'>F</span>
@@ -41,24 +36,23 @@ export default class LargeLink extends Component {
             </div>
             case 'appstore': return <span class={'link-text ' + dest}>App Store</span>
             case 'mail': return <span class={'link-text ' + dest}>Send Message</span>
-            default: return <span class={'link-text ' + dest}>{this.capitalized(dest)}</span>
+            default: return <span class={'link-text ' + dest}>{capitalized(dest)}</span>
         }
     }
 
-    capitalized = (string) => {
-        return string[0].toUpperCase() + string.slice(1);
+    const capitalized = (string) => {
+        return string[0].toUpperCase() + string.slice(1)
     }
 
-    toggleActive = () => {
-        this.setState((prevState) => { return { active: prevState.active === '' ? 'active' : '' } });
-    }
+    const toggleActive = () => { setActive(active === '' ? 'active' : '') }
 
-    render() {
-        return (
-            <a class={'link ' + this.props.state} href={this.props.url} title={this.props.destination} target='_blank' onMouseEnter={this.toggleActive} onMouseLeave={this.toggleActive}>
-                {this.icon(this.props.destination)}
-                {this.text(this.props.destination)}
-            </a>
-        );
-    }
+    return (
+        <a class={'link ' + state} href={url} title={destination} target='_blank' rel="noreferrer"
+            onMouseEnter={toggleActive} onMouseLeave={toggleActive}>
+            {icon(destination)}
+            {text(destination)}
+        </a>
+    );
 }
+
+export default LargeLink

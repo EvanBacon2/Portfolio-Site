@@ -9,7 +9,7 @@ import {ReactComponent as ChevronCutout} from 'svg/chevron-cutout.svg';
 
 export default function NavPageIcon(props) {
     return (
-        <a class={'nav-page-icon-background ' + props.layoutClass} title={props.type} href={props.href} target='_blank' onClick={props.onClick}>
+        <a class={'nav-page-icon-background ' + props.layoutClass} title={props.type} href={props.href} target='_blank' rel="noreferrer" onClick={props.onClick}>
             {cutout(props.type)}
         </a>
     );

@@ -4,6 +4,9 @@ import InitialsLogo from './InitialsLogo';
 import NavPageIcon from 'js/NavPageIcon';
 
 import 'css/NavPage.css';
+import 'css/NavPageIcon.css';
+
+import {ReactComponent as ChevronCutout} from 'svg/chevron-cutout.svg';
 
 export default class NavPage extends Component {
     navPageButton = (text) => {
@@ -18,7 +21,7 @@ export default class NavPage extends Component {
         return (
             <div class='nav-menu-bttn-container nav-spacer'>
                 <div id={'nav-menu-bttn-' + text} class='nav-menu-bttn'/>
-                <a class='nav-menu-bttn-text' href={link} target='_blank'>{text}</a>
+                <a class='nav-menu-bttn-text' href={link} target='_blank' rel="noreferrer">{text}</a>
             </div>);
     } 
 
@@ -26,7 +29,10 @@ export default class NavPage extends Component {
         return (
             <div id='nav-page' class={this.props.navState}>
                 <div id='nav-contents'>
-                    <NavPageIcon type='chevron' layoutClass='nav-back-button layout' onClick={() => this.props.onClick('')}/>
+                    {/*<NavPageIcon type='chevron' layoutClass='nav-back-button layout' onClick={() => this.props.onClick('')}/>*/}
+                    <div class={'nav-page-icon-background nav-back-button layout'} onClick={() => this.props.onClick('')}>
+                        <ChevronCutout class='nav-page-icon cheevron'/>
+                    </div>
                     <div class='nav-initials-logo layout'>
                         <InitialsLogo theme='brand'/>
                     </div>

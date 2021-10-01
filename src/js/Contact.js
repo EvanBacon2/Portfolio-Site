@@ -5,6 +5,7 @@ import emailjs from 'emailjs-com';
 import ContentHeader from 'js/ContentHeader'
 import Links from 'js/Links'
 import LargeLink from './LargeLink'
+import SubmitEmail from 'js/SubmitEmail'
 import { THEMES } from 'js/Themes'
 
 import 'css/Contact.css'
@@ -63,7 +64,8 @@ export default function Contact(props) {
                         <div id='contact-scroll-trigger' class='hide'/>
                         <div class='flex-center'>
                             <button class='send-message-layout' type='submit'>
-                                <LargeLink state={state + ' send-message '} destination='mail'/>
+                                {/*<LargeLink state={state + ' send-message'} destination='mail'/>*/}
+                                <SubmitEmail state={state + ' send-message'}/>
                             </button>
                         </div>
                     </form>
