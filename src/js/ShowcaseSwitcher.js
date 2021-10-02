@@ -1,38 +1,36 @@
+import { useState, useEffect } from 'react'
+
 import ProjectGallery from 'js/ProjectGallery'
 import ShowcaseFade from 'js/ShowcaseFade'
 import CalendexShowcase from 'js/CalendexShowcase'
 import LanguageShowcase from 'js/LanguageShowcase'
 
-import 'css/Projects.css';
+import 'css/Projects.css'
 
-const ShowcaseSwitcher = ({showcase, showcaseCallback, show, showCallback}) => {
-    const switchShowcase = (showcase) => {
-        if (show === '' || show === 'out') {
-            showCallback('in')
-            setTimeout(() => showcaseCallback(showcase), 600)
-        } else if (show === 'in') {
-            showCallback('out')
-            setTimeout(() => showcaseCallback(showcase), 1300)
-        }
-    }
-     
+const ShowcaseSwitcher = ({ showcase, showcaseState, showcaseCallback }) => {
+    const [selection, setSelection] = useState(showcase)
+
+    useEffect(() => {
+        setTimeout(() => setSelection(showcase), 1300)
+    }, [showcase])
+
     const showCaseSelector = () => {
-        switch(showcase) {
+        switch(selection) {
             case 'calendex': {
-                return <CalendexShowcase showCallback={switchShowcase}/>
+                return <CalendexShowcase showCallback={showcaseCallback}/>
             }
             case 'language': {
-                return <LanguageShowcase showCallback={switchShowcase}/>
+                return <LanguageShowcase showCallback={showcaseCallback}/>
             }
             default: {
-                return <ProjectGallery showcase={showcase} showcaseCallback={switchShowcase}/>
+                return <ProjectGallery showcase={showcase} showcaseCallback={showcaseCallback}/>
             }
         }
     }
 
     return (
         <div id='showcase-switcher'>
-            <ShowcaseFade show={show} showcaseCallback={showcaseCallback}>{showCaseSelector()}</ShowcaseFade>
+            <ShowcaseFade showcaseState={showcaseState}>{showCaseSelector()}</ShowcaseFade>
         </div>
     )
 }

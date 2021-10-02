@@ -10,7 +10,7 @@ import 'css/ProjectShowcase.css'
 
 import {ReactComponent as Chevron} from 'svg/chevron.svg'
 
-const CalendexShowcase = ({showCallback}) => {
+const CalendexShowcase = ({ showCallback }) => {
     const [showcase, setShowcase] = useState('no-showcase')
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const CalendexShowcase = ({showCallback}) => {
     return (  
         <div id='calendex-showcase' class={'showcase-container ' + showcase}>
             <SvgButton layoutClass='showcase-back-button-layout' theme='calendex'>
-                <Chevron class='showcase-back-button' onClick={() => showCallback('')}/>
+                <Chevron class='showcase-back-button' onClick={() => showCallback('no-showcase')}/>
             </SvgButton>
             <div class='content-layout'>
                 <ContentHeader title='Calendex' theme={'calendex'}/>

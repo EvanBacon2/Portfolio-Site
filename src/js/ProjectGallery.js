@@ -11,28 +11,18 @@ const ProjectGallery =  ({showcase, showcaseCallback}) => {
 
     useEffect(() => {
         if (showcase === 'show-init') setTimeout(() => { setDisplaySwitch('on') }, 3100)
-        if (isShowcase() === 'no-showcase') setDisplaySwitch('on')
+        if (showcase === 'no-showcase') setDisplaySwitch('on')
     })
 
-    const isShowcase = () => { 
-        switch(showcase) {
-            case 'show-init': return 'show-init'
-            case 'no-show': return 'no-show'
-            case 'no-showcase': return 'no-showcase'
-            case '': return 'no-showcase'
-            default: return 'showcase'
-        }
-    }
-
-    const includeScrollTrigger = () => {
+    const scrollTrigger = () => {
         if (showcase === 'no-show') return <div id='projects-scroll-trigger' class='hide'/>
     }
 
     return (
-        <div id='gallery-container' class={isShowcase() + ' ' + displaySwitch}>
+        <div id='gallery-container' class={displaySwitch}>
             <div class='p-1'>
                 <CalendexProjectCard showcaseCallback={showcaseCallback}/>
-                {includeScrollTrigger()}
+                {scrollTrigger()}
             </div>    
             <div class='p-2'><LanguageProjectCard showcaseCallback={showcaseCallback}/></div>
         </div>

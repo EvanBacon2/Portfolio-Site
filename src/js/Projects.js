@@ -6,9 +6,8 @@ import ShowcaseSwitcher from 'js/ShowcaseSwitcher'
 import 'css/Projects.css'
 import 'css/Structure.css'
 
-const Projects = ({refProp}) => {
+const Projects = ({ refProp }) => {
     const [projectsState, setProjectsState] = useState('no-show')
-    const [show, setShow] = useState('')
 
     useEffect(() => {
         const checkScrollTrigger = () => {
@@ -22,48 +21,46 @@ const Projects = ({refProp}) => {
         window.addEventListener("scroll", checkScrollTrigger, { passive: true })
     })
 
-    const isShowcase = () => { return projectsState === '' || 
-                                      projectsState === 'show-init' || 
-                                      projectsState === 'no-show' ? 'no-showcase' : 'showcase' 
+    const isShowcase = () => { 
+        return projectsState === 'show-init' || projectsState === 'no-show' || projectsState === 'no-showcase' 
+    }
+
+    const showcaseState = () => {
+        return isShowcase() ? 'no-showcase' : 'showcase'
     }
 
     const headerState = () => { 
-        switch(projectsState) {
-            case 'show-init': return 'show-init'
-            case 'no-show': return 'no-show'
-            case '': return 'no-showcase'
-            default: return 'showcase'
-        }
+        return isShowcase() ? projectsState : 'showcase' 
+    }
+
+    const headerTheme = () => {
+        return isShowcase() ? 'brand' : projectsState
     }
 
     const triangles = (orientation) => {
         return (
             <div class={'projects-triangle-container ' + orientation}>
-                <div class={'projects-triangle-box outer left ' + isShowcase()}/>
-                <div class={'projects-triangle-box inner gallery-swipe ' + isShowcase() + ' ' + projectsState + ' ' + show}/>
-                <div class={'projects-triangle-box outer right ' + isShowcase()}/>
+                <div class={'projects-triangle-box outer left ' + showcaseState()}/>
+                <div class={'projects-triangle-box inner gallery-swipe ' + projectsState + ' ' + showcaseState()}/>
+                <div class={'projects-triangle-box outer right ' + showcaseState()}/>
             </div>
         )
     }
     
-    return(
+    return (
         <div id='projects' class={'content-grid-template'} ref={refProp}>
             <div id='projects-background'>
                 {triangles('top')}
-                <div id='projects-content-container' class={'gallery-swipe ' + isShowcase() + ' ' + projectsState + ' ' + show}>
-                    <div id='projects-content-grid' class={'content-grid-template ' + isShowcase() + ' ' + show}>
-                        <ShowcaseSwitcher showcase={projectsState} showcaseCallback={setProjectsState} show={show} showCallback={setShow}/>
+                <div id='projects-content-container' class={'gallery-swipe ' + projectsState + ' ' + showcaseState()}>
+                    <div id='projects-content-grid' class={'content-grid-template ' + showcaseState()}>
+                        <ShowcaseSwitcher showcase={projectsState} showcaseState={showcaseState()} showcaseCallback={setProjectsState}/>
                     </div>
                 </div>
                 {triangles('bottom')}
             </div>
             <div id='projects-content'>
-                <div class={'center projects-header ' + headerState() + ' ' + show}>
-                    <ContentHeader title='Projects' state={'section-header ' + projectsState} 
-                                   theme={projectsState === '' || 
-                                   projectsState === 'show-init' || 
-                                   projectsState === 'no-show'  ? 'brand' : projectsState} fadeAlignment='center'/>
-                    <div class={projectsState}/>
+                <div class={'center projects-header ' + headerState()}>
+                    <ContentHeader title='Projects' state={'section-header'} theme={headerTheme()} fadeAlignment='center'/>
                 </div>
             </div>
         </div>

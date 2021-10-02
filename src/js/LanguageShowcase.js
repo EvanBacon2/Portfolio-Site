@@ -20,7 +20,7 @@ const LanguageShowcase = ({showCallback}) => {
     return (  
         <div id='calendex-showcase' class={'showcase-container ' + showcase}>
             <SvgButton layoutClass='showcase-back-button-layout' theme='language'>
-                <Chevron class='showcase-back-button' onClick={() => showCallback('')}/>
+                <Chevron class='showcase-back-button' onClick={() => showCallback('no-showcase')}/>
             </SvgButton>
             <div class='content-layout'>
                 <ContentHeader title='Language Buddy' theme={'language'}/>

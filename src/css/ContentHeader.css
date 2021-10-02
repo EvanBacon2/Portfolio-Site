@@ -45,10 +45,10 @@
 .projects-header.showcase .section-header .content-title {
     opacity: 1;
     transform: translate(0, 0);
-    transition: text-shadow .4s .6s;
+    transition: text-shadow .4s 1.3s;
 }
 
-.projects-header.out .section-header .content-title {
+.projects-header.no-showcase .section-header .content-title {
     opacity: 1;
     transform: translate(0, 0);
     transition: text-shadow .4s 1s;
@@ -89,10 +89,7 @@
     transition: opacity 0s, width .8s cubic-bezier(.82,0,.16,.96) 1.2s, transform .8s cubic-bezier(.82,0,.16,.96) 1.2s;
 }
 
-.projects-header.show.no-showcase .content-underline {
-    width: 100%;
-    transform: translateX(0);
-}
+
 
 .projects-header .content-underline::before {
     position: absolute;
@@ -109,8 +106,18 @@
     background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
 }
 
+.projects-header.show.no-showcase .content-underline {
+    width: 100%;
+    transform: translateX(0);
+}
+
+.projects-header.no-showcase .content-underline::before {
+    transition: background-color .4s 1s;
+}
+
 .projects-header.showcase .content-underline::before {
-    transition: background-color .4s .6s;
+    background-color: transparent;
+    transition: background-color .4s 1.3s;
 }
 
 .projects-header .content-underline.calendex::before {
@@ -119,11 +126,6 @@
 
 .projects-header .content-underline.language::before {
     background-color: #9877B1;
-}
-
-.projects-header.out .content-underline::before {
-    background-color: transparent;
-    transition: background-color .4s 1s;
 }
 
 /*----------------------THEMED ITEMS----------------------*/
@@ -153,7 +155,7 @@
     text-shadow: #9877B1 .0392em .0392em;
 }
 
-.projects-header.out .content-title {
+.projects-header.no-showcase .content-title {
     text-shadow: #EE6363 .0392em .0392em;
 }
 

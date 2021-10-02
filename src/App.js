@@ -1,17 +1,17 @@
-import * as React from 'react';
-import { Component } from 'react';
+import * as React from 'react'
+import { Component } from 'react'
 
-import NavButton from 'js/NavButton';
-import InitialsLogo from 'js/InitialsLogo';
-import NavPage from 'js/NavPage';
-import Overlay from 'js/Overlay';
-import LandingPage from 'js/LandingPage';
-import About from 'js/About';
-import Projects from 'js/Projects';
-import Contact from 'js/Contact';
-import Footer from 'js/Footer';
+import NavButton from 'js/NavButton'
+import InitialsLogo from 'js/InitialsLogo'
+import NavPage from 'js/NavPage'
+import Overlay from 'js/Overlay'
+import LandingPage from 'js/LandingPage'
+import About from 'js/About'
+import Projects from 'js/Projects'
+import Contact from 'js/Contact'
+import Footer from 'js/Footer'
 
-import 'css/Structure.css';
+import 'css/Structure.css'
 
 class App extends Component {
   constructor(props) {
@@ -40,8 +40,8 @@ class App extends Component {
     const master = document.getElementById('master');
 
     const scrollY = master.style.top;
-    master.style.position = '';
-    master.style.top = '';
+    master.style.position = ''
+    master.style.top = ''
 
     switch(section) {
       case 'About': this.aboutRef.current.scrollIntoView(); break
@@ -80,4 +80,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

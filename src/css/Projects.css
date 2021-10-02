@@ -76,16 +76,12 @@
 }
 
 #projects-content-grid.no-showcase {
-    transition: flex-basis 1s .0s;
+    transition: flex-basis 1s 1.3s;
     flex-basis: 33em;
 }
 
-#projects-content-grid.in {
-    transition: flex-basis .6s 0s !important; 
-    flex-basis: 47em;
-}
-
 #projects-content-grid.showcase {
+    transition: flex-basis .6s 0s !important; 
     flex-basis: 47em;
 }
 
@@ -100,33 +96,25 @@
     left: 0;
     right: 140%;
     content: ' ';
-    background-color: transparent;
-}
-
-.gallery-swipe.calendex::after {
-    background-image: linear-gradient(to right, #222E38 70% , #1C1F23 100%);
-}
-
-.gallery-swipe.language::after {
-    background-image: linear-gradient(to right, #2E303B 70% , #1C1F23 100%);
+    background-image: linear-gradient(to right, transparent 70% , #1C1F23 100%);
 }
 
 .gallery-swipe.showcase::after {
     right: -40%;
-    transition: right .6s ease-in-out .3s;
+    transition: right .6s ease-in-out 1s;
 }
 
-.gallery-swipe.out::after {
+.gallery-swipe.no-showcase::after {
     right: 140%;
-    transition: right .6s ease-in-out .7s;
+    transition: right .6s ease-in-out .7s, background-color 0s 1.3s;
 }
 
-.gallery-swipe.calendex.out::after {
-    background-image: linear-gradient(to right, #222E38 70% , #1C1F23 100%);
+.gallery-swipe.calendex::after {
+    background-color: #222E38;
 }
 
-.gallery-swipe.language.out::after {
-    background-image: linear-gradient(to right, #2E303B 70% , #1C1F23 100%);
+.gallery-swipe.language::after {
+    background-color: #2E303B;
 }
 
 /*- - - - gallery container - - - -*/
@@ -141,20 +129,6 @@
 
 #gallery-container * {
     justify-self: center;
-}
-
-#gallery-container.showcase {
-    opacity: 0;
-    transition: opacity .4s 0s;
-}
-
-#gallery-container.no-showcase {
-    opacity: 100;
-    transition: opacity .6s 1.7s;
-}
-
-#gallery-container.collapse {
-    position: absolute;
 }
 
 #showcase-switcher {
@@ -210,12 +184,8 @@
         grid-area: 1 / 1 / 2 / 2;
     }
 
-    #projects-content-grid.in {
-        flex-basis: 60.4375em;
-    }
-
     #projects-content-grid.showcase {
-        flex-basis: 60.4375em;
+        flex-basis: 65.4375em;
     }
 }
 

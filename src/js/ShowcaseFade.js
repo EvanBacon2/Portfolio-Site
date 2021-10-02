@@ -1,16 +1,10 @@
-import { useEffect } from 'react'
-
 import 'css/ShowcaseFade.css'
 
-const ShowcaseFade = ({showcaseCallback, show, children}) => {
-    useEffect(() => {
-        /*if (!show) setTimeout(() => showcaseCallback(''), 600)*/
-    }, [show])
-
+const ShowcaseFade = ({ showcaseState, children}) => {
     const fadeState = () => {
-        switch(show) {
-            case 'in': return 'fade-in'
-            case 'out': return 'fade-out'
+        switch(showcaseState) {
+            case 'showcase': return 'fade-in'
+            case 'no-showcase': return 'fade-out'
             default: return ''
         }
     }
