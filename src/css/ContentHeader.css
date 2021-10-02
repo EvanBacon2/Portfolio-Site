@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
-
 .header-container {
     width: fit-content;
     box-sizing: border-box;
@@ -39,7 +37,7 @@
 .showcase-container.showcase .content-title {
     opacity: 1;
     transform: translate(0, 0);
-    transition: opacity .2s ease-out 1.7s, text-shadow .4s ease-out 1.75s, transform .4s ease-out 1.75s;
+    transition: opacity .2s ease-out 1.1s, text-shadow .4s ease-out 1.15s, transform .4s ease-out 1.15s;
 }
 
 .projects-header.showcase .section-header .content-title {
@@ -86,10 +84,8 @@
     opacity: 1;
     width: 100%;
     transform: translateX(0);
-    transition: opacity 0s, width .8s cubic-bezier(.82,0,.16,.96) 1.2s, transform .8s cubic-bezier(.82,0,.16,.96) 1.2s;
+    transition: opacity 0s, width .8s cubic-bezier(.82,0,.16,.96) .6s, transform .8s cubic-bezier(.82,0,.16,.96) .6s;
 }
-
-
 
 .projects-header .content-underline::before {
     position: absolute;

@@ -46,7 +46,7 @@
 .showcase-container.showcase .showcase-chevron-layout {
     opacity: 100;
     transform: translateX(0);
-    transition: opacity .4s ease-out 2.5s, transform .4s ease-out 2.55s;
+    transition: opacity .4s ease-out 1.9s, transform .4s ease-out 1.95s;
 }
 
 /*----------------------SHOWCASE BORDER----------------------*/
@@ -88,8 +88,8 @@
 .showcase-container.showcase .showcase-border {
     background-color: transparent;
     transform: translateX(-.15625em) translateY(-.625em);
-    transition: height .8s ease-out 1.75s, background-color .4s ease-out 2.5s, 
-                transform .4s ease-out 2.5s, box-shadow .4s ease-out 2.5s;
+    transition: height .8s ease-out 1.15s, background-color .4s ease-out 1.9s, 
+                transform .4s ease-out 1.9s, box-shadow .4s ease-out 1.9s;
 }
 
 .showcase-container.showcase .showcase-border.ios {
@@ -101,12 +101,12 @@
 }
 
 .showcase-container.showcase .showcase-border.calendex {
-    animation: border-fade-in-calendex 2.9s 0s forwards;
+    animation: border-fade-in-calendex 2.3s 0s forwards;
     box-shadow: .3125em .3125em #38CDA1;
 }
 
 .showcase-container.showcase .showcase-border.language {
-    animation: border-fade-in-language 2.9s 0s forwards;
+    animation: border-fade-in-language 2.3s 0s forwards;
     box-shadow: .3125em .3125em #9877B1;
 }
 
@@ -125,7 +125,7 @@
 
 .showcase-container.showcase .showcase-image-list {
     opacity: 100;
-    transition: opacity .4s ease-out 2.5s, transform .4s ease-out;
+    transition: opacity .4s ease-out 1.9s, transform .4s ease-out;
 }
 
 .showcase-photo {

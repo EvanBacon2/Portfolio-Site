@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
-@import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
-
 #contact {
     height: min(calc(100vh - 5.025em), 55em);
     max-height: fit-content;

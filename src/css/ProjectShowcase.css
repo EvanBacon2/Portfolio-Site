@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:mediumitalic');
-
 /*----------------------SHOWCASE CONTAINER----------------------*/
 
 .showcase-container {
@@ -38,7 +36,7 @@
 .showcase-container.showcase .showcase-back-button-layout {
     opacity: 100;
     transform: translateX(0);
-    transition: opacity .4s ease-out 2.5s, transform .4s ease-out 2.55s;
+    transition: opacity .4s ease-out 1.9s, transform .4s ease-out 1.95s;
 }
 
 /*----------------------SHOWCASE CONTENT DESCRIPTION----------------------*/
@@ -62,7 +60,7 @@
 .showcase-container.showcase .showcase-content-description {
     opacity: 100;
     transform: translateX(0);
-    transition: opacity .4s ease-out 2.5s, transform .4s ease-out 2.55s;
+    transition: opacity .4s ease-out 1.9s, transform .4s ease-out 1.95s;
 }
 
 /*----------------------MISC LAYOUTS----------------------*/
