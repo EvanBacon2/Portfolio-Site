@@ -4,12 +4,12 @@ import { useState } from 'react'
 
 import 'css/SvgButton.css'
 
-const SvgButton = ({theme, layoutClass, active, baseColor, children}) => {
+const SvgButton = ({theme, layout, active, baseColor, children}) => {
     const [clickAnimation, setClickAnimation] = useState('')
 
     const injectStyle = (newClass) => {
         return React.Children.map(children, child => 
-            React.cloneElement(child, { class: child.props.class + ' ' + newClass}))
+            React.cloneElement(child, { className: child.props.className + ' ' + newClass}))
     }
 
     const onClick = () => {
@@ -19,9 +19,9 @@ const SvgButton = ({theme, layoutClass, active, baseColor, children}) => {
     }
     
     return (
-        <div class={'svg-button-box ' + layoutClass + ' ' + active} onClick={onClick}>
+        <div className={'svg-button-box ' + layout + ' ' + active} onClick={onClick}>
             {injectStyle('svg-button-shadow ' + theme)}
-            <div class={'svg-button-mover ' + clickAnimation}>
+            <div className={'svg-button-mover ' + clickAnimation}>
                 {injectStyle('svg-button ' + baseColor)}
             </div>
         </div>

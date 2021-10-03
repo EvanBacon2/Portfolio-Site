@@ -20,20 +20,20 @@ const ShowcaseGallery = ({theme, layout, captions, children}) => {
     }
     
     return (
-        <div class='showcase-gallery'>
-            <div class='showcase-gallery-screen'>
-                <SvgButton layoutClass='showcase-chevron-layout left' theme={theme}>
-                    <Chevron class='showcase-chevron left' onClick={() => shiftPage(-1)}/>
+        <div className='showcase-gallery'>
+            <div className='showcase-gallery-screen'>
+                <SvgButton layout='showcase-chevron-layout left' theme={theme}>
+                    <Chevron className='showcase-chevron left' onClick={() => shiftPage(-1)}/>
                 </SvgButton>
-                <div class={'showcase-border-container ' + layout + ' ' + theme}>
-                    <div class={'showcase-border ' + theme + ' ' + layout}>
-                        <div id={theme + '-showcase-image-list'} class='showcase-image-list'>
+                <div className={'showcase-border-container ' + layout + ' ' + theme}>
+                    <div className={'showcase-border ' + theme + ' ' + layout}>
+                        <div id={theme + '-showcase-image-list'} className='showcase-image-list'>
                             {children}
                         </div>
                     </div>
                 </div>
-                <SvgButton layoutClass='showcase-chevron-layout right' theme={theme}>
-                    <Chevron class='showcase-chevron right' onClick={() => shiftPage(1)}/>
+                <SvgButton layout='showcase-chevron-layout right' theme={theme}>
+                    <Chevron className='showcase-chevron right' onClick={() => shiftPage(1)}/>
                 </SvgButton>
             </div>
             <PageIndex theme={theme} captions={captions} currPage={page}/>

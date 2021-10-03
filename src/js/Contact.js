@@ -36,34 +36,34 @@ const Contact = ({refProp}) => {
       }
 
     return(
-        <div id='contact' class='content-grid-template' ref={refProp}>
-            <div id='contact-contents' class={state}>
-                <div class='form-container'>
-                    <div class='contact-header'>
+        <section id='contact' className='content-grid-template' ref={refProp}>
+            <div id='contact-contents' className={state}>
+                <div className='form-container'>
+                    <div className='contact-header'>
                         <ContentHeader state={'section-header'} title='Contact' theme={THEMES.BRAND} fadeAlignment='right'/>
                     </div>
-                    <form class='contact-form' onSubmit={sendEmail}>
-                        <div class="form-group">
-                            <label class='form-label' htmlFor="name">Name</label>
-                            <div class='form-border'>
-                                <input id="name" class="form-style line-form" type="text" name='user_name'/>
+                    <form className='contact-form' onSubmit={sendEmail}>
+                        <div className="form-group">
+                            <label className='form-label' htmlFor="name">Name</label>
+                            <div className='form-border'>
+                                <input id="name" className="form-style line-form" type="text" name='user_name'/>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class='form-label' htmlFor="email">Email</label>
-                            <div class='form-border'>
-                                <input id="email" class="form-style line-form" type="email" aria-describedby="emailHelp" name='user_email'/>
+                        <div className="form-group">
+                            <label className='form-label' htmlFor="email">Email</label>
+                            <div className='form-border'>
+                                <input id="email" className="form-style line-form" type="email" aria-describedby="emailHelp" name='user_email'/>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class='form-label' htmlFor="message">Message</label>
-                            <div class='area form-border'>
-                                <textarea id="message" class="form-style area-form" rows="4" name='message'/>
+                        <div className="form-group">
+                            <label className='form-label' htmlFor="message">Message</label>
+                            <div className='area form-border'>
+                                <textarea id="message" className="form-style area-form" rows="4" name='message'/>
                             </div>
                         </div>
-                        <div id='contact-scroll-trigger' class='hide'/>
-                        <div class='flex-center'>
-                            <button class='send-message-layout' type='submit'>
+                        <div id='contact-scroll-trigger' className='hide'/>
+                        <div className='flex-center'>
+                            <button className='send-message-layout' type='submit'>
                                 <SubmitEmail state={state + ' send-message'}/>
                             </button>
                         </div>
@@ -74,7 +74,7 @@ const Contact = ({refProp}) => {
                     <LargeLink state={state} url='https://www.linkedin.com/in/evan-bacon-5b5127172/' destination='linkedin'/>
                 </Links>
             </div>
-        </div>
+        </section>
     )
 }
 

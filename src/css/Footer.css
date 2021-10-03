@@ -1,17 +1,14 @@
 #footer {
     background-color: #22282E;
+    border-top: .125em solid #EE6363;
+    
     grid-area: 5 / 1 / 6 / 4;
     height: 5em;
-
-    border-top: .125em solid #EE6363;
-}
-
-#footer-box {
-    height: 100%;
     width: 100%;
+
     display: flex;
     justify-content: space-around;
-    align-content: center;
+    align-content: center;   
 }
 
 #footer-initials-logo.layout {
@@ -25,6 +22,7 @@
     font-size: 1.9375em;
     width: 4.5em;
     text-align: center;
+    text-decoration: none;
 
     margin: auto;
 

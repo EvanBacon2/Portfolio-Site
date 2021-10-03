@@ -4,20 +4,20 @@ import {ReactComponent as Chevron} from 'svg/chevron.svg';
 
 import 'css/ScrollPrompt.css';
 
-const ScrollPrompt = ({layoutClass}) => {
+const ScrollPrompt = ({layout}) => {
     useEffect(() => {
         setTimeout(() => document.getElementById('scroll-prompt-container').classList.add('show-init'), 200)
     })
     
     return (
-        <div id='scroll-prompt-container' class={layoutClass}>
+        <div id='scroll-prompt-container' className={layout}>
             <h1 id='scroll-prompt-text'>Scroll Down</h1>
             <div id='scroll-chevron-container'>
-                <div id='scroll-chevron' class ='scroll-chevron-box scroll-chevron-layout'>
-                    <Chevron class='chevron-fill'/>
+                <div id='scroll-chevron' className='scroll-chevron-box scroll-chevron-layout'>
+                    <Chevron className='chevron-fill'/>
                 </div>
-                <div id='scroll-chevron-shadow' class ='scroll-chevron-box'>
-                    <Chevron class='chevron-shadow-fill'/>
+                <div id='scroll-chevron-shadow' className='scroll-chevron-box'>
+                    <Chevron className='chevron-shadow-fill'/>
                 </div>
             </div>
         </div>

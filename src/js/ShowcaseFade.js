@@ -10,7 +10,7 @@ const ShowcaseFade = ({ showcaseState, children}) => {
     }
 
     return (
-        <div class={'showcase-fade ' + fadeState()}>
+        <div className={'showcase-fade ' + fadeState()}>
             {children}
         </div>
     )

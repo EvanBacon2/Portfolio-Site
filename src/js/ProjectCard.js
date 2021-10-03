@@ -9,24 +9,23 @@ import {ReactComponent as UXIcon} from 'svg/ux.svg'
 const ProjectCard = ({title, theme, type, cardPhoto, description, showcaseCallback, children}) => {
     const platformIcon = (type) => {
         switch (type) {
-            case 'web': return <WebIcon class={'card-icon platform-icon-sizer'}/>
-            case 'ios': return <AppleIcon class={'card-icon platform-icon-sizer apple'}/>
-            case 'ux': return <UXIcon class={'card-icon platform-icon-sizer ux'}/>
+            case 'web': return <WebIcon className={'card-icon platform-icon-sizer'}/>
+            case 'ios': return <AppleIcon className={'card-icon platform-icon-sizer apple'}/>
+            case 'ux': return <UXIcon className={'card-icon platform-icon-sizer ux'}/>
+            default: <div/>
         }
     }
     
     return (
-        <div class='card-container'>
-            <div class='header-box'>
-                <h1 class={'card-header ' + theme + '-shadow'}>{title}</h1>
+        <div className='card-container'>
+            <div className='header-box'>
+                <h1 className={'card-header ' + theme + '-shadow'}>{title}</h1>
                 {platformIcon(type)}
             </div>  
-                
             <ProjectCardImage theme={theme} showcaseCallback={showcaseCallback} cardPhoto={cardPhoto}>
                 {description}
             </ProjectCardImage>
-
-            <div class='link-box'>
+            <div className='link-box'>
                 {children}
             </div>
         </div>

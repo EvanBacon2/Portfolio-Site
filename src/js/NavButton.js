@@ -9,9 +9,9 @@ const NavButton = ({ navState, onClick }) => {
 
     return (
         <div id='nav-button' onClick={() => onClick()}>
-            <div class={'nav-line ' + navState}></div>
-            <div class={'nav-line ' + navState}></div>
-            <div class={'nav-line ' + navState}></div>
+            <div className={'nav-line ' + navState}></div>
+            <div className={'nav-line ' + navState}></div>
+            <div className={'nav-line ' + navState}></div>
         </div>
     )
 }

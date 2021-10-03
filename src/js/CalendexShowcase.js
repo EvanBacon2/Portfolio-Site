@@ -18,27 +18,27 @@ const CalendexShowcase = ({ showCallback }) => {
     })
 
     return (  
-        <div id='calendex-showcase' class={'showcase-container ' + showcase}>
-            <SvgButton layoutClass='showcase-back-button-layout' theme='calendex'>
-                <Chevron class='showcase-back-button' onClick={() => showCallback('no-showcase')}/>
+        <div id='calendex-showcase' className={'showcase-container ' + showcase}>
+            <SvgButton layout='showcase-back-button-layout' theme='calendex'>
+                <Chevron className='showcase-back-button' onClick={() => showCallback('no-showcase')}/>
             </SvgButton>
-            <div class='content-layout'>
+            <div className='content-layout'>
                 <ContentHeader title='Calendex' theme={'calendex'}/>
-                <p class='showcase-content-description'>                        
+                <p className='showcase-content-description'>                        
                     Calendex is an ios app which allows for blood sugar readings and metrics
                     to be displayed in a calendar format, allowing for users to gain better
                     insight into longer trends/patterns.  Built with Swift and Core Data,
                     with Dexcom's Api used to pull user data.
                 </p>
             </div>
-            <div class='showcase-layout'>
+            <div className='showcase-layout'>
                 <ShowcaseGallery layout='ios' theme='calendex' captions={['View Blood Sugar', 'View Aggregate Data', 'Set Goals']}>
-                    <img class='showcase-photo' src='Calendex_Day_Chart.avif' alt='A chart showing blood sugar readings over one day'/>
-                    <img class='showcase-photo' src='Calendex_Month_Data.avif' alt='A calender showing avg blood sugar over one month'/>
-                    <img class='showcase-photo' src='Calendex_Settings_Goals.avif' alt='Sliders for adjusting blood sugar goals'/>
+                    <img className='showcase-photo' src='Calendex_Day_Chart.avif' alt='A chart showing blood sugar readings over one day'/>
+                    <img className='showcase-photo' src='Calendex_Month_Data.avif' alt='A calender showing avg blood sugar over one month'/>
+                    <img className='showcase-photo' src='Calendex_Settings_Goals.avif' alt='Sliders for adjusting blood sugar goals'/>
                 </ShowcaseGallery>
             </div>
-            <div class='showcase-links-layout'>
+            <div className='showcase-links-layout'>
                 <Links theme={'calendex'}>
                     <LargeLink destination='github' url='https://github.com/EvanBacon2/Calendex'/>
                 </Links>

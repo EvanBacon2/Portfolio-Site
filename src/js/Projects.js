@@ -39,31 +39,31 @@ const Projects = ({ refProp }) => {
 
     const triangles = (orientation) => {
         return (
-            <div class={'projects-triangle-container ' + orientation}>
-                <div class={'projects-triangle-box outer left ' + showcaseState()}/>
-                <div class={'projects-triangle-box inner gallery-swipe ' + projectsState + ' ' + showcaseState()}/>
-                <div class={'projects-triangle-box outer right ' + showcaseState()}/>
+            <div className={'projects-triangle-container ' + orientation}>
+                <div className={'projects-triangle-box outer left ' + showcaseState()}/>
+                <div className={'projects-triangle-box inner gallery-swipe ' + projectsState + ' ' + showcaseState()}/>
+                <div className={'projects-triangle-box outer right ' + showcaseState()}/>
             </div>
         )
     }
     
     return (
-        <div id='projects' class={'content-grid-template'} ref={refProp}>
+        <section id='projects' className={'content-grid-template'} ref={refProp}>
             <div id='projects-background'>
                 {triangles('top')}
-                <div id='projects-content-container' class={'gallery-swipe ' + projectsState + ' ' + showcaseState()}>
-                    <div id='projects-content-grid' class={'content-grid-template ' + showcaseState()}>
+                <div id='projects-content-container' className={'gallery-swipe ' + projectsState + ' ' + showcaseState()}>
+                    <div id='projects-content-grid' className={'content-grid-template ' + showcaseState()}>
                         <ShowcaseSwitcher showcase={projectsState} showcaseState={showcaseState()} showcaseCallback={setProjectsState}/>
                     </div>
                 </div>
                 {triangles('bottom')}
             </div>
             <div id='projects-content'>
-                <div class={'center projects-header ' + headerState()}>
+                <div className={'center projects-header ' + headerState()}>
                     <ContentHeader title='Projects' state={'section-header'} theme={headerTheme()} fadeAlignment='center'/>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

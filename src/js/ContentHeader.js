@@ -1,10 +1,10 @@
 import 'css/ContentHeader.css'
 
-const ContentHeader = ({state, title, theme, fadeAlignment}) => {
+const ContentHeader = ({state, layout, title, theme, fadeAlignment}) => {
     return (
-        <div class={'header-container ' + state}>
-            <p class={'content-title ' + theme}>{title}</p>
-            <hr class={'content-underline ' + theme + ' ' + fadeAlignment}/>
+        <div className={'header-container ' + state + ' ' + layout}>
+            <p className={'content-title ' + theme}>{title}</p>
+            <hr className={'content-underline ' + theme + ' ' + fadeAlignment}/>
         </div>
     )
 }

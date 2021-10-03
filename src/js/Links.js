@@ -5,9 +5,9 @@ import '../css/ColorClasses.css'
 
 const Links = ({state, theme, children}) => {    
     return (
-        <div class='links-container'>
+        <div className='links-container'>
             <ContentHeader title='Links' state={state} theme={theme} fadeAlignment='left'/>
-            <div class='links-list'>
+            <div className='links-list'>
                 {children}
             </div>
         </div>

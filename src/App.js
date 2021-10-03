@@ -57,23 +57,23 @@ class App extends Component {
     document.body.style = 'background: #22282E'
     
     return (
-      <div class="App">
+      <div className="App">
         <div id='master' ref={this.homeRef}>
           <div id='fixed-elements'>
             <NavButton navState={this.state.navState} onClick={this.openOverlay}/>
-            <div id='main-initials-logo' class='main-initials-logo layout'>
+            <div id='main-initials-logo' className='main-initials-logo layout'>
               <InitialsLogo theme='brand'/>
             </div>
           </div>
           <Overlay navState={this.state.navState}/>
-          <NavPage navState={this.state.navState} onClick={this.closeOverlay}/>
-          <div class='skeleton content-grid-template'>
+          <NavPage navState={this.state.navState} navTo={this.closeOverlay}/>
+          <main className='skeleton content-grid-template'>
             <LandingPage scrollTop={window.pageYOffset}/>
             <About refProp={this.aboutRef}/>
             <Projects refProp={this.projectsRef}/>
             <Contact refProp={this.contactRef}/>
             <Footer homeRef={this.homeRef} aboutRef={this.aboutRef} projectsRef={this.projectsRef} contactRef={this.contactRef}/>
-          </div>
+          </main>
         </div>
       </div>
     )

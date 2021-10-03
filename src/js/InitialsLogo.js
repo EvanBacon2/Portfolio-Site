@@ -10,8 +10,8 @@ const InitialsLogo = ({theme}) => {
     })
     
     return ( 
-        <div id='initials-logo' class={'initials-sizer'}>
-            <InitialsIcon class={'initials-shadow ' + theme}/>
+        <div id='initials-logo' className={'initials-sizer'}>
+            <InitialsIcon className={'initials-shadow ' + theme}/>
         </div>
     )
 }

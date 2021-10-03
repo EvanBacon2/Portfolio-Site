@@ -12,9 +12,9 @@ const SubmitEmail = ({ state }) => {
     const toggleActive = () => { setActive(active === '' ? 'active' : '') }
 
     return (
-        <div class={'link ' + state} onMouseEnter={toggleActive} onMouseLeave={toggleActive}>
-            <SvgButton theme='mail' active={active}><MailIcon class='large-link-box mail'/></SvgButton>
-            <span class={'link-text mail'}>Send Message</span>
+        <div className={'link ' + state} onMouseEnter={toggleActive} onMouseLeave={toggleActive}>
+            <SvgButton theme='mail' active={active}><MailIcon className='large-link-box mail'/></SvgButton>
+            <span className={'link-text mail'}>Send Message</span>
         </div>
     )
 }

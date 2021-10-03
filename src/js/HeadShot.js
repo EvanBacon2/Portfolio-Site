@@ -1,12 +1,10 @@
 import 'css/HeadShot.css'
 
-const HeadShot = () => {
+const HeadShot = ({ layout }) => {
     return (
-        <div>
-            <div id='headshot-container'>
-                <div class='grad-photo-background'/>
-                <img class='grad-photo' src='grad_photo.avif' alt='My face'/>
-            </div>
+        <div id='headshot-container' className={layout}>
+            <div className='grad-photo-background'/>
+            <img className='grad-photo' src='grad_photo.avif' alt='My face'/>
         </div>
     )
 }

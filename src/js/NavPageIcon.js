@@ -10,17 +10,18 @@ import {ReactComponent as ChevronCutout} from 'svg/chevron-cutout.svg'
 const NavPageIcon = ({layoutClass, type, href, onClick}) => {
     const cutout = (type) => {
         switch (type) {
-            case 'github': return <GithubCutout class='nav-page-icon github'/>
-            case 'linkedin': return <LinkedinCutout class='nav-page-icon linkedin'/>
-            case 'figma': return <FigmaCutout class='nav-page-icon figma'/>
-            case 'website': return <WebsiteCutout class='nav-page-icon website'/>
-            case 'app-store': return <AppStoreCutout class='nav-page-icon app-store'/>
-            case 'chevron': return <ChevronCutout class='nav-page-icon cheevron'/>
+            case 'github': return <GithubCutout className='nav-page-icon github'/>
+            case 'linkedin': return <LinkedinCutout className='nav-page-icon linkedin'/>
+            case 'figma': return <FigmaCutout className='nav-page-icon figma'/>
+            case 'website': return <WebsiteCutout className='nav-page-icon website'/>
+            case 'app-store': return <AppStoreCutout className='nav-page-icon app-store'/>
+            case 'chevron': return <ChevronCutout className='nav-page-icon cheevron'/>
+            default: return <div/>
         }
     }
     
     return (
-        <a class={'nav-page-icon-background ' + layoutClass} title={type} href={href} target='_blank' rel="noreferrer" onClick={onClick}>
+        <a className={'nav-page-icon-background ' + layoutClass} title={type} href={href} target='_blank' rel="noreferrer" onClick={onClick}>
             {cutout(type)}
         </a>
     )

@@ -1,4 +1,4 @@
-import InitialsLogo from './InitialsLogo'
+import InitialsLogo from 'js/InitialsLogo'
 
 import 'css/Footer.css'
 
@@ -8,18 +8,16 @@ const Footer = ({homeRef, aboutRef, projectsRef, contactRef}) => {
     }
 
     return (
-        <div id='footer'>
-            <div id='footer-box'>
-                <a class='footer-link' onClick={() => scrollToSection(homeRef)}>Home</a>
-                <a class='footer-link' onClick={() => scrollToSection(aboutRef)}>About</a>
-                <div id='footer-initials-logo' class='layout'>
-                    <InitialsLogo theme='brand'/>
-                </div>
-                <a class='footer-link' onClick={() => scrollToSection(projectsRef)}>Projects</a>
-                <a class='footer-link' onClick={() => scrollToSection(contactRef)}>Contact</a>
+        <footer id='footer'>
+            <a className='footer-link' href={homeRef} onClick={() => scrollToSection(homeRef)}>Home</a>
+            <a className='footer-link' href={aboutRef} onClick={() => scrollToSection(aboutRef)}>About</a>
+            <div id='footer-initials-logo' className='layout'>
+                <InitialsLogo theme='brand'/>
             </div>
-        </div>
-    );
+            <a className='footer-link' href={projectsRef} onClick={() => scrollToSection(projectsRef)}>Projects</a>
+            <a className='footer-link' href={contactRef} onClick={() => scrollToSection(contactRef)}>Contact</a>
+        </footer>
+    )
 }
 
 export default Footer

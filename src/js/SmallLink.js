@@ -5,11 +5,11 @@ import 'css/SmallLink.css'
 const SmallLink = ({ theme, url, children }) => {
     const injectStyle = (newClass) =>{
         return React.Children.map(children, child => 
-            React.cloneElement(child, { class: child.props.class + ' ' + newClass}))
+            React.cloneElement(child, { className: child.props.className + ' ' + newClass}))
     }
 
     return (
-        <a class={'small-link-box ' + theme} href={url} target='_blank' rel="noreferrer">
+        <a className={'small-link-box ' + theme} href={url} target='_blank' rel="noreferrer">
             {injectStyle('small-link ' + theme)}
         </a>
     )

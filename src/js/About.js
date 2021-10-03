@@ -21,25 +21,20 @@ const About = ({refProp}) => {
     })
 
     return (
-        <div id='about' class='content-grid-template' ref={refProp}>
-            <div id='about-content' class={state}>
-                <div class='about-header'>
-                    <ContentHeader state={'section-header'} title='About Me' theme={THEMES.BRAND} fadeAlignment='right'/>
-                </div>
-                <div id='about-scroll-trigger' class='hide'/>
-                <p class='about-description'>                        
+        <section id='about' className='content-grid-template' ref={refProp}>
+            <div id='about-content' className={state}>
+                <ContentHeader state={'section-header'} layout='about-header' title='About Me' theme={THEMES.BRAND} fadeAlignment='right'/>
+                <div id='about-scroll-trigger' className='hide'/>
+                <p className='about-description'>                        
                     Hi, my name’s Evan.  I’m a recent graduate from the University of Washington pursuing a career as a front 
                     end developer. I am particularly passionate about the design aspect of front end development, and have 
                     experience designing ios apps and websites.  When not coding I enjoy making pixel art and writing 
                     music in my free time.
                 </p>
-                <div class='about-headshot'>
-                    <HeadShot/>
-                </div>
+                <HeadShot layout='about-headshot'/>
             </div>
-            
-        </div>
-    );   
+        </section>
+    )
 }
 
 export default About

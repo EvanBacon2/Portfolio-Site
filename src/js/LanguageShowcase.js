@@ -18,13 +18,13 @@ const LanguageShowcase = ({showCallback}) => {
     })
 
     return (  
-        <div id='calendex-showcase' class={'showcase-container ' + showcase}>
-            <SvgButton layoutClass='showcase-back-button-layout' theme='language'>
-                <Chevron class='showcase-back-button' onClick={() => showCallback('no-showcase')}/>
+        <div id='calendex-showcase' className={'showcase-container ' + showcase}>
+            <SvgButton layout='showcase-back-button-layout' theme='language'>
+                <Chevron className='showcase-back-button' onClick={() => showCallback('no-showcase')}/>
             </SvgButton>
-            <div class='content-layout'>
+            <div className='content-layout'>
                 <ContentHeader title='Language Buddy' theme={'language'}/>
-                <p class='showcase-content-description'>                        
+                <p className='showcase-content-description'>                        
                     Language Buddy is a mockup of an app meant to help international students studying in the US 
                     find others to study or practice English with.  The mockup was created as part of a group project 
                     for a college course. In creating the mockup I conducted user research by organizing interviews with 
@@ -32,18 +32,18 @@ const LanguageShowcase = ({showCallback}) => {
                     the challenges they face. I also helped design and create the ui for the mockup.
                 </p>
             </div>
-            <div class='showcase-layout'>
+            <div className='showcase-layout'>
                 <ShowcaseGallery layout='ios' theme='language' captions={['Sign in/up', 'Search for other users', 'Search for other users', 
                                                                           'Search for other users', 'Schedule Meetups', 'Schedule Meetups']}>
-                    <img class='showcase-photo' src='Language_Main_App_Page.avif' alt='Sign in/up screen'/>
-                    <img class='showcase-photo' src='Language_Connect_Intro_Page.avif' alt='Choose between searching for meetups, finding them on a map'/>
-                    <img class='showcase-photo' src='Language_Initial_Search.avif' alt='Menu for searching for nearby users'/>
-                    <img class='showcase-photo' src='Language_Explore.avif' alt='Map for explore the surrounding area'/>
-                    <img class='showcase-photo' src='Language_Schedule_New_Meeting.avif' alt='Menu for scheduling a new meeting'/>
-                    <img class='showcase-photo' src='Language_Calendar_Popup.avif' alt='Menu for scheduling a new meeting'/>
+                    <img className='showcase-photo' src='Language_Main_App_Page.avif' alt='Sign in/up screen'/>
+                    <img className='showcase-photo' src='Language_Connect_Intro_Page.avif' alt='Choose between searching for meetups, finding them on a map'/>
+                    <img className='showcase-photo' src='Language_Initial_Search.avif' alt='Menu for searching for nearby users'/>
+                    <img className='showcase-photo' src='Language_Explore.avif' alt='Map for explore the surrounding area'/>
+                    <img className='showcase-photo' src='Language_Schedule_New_Meeting.avif' alt='Menu for scheduling a new meeting'/>
+                    <img className='showcase-photo' src='Language_Calendar_Popup.avif' alt='Menu for scheduling a new meeting'/>
                 </ShowcaseGallery>
             </div>
-            <div class='showcase-links-layout'>
+            <div className='showcase-links-layout'>
                 <Links theme={'language'}>
                     <LargeLink destination='figma' url='https://www.figma.com/file/NoxMY1g6x97M8WzxnpFUmL/Language-Buddy'/>
                 </Links>

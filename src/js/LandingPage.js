@@ -31,8 +31,8 @@ const LandingPage = () => {
     
     return (
         <div id='landing-page'>               
-            <SiteHeader layoutClass='header-layout'/>
-            <ScrollPrompt layoutClass={'scroll-prompt-layout ' + hidePrompt}/>
+            <SiteHeader layout='header-layout'/>
+            <ScrollPrompt layout={'scroll-prompt-layout ' + hidePrompt}/>
             <span>{window.scrollTop}</span>
         </div>
     )

@@ -15,10 +15,10 @@ const FigmaButton = ({active, boxClass}) => {
     }
 
     return (
-        <div class={'svg-button-box ' + active} onClick={onClick}>
-            <FigmaColorIcon class={'svg-button-shadow ' + boxClass}/>
-            <div class={'svg-button-mover ' + clickAnimation}>
-                <FigmaIcon class={'svg-button ' + boxClass}/>
+        <div className={'svg-button-box ' + active} onClick={onClick}>
+            <FigmaColorIcon className={'svg-button-shadow ' + boxClass}/>
+            <div className={'svg-button-mover ' + clickAnimation}>
+                <FigmaIcon className={'svg-button ' + boxClass}/>
             </div>
         </div>
     );
