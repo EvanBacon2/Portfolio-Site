@@ -1,0 +1,29 @@
+@use 'colors'
+    
+#landing-page 
+    width: 100%
+    height: 100vh
+    grid-area: 1 / 1 / 2 / 4
+    background-color: colors.$light-background
+    display: grid
+    grid-template-rows: 1fr
+    grid-template-columns: 1fr
+    font-size: 1rem
+
+.header-layout 
+    grid-area: 1 / 1 / 1 / 1
+    justify-self: center
+    align-self: center
+
+.scroll-prompt-layout 
+    justify-self: center
+    align-self: end
+    margin-bottom: 1.5em
+
+.show-prompt 
+    transition: all .4s .2s
+
+.hide-prompt 
+    opacity: 0
+    transform: translateY(3em)
+    transition: transform .4s, opacity .4s

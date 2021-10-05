@@ -3,7 +3,7 @@ import { useState, useEffect} from 'react'
 import SiteHeader from 'js/SiteHeader'
 import ScrollPrompt from 'js/ScrollPrompt'
 
-import 'css/LandingPage.css'
+import 'stylesheets/LandingPage.css'
 
 const LandingPage = () => {
     const [offset, setOffset] = useState(0)
