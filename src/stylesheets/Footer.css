@@ -1,0 +1,39 @@
+#footer {
+  background-color: #22282e;
+  border-top: 0.125em solid #ee6363;
+  grid-area: 5/1/6/4;
+  height: 5em;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#footer-initials-logo.layout {
+  height: fit-content;
+  margin: auto;
+}
+
+.footer-link {
+  font-family: "Racing Sans One";
+  font-size: 1.9375em;
+  font-weight: bold;
+  color: #fafeff;
+  text-shadow: #ee6363 0.0392em 0.0392em;
+  display: inline-block;
+  width: 4.5em;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+@media only screen and (max-width: 900px) {
+  .footer-link {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=Footer.css.map */

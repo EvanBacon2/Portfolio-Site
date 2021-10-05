@@ -1,0 +1,42 @@
+#headshot-container {
+  position: relative;
+  height: 18.3423em;
+}
+
+.grad-photo-background {
+  width: 13.3116em;
+  border-radius: 0.75em;
+  background: linear-gradient(to top left, #fcc28d, #ee6363 45%);
+}
+.no-show .grad-photo-background {
+  height: 0;
+  transform: translateY(30%);
+}
+.show-init .grad-photo-background {
+  height: 18.3423em;
+  transform: translateY(0);
+  transition: height 1s cubic-bezier(0.82, 0, 0.16, 0.96) 0.55s, transform 1s cubic-bezier(0.82, 0, 0.16, 0.96) 0.85s;
+}
+
+.grad-photo {
+  position: absolute;
+  width: 13.3116em;
+  box-sizing: border-box;
+  height: fit-content;
+  object-fit: contain;
+  border-radius: 0.75em;
+  border: 0.625em solid #FAFEFF;
+}
+.no-show .grad-photo {
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.show-init .grad-photo {
+  top: -0.625em;
+  left: -0.625em;
+  opacity: 100;
+  transition: opacity 0.3s ease-out 1.55s, left 0.5s ease-out 1.55s, top 0.5s ease-out 1.55s;
+}
+
+/*# sourceMappingURL=HeadShot.css.map */

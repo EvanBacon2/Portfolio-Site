@@ -6,10 +6,7 @@
 .grad-photo-background {
     width: 13.3116em;
     border-radius: .75em;
-    background-color: #EE6363;
     background: linear-gradient(to top left, #FCC28D, #EE6363 45%);
-    
-    transition: height 1s cubic-bezier(.82,0,.16,.96) .55s, transform 1s cubic-bezier(.82,0,.16,.96) .85s;
 }
 
 .no-show .grad-photo-background{
@@ -20,6 +17,7 @@
 .show-init .grad-photo-background {
     transform: translateY(0);
     height: 18.3423em;
+    transition: height 1s cubic-bezier(.82,0,.16,.96) .55s, transform 1s cubic-bezier(.82,0,.16,.96) .85s;
 }
 
 .grad-photo {

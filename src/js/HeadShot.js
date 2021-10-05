@@ -1,4 +1,4 @@
-import 'css/HeadShot.css'
+import 'stylesheets/HeadShot.css'
 
 const HeadShot = ({ layout }) => {
     return (

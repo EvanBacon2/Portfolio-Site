@@ -1,6 +1,6 @@
 import InitialsLogo from 'js/InitialsLogo'
 
-import 'css/Footer.css'
+import 'stylesheets/Footer.css'
 
 const Footer = ({homeRef, aboutRef, projectsRef, contactRef}) => {
     const scrollToSection = (section) => {
@@ -9,13 +9,13 @@ const Footer = ({homeRef, aboutRef, projectsRef, contactRef}) => {
 
     return (
         <footer id='footer'>
-            <a className='footer-link' href={homeRef} onClick={() => scrollToSection(homeRef)}>Home</a>
-            <a className='footer-link' href={aboutRef} onClick={() => scrollToSection(aboutRef)}>About</a>
+            <button className='footer-link' onClick={() => scrollToSection(homeRef)}>Home</button>
+            <button className='footer-link' onClick={() => scrollToSection(aboutRef)}>About</button>
             <div id='footer-initials-logo' className='layout'>
                 <InitialsLogo theme='brand'/>
             </div>
-            <a className='footer-link' href={projectsRef} onClick={() => scrollToSection(projectsRef)}>Projects</a>
-            <a className='footer-link' href={contactRef} onClick={() => scrollToSection(contactRef)}>Contact</a>
+            <button className='footer-link' onClick={() => scrollToSection(projectsRef)}>Projects</button>
+            <button className='footer-link' onClick={() => scrollToSection(contactRef)}>Contact</button>
         </footer>
     )
 }

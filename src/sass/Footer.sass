@@ -1,0 +1,36 @@
+@use 'colors'
+@use 'textStyles'
+@use 'media'
+    
+#footer 
+    background-color: colors.$light-background
+    border-top: .125em solid colors.$brand
+    
+    grid-area: 5 / 1 / 6 / 4
+    height: 5em
+    width: 100%
+
+    display: flex
+    justify-content: space-around
+    align-content: center   
+
+#footer-initials-logo.layout 
+    height: fit-content
+    margin: auto
+
+.footer-link 
+    @include textStyles.header($size: 1.9375em, $shadow: colors.$brand)
+
+    display: inline-block
+    width: 4.5em
+    text-align: center
+    text-decoration: none
+    margin: auto
+    cursor: pointer
+
+    background-color: transparent
+    border: none
+    outline: none
+
+    @include media.w-900
+        display: none
