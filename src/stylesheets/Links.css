@@ -1,0 +1,25 @@
+.links-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (orientation: portrait) {
+  .links-container {
+    align-items: center;
+    align-self: center;
+  }
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (orientation: portrait) {
+  .links-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=Links.css.map */

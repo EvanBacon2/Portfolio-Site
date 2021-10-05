@@ -1,0 +1,19 @@
+@use 'media'
+    
+.links-container 
+    width: fit-content
+    display: flex
+    flex-direction: column
+
+    @include media.portrait
+        align-items: center
+        align-self: center
+
+.links-list 
+    display: flex
+    flex-direction: column
+
+    @include media.portrait
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center

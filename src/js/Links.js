@@ -1,6 +1,6 @@
 import ContentHeader from './ContentHeader.js'
 
-import '../css/Links.css'
+import 'stylesheets/Links.css'
 
 const Links = ({state, theme, children}) => {    
     return (
