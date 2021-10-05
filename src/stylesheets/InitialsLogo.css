@@ -1,0 +1,19 @@
+#main-initials-logo {
+  opacity: 0;
+}
+#main-initials-logo.show-init {
+  opacity: 100;
+  transition: opacity 0.6s ease-out 0.9s;
+}
+
+.initials-sizer {
+  width: 3.3125em;
+  height: 3.5625em;
+  font-size: 1rem;
+}
+
+.initials-shadow.brand {
+  fill: #ee6363;
+}
+
+/*# sourceMappingURL=InitialsLogo.css.map */

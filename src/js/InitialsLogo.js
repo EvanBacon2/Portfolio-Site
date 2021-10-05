@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 import {ReactComponent as InitialsIcon} from 'svg/initials.svg'
 
-import 'css/InitialsLogo.css'
+import 'stylesheets/InitialsLogo.css'
 
 const InitialsLogo = ({theme}) => {
     useEffect(() => {
