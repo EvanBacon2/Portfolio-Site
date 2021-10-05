@@ -1,0 +1,75 @@
+@use 'colors'
+@use 'textStyles'
+@use 'media'
+    
+.link 
+    width: fit-content
+    margin-top: 1.25em
+    margin-left: .9375em
+    display: flex
+    align-items: center
+    text-decoration: none
+    font-size: 1rem
+
+    &:hover
+        cursor: pointer
+
+        @include colors.shadow-colors($inset: .625em, $map: colors.$link-map)
+
+    &.no-show
+        opacity: 0
+        transform: translateX(-.9375em)
+
+    &.show-init
+        opacity: 100
+        transform: translateX(0)
+        transition: opacity .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s, transform .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s
+
+    @include media.portrait
+        margin-top: 1.25em
+        margin-left: .75em
+        margin-right: .75em
+        text-align: center
+        flex-basis: fill
+
+.link-text 
+    display: inline
+    @include textStyles.text($size: 1.625em)
+
+    margin-left: .9375em
+    margin-bottom: .375em
+    position: relative
+    pointer-events: none
+    transition: text-shadow .2s
+
+    @include media.portrait
+        display: none
+
+.large-link-box 
+    width: 3.625em
+    height: 3.625em
+
+    &.mail 
+        width: 3.25em
+        height: 2.3125em
+
+    &.figma 
+        width: 2.4167em
+        height: 3.625em
+        margin-left: .59766em 
+
+.figma-text 
+    margin: 0
+
+.showcase-container
+    .no-showcase
+        .link
+            opacity: 0
+            transform: translateX(.9375em)
+            transition: opacity .4s, transform 0s .4s
+
+    .showcase
+        .link
+            opacity: 100
+            transform: translateX(0)
+            transition: opacity .4s ease-out 1.9s, transform .4s ease-out 1.95s

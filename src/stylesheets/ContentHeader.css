@@ -33,9 +33,6 @@
   margin: 0px;
   transform: skew(-12deg);
 }
-.content-underline.brand {
-  background-color: #ee6363;
-}
 .content-underline.calendex {
   background-color: #38cda1;
 }
@@ -88,9 +85,6 @@
 .showcase-container.no-showcase .content-title {
   opacity: 0;
   transform: translate(0.0196em, 0.0196em);
-}
-.showcase-container.no-showcase .content-title.brand {
-  text-shadow: #ee6363 0.0196em 0.0196em;
 }
 .showcase-container.no-showcase .content-title.calendex {
   text-shadow: #38cda1 0.0196em 0.0196em;

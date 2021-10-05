@@ -17,11 +17,9 @@
     transition: opacity .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s, transform .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s;
 }
 
-.showcase-container .link {
-    transform: translateX(.9375em);
-}
-
 .showcase-container.no-showcase .link {
+    opacity: 0;
+    transform: translateX(.9375em);
     transition: opacity .4s, transform 0s .4s;
 }
 
