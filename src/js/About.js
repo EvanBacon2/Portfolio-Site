@@ -4,7 +4,7 @@ import ContentHeader from 'js/ContentHeader'
 import HeadShot from 'js/HeadShot'
 import { THEMES } from 'js/Themes'
 
-import 'css/About.css'
+import 'stylesheets/About.css'
 import 'css/Structure.css'
 
 const About = ({refProp}) => {

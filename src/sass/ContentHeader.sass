@@ -1,6 +1,7 @@
 @use 'colors'
 @use 'textStyles'
 @use 'utility'
+@use 'media'
 
 @mixin title-hidden()
     opacity: 0
@@ -47,13 +48,13 @@
     &.brand 
         &.left
             background-image: linear-gradient(to left, colors.$brand 50%, colors.$brand-highlight 95%)
-            @include utility.portrait
+            @include media.portrait
                 background-image: radial-gradient(circle at center, colors.$brand-highlight 0%, colors.$brand 50%)
         &.center 
             background-image: radial-gradient(circle at center, colors.$brand-highlight 0%, colors.$brand 50%)
         &.right
             background-image: linear-gradient(to right, colors.$brand 50%, colors.$brand-highlight 95%)
-            @include utility.portrait
+            @include media.portrait
                 background-image: radial-gradient(circle at center, colors.$brand-highlight 0%, colors.$brand 50%)
 
 .no-show 

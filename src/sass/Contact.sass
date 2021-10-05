@@ -1,0 +1,154 @@
+@use 'colors'
+@use 'textStyles'
+@use 'media'
+
+#contact 
+    height: min(calc(100vh - 5.025em), 55em)
+    max-height: fit-content
+    background-image: linear-gradient(to top, colors.$background-haze 5%, colors.$dark-background 60%)
+    grid-area: 4 / 1 / 5 / 5
+    display: grid
+
+    @include media.portrait
+        height: fit-content
+        width: 100%
+        justify-self: center
+        grid-area: 4 / 1 / 5 / 2
+
+#contact-contents 
+    display: flex
+    height: fit-content
+    justify-content: space-between
+    grid-area: 1 / 2 / 2 / 3
+    margin-top: 3.75em
+    gap: max(2em, 5vw)
+
+    @include media.portrait
+        flex-direction: column
+        justify-items: flex-end
+        justify-self: center
+        grid-area: 1 / 1 / 2 / 2
+        margin-bottom: 1em
+        gap: 0
+
+.contact-header 
+    @include media.portrait
+        text-align: center
+
+.contact-form 
+    margin-top: 1.5em
+    margin-left: .9375em
+
+    @include media.portrait
+        margin-left: 0
+
+    @include media.w-320
+        margin-left: auto
+        margin-right: auto
+    
+
+.form-group 
+    margin-bottom: 1.5em
+    width: 21.525em
+
+    @include media.portrait
+        margin-left: auto
+        margin-right: auto
+
+    @include media.w-400
+        width: 17.525rem
+
+    @include media.w-320
+        width: 16.525rem
+
+.form-container 
+    @include media.portrait
+        display: flex
+        flex-direction: column
+        justify-items: center
+    
+
+.form-label 
+    display: block
+    @include textStyles.header($size: 1.9375rem)
+
+    .no-show &
+        opacity: 0
+        transform: translateX(-.9375em)
+
+    .show-init &
+        opacity: 1
+        transform: translateX(0)
+        transition: all .4s cubic-bezier(.15,-0.01,.69,.07) 1.25s
+
+.form-style 
+    height: 100%
+    width: 100%
+    padding: .7rem
+    border: none
+    border-radius: .4167rem
+    box-sizing: border-box
+    background-color: colors.$dark-background
+    @include textStyles.text()
+
+    &:focus
+        outline: none
+
+    .no-show & 
+        opacity: 0
+
+    .show-init &
+        opacity: 1
+        transition: opacity .4s ease-out 1.45s
+
+.form-border 
+    display: block
+    width: 0
+    height: min-content
+    padding: .0625em
+    border-radius: .4167em
+    background: linear-gradient(to right, colors.$brand 50%, colors.$brand-highlight 95%)
+
+    &.area
+        height: 7em
+
+    .no-show & 
+        opacity: 0
+
+    .show-init & 
+        opacity: 1
+        width: 21.4em
+        transition: width .9s cubic-bezier(.05,.11,0,.7) .5s, opacity .05s linear .5s
+
+    @include media.w-400
+        .show-init &
+            width: 17.4rem
+
+    @include media.w-320
+        .show-init &
+            width: 16.4rem
+
+.area-form 
+    resize: none
+    margin-top: 0px
+
+.send-message-layout 
+    width: fit-content
+    margin-top: -1.25em
+    margin-left: -.9375em
+    border-style: none
+    background-color: transparent
+
+.flex-center 
+    display: flex
+    width: 100%
+    justify-content: center
+
+
+
+
+
+
+
+
+

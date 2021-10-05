@@ -5,8 +5,9 @@
 }
 
 .content-title {
-  font-family: bold, "Racing Sans One";
+  font-family: "Racing Sans One";
   font-size: 3.1875em;
+  font-weight: bold;
   color: #fafeff;
   text-shadow: transparent 0.0392em 0.0392em;
   text-align: center;

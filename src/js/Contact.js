@@ -8,7 +8,7 @@ import LargeLink from './LargeLink'
 import SubmitEmail from 'js/SubmitEmail'
 import { THEMES } from 'js/Themes'
 
-import 'css/Contact.css'
+import 'stylesheets/Contact.css'
 import 'css/Structure.css'
 
 const Contact = ({refProp}) => {
