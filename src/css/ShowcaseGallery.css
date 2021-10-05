@@ -101,12 +101,12 @@
 }
 
 .showcase-container.showcase .showcase-border.calendex {
-    animation: border-fade-in-calendex 2.3s 0s forwards;
+    animation: border-fade-in-calendex 2.3s 0s ease-out forwards;
     box-shadow: .3125em .3125em #38CDA1;
 }
 
 .showcase-container.showcase .showcase-border.language {
-    animation: border-fade-in-language 2.3s 0s forwards;
+    animation: border-fade-in-language 2.3s 0s ease-out forwards;
     box-shadow: .3125em .3125em #9877B1;
 }
 
@@ -140,11 +140,11 @@
 }
 
 @keyframes border-fade-in-calendex {
-    0%, 60.34% {
+    0%, 47.82% {
         border: 0em solid #38CDA1; 
     }
 
-    60.35%, 89.47% {
+    50%, 84.78% {
         border: .3125em solid #38CDA1; 
         border-radius: 1.125em;
     }
@@ -156,11 +156,11 @@
 }
 
 @keyframes border-fade-in-language {
-    0%, 60.34% {
+    0%, 47.82% {
         border: 0em solid #9877B1; 
     }
 
-    60.35%, 89.47% {
+    50%, 84.78% {
         border: .3125em solid #9877B1; 
         border-radius: 1.125em;
     }

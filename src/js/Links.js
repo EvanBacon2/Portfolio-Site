@@ -1,7 +1,6 @@
 import ContentHeader from './ContentHeader.js'
 
 import '../css/Links.css'
-import '../css/ColorClasses.css'
 
 const Links = ({state, theme, children}) => {    
     return (

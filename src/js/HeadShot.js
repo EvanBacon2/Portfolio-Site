@@ -4,7 +4,7 @@ const HeadShot = ({ layout }) => {
     return (
         <div id='headshot-container' className={layout}>
             <div className='grad-photo-background'/>
-            <img className='grad-photo' src='grad_photo.avif' alt='My face'/>
+            <img className='grad-photo' src='grad_photo.png' alt='My face'/>
         </div>
     )
 }

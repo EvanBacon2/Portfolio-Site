@@ -135,36 +135,6 @@
     grid-area: 1 / 2 / 2 / 3;
 }
 
-/*----------------------ANIMATIONS----------------------*/
-
-@keyframes background-color-shift {
-    0% {
-        background-color: #1C1F23;
-    }
-
-    33%, 66% {
-        background-color: #22282E;
-    }
-
-    100% {
-        background-color: #222E38;
-    }
-}
-
-@keyframes fill-shift {
-    0% {
-        fill: #1C1F23;
-    }
-
-    33%, 66% {
-        fill: #22282E;
-    }
-
-    100% {
-        fill: #222E38;
-    }
-}
-
 /*----------------------MEDIA QUERIES----------------------*/
 
 @media only screen and (orientation: portrait) {

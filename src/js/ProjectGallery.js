@@ -6,7 +6,7 @@ import LanguageProjectCard from './LanguageProjectCard'
 import 'css/Projects.css'
 import 'css/Structure.css'
 
-const ProjectGallery =  ({showcase, showcaseCallback}) => {
+const ProjectGallery =  ({ showcase, showcaseCallback }) => {
     const [displaySwitch, setDisplaySwitch] = useState('off')
 
     useEffect(() => {

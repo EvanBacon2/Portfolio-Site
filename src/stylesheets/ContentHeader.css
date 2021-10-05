@@ -1,0 +1,146 @@
+.header-container {
+  display: inline-block;
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+.content-title {
+  font-family: bold, "Racing Sans One";
+  font-size: 3.1875em;
+  color: #fafeff;
+  text-shadow: transparent 0.0392em 0.0392em;
+  text-align: center;
+  pointer-events: none;
+  padding-left: 0.29412em;
+  padding-right: 0.29412em;
+  margin: 0;
+}
+.content-title.brand {
+  text-shadow: #ee6363 0.0392em 0.0392em;
+}
+.content-title.calendex {
+  text-shadow: #38cda1 0.0392em 0.0392em;
+}
+.content-title.language {
+  text-shadow: #9877b1 0.0392em 0.0392em;
+}
+
+.content-underline {
+  position: relative;
+  height: 0.0625em;
+  border: none;
+  margin: 0px;
+  transform: skew(-12deg);
+}
+.content-underline.brand {
+  background-color: #ee6363;
+}
+.content-underline.calendex {
+  background-color: #38cda1;
+}
+.content-underline.language {
+  background-color: #9877b1;
+}
+.content-underline.brand.left {
+  background-image: linear-gradient(to left, #ee6363 50%, #fcc28d 95%);
+}
+@media only screen and (orientation: portrait) {
+  .content-underline.brand.left {
+    background-image: radial-gradient(circle at center, #fcc28d 0%, #ee6363 50%);
+  }
+}
+.content-underline.brand.center {
+  background-image: radial-gradient(circle at center, #fcc28d 0%, #ee6363 50%);
+}
+.content-underline.brand.right {
+  background-image: linear-gradient(to right, #ee6363 50%, #fcc28d 95%);
+}
+@media only screen and (orientation: portrait) {
+  .content-underline.brand.right {
+    background-image: radial-gradient(circle at center, #fcc28d 0%, #ee6363 50%);
+  }
+}
+
+.no-show .content-title {
+  text-shadow: #ee6363 0.0196em 0.0196em;
+}
+.no-show .section-header .content-title {
+  opacity: 0;
+  transform: translate(0.0196em, 0.0196em);
+}
+.no-show .content-underline {
+  width: 0;
+  transform: translateX(100%);
+}
+
+.show-init .section-header .content-title {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: opacity 0.2s ease-out 0.5s, text-shadow 0.4s ease-out 0.55s, transform 0.4s ease-out 0.55s;
+}
+.show-init .content-underline {
+  width: 100%;
+  transform: translateX(0);
+  transition: width 0.8s cubic-bezier(0.82, 0, 0.16, 0.96) 0s, transform 0.8s cubic-bezier(0.82, 0, 0.16, 0.96) 0s;
+}
+
+.showcase-container.no-showcase .content-title {
+  opacity: 0;
+  transform: translate(0.0196em, 0.0196em);
+}
+.showcase-container.no-showcase .content-title.brand {
+  text-shadow: #ee6363 0.0196em 0.0196em;
+}
+.showcase-container.no-showcase .content-title.calendex {
+  text-shadow: #38cda1 0.0196em 0.0196em;
+}
+.showcase-container.no-showcase .content-title.language {
+  text-shadow: #9877b1 0.0196em 0.0196em;
+}
+.showcase-container.no-showcase .content-underline {
+  width: 0;
+  transform: translateX(100%);
+}
+.showcase-container.showcase .content-title {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: opacity 0.2s ease-out 1.1s, text-shadow 0.4s ease-out 1.15s, transform 0.4s ease-out 1.15s;
+}
+.showcase-container.showcase .content-underline {
+  width: 100%;
+  transform: translateX(0);
+  transition: width 0.8s cubic-bezier(0.82, 0, 0.16, 0.96) 0.55s, transform 0.8s cubic-bezier(0.82, 0, 0.16, 0.96) 0.55s;
+}
+
+.projects-header .content-underline {
+  background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%);
+}
+.projects-header .content-underline::before {
+  background-color: transparent;
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.projects-header .content-underline.calendex::before {
+  background-color: #38cda1;
+}
+.projects-header .content-underline.language::before {
+  background-color: #9877b1;
+}
+.projects-header.no-showcase .section-header .content-title {
+  transition: text-shadow 0.4s 1s;
+}
+.projects-header.no-showcase .content-underline::before {
+  transition: background-color 0.4s 1s;
+}
+.projects-header.showcase .section-header .content-title {
+  transition: text-shadow 0.4s 1.3s;
+}
+.projects-header.showcase .content-underline::before {
+  transition: background-color 0.4s 1.3s;
+}
+
+/*# sourceMappingURL=ContentHeader.css.map */

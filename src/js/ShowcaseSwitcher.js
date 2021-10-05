@@ -11,26 +11,20 @@ const ShowcaseSwitcher = ({ showcase, showcaseState, showcaseCallback }) => {
     const [selection, setSelection] = useState(showcase)
 
     useEffect(() => {
-        setTimeout(() => setSelection(showcase), 1300)
-    }, [showcase])
+        setTimeout(() => setSelection(showcase), showcaseState === 'showcase' ? 1900 : 600)
+    }, [showcase, showcaseState])
 
     const showCaseSelector = () => {
         switch(selection) {
-            case 'calendex': {
-                return <CalendexShowcase showCallback={showcaseCallback}/>
-            }
-            case 'language': {
-                return <LanguageShowcase showCallback={showcaseCallback}/>
-            }
-            default: {
-                return <ProjectGallery showcase={showcase} showcaseCallback={showcaseCallback}/>
-            }
+            case 'calendex': return <CalendexShowcase showCallback={showcaseCallback}/>
+            case 'language': return <LanguageShowcase showCallback={showcaseCallback}/>
+            default: return <ProjectGallery showcase={showcase} showcaseCallback={showcaseCallback}/>
         }
     }
 
     return (
-        <div id='showcase-switcher'>
-            <ShowcaseFade showcaseState={showcaseState}>{showCaseSelector()}</ShowcaseFade>
+        <div id='showcase-switcher' className={showcase}>
+            <ShowcaseFade showcaseState={showcase}>{showCaseSelector()}</ShowcaseFade>
         </div>
     )
 }

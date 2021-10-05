@@ -5,13 +5,16 @@
 
 .grad-photo-background {
     width: 13.3116em;
-    height: 0;
     border-radius: .75em;
     background-color: #EE6363;
     background: linear-gradient(to top left, #FCC28D, #EE6363 45%);
-
-    transform: translateY(30%);
+    
     transition: height 1s cubic-bezier(.82,0,.16,.96) .55s, transform 1s cubic-bezier(.82,0,.16,.96) .85s;
+}
+
+.no-show .grad-photo-background{
+    height: 0;
+    transform: translateY(30%);
 }
 
 .show-init .grad-photo-background {
@@ -21,14 +24,17 @@
 
 .grad-photo {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 13.3116em;
     box-sizing: border-box;
     height: fit-content;
     object-fit: contain;
     border-radius: .75em;
     border: .625em solid #FAFEFF;
+}
+
+.no-show .grad-photo{
+    top: 0;
+    left: 0;
     opacity: 0;
 }
 

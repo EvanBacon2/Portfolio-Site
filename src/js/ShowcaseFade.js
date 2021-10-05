@@ -3,9 +3,9 @@ import 'css/ShowcaseFade.css'
 const ShowcaseFade = ({ showcaseState, children}) => {
     const fadeState = () => {
         switch(showcaseState) {
-            case 'showcase': return 'fade-in'
+            case 'show-init': return ''
             case 'no-showcase': return 'fade-out'
-            default: return ''
+            default: return 'fade-in'
         }
     }
 

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-import SvgButton from './SvgButton.js';
+import SvgButton from 'js/SvgButton.js';
 
-import '../css/LargeLink.css';
+import 'css/LargeLink.css';
 
 import {ReactComponent as MailIcon} from '../svg/mail.svg';
 

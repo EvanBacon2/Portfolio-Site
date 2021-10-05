@@ -33,9 +33,9 @@ const CalendexShowcase = ({ showCallback }) => {
             </div>
             <div className='showcase-layout'>
                 <ShowcaseGallery layout='ios' theme='calendex' captions={['View Blood Sugar', 'View Aggregate Data', 'Set Goals']}>
-                    <img className='showcase-photo' src='Calendex_Day_Chart.avif' alt='A chart showing blood sugar readings over one day'/>
-                    <img className='showcase-photo' src='Calendex_Month_Data.avif' alt='A calender showing avg blood sugar over one month'/>
-                    <img className='showcase-photo' src='Calendex_Settings_Goals.avif' alt='Sliders for adjusting blood sugar goals'/>
+                    <img className='showcase-photo' src='Calendex_Day_Chart.png' alt='A chart showing blood sugar readings over one day'/>
+                    <img className='showcase-photo' src='Calendex_Month_Data.png' alt='A calender showing avg blood sugar over one month'/>
+                    <img className='showcase-photo' src='Calendex_Settings_Goals.png' alt='Sliders for adjusting blood sugar goals'/>
                 </ShowcaseGallery>
             </div>
             <div className='showcase-links-layout'>

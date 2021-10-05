@@ -1,0 +1,31 @@
+$brand: #ee6363
+$brand-highlight: #fcc28d
+$text: #fafeff
+
+$light-background: #22282e
+$dark-background: #1c1f23
+$background-haze: #23272B
+
+$calendex: #38cda1
+$calendex-background: #222E38
+$calendex-cover: #203935
+
+$language: #9877b1
+$language-background: #2e303b
+$language-cover: #2f2c37
+
+$theme-map: (brand: $brand, calendex: $calendex, language: $language)
+$project-map: (calendex: $calendex, language: $language)
+
+@mixin shadow-colors($inset: 0, $map: $theme-map)
+    @each $name, $hex in $theme-map
+        &.#{$name}
+            text-shadow: $hex $inset $inset
+
+@mixin background-colors($map: $theme-map)
+    @each $name, $hex in $theme-map
+        &.#{$name}
+            background-color: $hex
+
+
+

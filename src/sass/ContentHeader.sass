@@ -1,0 +1,124 @@
+@use 'colors'
+@use 'textStyles'
+@use 'utility'
+
+@mixin title-hidden()
+    opacity: 0
+    transform: translate(.0196em, .0196em)
+
+@mixin underline-hidden()
+    width: 0
+    transform: translateX(100%)
+
+@mixin title-fade-in($delay: 0s) 
+    opacity: 1
+    transform: translate(0, 0)
+    transition: opacity .2s ease-out $delay, text-shadow .4s ease-out $delay + .05s, transform .4s ease-out $delay + .05s
+
+@mixin underline-fade-in($delay: 0s)
+    width: 100%
+    transform: translateX(0)
+    transition: width .8s cubic-bezier(.82,0,.16,.96) $delay, transform .8s cubic-bezier(.82,0,.16,.96) $delay
+    
+.header-container 
+    display: inline-block
+    width: fit-content
+    box-sizing: border-box
+
+.content-title 
+    @include textStyles.header($size: 3.1875em)
+    text-align: center
+    pointer-events: none
+    padding-left: .29412em
+    padding-right: .29412em
+    margin: 0
+
+    @include colors.shadow-colors($inset: .0392em)
+
+.content-underline 
+    position: relative
+    height: .0625em
+    border: none
+    margin: 0px
+    transform: skew(-12deg)
+
+    @include colors.background-colors($map: colors.$project-map)
+
+    &.brand 
+        &.left
+            background-image: linear-gradient(to left, colors.$brand 50%, colors.$brand-highlight 95%)
+            @include utility.portrait
+                background-image: radial-gradient(circle at center, colors.$brand-highlight 0%, colors.$brand 50%)
+        &.center 
+            background-image: radial-gradient(circle at center, colors.$brand-highlight 0%, colors.$brand 50%)
+        &.right
+            background-image: linear-gradient(to right, colors.$brand 50%, colors.$brand-highlight 95%)
+            @include utility.portrait
+                background-image: radial-gradient(circle at center, colors.$brand-highlight 0%, colors.$brand 50%)
+
+.no-show 
+    .content-title
+        text-shadow: colors.$brand .0196em .0196em
+
+    .section-header .content-title 
+        @include title-hidden()
+    
+    .content-underline 
+        @include underline-hidden()
+
+.show-init 
+    .section-header .content-title 
+        @include title-fade-in($delay: .5s)
+
+    .content-underline
+        @include underline-fade-in()
+
+.showcase-container
+    &.no-showcase 
+        .content-title 
+            @include title-hidden()
+            @include colors.shadow-colors($inset: .0196em, $map: colors.$project-map)
+
+        .content-underline
+            @include underline-hidden()
+
+    &.showcase 
+        .content-title 
+            @include title-fade-in($delay: 1.1s)
+
+        .content-underline
+            @include underline-fade-in($delay: .55s)
+
+.projects-header
+    .content-underline
+        background-image: radial-gradient(circle at center, #FCC28D 0%, #E26E6E 50%)
+
+        &::before
+            background-color: transparent
+            content: " "
+            position: absolute
+            @include utility.position()
+        
+        &.calendex::before
+            background-color: colors.$calendex
+
+        &.language::before
+            background-color: colors.$language
+
+    &.no-showcase 
+        .section-header .content-title 
+            transition: text-shadow .4s 1s
+        
+        .content-underline::before
+            transition: background-color .4s 1s
+
+    &.showcase 
+        .section-header .content-title 
+            transition: text-shadow .4s 1.3s
+
+        .content-underline::before
+            transition: background-color .4s 1.3s
+
+
+
+

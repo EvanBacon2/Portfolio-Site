@@ -1,4 +1,4 @@
-import 'css/ContentHeader.css'
+import 'stylesheets/ContentHeader.css'
 
 const ContentHeader = ({state, layout, title, theme, fadeAlignment}) => {
     return (

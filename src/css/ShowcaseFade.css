@@ -1,5 +1,5 @@
 .showcase-fade {
-    opacity: 100;
+    opacity: 1;
     position: relative;
     z-index: 998;
 }
@@ -14,7 +14,7 @@
 
 @keyframes gallery-to-showcase {
     0% {
-        opacity: 100
+        opacity: 1
     }
 
     25%, 99% {
@@ -22,13 +22,13 @@
     }
 
     100% {
-        opacity: 100
+        opacity: 1
     }
 }
 
 @keyframes showcase-to-gallery {
     0% {
-        opacity: 100
+        opacity: 1
     }
 
     25% {
@@ -40,6 +40,6 @@
     }
 
     100% {
-        opacity: 100
+        opacity: 1
     }
 }
