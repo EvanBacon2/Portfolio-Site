@@ -40,7 +40,7 @@ const LanguageShowcase = ({showCallback}) => {
                     <img className='showcase-photo' src='Language_Initial_Search.png' alt='Menu for searching for nearby users'/>
                     <img className='showcase-photo' src='Language_Explore.png' alt='Map for explore the surrounding area'/>
                     <img className='showcase-photo' src='Language_Schedule_New_Meeting.png' alt='Menu for scheduling a new meeting'/>
-                    <img className='showcase-photo' src='Language_Calendar_Popup.png' alt='Menu for scheduling a new meeting'/>
+    <img className='showcase-photo' src='Language_Calendar_Popup.png' alt='Menu for scheduling a new meeting'/>
                 </ShowcaseGallery>
             </div>
             <div className='showcase-links-layout'>

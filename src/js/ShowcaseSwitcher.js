@@ -11,7 +11,7 @@ const ShowcaseSwitcher = ({ showcase, showcaseState, showcaseCallback }) => {
     const [selection, setSelection] = useState(showcase)
 
     useEffect(() => {
-        setTimeout(() => setSelection(showcase), showcaseState === 'showcase' ? 1900 : 600)
+        setTimeout(() => setSelection(showcase), showcaseState === 'showcase' ? 1200 : 600)
     }, [showcase, showcaseState])
 
     const showCaseSelector = () => {
