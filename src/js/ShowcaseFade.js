@@ -1,6 +1,6 @@
-import 'css/ShowcaseFade.css'
+import 'stylesheets/ShowcaseFade.css'
 
-const ShowcaseFade = ({ showcaseState, children}) => {
+const ShowcaseFade = ({ showcaseState, children }) => {
     const fadeState = () => {
         switch(showcaseState) {
             case 'show-init': return ''
