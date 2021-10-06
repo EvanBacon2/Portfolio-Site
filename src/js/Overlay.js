@@ -1,4 +1,4 @@
-import 'css/Overlay.css';
+import 'stylesheets/Overlay.css';
 
 const Overlay = ({ navState }) => {
     return (
