@@ -100,19 +100,6 @@
     text-decoration: none;
 }
 
-.nav-bttn {
-    position: relative;
-    font-family: 'Racing Sans One';
-    font-size: 3.75em;
-    background-color: #FAFEFF;
-    color: #EE6363;
-    border: none;
-    outline: none;
-    padding: .03em 0;
-    border-radius: .15em;
-    width: 5.5em;
-}
-
 .nav-menu-bttn::before {
     position: absolute;
     display: block;

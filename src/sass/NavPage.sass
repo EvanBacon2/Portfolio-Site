@@ -1,0 +1,198 @@
+@use 'colors'
+@use 'media'
+@use 'textStyles'
+    
+#nav-page 
+    position: fixed
+    left: 7em
+    top: 7em
+    z-index: 1001
+    visibility: hidden
+
+    &.open 
+        visibility: visible
+        transition: 0s 1s
+
+    @include media.w-1080
+        left: 0
+        right: 0
+        font-size: .8em
+        overflow-y: auto
+
+    @include media.w-350--h-700
+        font-size: .7em
+
+    @include media.w-300--h-600
+        font-size: .6em
+
+#nav-contents 
+    position: relative
+    z-index: 1001
+    display: flex
+    
+    display: flex
+    justify-content: space-between
+    width: fit-content
+    height: fit-content
+
+    .closed & 
+        visibility: hidden
+        opacity: 0
+        transition: all .6s .2s
+
+    .open &
+        visibility: visible
+        opacity: 1.0
+        transition: opacity .6s 1s
+
+    @include media.w-1080
+        flex-direction: column
+        margin-left: auto
+        margin-right: auto
+
+.nav-spacer 
+    margin: .3em 0
+
+.nav-back-button.layout 
+    position: fixed
+    top: 2em
+    left: 1.25em
+    z-index: 1002
+
+    .closed & 
+        transform: translateX(-2em)
+        transition: transform .6s .2s
+
+    .open .nav-back-button 
+        transform: translateX(0)
+        transition: transform .6s 1s
+
+.nav-initials-logo
+    visibility: hidden
+
+    &.layout 
+        position: fixed
+        right: 1.5em
+        top: 1.5em
+
+.nav-header 
+    @include textStyles.header($size: 5em)
+    margin: 0
+
+#nav-menu 
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+
+    .closed & 
+        transform: translateX(-2em)
+        transition: transform .6s .2s
+
+    .open &
+        transform: translateX(0)
+        transition: transform .6s 1s
+
+    @include media.w-1080
+        align-items: center
+
+.nav-menu-bttn-container 
+    position: relative
+    width: 5.5em
+    height: fit-content
+    border-radius: .15em
+    padding: .03em 0
+    font-size: 3.75em
+
+    &:hover 
+        cursor: pointer
+
+.nav-menu-bttn 
+    position: absolute
+    top: 0
+    background-color: colors.$text
+    width: inherit
+    height: 100%
+    border-radius: .15em
+    overflow: hidden
+
+    &::before 
+        position: absolute
+        display: block
+        left: 100%
+        width: 5.5em
+        height: fit-content
+        border-radius: inherit
+
+        background-color: transparent
+        background-image: linear-gradient(-75deg, colors.$brand-highlight, colors.$text 95%)
+
+        content: "."
+        color: transparent
+
+        opacity: 0
+        transition: opacity .3s 0s, left .6s 0s
+
+    .nav-menu-bttn-container:hover &::before
+        opacity: 1
+        left: 0
+
+.nav-menu-bttn-text 
+    position: relative
+    display: block
+    @include textStyles.header($size: 1em, $weight: normal, $color: colors.$brand)
+    text-align: center
+    text-decoration: none
+
+#nav-links 
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    
+    @include media.w-1080
+        align-items: center
+
+.closed #nav-links 
+    transform: translateX(2em)
+    transition: transform .6s .2s
+
+    @include media.w-1080
+        transform: translateX(-2em)
+
+.open #nav-links 
+    transform: translateX(0)
+    transition: transform .6s 1s
+
+#nav-divider 
+    height: inherit
+    width: .15em
+    margin: 0 4em
+
+#nav-link-resume 
+    text-align: center
+    pointer-events: none
+
+#link-container 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    @include media.w-1080
+        width: 20.625em
+        justify-content: space-around
+
+#nav-links-spacer 
+    width: 4.95em
+    height: 4.95em
+        
+    @include media.w-1080
+        width: 0em
+        height: 0em
+        display: none
+
+
+
+
+
+
+

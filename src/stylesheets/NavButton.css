@@ -1,0 +1,56 @@
+#nav-button {
+  position: fixed;
+  left: 1em;
+  top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1rem;
+  width: fit-content;
+  height: 1.875em;
+  font-size: 0.75em;
+  opacity: 0;
+}
+#nav-button.show-init {
+  opacity: 100;
+  transition: opacity 0.6s ease-out 0.9s;
+}
+#nav-button:hover {
+  cursor: pointer;
+}
+@media only screen and (orientation: portrait) {
+  #nav-button {
+    background-color: #fafeff;
+    padding: 1em;
+    top: 0;
+    left: 0;
+    font-size: 0.75em;
+    border-radius: 0 0 0.25em 0;
+  }
+}
+
+.nav-line {
+  width: 4.375em;
+  height: 0.3125em;
+  opacity: 1;
+  background-color: #637280;
+  transform: skew(11.3deg);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.05s, opacity 0.2s;
+}
+@media only screen and (orientation: landscape) {
+  #nav-button:hover .nav-line {
+    background-color: #fafeff;
+    box-shadow: 0.1875em 0.125em #ee6363;
+    transform: translate(-0.1875em, -0.125em);
+  }
+  .nav-line.open {
+    opacity: 0;
+  }
+}
+@media only screen and (orientation: portrait) {
+  .nav-line {
+    background-color: #ee6363;
+  }
+}
+
+/*# sourceMappingURL=NavButton.css.map */

@@ -1,10 +1,10 @@
 import InitialsLogo from './InitialsLogo'
 import NavPageIcon from 'js/NavPageIcon'
 
-import 'css/NavPage.css'
+import 'stylesheets/NavPage.css'
 import 'css/NavPageIcon.css'
 
-import {ReactComponent as ChevronCutout} from 'svg/chevron-cutout.svg'
+import { ReactComponent as ChevronCutout } from 'svg/chevron-cutout.svg'
 
 const NavPage = ({navState, navTo}) => {
     const navPageButton = (text) => {

@@ -1,0 +1,228 @@
+#nav-page {
+  position: fixed;
+  left: 7em;
+  top: 7em;
+  z-index: 1001;
+  visibility: hidden;
+}
+#nav-page.open {
+  visibility: visible;
+  transition: 0s 1s;
+}
+@media only screen and (max-width: 1080px) {
+  #nav-page {
+    left: 0;
+    right: 0;
+    font-size: 0.8em;
+    overflow-y: auto;
+  }
+}
+@media only screen and (max-width: 350px), (max-height: 700px) {
+  #nav-page {
+    font-size: 0.7em;
+  }
+}
+@media only screen and (max-width: 300px), (max-height: 600px) {
+  #nav-page {
+    font-size: 0.6em;
+  }
+}
+
+#nav-contents {
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  height: fit-content;
+}
+.closed #nav-contents {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.6s 0.2s;
+}
+.open #nav-contents {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.6s 1s;
+}
+@media only screen and (max-width: 1080px) {
+  #nav-contents {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.nav-spacer {
+  margin: 0.3em 0;
+}
+
+.nav-back-button.layout {
+  position: fixed;
+  top: 2em;
+  left: 1.25em;
+  z-index: 1002;
+}
+.closed .nav-back-button.layout {
+  transform: translateX(-2em);
+  transition: transform 0.6s 0.2s;
+}
+.nav-back-button.layout .open .nav-back-button {
+  transform: translateX(0);
+  transition: transform 0.6s 1s;
+}
+
+.nav-initials-logo {
+  visibility: hidden;
+}
+.nav-initials-logo.layout {
+  position: fixed;
+  right: 1.5em;
+  top: 1.5em;
+}
+
+.nav-header {
+  font-family: "Racing Sans One";
+  font-size: 5em;
+  font-weight: bold;
+  color: #fafeff;
+  text-shadow: transparent 0.0392em 0.0392em;
+  margin: 0;
+}
+
+#nav-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.closed #nav-menu {
+  transform: translateX(-2em);
+  transition: transform 0.6s 0.2s;
+}
+.open #nav-menu {
+  transform: translateX(0);
+  transition: transform 0.6s 1s;
+}
+@media only screen and (max-width: 1080px) {
+  #nav-menu {
+    align-items: center;
+  }
+}
+
+.nav-menu-bttn-container {
+  position: relative;
+  width: 5.5em;
+  height: fit-content;
+  border-radius: 0.15em;
+  padding: 0.03em 0;
+  font-size: 3.75em;
+}
+.nav-menu-bttn-container:hover {
+  cursor: pointer;
+}
+
+.nav-menu-bttn {
+  position: absolute;
+  top: 0;
+  background-color: #fafeff;
+  width: inherit;
+  height: 100%;
+  border-radius: 0.15em;
+  overflow: hidden;
+}
+.nav-menu-bttn::before {
+  position: absolute;
+  display: block;
+  left: 100%;
+  width: 5.5em;
+  height: fit-content;
+  border-radius: inherit;
+  background-color: transparent;
+  background-image: linear-gradient(-75deg, #fcc28d, #fafeff 95%);
+  content: ".";
+  color: transparent;
+  opacity: 0;
+  transition: opacity 0.3s 0s, left 0.6s 0s;
+}
+.nav-menu-bttn-container:hover .nav-menu-bttn::before {
+  opacity: 1;
+  left: 0;
+}
+
+.nav-menu-bttn-text {
+  position: relative;
+  display: block;
+  font-family: "Racing Sans One";
+  font-size: 1em;
+  font-weight: normal;
+  color: #ee6363;
+  text-shadow: transparent 0.0392em 0.0392em;
+  text-align: center;
+  text-decoration: none;
+}
+
+#nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1080px) {
+  #nav-links {
+    align-items: center;
+  }
+}
+
+.closed #nav-links {
+  transform: translateX(2em);
+  transition: transform 0.6s 0.2s;
+}
+@media only screen and (max-width: 1080px) {
+  .closed #nav-links {
+    transform: translateX(-2em);
+  }
+}
+
+.open #nav-links {
+  transform: translateX(0);
+  transition: transform 0.6s 1s;
+}
+
+#nav-divider {
+  height: inherit;
+  width: 0.15em;
+  margin: 0 4em;
+}
+
+#nav-link-resume {
+  text-align: center;
+  pointer-events: none;
+}
+
+#link-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1080px) {
+  #link-container {
+    width: 20.625em;
+    justify-content: space-around;
+  }
+}
+
+#nav-links-spacer {
+  width: 4.95em;
+  height: 4.95em;
+}
+@media only screen and (max-width: 1080px) {
+  #nav-links-spacer {
+    width: 0em;
+    height: 0em;
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=NavPage.css.map */

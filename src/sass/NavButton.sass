@@ -1,0 +1,52 @@
+@use 'colors'
+@use 'media'
+    
+#nav-button 
+    position: fixed
+    left: 1em
+    top: 1em
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    font-size: 1rem
+    width: fit-content
+    height: 1.875em
+    font-size: .75em
+
+    opacity: 0
+
+    &.show-init  
+        opacity: 100
+        transition: opacity .6s ease-out .9s
+
+    &:hover 
+        cursor: pointer
+
+    @include media.portrait
+        background-color: colors.$text
+        padding: 1em
+        top: 0
+        left: 0
+        font-size: .75em
+        border-radius: 0 0 .25em 0
+
+.nav-line 
+    width: 4.375em
+    height: .3125em
+    opacity: 1
+    background-color: colors.$inactive-button
+    transform: skew(11.3deg)
+    transition: transform .2s, box-shadow .2s, background-color .05s, opacity .2s
+        
+    @include media.landscape
+        #nav-button:hover &
+            background-color: colors.$text
+            box-shadow: .1875em .125em colors.$brand
+            transform: translate(-.1875em, -.125em)
+
+        &.open
+            opacity: 0
+
+    @include media.portrait
+        background-color: colors.$brand
+    

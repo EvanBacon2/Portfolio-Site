@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import 'css/NavButton.css'
+import 'stylesheets/NavButton.css'
 
 const NavButton = ({ navState, onClick }) => {
     useEffect(() => {
