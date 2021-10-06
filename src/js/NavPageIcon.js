@@ -1,13 +1,13 @@
-import 'css/NavPageIcon.css'
+import 'stylesheets/NavPageIcon.css'
 
-import {ReactComponent as GithubCutout} from 'svg/github-cutout.svg'
-import {ReactComponent as LinkedinCutout} from 'svg/linkedin-cutout.svg'
-import {ReactComponent as FigmaCutout} from 'svg/figma-cutout.svg'
-import {ReactComponent as WebsiteCutout} from 'svg/website-cutout.svg'
-import {ReactComponent as AppStoreCutout} from 'svg/app-store-cutout.svg'
-import {ReactComponent as ChevronCutout} from 'svg/chevron-cutout.svg'
+import { ReactComponent as GithubCutout } from 'svg/github-cutout.svg'
+import { ReactComponent as LinkedinCutout } from 'svg/linkedin-cutout.svg'
+import { ReactComponent as FigmaCutout } from 'svg/figma-cutout.svg'
+import { ReactComponent as WebsiteCutout } from 'svg/website-cutout.svg'
+import { ReactComponent as AppStoreCutout } from 'svg/app-store-cutout.svg'
+import { ReactComponent as ChevronCutout } from 'svg/chevron-cutout.svg'
 
-const NavPageIcon = ({layoutClass, type, href, onClick}) => {
+const NavPageIcon = ({ layoutClass, type, href, onClick }) => {
     const cutout = (type) => {
         switch (type) {
             case 'github': return <GithubCutout className='nav-page-icon github'/>

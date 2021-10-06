@@ -2,7 +2,7 @@ import InitialsLogo from './InitialsLogo'
 import NavPageIcon from 'js/NavPageIcon'
 
 import 'stylesheets/NavPage.css'
-import 'css/NavPageIcon.css'
+import 'stylesheets/NavPageIcon.css'
 
 import { ReactComponent as ChevronCutout } from 'svg/chevron-cutout.svg'
 
