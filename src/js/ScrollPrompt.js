@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
-import {ReactComponent as Chevron} from 'svg/chevron.svg';
+import { ReactComponent as Chevron } from 'svg/chevron.svg'
 
-import 'css/ScrollPrompt.css';
+import 'stylesheets/ScrollPrompt.css'
 
-const ScrollPrompt = ({layout}) => {
+const ScrollPrompt = ({ layout }) => {
     useEffect(() => {
         setTimeout(() => document.getElementById('scroll-prompt-container').classList.add('show-init'), 200)
     })

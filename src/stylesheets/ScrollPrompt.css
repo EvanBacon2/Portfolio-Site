@@ -1,0 +1,58 @@
+#scroll-prompt-container {
+  font-size: 1rem;
+  opacity: 0;
+}
+#scroll-prompt-container.show-prompt.show-init {
+  opacity: 100;
+  transition: opacity 0.6s ease-out 0.9s;
+}
+
+#scroll-prompt-text {
+  font-family: "Roboto";
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: normal;
+  color: #fafeff;
+}
+
+#scroll-chevron-container {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+#scroll-chevron {
+  z-index: 1;
+  animation: scroll-float 3s ease-in-out 0s infinite;
+}
+
+.scroll-chevron-box {
+  width: 2.875em;
+  height: 1.75em;
+}
+
+.scroll-chevron-layout {
+  position: absolute;
+}
+
+.chevron-fill {
+  fill: #fafeff;
+}
+
+.chevron-shadow-fill {
+  fill: #ee6363;
+}
+
+@keyframes scroll-float {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 0.25em;
+  }
+  50% {
+    top: 0;
+  }
+}
+
+/*# sourceMappingURL=ScrollPrompt.css.map */
