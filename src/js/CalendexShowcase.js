@@ -14,7 +14,7 @@ const CalendexShowcase = ({ showCallback }) => {
     const [showcase, setShowcase] = useState('no-showcase')
 
     useEffect(() => {
-        setTimeout(() => setShowcase('showcase'), 10)
+        setTimeout(() => setShowcase('showcase'), 50)
     })
 
     return (  

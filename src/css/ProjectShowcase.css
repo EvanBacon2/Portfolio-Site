@@ -27,16 +27,16 @@
     align-self: center;
 }
 
-.showcase-container.no-showcase .showcase-back-button-layout {
-    opacity: 0;
-    transform: translateX(-.625em);
-    transition: opacity .4s 0s, transform 0s .4s;
-}
-
-.showcase-container.showcase .showcase-back-button-layout {
+.showcase .showcase-back-button-layout {
     opacity: 100;
     transform: translateX(0);
     transition: opacity .4s ease-out 1.9s, transform .4s ease-out 1.95s;
+}
+
+.no-showcase .showcase-back-button-layout {
+    opacity: 0;
+    transform: translateX(-.625em);
+    transition: opacity .4s 0s, transform 0s .4s;
 }
 
 /*----------------------SHOWCASE CONTENT DESCRIPTION----------------------*/
@@ -51,16 +51,16 @@
     font-size: .8125em;
 }
 
-.showcase-container.no-showcase .showcase-content-description {
-    opacity: 0;
-    transform: translateX(-.675em);
-    transition: opacity .4s 0s, transform 0s .4s;
-}
-
-.showcase-container.showcase .showcase-content-description {
+.showcase .showcase-content-description {
     opacity: 100;
     transform: translateX(0);
     transition: opacity .4s ease-out 1.9s, transform .4s ease-out 1.95s;
+}
+
+.no-showcase .showcase-content-description {
+    opacity: 0;
+    transform: translateX(-.675em);
+    transition: opacity .4s 0s, transform 0s .4s;
 }
 
 /*----------------------MISC LAYOUTS----------------------*/
