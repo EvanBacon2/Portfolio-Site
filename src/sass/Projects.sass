@@ -1,0 +1,154 @@
+@use 'colors'
+@use 'media'
+@use 'utility'
+
+#projects 
+    height: fit-content
+    width: 100%
+    background-color: colors.$light-background
+    grid-area: 3 / 1 / 4 / 4
+    display: grid
+    grid-template-rows: 1fr
+    font-size: 1rem
+
+    @include media.portrait
+        grid-area: 3 / 1 / 4 / 2
+
+    @include media.landscape--w-1040
+        grid-area: 3 / 1 / 4 / 4
+
+#projects-background 
+    grid-area: 1 / 1 / 2 / 4
+
+    @include media.portrait
+        grid-area: 1 / 1 / 2 / 2
+
+    @include media.landscape--w-1040
+        grid-area: 1 / 1 / 2 / 4
+
+#projects-content 
+    grid-area: 1 / 2 / 2 / 3
+    height: fit-content
+    justify-self: center
+    margin-top: 3.5em
+    z-index: 1
+
+    @include media.portrait
+        grid-area: 1 / 1 / 2 / 2
+
+    @include media.landscape--w-1040
+        grid-area: 1 / 1 / 2 / 4
+
+.projects-triangle-container 
+    position: relative
+
+    &.bottom 
+        transform: scaleY(-1)
+
+.projects-triangle-box 
+    height: calc(50vw * .17708333)
+    overflow: hidden
+    background-color: colors.$dark-background
+
+    &.outer 
+        display: inline-block
+        width: 50%
+        transform: scaleY(-1)
+        clip-path: polygon(0 0, 100% 100%, 0 100%)
+
+    &.inner 
+        position: absolute
+        width: 100%
+        top: .25em
+        clip-path: polygon(0 100%, 50% 0, 100% 100%)
+
+    &.right 
+        transform: scaleY(-1) scaleX(-1) 
+
+.center 
+    margin: auto
+
+#projects-content-container 
+    position: relative
+    display: flex
+    flex-direction: column
+    height: fit-content
+    padding: calc(10em - calc(4vw * 2)) 0
+    background-color: colors.$dark-background
+
+#projects-content-grid 
+    display: grid
+    width: 100%
+    height: fit-content
+    flex-basis: 33em
+
+    &.no-showcase 
+        transition: flex-basis 1s 1.3s
+        flex-basis: 33em
+
+    &.showcase 
+        transition: flex-basis .6s 0s !important 
+        flex-basis: 47em
+
+    @include media.portrait
+        &.showcase
+            flex-basis: 65.4375em
+
+    @include media.w-1391
+        flex-basis: 52.375em
+
+    @include media.w-767
+        flex-basis: 106.25em
+
+    @include media.w-400
+        flex-basis: 79.625em
+    
+.gallery-swipe 
+    overflow: hidden
+
+    &::after 
+        position: absolute
+        @include utility.position($left: 0, $right: 140%, $top: 0, $bottom: 0)
+        content: ' '
+        background-image: linear-gradient(to right, transparent 70% , colors.$dark-background 100%)
+
+    &.showcase::after 
+        right: -40%
+        transition: right .6s ease-in-out 1s
+
+    &.no-showcase::after 
+        right: 140%
+        transition: right .6s ease-in-out .7s, background-color 0s 1.3s
+
+    @include colors.background-colors($map: colors.$project-cover-map, $pseudo: '::after')
+
+#gallery-container 
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(23.55em, 24em))
+    row-gap: 1.5em
+    justify-content: center
+    align-content: center
+    max-height: fit-content
+
+    & * 
+        justify-self: center
+
+#showcase-switcher 
+    grid-area: 1 / 2 / 2 / 3
+
+    @include media.portrait
+        grid-area: 1 / 1 / 2 / 2
+
+    @include media.landscape--w-1040
+        grid-area: 1 / 1 / 2 / 4
+
+    @include media.w-400
+        font-size: .75rem
+
+    
+
+
+
+
+
+

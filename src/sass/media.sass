@@ -2,8 +2,20 @@
     @media only screen and (orientation: landscape)
         @content
 
+@mixin landscape--w-1450
+    @media only screen and (orientation: landscape) and (max-width: 1450px)
+        @content
+
+@mixin landscape--w-1040
+    @media only screen and (orientation: landscape) and (max-width: 1040px)
+        @content
+
 @mixin portrait
     @media only screen and (orientation: portrait)
+        @content
+
+@mixin w-1391
+    @media only screen and (max-width: 1391px)
         @content
 
 @mixin w-1080
@@ -12,6 +24,10 @@
 
 @mixin w-900
     @media only screen and (max-width: 900px)
+        @content
+
+@mixin w-767
+    @media only screen and (max-width: 767px)
         @content
 
 @mixin w-450

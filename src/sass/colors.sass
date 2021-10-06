@@ -37,9 +37,9 @@ $link-map: (figma1: $figma1, figma2: $figma2, figma3: $figma3, figma4: $figma4, 
         &.#{$name}
             text-shadow: $hex $inset $inset
 
-@mixin background-colors($map: $theme-map)
+@mixin background-colors($map: $theme-map, $pseudo: '')
     @each $name, $hex in $map
-        &.#{$name}
+        &.#{$name}#{$pseudo}
             background-color: $hex
 
 @mixin colors($map: $theme-map)

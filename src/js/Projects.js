@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import ContentHeader from 'js/ContentHeader'
 import ShowcaseSwitcher from 'js/ShowcaseSwitcher'
 
-import 'css/Projects.css'
+import 'stylesheets/Projects.css'
 import 'css/Structure.css'
 
 const Projects = ({ refProp }) => {
