@@ -1,0 +1,95 @@
+.card-container {
+  position: relative;
+  height: fit-content;
+  width: min(18.75em, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.78125em;
+  background-color: #637280;
+  padding: 0 0.625em 0.3125em 0.625em;
+}
+.no-show .card-container {
+  background-color: transparent;
+  padding: 0;
+}
+.show-init .card-container {
+  transition: background-color 0s 2.5s, padding 0.6s 2.5s;
+}
+@media only screen and (max-width: 400px) {
+  .card-container {
+    font-size: 0.75rem;
+  }
+}
+
+.header-box {
+  display: flex;
+  width: 97%;
+  justify-content: space-between;
+  align-content: flex-end;
+  margin: 0.12em 0.25em;
+  height: 1.575em;
+  opacity: 100;
+  transform: translteY(0);
+}
+.no-show .header-box {
+  height: 0;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.show-init .header-box {
+  transition: opacity 0.2s 2.55s, transform 0.2s ease-out 2.55s, height 0.2s ease-out 2.55s;
+}
+
+.card-header {
+  font-family: "Racing Sans One";
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #fafeff;
+  text-shadow: transparent 0.0392em 0.0392em;
+  margin: 0;
+}
+.card-header.calendex {
+  text-shadow: #38cda1 0.0625em 0.0625em;
+}
+.card-header.language {
+  text-shadow: #9877b1 0.0625em 0.0625em;
+}
+
+.link-box {
+  display: flex;
+  justify-content: flex-end;
+  width: 97%;
+  height: 1.5em;
+  opacity: 100;
+  transform: translateY(0);
+}
+.link-box * {
+  margin: 0 0.25em;
+}
+.no-show .link-box {
+  height: 0;
+  opacity: 0;
+  transform: translateY(-3.5em);
+}
+.show-init .link-box {
+  transition: opacity 0.2s 2.55s, transform 0.2s ease-out 2.55s, height 0.2s ease-out 2.55s;
+}
+
+.card-icon {
+  fill: #fafeff;
+  margin: auto 0;
+  margin-right: 0.2em;
+}
+
+.platform-icon-sizer {
+  height: 1.03125em;
+}
+.platform-icon-sizer.apple {
+  width: 0.859375em;
+}
+.platform-icon-sizer.ux {
+  width: 1.40625em;
+}
+
+/*# sourceMappingURL=ProjectCard.css.map */

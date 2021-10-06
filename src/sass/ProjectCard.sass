@@ -1,0 +1,91 @@
+@use 'colors'
+@use 'media'
+@use 'textStyles'
+    
+.card-container 
+    position: relative
+    height: fit-content
+    width: min(18.75em, 100%)
+    display: flex
+    flex-direction: column
+    align-items: center
+    border-radius: .78125em
+
+    background-color: colors.$inactive-button
+    padding: 0 .625em .3125em .625em
+
+    .no-show & 
+        background-color: transparent
+        padding: 0
+
+    .show-init &
+        transition: background-color 0s 2.5s, padding .6s 2.5s
+
+    @include media.w-400
+        font-size: .75rem
+
+.header-box 
+    display: flex
+    width: 97%
+    justify-content: space-between
+    align-content: flex-end
+    margin: .12em .25em
+
+    height: 1.575em
+    opacity: 100
+    transform: translteY(0)
+
+    .no-show &
+        height: 0
+        opacity: 0
+        transform: translateY(100%)
+
+    .show-init &
+        transition: opacity .2s 2.55s, transform .2s ease-out 2.55s, height .2s ease-out 2.55s
+
+.card-header 
+    @include textStyles.header($size: 1.25em)
+    margin: 0
+
+    @include colors.shadow-colors($inset: .0625em, $map: colors.$project-map)
+
+.link-box 
+    display: flex
+    justify-content: flex-end
+    width: 97%
+
+    height: 1.5em
+    opacity: 100
+    transform: translateY(0)
+
+    & * 
+        margin: 0 .25em
+
+    .no-show &
+        height: 0
+        opacity: 0
+        transform: translateY(-3.5em)
+
+    .show-init &
+        transition: opacity .2s 2.55s, transform .2s ease-out 2.55s, height .2s ease-out 2.55s
+
+.card-icon 
+    fill: colors.$text
+    margin: auto 0
+    margin-right: .2em
+
+.platform-icon-sizer 
+    height: 1.03125em
+
+    &.apple 
+        width: .859375em
+
+    &.ux 
+        width: 1.40625em
+
+
+
+
+
+
+

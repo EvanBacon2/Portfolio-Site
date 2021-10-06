@@ -14,7 +14,11 @@
 }
 
 #page-caption {
-  @incude textStyles.header($size: 1.2em, $weight: normal);
+  font-family: "Racing Sans One";
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #fafeff;
+  text-shadow: transparent 0.0392em 0.0392em;
   pointer-events: none;
   text-align: center;
   margin-top: 0.9em;

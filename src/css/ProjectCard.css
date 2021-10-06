@@ -101,15 +101,11 @@
 
 /*----------------------TEXT SHADOW----------------------*/
 
-.web-shadow {
-    text-shadow: .0625em .0625em #1ABCFE;
-}
-
-.calendex-shadow {
+.card-header.calendex {
     text-shadow: .0625em .0625em #38CDA1;
 }
 
-.language-shadow {
+.card-header.language {
     text-shadow: .0625em .0625em #9877B1;
 }
 

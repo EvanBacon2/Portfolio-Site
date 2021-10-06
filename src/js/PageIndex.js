@@ -1,4 +1,4 @@
-import 'css/PageIndex.css';
+import 'stylesheets/PageIndex.css'
 
 const PageIndex = ({captions, currPage, theme}) => {
     const captionForIndex = (index) => {

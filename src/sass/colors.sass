@@ -29,6 +29,7 @@ $mail: #ee6363
 
 $theme-map: (brand: $brand, calendex: $calendex, language: $language)
 $project-map: (calendex: $calendex, language: $language)
+$project-cover-map: (calendex: $calendex-cover, language: $language-cover)
 $link-map: (figma1: $figma1, figma2: $figma2, figma3: $figma3, figma4: $figma4, figma5: $figma5, github: $github, website: $website, appstore: $appstore, linkedin: $linkedin, mail: $mail)
 
 @mixin shadow-colors($inset: 0, $map: $theme-map)
@@ -45,6 +46,12 @@ $link-map: (figma1: $figma1, figma2: $figma2, figma3: $figma3, figma4: $figma4, 
     @each $name, $hex in $map
         &.#{$name}
             color: $hex
+
+@mixin borders($width: 0, $map: $theme-map)
+    @each $name, $hex in $map
+        &.#{$name}
+            border: $width solid $hex
+
 
 
 
