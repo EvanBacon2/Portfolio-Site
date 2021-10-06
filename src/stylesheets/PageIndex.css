@@ -1,0 +1,54 @@
+.page-index-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+}
+.showcase-container.no-showcase .page-index-container {
+  opacity: 0;
+}
+.showcase-container.showcase .page-index-container {
+  opacity: 100;
+  transform: translateY(0);
+  transition: opacity 0.4s ease-out 1.9s, transform 0.4s ease-out 1.95s;
+}
+
+#page-caption {
+  @incude textStyles.header($size: 1.2em, $weight: normal);
+  pointer-events: none;
+  text-align: center;
+  margin-top: 0.9em;
+}
+
+#index-list {
+  list-style: none;
+  text-align: center;
+  font-size: 3rem;
+  padding: 0;
+  margin: -0.5em 0;
+  pointer-events: none;
+}
+
+.index-dot {
+  display: inline-block;
+  padding: 0 0.165em;
+  color: #fafeff;
+  pointer-events: none;
+  transition: color 0.2s 0s;
+}
+.index-dot.selected.calendex {
+  color: #38cda1;
+}
+.index-dot.selected.language {
+  color: #9877b1;
+}
+
+.no-highlight {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/*# sourceMappingURL=PageIndex.css.map */
