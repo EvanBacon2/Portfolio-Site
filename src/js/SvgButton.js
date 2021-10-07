@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useState } from 'react'
 
-import 'css/SvgButton.css'
+import 'stylesheets/SvgButton.css'
 
 const SvgButton = ({theme, layout, active, baseColor, children}) => {
     const [clickAnimation, setClickAnimation] = useState('')

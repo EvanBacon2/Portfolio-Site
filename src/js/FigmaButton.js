@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import 'css/SvgButton.css'
+import 'stylesheets/SvgButton.css'
 
 import {ReactComponent as FigmaIcon} from '../svg/figma.svg'
 import {ReactComponent as FigmaColorIcon} from '../svg/figma-color.svg'

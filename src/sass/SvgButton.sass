@@ -1,0 +1,61 @@
+@use 'colors'
+    
+.svg-button-box 
+    width: fit-content
+    height: fit-content
+    position: relative
+
+    &:hover 
+        cursor: pointer
+
+.svg-button 
+    fill: colors.$inactive-button
+    transition: fill .2s ease-in-out 0s
+
+    .svg-button-box:hover &
+        fill: colors.$text
+        transition: fill .05s ease-in-out 0s
+
+    .svg-button-box.active &
+        fill: colors.$text
+        transition: fill .05s ease-in-out 0s
+
+    &.white 
+        fill: colors.$text
+
+.svg-button-mover 
+    width: fit-content
+    height: fit-content
+    position: absolute
+    top: 0
+    left: 0
+    transition: transform .2s ease-in-out 0s
+
+    .svg-button-box:hover &
+        transform: translate(-.25em, -.0625em)
+        transition: transform .2s ease-in-out 0s
+
+    .svg-button-box.active &
+        transform: translate(-.25em, -.0625em)
+        transition: transform .2s ease-in-out 0s
+
+.click-animation 
+    animation: svg-button-click .4s ease-out
+
+    & * 
+        fill: colors.$text
+
+.svg-button-shadow
+    @include colors.fills($map: colors.$link-map)
+    @include colors.fills($map: colors.$theme-map)
+
+@keyframes svg-button-click 
+    40% 
+        transform: translate(0, 0)
+
+    100% 
+        transform: translate(-.25em, -.0625em)
+    
+
+    
+

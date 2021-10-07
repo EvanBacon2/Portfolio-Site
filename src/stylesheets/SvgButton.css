@@ -1,0 +1,99 @@
+.svg-button-box {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.svg-button-box:hover {
+  cursor: pointer;
+}
+
+.svg-button {
+  fill: #637280;
+  transition: fill 0.2s ease-in-out 0s;
+}
+.svg-button-box:hover .svg-button {
+  fill: #fafeff;
+  transition: fill 0.05s ease-in-out 0s;
+}
+.svg-button-box.active .svg-button {
+  fill: #fafeff;
+  transition: fill 0.05s ease-in-out 0s;
+}
+.svg-button.white {
+  fill: #fafeff;
+}
+
+.svg-button-mover {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease-in-out 0s;
+}
+.svg-button-box:hover .svg-button-mover {
+  transform: translate(-0.25em, -0.0625em);
+  transition: transform 0.2s ease-in-out 0s;
+}
+.svg-button-box.active .svg-button-mover {
+  transform: translate(-0.25em, -0.0625em);
+  transition: transform 0.2s ease-in-out 0s;
+}
+
+.click-animation {
+  animation: svg-button-click 0.4s ease-out;
+}
+.click-animation * {
+  fill: #fafeff;
+}
+
+.svg-button-shadow.figma1 {
+  fill: #f24e1e;
+}
+.svg-button-shadow.figma2 {
+  fill: #ff7262;
+}
+.svg-button-shadow.figma3 {
+  fill: #a259ff;
+}
+.svg-button-shadow.figma4 {
+  fill: #1abcfe;
+}
+.svg-button-shadow.figma5 {
+  fill: #0acf83;
+}
+.svg-button-shadow.github {
+  fill: #a259ff;
+}
+.svg-button-shadow.website {
+  fill: #1abcfe;
+}
+.svg-button-shadow.appstore {
+  fill: #2071f3;
+}
+.svg-button-shadow.linkedin {
+  fill: #0077b7;
+}
+.svg-button-shadow.mail {
+  fill: #ee6363;
+}
+.svg-button-shadow.brand {
+  fill: #ee6363;
+}
+.svg-button-shadow.calendex {
+  fill: #38cda1;
+}
+.svg-button-shadow.language {
+  fill: #9877b1;
+}
+
+@keyframes svg-button-click {
+  40% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-0.25em, -0.0625em);
+  }
+}
+
+/*# sourceMappingURL=SvgButton.css.map */

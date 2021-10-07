@@ -32,9 +32,9 @@ $project-map: (calendex: $calendex, language: $language)
 $project-cover-map: (calendex: $calendex-cover, language: $language-cover)
 $link-map: (figma1: $figma1, figma2: $figma2, figma3: $figma3, figma4: $figma4, figma5: $figma5, github: $github, website: $website, appstore: $appstore, linkedin: $linkedin, mail: $mail)
 
-@mixin shadow-colors($inset: 0, $map: $theme-map)
+@mixin shadow-colors($inset: 0, $map: $theme-map, $modifier: '')
     @each $name, $hex in $map
-        &.#{$name}
+        &#{$modifier}.#{$name}
             text-shadow: $hex $inset $inset
 
 @mixin background-colors($map: $theme-map, $pseudo: '')

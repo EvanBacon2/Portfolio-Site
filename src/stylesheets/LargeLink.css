@@ -10,35 +10,35 @@
 .link:hover {
   cursor: pointer;
 }
-.link:hover.figma1 {
-  text-shadow: #f24e1e 0.625em 0.625em;
+.link:hover .figma1 {
+  text-shadow: #f24e1e 0.0625em 0.0625em;
 }
-.link:hover.figma2 {
-  text-shadow: #ff7262 0.625em 0.625em;
+.link:hover .figma2 {
+  text-shadow: #ff7262 0.0625em 0.0625em;
 }
-.link:hover.figma3 {
-  text-shadow: #a259ff 0.625em 0.625em;
+.link:hover .figma3 {
+  text-shadow: #a259ff 0.0625em 0.0625em;
 }
-.link:hover.figma4 {
-  text-shadow: #1abcfe 0.625em 0.625em;
+.link:hover .figma4 {
+  text-shadow: #1abcfe 0.0625em 0.0625em;
 }
-.link:hover.figma5 {
-  text-shadow: #0acf83 0.625em 0.625em;
+.link:hover .figma5 {
+  text-shadow: #0acf83 0.0625em 0.0625em;
 }
-.link:hover.github {
-  text-shadow: #a259ff 0.625em 0.625em;
+.link:hover .github {
+  text-shadow: #a259ff 0.0625em 0.0625em;
 }
-.link:hover.website {
-  text-shadow: #1abcfe 0.625em 0.625em;
+.link:hover .website {
+  text-shadow: #1abcfe 0.0625em 0.0625em;
 }
-.link:hover.appstore {
-  text-shadow: #2071f3 0.625em 0.625em;
+.link:hover .appstore {
+  text-shadow: #2071f3 0.0625em 0.0625em;
 }
-.link:hover.linkedin {
-  text-shadow: #0077b7 0.625em 0.625em;
+.link:hover .linkedin {
+  text-shadow: #0077b7 0.0625em 0.0625em;
 }
-.link:hover.mail {
-  text-shadow: #ee6363 0.625em 0.625em;
+.link:hover .mail {
+  text-shadow: #ee6363 0.0625em 0.0625em;
 }
 .link.no-show {
   opacity: 0;
@@ -48,6 +48,16 @@
   opacity: 100;
   transform: translateX(0);
   transition: opacity 0.4s cubic-bezier(0.15, -0.01, 0.69, 0.07) 1.25s, transform 0.4s cubic-bezier(0.15, -0.01, 0.69, 0.07) 1.25s;
+}
+.showcase-container.no-showcase .link {
+  opacity: 0;
+  transform: translateX(0.9375em);
+  transition: opacity 0.4s, transform 0s 0.4s;
+}
+.showcase-container.showcase .link {
+  opacity: 100;
+  transform: translateX(0);
+  transition: opacity 0.4s ease-out 1.9s, transform 0.4s ease-out 1.95s;
 }
 @media only screen and (orientation: portrait) {
   .link {
@@ -94,17 +104,6 @@
 
 .figma-text {
   margin: 0;
-}
-
-.showcase-container .no-showcase .link {
-  opacity: 0;
-  transform: translateX(0.9375em);
-  transition: opacity 0.4s, transform 0s 0.4s;
-}
-.showcase-container .showcase .link {
-  opacity: 100;
-  transform: translateX(0);
-  transition: opacity 0.4s ease-out 1.9s, transform 0.4s ease-out 1.95s;
 }
 
 /*# sourceMappingURL=LargeLink.css.map */
