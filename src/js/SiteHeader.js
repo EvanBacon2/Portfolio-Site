@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import 'css/SiteHeader.css'
+import 'stylesheets/SiteHeader.css'
 
 const SiteHeader = ({layout}) => {
     useEffect(() => {

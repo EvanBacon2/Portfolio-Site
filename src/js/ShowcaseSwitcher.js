@@ -5,7 +5,7 @@ import ShowcaseFade from 'js/ShowcaseFade'
 import CalendexShowcase from 'js/CalendexShowcase'
 import LanguageShowcase from 'js/LanguageShowcase'
 
-import 'css/Projects.css'
+import 'stylesheets/Projects.css'
 
 const ShowcaseSwitcher = ({ showcase, showcaseState, showcaseCallback }) => {
     const [selection, setSelection] = useState(showcase)
