@@ -39,14 +39,14 @@
     transform: translateX(.625em);
 }
 
-.showcase-container.no-showcase .showcase-chevron-layout {
-    opacity: 0;
-}
-
-.showcase-container.showcase .showcase-chevron-layout {
+.showcase .showcase-chevron-layout {
     opacity: 100;
     transform: translateX(0);
     transition: opacity .4s ease-out 1.9s, transform .4s ease-out 1.95s;
+}
+
+.no-showcase .showcase-chevron-layout {
+    opacity: 0;
 }
 
 /*----------------------SHOWCASE BORDER----------------------*/
@@ -60,7 +60,6 @@
 }
 
 .showcase-border {
-   
     height: 0;
     overflow: hidden;
 }
@@ -120,7 +119,7 @@
 
 .showcase-container.no-showcase .showcase-image-list {
     opacity: 0;
-    transition: opacity.4s;
+    transition: opacity .4s;
 }
 
 .showcase-container.showcase .showcase-image-list {

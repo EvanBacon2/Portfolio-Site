@@ -26,15 +26,15 @@
   grid-area: 1/1/2/2;
   align-self: center;
 }
-.no-showcase .showcase-back-button-layout {
-  opacity: 0;
-  transform: translateX(-0.625em);
-  transition: opacity 0.4s 0s, transform 0s 0.4s;
-}
 .showcase .showcase-back-button-layout {
   opacity: 100;
   transform: translateX(0);
   transition: opacity 0.4s ease-out 1.9s, transform 0.4s ease-out 1.95s;
+}
+.no-showcase .showcase-back-button-layout {
+  opacity: 0;
+  transform: translateX(-0.625em);
+  transition: opacity 0.4s 0s, transform 0s 0.4s;
 }
 @media only screen and (orientation: portrait) and (max-width: 1080px) {
   .showcase-back-button-layout .showcase-back-button-layout {

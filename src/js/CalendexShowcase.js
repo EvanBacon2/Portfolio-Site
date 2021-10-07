@@ -6,7 +6,7 @@ import Links from 'js/Links'
 import LargeLink from 'js/LargeLink'
 import SvgButton from 'js/SvgButton'
 
-import 'css/ProjectShowcase.css'
+import 'stylesheets/ProjectShowcase.css'
 
 import {ReactComponent as Chevron} from 'svg/chevron.svg'
 

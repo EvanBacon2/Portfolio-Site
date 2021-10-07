@@ -3,7 +3,7 @@ import { Children, useState } from 'react'
 import PageIndex from 'js/PageIndex'
 import SvgButton from 'js/SvgButton'
 
-import '../css/ShowcaseGallery.css'
+import 'stylesheets/ShowcaseGallery.css'
 
 import {ReactComponent as Chevron} from 'svg/chevron.svg'
 

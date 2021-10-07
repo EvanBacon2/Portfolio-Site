@@ -6,15 +6,15 @@ import Links from 'js/Links'
 import LargeLink from 'js/LargeLink'
 import SvgButton from 'js/SvgButton'
 
-import 'css/ProjectShowcase.css'
+import 'stylesheets/ProjectShowcase.css'
 
 import {ReactComponent as Chevron} from 'svg/chevron.svg'
 
-const LanguageShowcase = ({showCallback}) => {
+const LanguageShowcase = ({ showCallback }) => {
     const [showcase, setShowcase] = useState('no-showcase')
 
     useEffect(() => {
-        setTimeout(() => setShowcase('showcase'), 10)
+        setTimeout(() => setShowcase('showcase'), 50)
     })
 
     return (  

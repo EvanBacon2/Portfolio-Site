@@ -1,0 +1,126 @@
+@use 'colors'
+@use "sass:map"
+
+@mixin border-fade-in($theme: 'brand')
+    @keyframes border-fade-in-#{$theme} 
+        0%, 47.82% 
+            border: 0em solid map.get(colors.$theme-map, $theme) 
+
+        50%, 84.78% 
+            border: .3125em solid map.get(colors.$theme-map, $theme) 
+            border-radius: 1.125em
+        
+        100% 
+            border: .3125em solid #FAFEFF 
+            border-radius: 1.125em
+    
+.showcase-layout 
+    margin-top: 4em
+
+.showcase-gallery 
+    display: flex
+    flex-direction: column
+
+.showcase-gallery-screen 
+    display: flex
+
+.showcase-chevron 
+    width: 2.875em
+    height: 1.75em
+
+    &.left 
+        transform: rotate(90deg)
+
+    &.right 
+        transform: rotate(-90deg)
+
+.showcase-chevron-layout 
+    margin: auto .75em
+    justify-self: center
+
+    &.left 
+        transform: translateX(-.625em)
+
+    &.right 
+        transform: translateX(.625em)
+
+    .showcase &
+        opacity: 100
+        transform: translateX(0)
+        transition: opacity .4s ease-out 1.9s, transform .4s ease-out 1.95s
+
+    .no-showcase &
+        opacity: 0    
+
+.showcase-border-container
+    &.ios 
+        height: 26.3745em
+
+    &.web 
+        height: 15em
+
+.showcase-border 
+    height: 0
+    overflow: hidden
+
+    &.ios 
+        width: 12.1875em
+
+    &.web 
+        width: 24em
+
+    @include colors.background-colors($map: colors.$project-map)
+
+    .showcase-container.no-showcase & 
+        opacity: 0
+
+    .showcase-container.showcase &
+        background-color: transparent
+        transform: translateX(-.15625em) translateY(-.625em)
+        transition: height .8s ease-out 1.15s, background-color .4s ease-out 1.9s, transform .4s ease-out 1.9s, box-shadow .4s ease-out 1.9s
+
+    .showcase-container.showcase &.ios 
+        height: 26.3745em
+
+    .showcase-container.showcase &.web 
+        height: 15em
+
+    .showcase-container.showcase &.calendex 
+        animation: border-fade-in-calendex 2.3s 0s ease-out forwards
+        box-shadow: .3125em .3125em colors.$calendex
+
+    .showcase-container.showcase &.language 
+        animation: border-fade-in-language 2.3s 0s ease-out forwards
+        box-shadow: .3125em .3125em colors.$language
+
+.showcase-image-list 
+    display: flex
+    position: relative
+    flex-wrap: nowrap
+
+    .showcase-container.no-showcase & 
+        opacity: 0
+
+    .showcase-container.showcase & 
+        opacity: 100
+        transition: opacity .4s ease-out 1.9s, transform .4s ease-out
+
+.showcase-photo 
+    object-fit: contain 
+    width: 12.1875em
+
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -o-user-select: none
+    user-select: none
+
+@include border-fade-in($theme: 'calendex')
+@include border-fade-in($theme: 'language')
+
+
+    
+    
+
+
+
