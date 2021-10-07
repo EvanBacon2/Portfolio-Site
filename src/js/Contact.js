@@ -9,7 +9,7 @@ import SubmitEmail from 'js/SubmitEmail'
 import { THEMES } from 'js/Themes'
 
 import 'stylesheets/Contact.css'
-import 'css/Structure.css'
+import 'stylesheets/Structure.css'
 
 const Contact = ({refProp}) => {
     const [state, setState] = useState('no-show')

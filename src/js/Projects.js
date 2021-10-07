@@ -4,7 +4,7 @@ import ContentHeader from 'js/ContentHeader'
 import ShowcaseSwitcher from 'js/ShowcaseSwitcher'
 
 import 'stylesheets/Projects.css'
-import 'css/Structure.css'
+import 'stylesheets/Structure.css'
 
 const Projects = ({ refProp }) => {
     const [projectsState, setProjectsState] = useState('no-show')

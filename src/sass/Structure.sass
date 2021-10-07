@@ -1,0 +1,38 @@
+@use 'colors'
+@use 'media'
+    
+#fixed-elements 
+    position: relative
+    z-index: 999
+
+.main-initials-logo.layout 
+    position: fixed
+    right: 1.4em
+    top: .34em
+    font-size: .8em
+
+    @include media.w-450
+        visibility: hidden
+
+.skeleton 
+    display: grid
+    grid-template-rows: min-content auto
+    width: 100%
+    overflow-x: hidden
+
+.content-grid-template 
+    grid-template-columns: 10% 1fr 10%
+
+    @include media.portrait
+        grid-template-columns: 1fr
+
+::-webkit-scrollbar 
+    width: 2px
+
+::-webkit-scrollbar-thumb 
+    width: 2px
+    background-color: colors.$brand
+    border-radius: 10px
+
+body 
+    overflow: overlay

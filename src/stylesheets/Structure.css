@@ -1,0 +1,48 @@
+#fixed-elements {
+  position: relative;
+  z-index: 999;
+}
+
+.main-initials-logo.layout {
+  position: fixed;
+  right: 1.4em;
+  top: 0.34em;
+  font-size: 0.8em;
+}
+@media only screen and (max-width: 450px) {
+  .main-initials-logo.layout {
+    visibility: hidden;
+  }
+}
+
+.skeleton {
+  display: grid;
+  grid-template-rows: min-content auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.content-grid-template {
+  grid-template-columns: 10% 1fr 10%;
+}
+@media only screen and (orientation: portrait) {
+  .content-grid-template {
+    grid-template-columns: 1fr;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 2px;
+  background-color: #ee6363;
+  border-radius: 10px;
+}
+
+body {
+  overflow: overlay;
+}
+
+/*# sourceMappingURL=Structure.css.map */

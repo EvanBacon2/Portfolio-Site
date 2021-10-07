@@ -5,7 +5,7 @@ import HeadShot from 'js/HeadShot'
 import { THEMES } from 'js/Themes'
 
 import 'stylesheets/About.css'
-import 'css/Structure.css'
+import 'stylesheets/Structure.css'
 
 const About = ({refProp}) => {
     const [state, setState] = useState('no-show')

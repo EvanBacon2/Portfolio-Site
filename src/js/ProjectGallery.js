@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 import CalendexProjectCard from './CalendexProjectCard'
 import LanguageProjectCard from './LanguageProjectCard'
 
-import 'css/Projects.css'
-import 'css/Structure.css'
+import 'stylesheets/Projects.css'
+import 'stylesheets/Structure.css'
 
 const ProjectGallery =  ({ showcase, showcaseCallback }) => {
     const [displaySwitch, setDisplaySwitch] = useState('off')

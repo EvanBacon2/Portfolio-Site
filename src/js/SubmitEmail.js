@@ -2,9 +2,9 @@ import { useState } from 'react'
 
 import SvgButton from 'js/SvgButton.js';
 
-import 'css/LargeLink.css';
+import 'stylesheets/LargeLink.css';
 
-import {ReactComponent as MailIcon} from '../svg/mail.svg';
+import { ReactComponent as MailIcon } from '../svg/mail.svg';
 
 const SubmitEmail = ({ state }) => {
     const [active, setActive] = useState('');
