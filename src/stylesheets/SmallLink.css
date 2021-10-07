@@ -1,0 +1,19 @@
+.small-link-box {
+  width: 1.25em;
+}
+
+.small-link {
+  fill: #FAFEFF;
+  transition: fill 0.2s;
+}
+.small-link:hover {
+  cursor: pointer;
+}
+.small-link:hover.calendex {
+  fill: #38cda1;
+}
+.small-link:hover.language {
+  fill: #9877b1;
+}
+
+/*# sourceMappingURL=SmallLink.css.map */

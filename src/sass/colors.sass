@@ -47,6 +47,11 @@ $link-map: (figma1: $figma1, figma2: $figma2, figma3: $figma3, figma4: $figma4, 
         &.#{$name}
             color: $hex
 
+@mixin fills($map: $theme-map)
+    @each $name, $hex in $map
+        &.#{$name}
+            fill: $hex
+
 @mixin borders($width: 0, $map: $theme-map)
     @each $name, $hex in $map
         &.#{$name}

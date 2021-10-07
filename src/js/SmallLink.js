@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import 'css/SmallLink.css'
+import 'stylesheets/SmallLink.css'
 
 const SmallLink = ({ theme, url, children }) => {
     const injectStyle = (newClass) =>{
