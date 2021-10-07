@@ -11,7 +11,7 @@ import Projects from 'js/Projects'
 import Contact from 'js/Contact'
 import Footer from 'js/Footer'
 
-import 'css/Structure.css'
+import 'stylesheets/Structure.css'
 
 class App extends Component {
   constructor(props) {
