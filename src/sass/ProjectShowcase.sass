@@ -15,10 +15,9 @@
     justify-self: center
 
     @include media.portrait--w-1080
-        .showcase-container 
-            grid-template-rows: 1fr min-content min-content min-content
-            grid-template-columns: 100%
-            row-gap: 2em
+        grid-template-rows: 1fr min-content min-content min-content
+        grid-template-columns: 100%
+        row-gap: 2em
 
 .showcase-back-button 
     width: 2.875em
@@ -39,11 +38,10 @@
         transform: translateX(-.625em)
         transition: opacity .4s 0s, transform 0s .4s
 
-    @include media.portrait--w-1080
-        .showcase-back-button-layout 
-            grid-area: 1 / 1 / 2 / 2
-            justify-self: flex-start
-            margin-left: 5%
+    @include media.portrait--w-1080 
+        grid-area: 1 / 1 / 2 / 2
+        justify-self: flex-start
+        margin-left: 5%
 
 .showcase-content-description 
     width: 100%

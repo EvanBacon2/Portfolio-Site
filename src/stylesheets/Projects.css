@@ -12,7 +12,7 @@
     grid-area: 3/1/4/2;
   }
 }
-@media only screen and (orientation: landscape) and (max-width: 1040px) {
+@media only screen and (orientation: landscape), (max-width: 1040px) {
   #projects {
     grid-area: 3/1/4/4;
   }
@@ -26,7 +26,7 @@
     grid-area: 1/1/2/2;
   }
 }
-@media only screen and (orientation: landscape) and (max-width: 1040px) {
+@media only screen and (orientation: landscape), (max-width: 1040px) {
   #projects-background {
     grid-area: 1/1/2/4;
   }
@@ -44,7 +44,7 @@
     grid-area: 1/1/2/2;
   }
 }
-@media only screen and (orientation: landscape) and (max-width: 1040px) {
+@media only screen and (orientation: landscape), (max-width: 1040px) {
   #projects-content {
     grid-area: 1/1/2/4;
   }
@@ -173,7 +173,7 @@
     grid-area: 1/1/2/2;
   }
 }
-@media only screen and (orientation: landscape) and (max-width: 1040px) {
+@media only screen and (orientation: landscape), (max-width: 1040px) {
   #showcase-switcher {
     grid-area: 1/1/2/4;
   }
