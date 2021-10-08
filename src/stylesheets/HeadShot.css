@@ -1,10 +1,10 @@
 #headshot-container {
   position: relative;
-  height: 18.3423em;
+  height: 19.536em;
 }
 
 .grad-photo-background {
-  width: 13.3116em;
+  width: 13.786em;
   border-radius: 0.75em;
   background: linear-gradient(to top left, #fcc28d, #ee6363 45%);
 }
@@ -13,17 +13,16 @@
   transform: translateY(30%);
 }
 .show-init .grad-photo-background {
-  height: 18.3423em;
+  height: 19.536em;
   transform: translateY(0);
   transition: height 1s cubic-bezier(0.82, 0, 0.16, 0.96) 0.55s, transform 1s cubic-bezier(0.82, 0, 0.16, 0.96) 0.85s;
 }
 
 .grad-photo {
   position: absolute;
-  width: 13.3116em;
+  width: 13.786em;
+  height: 19.536em;
   box-sizing: border-box;
-  height: fit-content;
-  object-fit: contain;
   border-radius: 0.75em;
   border: 0.625em solid #FAFEFF;
 }
