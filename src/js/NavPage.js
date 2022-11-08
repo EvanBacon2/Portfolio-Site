@@ -49,7 +49,7 @@ const NavPage = ({navState, navTo}) => {
                         <div id='nav-links-spacer' className='nav-spacer'/>
                     </div>
                     <div id='nav-links-spacer' className='nav-spacer'/>
-                    {navPageLink('Resume', 'https://github.com/EvanBacon2')}
+                    {navPageLink('Resume', 'Portfolio Site.pdf')}
                 </div>
             </div>
         </div>

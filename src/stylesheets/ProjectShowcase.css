@@ -25,6 +25,7 @@
 .showcase-back-button-layout {
   grid-area: 1/1/2/2;
   align-self: center;
+  justify-self: center;
 }
 .showcase .showcase-back-button-layout {
   opacity: 100;
